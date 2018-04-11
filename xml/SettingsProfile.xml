@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol>9000</defaultcontrol>
+  <controls>
+    <include>DialogFullBG</include>
+    <control type="group" description="Content">
+      <include>OpenClose</include>
+      <control type="image" description="Sidebar">
+        <left>0</left>
+        <top>0</top>
+        <width>471</width>
+        <height>1080</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>img/Sidebar.png</texture>
+      </control>
+      <control type="label" description="Heading">
+        <include>CenterHeading</include>
+        <label>$LOCALIZE[10034]</label>
+      </control>
+      <control type="list" id="9000" description="Left - Button Area">
+        <left>45</left>
+        <top>165</top>
+        <width>420</width>
+        <height>864</height>
+        <itemgap>5</itemgap>
+        <onleft>9100</onleft>
+        <onright>9100</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <orientation>vertical</orientation>
+        <itemlayout height="74" width="390">
+          <control type="image">
+            <width>390</width>
+            <height>60</height>
+            <texture border="4">img/SettingsButtonNF.png</texture>
+          </control>
+          <control type="label">
+            <height>60</height>
+            <width>360</width>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>size20</font>
+            <left>20</left>
+            <right>20</right>
+            <textcolor>UnfocusedDark</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="74" width="390">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <width>390</width>
+              <height>60</height>
+              <texture border="4">img/SettingsButtonFO.png</texture>
+            </control>
+            <control type="label">
+              <width>360</width>
+              <height>60</height>
+              <align>center</align>
+              <aligny>center</aligny>
+              <font>size20</font>
+              <left>20</left>
+              <right>20</right>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+          </control>
+        </focusedlayout>
+        <content>
+          <item id="1">
+            <label>$LOCALIZE[128]</label>
+            <onclick>noop</onclick>
+          </item>
+          <item id="2">
+            <label>$LOCALIZE[13200]</label>
+            <onclick>noop</onclick>
+          </item>
+        </content>
+      </control>
+      <control type="group" id="9100" description="FOCUS sake grouped">
+        <control type="grouplist" id="9001" description="Right - Control Area">
+          <visible>Container(9000).Hasfocus(1)</visible>
+          <include>VisibleFadeEffect</include>
+          <left>540</left>
+          <top>165</top>
+          <width>1260</width>
+          <height>660</height>
+          <itemgap>0</itemgap>
+          <onleft>9000</onleft>
+          <onright>9000</onright>
+          <onup>9001</onup>
+          <ondown>9001</ondown>
+          <orientation>vertical</orientation>
+          <control type="radiobutton" id="4" description="Radio Button">
+            <width>1260</width>
+            <radioleft>1197</radioleft>
+            <align>left</align>
+            <label>10029</label>
+          </control>
+          <control type="button" id="5" description="Button">
+            <enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
+            <animation type="Conditional" condition="!Control.IsEnabled(5)">
+              <effect type="fade" start="100" end="30" time="0" reversible="true" />
+            </animation>
+            <width>1260</width>
+            <align>left</align>
+            <label>33084</label>
+            <label2>$INFO[System.ProfileAutoLogin]</label2>
+          </control>
+        </control>
+        <control type="panel" id="2">
+          <visible>Container(9000).Hasfocus(2)</visible>
+          <include>VisibleFadeEffect</include>
+          <centerleft>60%</centerleft>
+          <centertop>50%</centertop>
+          <width>800</width>
+          <height max="719">auto</height>
+          <onup>2</onup>
+          <ondown>2</ondown>
+          <onleft>4</onleft>
+          <itemlayout width="800" height="120">
+            <control type="image">
+              <left>16</left>
+              <top>6</top>
+              <width>770</width>
+              <height>108</height>
+              <texture border="4">img/SettingsButtonNF.png</texture>
+              <bordersize>0</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image" description="Thumb">
+              <top>14</top>
+              <left>28</left>
+              <width>90</width>
+              <height>90</height>
+              <texture diffuse="img/UserDiffuse.png" background="true">$INFO[ListItem.Thumb]</texture>
+              <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <left>140</left>
+              <right>20</right>
+              <top>0</top>
+              <height>90</height>
+              <font>size20B</font>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label" description="INFO">
+              <left>140</left>
+              <right>20</right>
+              <bottom>0</bottom>
+              <height>66</height>
+              <font>size16</font>
+              <scroll>false</scroll>
+              <label>$INFO[ListItem.Label2]</label>
+            </control>
+          </itemlayout>
+          <focusedlayout width="800" height="120">
+            <control type="group">
+              <include>FocusButtonsAnimation</include>
+              <control type="image">
+                <left>16</left>
+                <top>9</top>
+                <width>770</width>
+                <height>102</height>
+                <texture border="36">focus/FrameFO.png</texture>
+                <bordersize>-26</bordersize>
+                <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="image" description="Thumb">
+                <top>14</top>
+                <left>28</left>
+                <width>90</width>
+                <height>90</height>
+                <texture diffuse="img/UserDiffuse.png" background="true">$INFO[ListItem.Thumb]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+              </control>
+              <control type="label" description="Main Label">
+                <left>140</left>
+                <right>20</right>
+                <top>0</top>
+                <height>90</height>
+                <font>size20B</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+              </control>
+              <control type="label" description="INFO">
+                <left>140</left>
+                <right>20</right>
+                <bottom>0</bottom>
+                <height>66</height>
+                <font>size16</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Label2]</label>
+              </control>
+            </control>
+          </focusedlayout>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>

@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol>300</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+    <control type="label" description="MainHeading">
+      <top>60</top>
+      <left>0</left>
+      <width>1920</width>
+      <font>size28B</font>
+      <label>MRMC</label>
+      <textcolor>Selected</textcolor>
+      <align>center</align>
+      <aligny>bottom</aligny>
+    </control>
+    <control type="group" description="Side Menu">
+      <left>-420</left>
+      <top>0</top>
+      <animation effect="slide" start="0,0" end="420,0" time="200" delay="100" reversible="true" condition="Control.HasFocus(500)">conditional</animation>
+      <control type="image" description="Sidebar">
+        <left>0</left>
+        <top>0</top>
+        <width>520</width>
+        <height>1080</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>img/Sidebar.png</texture>
+      </control>
+      <control type="image" description="User Thumb">
+        <top>60</top>
+        <centerleft>256</centerleft>
+        <width>150</width>
+        <height>150</height>
+        <texture align="center" diffuse="img/UserDiffuse.png">$INFO[System.ProfileThumb]</texture>
+        <aspectratio scalediffuse="false">scale</aspectratio>
+      </control>
+      <control type="group" description="Side Menu Icons">
+        <visible>!Control.HasFocus(500)</visible>
+        <animation effect="fade" time="100" delay="0">Hidden</animation>
+        <animation effect="fade" time="200" delay="300">Visible</animation>
+        <left>450</left>
+        <top>274</top>
+        <control type="image">
+          <width>42</width>
+          <height>42</height>
+          <aspectratio>keep</aspectratio>
+          <texture>home/Folder.png</texture>
+        </control>
+        <control type="image">
+          <top>100</top>
+          <width>42</width>
+          <height>42</height>
+          <aspectratio>keep</aspectratio>
+          <texture>home/Settings.png</texture>
+        </control>
+        <control type="image">
+          <top>200</top>
+          <width>42</width>
+          <height>42</height>
+          <aspectratio>keep</aspectratio>
+          <texture>home/More.png</texture>
+        </control>
+      </control>
+      <control type="panel" id="500" description="LeftSideMenu">
+        <visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
+        <animation effect="fade" time="100" delay="0">Hidden</animation>
+        <animation effect="fade" time="200" delay="200">Visible</animation>
+        <top>256</top>
+        <left>68</left>
+        <width>480</width>
+        <height>720</height>
+        <ondown>500</ondown>
+        <onup>500</onup>
+        <onleft>noop</onleft>
+        <onright>300</onright>
+        <onback>300</onback>
+        <orientation>vertical</orientation>
+        <itemlayout height="72" width="386">
+          <control type="label">
+            <left>24</left>
+            <right>24</right>
+            <height>72</height>
+            <font>size20B</font>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="72" width="386">
+          <control type="group">
+            <visible>Control.HasFocus(500)</visible>
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <visible>Control.HasFocus(500)</visible>
+              <left>6</left>
+              <top>6</top>
+              <height>60</height>
+              <width>374</width>
+              <texture border="42">focus/FrameFO.png</texture>
+              <bordersize>-28</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label">
+              <left>24</left>
+              <right>24</right>
+              <height>72</height>
+              <font>size20B</font>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+          </control>
+        </focusedlayout>
+        <content>
+          <item id="15">
+            <visible>IntegerGreaterThan(System.ProfileCount,1)</visible>
+            <label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+            <onclick>dialog.close(all,true)</onclick>
+            <onclick>System.LogOff</onclick>
+          </item>
+          <item id="9">
+            <label>$LOCALIZE[10134]</label>
+            <onclick>ActivateWindow(favourites)</onclick>
+            <visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
+          </item>
+          <item id="8">
+            <label>$LOCALIZE[20094]</label>
+            <onclick>ActivateWindow(MediaSources,root)</onclick>
+            <visible>!Skin.HasSetting(HomeMenuNoMediaSourceButton)</visible>
+          </item>
+          <!--<item id="13">
+            <label>$LOCALIZE[24001]</label>
+            <onclick>ActivateWindow(Programs,Addons,return)</onclick>
+            <visible>!Skin.HasSetting(HomeMenuNoAddonsButton)</visible>
+          </item>
+          <item id="1">
+            <visible>Library.HasContent(music)</visible>
+            <label>$LOCALIZE[653]: $LOCALIZE[2]</label>
+            <onclick>UpdateLibrary(music)</onclick>
+          </item>
+          <item id="2">
+            <visible>Library.HasContent(video)</visible>
+            <label>$LOCALIZE[653]: $LOCALIZE[3]</label>
+            <property name="separator">true</property>
+            <onclick>UpdateLibrary(video)</onclick>
+          </item>-->
+          <item id="11">
+            <label>$LOCALIZE[10004]</label>
+            <onclick>ActivateWindow(settings)</onclick>
+          </item>
+          <item id="12">
+            <label>$LOCALIZE[13009]</label>
+            <onclick>ActivateWindow(shutdownmenu)</onclick>
+            <visible>!System.Platform.IOS + !System.Platform.TVOS</visible>
+          </item>
+        </content>
+      </control>
+    </control>
+    <control type="group">
+      <animation effect="fade" start="100" end="0" time="100" reversible="true" condition="Control.HasFocus(500)">conditional</animation>
+      <control type="image" description="User Thumb">
+        <top>60</top>
+        <centerleft>51</centerleft>
+        <width>69</width>
+        <height>69</height>
+        <texture align="center" diffuse="img/UserDiffuse.png">$INFO[System.ProfileThumb]</texture>
+        <aspectratio scalediffuse="false">scale</aspectratio>
+      </control>
+      <control type="label" description="Menu Header">
+        <top>174</top>
+        <left>176</left>
+        <width>496</width>
+        <font>size19U</font>
+        <label>$LOCALIZE[14022]</label>
+        <textcolor>SubtitleDark</textcolor>
+      </control>
+      <control type="list" id="300" description="Main menu">
+        <top>256</top>
+        <left>152</left>
+        <width>480</width>
+        <height>720</height>
+        <ondown>300</ondown>
+        <onup>300</onup>
+        <onleft>500</onleft>
+        <onright condition="Container(300).HasFocus(1)">8000</onright>
+        <!-- Movies -->
+        <onright condition="Container(300).HasFocus(2)">8001</onright>
+        <!-- TvShows -->
+        <onright condition="Container(300).HasFocus(3)">8002</onright>
+        <!-- Music -->
+        <orientation>vertical</orientation>
+        <itemlayout height="72" width="446">
+          <control type="label">
+            <left>24</left>
+            <right>24</right>
+            <height>72</height>
+            <font>size22B</font>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="72" width="446">
+          <control type="group" description="List in FO">
+            <visible>Control.HasFocus(300)</visible>
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <left>6</left>
+              <top>6</top>
+              <height>60</height>
+              <width>434</width>
+              <texture border="42">focus/FrameFO.png</texture>
+              <bordersize>-28</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label">
+              <left>24</left>
+              <right>24</right>
+              <height>72</height>
+              <font>size22B</font>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+          </control>
+          <control type="group" description="List out of FO">
+            <visible>!Control.HasFocus(300)</visible>
+            <control type="image">
+              <left>6</left>
+              <top>6</top>
+              <height>60</height>
+              <width>434</width>
+              <texture border="4">img/SettingsButtonNF.png</texture>
+              <bordersize>-4</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label">
+              <left>24</left>
+              <right>24</right>
+              <height>72</height>
+              <font>size22B</font>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+          </control>
+        </focusedlayout>
+        <content>
+          <item id="0">
+            <visible>Player.HasMedia</visible>
+            <label>$LOCALIZE[16003]</label>
+            <onclick>fullscreen</onclick>
+          </item>
+          <item id="1">
+            <label>$LOCALIZE[342]</label>
+            <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+            <property name="menu_id">$NUMBER[5000]</property>
+            <property name="id">movies</property>
+            <property name="submenu">true</property>
+            <visible>!Skin.HasSetting(HomeMenuNoMovieButton) + [Library.HasServices | Library.HasContent(Movies)]</visible>
+          </item>
+          <item id="2">
+            <label>$LOCALIZE[20343]</label>
+            <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+            <property name="menu_id">$NUMBER[6000]</property>
+            <property name="id">tvshows</property>
+            <property name="submenu">true</property>
+            <visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + [Library.HasServices | Library.HasContent(TVShows)]</visible>
+          </item>
+          <!--<item id="14">
+          <label>Plex</label>
+          <onclick>RunAddon(script.plex)</onclick>
+          <property name="menu_id">$NUMBER[1500]</property>
+          <property name="id">plex</property>
+          <visible>!Skin.HasSetting(HomeMenuPlexButton)</visible>
+        </item>-->
+        <item id="15">
+          <label>$LOCALIZE[3]</label>
+          <onclick>ActivateWindow(Video,Files,return)</onclick>
+          <property name="id">videos</property>
+          <visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+        </item>
+        <item id="3">
+          <label>$LOCALIZE[2]</label>
+          <onclick>ActivateWindow(Music,root,return)</onclick>
+          <property name="menu_id">$NUMBER[7000]</property>
+          <property name="id">music</property>
+          <property name="submenu">true</property>
+          <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+        </item>
+        <item id="4">
+          <label>$LOCALIZE[20389]</label>
+          <property name="menu_id">$NUMBER[16000]</property>
+          <onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
+          <property name="id">musicvideos</property>
+          <visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton) + [Library.HasServices | Library.HasContent(musicvideos)]</visible>
+        </item>
+        <item id="7">
+          <label>$LOCALIZE[1]</label>
+          <onclick>ActivateWindow(Pictures)</onclick>
+          <property name="menu_id">$NUMBER[4000]</property>
+          <property name="id">pictures</property>
+          <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+        </item>
+        <item id="13">
+          <label>$LOCALIZE[24001]</label>
+          <onclick>ActivateWindow(Programs,Addons,return)</onclick>
+          <property name="menu_id">$NUMBER[1300]</property>
+          <property name="id">addons</property>
+          <visible>!Skin.HasSetting(HomeMenuNoAddonsButton)</visible>
+        </item>
+      </content>
+    </control>
+  </control>
+  <control type="panel" id="8000" description="Movies RA">
+    <visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+    <visible>Container(300).HasFocus(1)</visible>
+    <animation effect="fade" time="200">Visible</animation>
+    <top>176</top>
+    <left>660</left>
+    <width>1270</width>
+    <height>500</height>
+    <orientation>horizontal</orientation>
+    <onleft>300</onleft>
+    <onup>noop</onup>
+    <ondown>8010</ondown>
+    <onright>8000</onright>
+    <onback>300</onback>
+    <itemlayout width="270" height="350">
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>220</width>
+        <height>330</height>
+        <texture border="12">img/ThumbBorder.png</texture>
+        <bordersize>-9</bordersize>
+      </control>
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>220</width>
+        <height>330</height>
+        <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
+    </itemlayout>
+    <focusedlayout width="270" height="350">
+      <control type="group">
+        <animation type="Focus" reversible="false">
+          <effect type="zoom" center="auto" start="100" end="110" time="100" easing="inout"/>
+        </animation>
+        <animation type="UnFocus" reversible="false">
+          <effect type="zoom" center="auto" start="110" end="100" time="100" easing="inout"/>
+        </animation>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>220</width>
+          <height>330</height>
+          <texture border="12">img/ThumbBorder.png</texture>
+          <bordersize>-9</bordersize>
+        </control>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>220</width>
+          <height>330</height>
+          <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="label">
+          <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+          <left>5</left>
+          <top>354</top>
+          <width>260</width>
+          <height>45</height>
+          <font>size16</font>
+          <textcolor>UnfocusedDark</textcolor>
+          <align>center</align>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </control>
+    </focusedlayout>
+  </control>
+  <control type="panel" id="8010" description="Movies OnDeck">
+    <visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+    <visible>Container(300).HasFocus(1)</visible>
+    <animation effect="fade" time="200">Visible</animation>
+    <top>600</top>
+    <left>660</left>
+    <width>1270</width>
+    <height>500</height>
+    <orientation>horizontal</orientation>
+    <onleft>300</onleft>
+    <onup>8000</onup>
+    <ondown>noop</ondown>
+    <onright>8010</onright>
+    <onback>300</onback>
+    <itemlayout width="270" height="350">
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>220</width>
+        <height>330</height>
+        <texture border="12">img/ThumbBorder.png</texture>
+        <bordersize>-9</bordersize>
+      </control>
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>220</width>
+        <height>330</height>
+        <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
+    </itemlayout>
+    <focusedlayout width="270" height="350">
+      <control type="group">
+        <animation type="Focus" reversible="false">
+          <effect type="zoom" center="auto" start="100" end="110" time="100" easing="inout"/>
+        </animation>
+        <animation type="UnFocus" reversible="false">
+          <effect type="zoom" center="auto" start="110" end="100" time="100" easing="inout"/>
+        </animation>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>220</width>
+          <height>330</height>
+          <texture border="12">img/ThumbBorder.png</texture>
+          <bordersize>-9</bordersize>
+        </control>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>220</width>
+          <height>330</height>
+          <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="label">
+          <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+          <left>5</left>
+          <top>354</top>
+          <width>260</width>
+          <height>45</height>
+          <font>size16</font>
+          <textcolor>UnfocusedDark</textcolor>
+          <align>center</align>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </control>
+    </focusedlayout>
+  </control>
+  <control type="panel" id="8001" description="Shows RA">
+    <visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
+    <visible>Container(300).HasFocus(2)</visible>
+    <animation effect="fade" time="200">Visible</animation>
+    <top>176</top>
+    <left>660</left>
+    <width>1270</width>
+    <height>500</height>
+    <orientation>horizontal</orientation>
+    <onleft>300</onleft>
+    <onup>noop</onup>
+    <ondown>8011</ondown>
+    <onright>8001</onright>
+    <onback>300</onback>
+    <itemlayout width="270" height="350">
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>220</width>
+        <height>330</height>
+        <texture border="12">img/ThumbBorder.png</texture>
+        <bordersize>-9</bordersize>
+      </control>
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>220</width>
+        <height>330</height>
+        <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
+    </itemlayout>
+    <focusedlayout width="270" height="350">
+      <control type="group">
+        <animation type="Focus" reversible="false">
+          <effect type="zoom" center="auto" start="100" end="110" time="100" easing="inout"/>
+        </animation>
+        <animation type="UnFocus" reversible="false">
+          <effect type="zoom" center="auto" start="110" end="100" time="100" easing="inout"/>
+        </animation>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>220</width>
+          <height>330</height>
+          <texture border="12">img/ThumbBorder.png</texture>
+          <bordersize>-9</bordersize>
+        </control>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>220</width>
+          <height>330</height>
+          <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="label">
+          <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+          <left>5</left>
+          <top>354</top>
+          <width>260</width>
+          <height>45</height>
+          <font>size16</font>
+          <textcolor>UnfocusedDark</textcolor>
+          <align>center</align>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </control>
+    </focusedlayout>
+  </control>
+  <control type="panel" id="8011" description="Shows OnDeck">
+    <visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
+    <visible>Container(300).HasFocus(2)</visible>
+    <animation effect="fade" time="200">Visible</animation>
+    <top>600</top>
+    <left>660</left>
+    <width>1270</width>
+    <height>500</height>
+    <orientation>horizontal</orientation>
+    <onleft>300</onleft>
+    <onup>8001</onup>
+    <ondown>noop</ondown>
+    <onright>8011</onright>
+    <onback>300</onback>
+    <itemlayout width="270" height="350">
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>220</width>
+        <height>330</height>
+        <texture border="12">img/ThumbBorder.png</texture>
+        <bordersize>-9</bordersize>
+      </control>
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>220</width>
+        <height>330</height>
+        <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
+    </itemlayout>
+    <focusedlayout width="270" height="350">
+      <control type="group">
+        <animation type="Focus" reversible="false">
+          <effect type="zoom" center="auto" start="100" end="110" time="100" easing="inout"/>
+        </animation>
+        <animation type="UnFocus" reversible="false">
+          <effect type="zoom" center="auto" start="110" end="100" time="100" easing="inout"/>
+        </animation>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>220</width>
+          <height>330</height>
+          <texture border="12">img/ThumbBorder.png</texture>
+          <bordersize>-9</bordersize>
+        </control>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>220</width>
+          <height>330</height>
+          <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="label">
+          <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+          <left>5</left>
+          <top>354</top>
+          <width>260</width>
+          <height>45</height>
+          <font>size16</font>
+          <textcolor>UnfocusedDark</textcolor>
+          <align>center</align>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </control>
+    </focusedlayout>
+  </control>
+  <control type="panel" id="8002" description="Music RA">
+    <visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>
+    <visible>Container(300).HasFocus(3)</visible>
+    <animation effect="fade" time="200">Visible</animation>
+    <top>366</top>
+    <left>660</left>
+    <width>1270</width>
+    <height>500</height>
+    <orientation>horizontal</orientation>
+    <onleft>300</onleft>
+    <onup>noop</onup>
+    <ondown>8010</ondown>
+    <onright>8000</onright>
+    <onback>300</onback>
+    <itemlayout width="350" height="350">
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>302</width>
+        <height>302</height>
+        <texture border="12">img/ThumbBorder.png</texture>
+        <bordersize>-9</bordersize>
+      </control>
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>302</width>
+        <height>302</height>
+        <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
+    </itemlayout>
+    <focusedlayout width="350" height="350">
+      <control type="group">
+        <animation type="Focus" reversible="false">
+          <effect type="zoom" center="auto" start="100" end="110" time="100" easing="inout"/>
+        </animation>
+        <animation type="UnFocus" reversible="false">
+          <effect type="zoom" center="auto" start="110" end="100" time="100" easing="inout"/>
+        </animation>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>302</width>
+          <height>302</height>
+          <texture border="12">img/ThumbBorder.png</texture>
+          <bordersize>-9</bordersize>
+        </control>
+        <control type="image">
+          <left>24</left>
+          <top>24</top>
+          <width>302</width>
+          <height>302</height>
+          <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
+          <aspectratio>scale</aspectratio>
+        </control>
+        <control type="label">
+          <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+          <left>0</left>
+          <top>354</top>
+          <width>350</width>
+          <height>45</height>
+          <font>size16</font>
+          <textcolor>UnfocusedDark</textcolor>
+          <align>center</align>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </control>
+    </focusedlayout>
+  </control>
+</controls>
+</window>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">20</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+    <control type="group">
+      <include>OpenClose</include>
+			<left>0</left>
+      <top>30</top>
+      <control type="label" description="Directory Contains">
+        <left>450</left>
+        <top>-9</top>
+        <align>center</align>
+        <font>size26B</font>
+        <width>1020</width>
+        <label>20344</label>
+      </control>
+      <control type="spincontrolex" id="20" description="Content Type">
+        <left>435</left>
+        <top>75</top>
+        <width>1080</width>
+        <onup>29</onup>
+        <ondown>21</ondown>
+        <onleft>28</onleft>
+        <onright>28</onright>
+        <textoffsetx>20</textoffsetx>
+        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+				<label>$LOCALIZE[20344]</label>
+      </control>
+      <control type="panel" id="21" description="Scraper list">
+        <left>705</left>
+        <top>171</top>
+        <width>810</width>
+        <height>210</height>
+        <onup>20</onup>
+        <onleft>5</onleft>
+        <onright>20</onright>
+        <ondown>5</ondown>
+        <itemlayout height="69" width="810">
+          <control type="label">
+            <left>30</left>
+            <width>750</width>
+            <height>69</height>
+            <font>size20</font>
+            <info>ListItem.Label</info>
+          </control>
+        </itemlayout>
+        <focusedlayout height="69" width="810">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>4</left>
+              <top>4</top>
+              <width>776</width>
+              <height>60</height>
+              <texture border="36">focus/FrameFO.png</texture>
+              <bordersize>-26</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+          <control type="label">
+            <left>30</left>
+            <width>750</width>
+            <height>69</height>
+            <font>size20</font>
+            <textcolor>FocusedDark</textcolor>
+            <info>ListItem.Label</info>
+          </control>
+        </control>
+        </focusedlayout>
+      </control>
+      <control type="grouplist" id="5" description="Control Area">
+        <left>435</left>
+        <top>405</top>
+        <width>1080</width>
+        <height>450</height>
+        <itemgap>3</itemgap>
+        <onup>21</onup>
+        <ondown>22</ondown>
+        <onleft>noop</onleft>
+        <onright>noop</onright>
+        <orientation>vertical</orientation>
+      </control>
+      <control type="button" id="7" description="Button Default">
+        <width>1080</width>
+        <align>left</align>
+        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+      </control>
+      <control type="radiobutton" id="8" description="RadioButton">
+        <width>1080</width>
+        <align>left</align>
+        <radioleft>1020</radioleft>
+        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+      </control>
+      <control type="group">
+        <top>72</top>
+        <control type="button" id="22" description="Settings">
+          <left>435</left>
+          <top>723</top>
+          <width>1080</width>
+          <height>75</height>
+          <align>left</align>
+          <label>$LOCALIZE[5]</label>
+          <onup>5</onup>
+          <onleft>28</onleft>
+          <onright>29</onright>
+          <ondown>28</ondown>
+          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        </control>
+        <control type="button" id="28" description="OK">
+          <left>510</left>
+          <top>831</top>
+          <width>330</width>
+          <label>186</label>
+          <onleft>noop</onleft>
+          <onright>29</onright>
+          <onup>22</onup>
+          <ondown>20</ondown>
+          <align>center</align>
+          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        </control>
+        <control type="button" id="29" description="Cancel">
+          <left>1008</left>
+          <top>831</top>
+          <width>330</width>
+          <label>222</label>
+          <onleft>28</onleft>
+          <onright>noop</onright>
+          <onup>22</onup>
+          <ondown>20</ondown>
+          <align>center</align>
+          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        </control>
+      </control>
+      <control type="image" description="Addon Icon">
+        <left>441</left>
+        <top>189</top>
+        <width>180</width>
+        <height>180</height>
+        <texture fallback="DefaultFolder.png">$INFO[ListItem.Thumb]</texture>
+        <aspectratio aligny="top">scale</aspectratio>
+      </control>
+    </control>
+  </controls>
+</window>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol>3</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+    <control type="group" description="Content">
+      <include>OpenClose</include>
+      <control type="image" description="Sidebar">
+        <left>0</left>
+        <top>0</top>
+        <width>471</width>
+        <height>1080</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>img/Sidebar.png</texture>
+      </control>
+      <control type="label" id="1" description="Header label">
+        <include>HeadingR</include>
+        <label>13406</label>
+      </control>
+      <control type="panel" id="3">
+        <left>540</left>
+        <top>150</top>
+        <width>1260</width>
+        <height>810</height>
+        <onleft>5</onleft>
+        <itemlayout width="1260" height="80">
+            <control type="label" description="Main Label">
+              <left>30</left>
+              <right>30</right>
+              <height>81</height>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="image">
+                <visible>ListItem.IsSelected</visible>
+                <right>20</right>
+                <top>0</top>
+                <width>30</width>
+                <height>81</height>
+                <texture colordiffuse="UnfocusedDark">img/RadioON.png</texture>
+                <aspectratio>keep</aspectratio>
+              </control>
+          </itemlayout>
+          <focusedlayout width="1260" height="80">
+            <control type="group">
+              <include>FocusButtonsAnimation</include>
+              <control type="image">
+                <animation effect="fade" time="100">VisibleChange</animation>
+                <left>4</left>
+                <top>4</top>
+                <width>1252</width>
+                <height>72</height>
+                <texture border="36">focus/FrameFO.png</texture>
+                <bordersize>-26</bordersize>
+          	    <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="label" description="Main Label">
+              <left>30</left>
+              <right>60</right>
+              <height>81</height>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+              </control>
+              <control type="image">
+                <visible>ListItem.IsSelected</visible>
+                <right>20</right>
+                <top>0</top>
+                <width>30</width>
+                <height>81</height>
+                <texture colordiffuse="FocusedDark">img/RadioON.png</texture>
+                <aspectratio>keep</aspectratio>
+              </control>
+          </control>
+          </focusedlayout>
+      </control>
+      <control type="panel" id="6">
+        <left>1058</left>
+        <top>180</top>
+        <width>784</width>
+        <height>799</height>
+        <pagecontrol>60</pagecontrol>
+        <onleft>5</onleft>
+        <itemlayout width="784" height="80">
+            <control type="label" description="Main Label">
+              <left>30</left>
+              <right>30</right>
+              <height>81</height>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="image">
+                <visible>ListItem.IsSelected</visible>
+                <right>20</right>
+                <top>0</top>
+                <width>30</width>
+                <height>81</height>
+                <texture colordiffuse="UnfocusedDark">img/RadioON.png</texture>
+                <aspectratio>keep</aspectratio>
+              </control>
+          </itemlayout>
+          <focusedlayout width="784" height="80">
+            <control type="group">
+              <include>FocusButtonsAnimation</include>
+              <control type="image">
+                <animation effect="fade" time="100">VisibleChange</animation>
+                <left>4</left>
+                <top>4</top>
+                <width>776</width>
+                <height>72</height>
+                <texture border="36">focus/FrameFO.png</texture>
+                <bordersize>-26</bordersize>
+          	    <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="label" description="Main Label">
+              <left>30</left>
+              <right>60</right>
+              <height>81</height>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+              </control>
+              <control type="image">
+                <visible>ListItem.IsSelected</visible>
+                <right>20</right>
+                <top>0</top>
+                <width>30</width>
+                <height>81</height>
+                <texture colordiffuse="FocusedDark">img/RadioON.png</texture>
+                <aspectratio>keep</aspectratio>
+              </control>
+          </control>
+          </focusedlayout>
+      </control>
+      <control type="button" id="5" description="Manual Get more common button">
+        <left>60</left>
+        <top>150</top>
+        <width>360</width>
+        <height>81</height>
+        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        <font>size20</font>
+        <onleft>3</onleft>
+        <onright>3</onright>
+      </control>
+      <control type="group">
+        <left>-60</left>
+        <visible>!Control.IsVisible(3)</visible>
+        <control type="image" description="Item Thumb">
+          <centerleft>810</centerleft>
+          <top>210</top>
+          <width>450</width>
+          <height>450</height>
+          <fadetime>200</fadetime>
+          <texture fallback="DefaultFolder.png">$INFO[Container(6).ListItem.Thumb]</texture>
+          <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+          <bordersize>9</bordersize>
+          <aspectratio aligny="top">keep</aspectratio>
+        </control>
+        <control type="label" description="Author">
+          <visible>!IsEmpty(Container(6).ListItem.Property(Addon.Version))</visible>
+          <centerleft>810</centerleft>
+          <top>720</top>
+          <width>450</width>
+          <height>150</height>
+          <align>center</align>
+          <font>size22</font>
+          <label>$INFO[Container(6).ListItem.Property(Addon.Version),$LOCALIZE[24051] ]</label>
+        </control>
+        <control type="label" description="Author">
+          <visible>!IsEmpty(Container(6).ListItem.Property(Addon.Creator))</visible>
+          <centerleft>810</centerleft>
+          <top>839</top>
+          <width>450</width>
+          <height>150</height>
+          <wrapmultiline>true</wrapmultiline>
+          <align>center</align>
+          <font>size22</font>
+          <label>$INFO[Container(6).ListItem.Property(Addon.Creator),$LOCALIZE[21863]: ]</label>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>

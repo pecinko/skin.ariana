@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">50</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+    <include>View_50</include>
+    <control type="group" description="Thumbnails 53">
+      <visible>Control.IsVisible(53)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="group" description="Container">
+        <control type="panel" id="53" description="Grid">
+          <visible>[Container.Content(albums) | Container.content(artists)]</visible>
+          <viewtype label="21371">Thumbnails</viewtype>
+          <left>60</left>
+          <top>90</top>
+          <width>1800</width>
+          <height>980</height>
+          <orientation>vertical</orientation>
+          <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
+          <onright condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onright>
+          <onup>PageUp</onup>
+          <ondown>PageDown</ondown>
+          <preloaditems>4</preloaditems>
+          <itemlayout height="408" width="360">
+            <control type="image">
+              <left>26</left>
+              <top>10</top>
+              <width>308</width>
+              <height>308</height>
+              <texture border="12">img/ThumbBorder.png</texture>
+              <bordersize>-5</bordersize>
+            </control>
+            <control type="image">
+              <left>26</left>
+              <top>10</top>
+              <width>308</width>
+              <height>308</height>
+              <texture background="true">$INFO[ListItem.Thumb]</texture>
+              <aspectratio aligny="top">scale</aspectratio>
+            </control>
+            </itemlayout>
+          <focusedlayout height="408" width="360">
+            <control type="group">
+              <animation type="Focus" reversible="false">
+                <effect type="zoom" center="auto" start="100" end="110" time="120" easing="inout"/>
+              </animation>
+              <animation type="UnFocus" reversible="false">
+                <effect type="zoom" center="auto" start="110" end="100" time="120" easing="inout"/>
+              </animation>
+              <control type="image">
+                <left>26</left>
+                <top>10</top>
+                <width>308</width>
+                <height>308</height>
+                <texture border="12">img/ThumbBorder.png</texture>
+                <bordersize>-5</bordersize>
+              </control>
+              <control type="image">
+                <left>26</left>
+                <top>10</top>
+                <width>308</width>
+                <height>308</height>
+                <texture background="true">$INFO[ListItem.Thumb]</texture>
+                <aspectratio aligny="top">scale</aspectratio>
+              </control>
+              <control type="label">
+                <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+                <left>26</left>
+                <top>330</top>
+                <width>308</width>
+                <height>30</height>
+                <font>size16</font>
+                <textcolor>UnfocusedDark</textcolor>
+                <align>center</align>
+                <label>$INFO[ListItem.Label]</label>
+              </control>
+            </control>
+          </focusedlayout>
+        </control>
+      </control>
+    </control>
+    <control type="group" description="BigList 52">
+      <visible>Control.IsVisible(52)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="Main Label">
+        <centerleft>1400</centerleft>
+        <centertop>90</centertop>
+        <align>center</align>
+        <font>size28B</font>
+        <width>850</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$VAR[GlobalHeadings]</label>
+      </control>
+      <control type="image" description="Thumb">
+        <centerleft>480</centerleft>
+        <centertop>580</centertop>
+        <width>600</width>
+        <height>760</height>
+        <include>Icon_Fade</include>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+        <bordersize>9</bordersize>
+        <aspectratio>keep</aspectratio>
+      </control>
+      <control type="group" description="Infolist 52">
+        <left>0</left>
+        <top>0</top>
+        <control type="list" id="52">
+          <visible>container.content(albums) | container.content(artists)</visible>
+          <left>1020</left>
+          <top>164</top>
+          <width>840</width>
+          <height>847</height>
+          <pagecontrol>60</pagecontrol>
+          <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
+          <onright condition="Skin.HasSetting(Scrollbars_Active)">9001</onright>
+          <onup>52</onup>
+          <ondown>52</ondown>
+          <viewtype label="537">Big List</viewtype>
+          <preloaditems>4</preloaditems>
+          <itemlayout condition="container.content(albums) | container.content(artists)" width="840" height="106">
+            <control type="label" description="Main Label">
+              <left>34</left>
+              <right>125</right>
+              <top>0</top>
+              <height>66</height>
+              <font>size20B</font>
+              <scroll>false</scroll>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label" description="Label2">
+              <visible>!IsEmpty(ListItem.Label2)</visible>
+              <left>34</left>
+              <right>125</right>
+              <bottom>0</bottom>
+              <height>66</height>
+              <font>size16</font>
+              <scroll>false</scroll>
+              <label>$INFO[ListItem.Label2]</label>
+            </control>
+            <control type="label" description="Label2">
+              <visible>IsEmpty(ListItem.Label2)</visible>
+              <left>34</left>
+              <right>125</right>
+              <bottom>0</bottom>
+              <height>66</height>
+              <font>size16</font>
+              <scroll>false</scroll>
+              <label>$INFO[ListItem.Year]</label>
+            </control>
+          </itemlayout>
+          <focusedlayout condition="container.content(albums) | container.content(artists)" width="840" height="106">
+            <control type="group">
+              <include>FocusButtonsAnimation</include>
+              <control type="image">
+                <animation effect="fade" time="100">VisibleChange</animation>
+                <left>16</left>
+                <top>9</top>
+                <width>768</width>
+                <height>88</height>
+                <texture border="36">focus/FrameFO.png</texture>
+                <bordersize>-26</bordersize>
+                <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="label" description="Main Label">
+                <left>34</left>
+                <right>125</right>
+                <top>0</top>
+                <height>66</height>
+                <font>size20B</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+              </control>
+              <control type="label" description="Label2">
+                <visible>!IsEmpty(ListItem.Label2)</visible>
+                <left>34</left>
+                <right>125</right>
+                <bottom>0</bottom>
+                <height>66</height>
+                <font>size16</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Label2]</label>
+              </control>
+              <control type="label" description="Label2">
+                <visible>IsEmpty(ListItem.Label2)</visible>
+                <left>34</left>
+                <right>125</right>
+                <bottom>0</bottom>
+                <height>66</height>
+                <font>size16</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Year]</label>
+              </control>
+            </control>
+          </focusedlayout>
+        </control>
+      </control>
+    </control>
+    <control type="group" description="BigList 51">
+      <visible>Control.IsVisible(51)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="Show Label">
+        <left>180</left>
+        <top>80</top>
+        <font>size28B</font>
+        <width>800</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$INFO[ListItem.Artist]</label>
+      </control>
+      <control type="label" description="Season Label">
+        <left>180</left>
+        <top>132</top>
+        <font>size22B</font>
+        <width>800</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$INFO[ListItem.Album]</label>
+      </control>
+      <control type="label" description="Genre">
+        <left>180</left>
+        <top>200</top>
+        <font>size20B</font>
+        <width>800</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$INFO[ListItem.Genre]</label>
+      </control>
+      <control type="textbox" description="Show Plot">
+        <left>180</left>
+        <top>264</top>
+        <width>758</width>
+        <height>84</height>
+        <font>size20</font>
+        <align>left</align>
+        <aligny>bottom</aligny>
+        <label>$INFO[ListItem.Property(Album_Description)]</label>
+      </control>
+      <control type="image" description="Thumb">
+        <centertop>460</centertop>
+        <centerleft>1510</centerleft>
+        <width>640</width>
+        <height>640</height>
+        <include>Icon_Fade</include>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <aspectratio align="center" aligny="center">keep</aspectratio>
+        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+        <bordersize>4</bordersize>
+      </control>
+      <control type="grouplist" id="9001">
+        <left>1192</left>
+        <top>830</top>
+        <width>638</width>
+        <height>150</height>
+        <itemgap>20</itemgap>
+        <onleft>51</onleft>
+        <onright>noop</onright>
+        <onup>51</onup>
+        <ondown>51</ondown>
+        <align>center</align>
+        <orientation>horizontal</orientation>
+        <control type="button" id="16" description="Party">
+          <width>144</width>
+          <height>80</height>
+          <texturefocus>buttons/PartyFO.png</texturefocus>
+          <texturenofocus>buttons/PartyNF.png</texturenofocus>
+          <label>$LOCALIZE[589]</label>
+          <font>size14</font>
+          <aligny>top</aligny>
+          <textoffsety>80</textoffsety>
+        </control>
+        <control type="button" id="697" description="Playlist">
+          <onclick>ActivateWindow(musicplaylist)</onclick>
+          <width>144</width>
+          <height>80</height>
+          <texturefocus>buttons/PlaylistFO.png</texturefocus>
+          <texturenofocus>buttons/PlaylistNF.png</texturenofocus>
+          <label>$LOCALIZE[31040]</label>
+          <wrapmultiline>True</wrapmultiline>
+          <font>size14</font>
+          <aligny>top</aligny>
+          <textoffsety>80</textoffsety>
+        </control>
+        <control type="button" id="699" description="Player Fullscreen">
+          <visible>Player.HasMedia</visible>
+          <onclick condition="Player.HasMedia">fullscreen</onclick>
+          <width>144</width>
+          <height>80</height>
+          <texturefocus>buttons/FullscreenFO.png</texturefocus>
+          <texturenofocus>buttons/FullscreenNF.png</texturenofocus>
+          <label>$LOCALIZE[16003]</label>
+          <wrapmultiline>True</wrapmultiline>
+          <font>size14</font>
+          <aligny>top</aligny>
+          <textoffsety>80</textoffsety>
+        </control>
+      </control>
+      <control type="textbox" description="Plot51">
+        <top>800</top>
+        <left>1198</left>
+        <width>636</width>
+        <height>168</height>
+        <font>size20</font>
+        <align>left</align>
+        <label>$INFO[ListItem.Property(Album_Description)]</label>
+      </control>
+      <control type="group" description="Infolist">
+        <left>0</left>
+        <top>0</top>
+        <control type="list" id="51">
+          <visible>container.content(songs)</visible>
+          <left>140</left>
+          <top>390</top>
+          <width>920</width>
+          <height>635</height>
+          <pagecontrol>60</pagecontrol>
+          <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
+          <onright>9001</onright>
+          <onup>51</onup>
+          <ondown>51</ondown>
+          <viewtype label="537">Big List 51</viewtype>
+          <preloaditems>4</preloaditems>
+          <itemlayout condition="container.content(songs)" width="920" height="106">
+            <control type="label" description="Main Label">
+              <left>40</left>
+              <right>125</right>
+              <top>0</top>
+              <height>66</height>
+              <font>size20B</font>
+              <scroll>false</scroll>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label" description="Album">
+              <left>40</left>
+              <right>125</right>
+              <bottom>0</bottom>
+              <height>66</height>
+              <font>size16</font>
+              <scroll>false</scroll>
+              <label>$INFO[ListItem.Album]</label>
+            </control>
+            <control type="label" description="Duration">
+              <visible>!ListItem.IsPlaying</visible>
+              <right>76</right>
+              <top>0</top>
+              <height>106</height>
+              <width>330</width>
+              <font>size16</font>
+              <align>right</align>
+              <label>$INFO[ListItem.Duration]</label>
+            </control>
+            <control type="image" description="playing">
+              <visible>ListItem.IsPlaying</visible>
+              <right>76</right>
+              <top>0</top>
+              <height>106</height>
+              <width>36</width>
+              <aspectratio>keep</aspectratio>
+              <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
+            </control>
+          </itemlayout>
+          <focusedlayout condition="container.content(songs)" width="920" height="106">
+            <control type="group">
+              <include>FocusButtonsAnimation</include>
+              <control type="image">
+                <visible>Control.HasFocus(51)</visible>
+                <animation effect="fade" time="100">VisibleChange</animation>
+                <left>16</left>
+                <top>9</top>
+                <width>848</width>
+                <height>88</height>
+                <texture border="36">focus/FrameFO.png</texture>
+                <bordersize>-26</bordersize>
+                <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="label" description="Main Label">
+                <left>40</left>
+                <right>125</right>
+                <top>0</top>
+                <height>66</height>
+                <font>size20B</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+              </control>
+              <control type="label" description="Album">
+                <left>40</left>
+                <right>125</right>
+                <bottom>0</bottom>
+                <height>66</height>
+                <font>size16</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Album]</label>
+              </control>
+              <control type="label" description="Duration">
+                <visible>!ListItem.IsPlaying</visible>
+                <right>76</right>
+                <top>0</top>
+                <height>106</height>
+                <width>330</width>
+                <font>size16</font>
+                <align>right</align>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Duration]</label>
+              </control>
+              <control type="image" description="playing">
+                <visible>ListItem.IsPlaying</visible>
+                <right>76</right>
+                <top>0</top>
+                <height>106</height>
+                <width>36</width>
+                <aspectratio>keep</aspectratio>
+                <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
+              </control>
+            </control>
+          </focusedlayout>
+        </control>
+      </control>
+    </control>
+
+    <control type="group" description="Side menu 9000 group">
+      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+      <include>MenuFullBG</include>
+      <include>VisibleFadeEffect</include>
+      <control type="grouplist" id="9000">
+        <include>9000GrouplistParameters</include>
+        <control type="button" id="2" description="Views">
+          <include>9000Buttons</include>
+        </control>
+        <control type="button" id="3" description="Sort">
+          <include>9000Buttons</include>
+        </control>
+        <control type="togglebutton" id="4" description="Ordering">
+          <include>9000Buttons</include>
+          <label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
+          <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
+        </control>
+        <control type="togglebutton" id="16" description="PartyMode">
+          <include>9000Buttons</include>
+          <label>$LOCALIZE[589]: $LOCALIZE[1223]</label>
+          <altlabel>$LOCALIZE[589]: $LOCALIZE[305]</altlabel>
+        </control>
+		<control type="togglebutton" id="20" description="Update library">
+          <include>9000Buttons</include>
+          <label>653</label>
+		  <altlabel>13353</altlabel>
+		  <usealttexture>library.isscanningmusic</usealttexture>
+        </control>
+        <control type="button" id="697" description="Playlist">
+          <include>9000Buttons</include>
+          <label>$LOCALIZE[31040]</label>
+          <onclick>ActivateWindow(musicplaylist)</onclick>
+        </control>
+		<control type="button" id="698" description="Files">
+          <include>9000Buttons</include>
+          <label>$LOCALIZE[1024] $LOCALIZE[744]</label>
+          <onclick>ActivateWindow(MusicFiles,root)</onclick>
+        </control>
+        <control type="togglebutton" id="699" description="Playing">
+          <enable>Player.HasMedia</enable>
+          <include>9000Buttons</include>
+          <label>$LOCALIZE[16003]</label>
+          <altlabel>$LOCALIZE[31977]</altlabel>
+          <usealttexture>Player.HasMedia</usealttexture>
+          <onclick>fullscreen</onclick>
+          <altclick>fullscreen</altclick>
+          <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

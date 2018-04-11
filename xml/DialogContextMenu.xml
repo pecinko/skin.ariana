@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">996</defaultcontrol>
+  <controls>
+    <include>DialogFullBG</include>
+    <control type="group">
+      <include>OpenClose</include>
+      <control type="grouplist" id="996" description="Context menu container">
+        <centerleft>960</centerleft>
+        <height max="1000">auto</height>
+        <width>500</width>
+        <itemgap>12</itemgap>
+        <align>center</align>
+        <aligny>center</aligny>
+        <control type="textbox">
+          <width>100%</width>
+          <height>150</height>
+          <font>size22B</font>
+          <label>$INFO[ListItem.Label]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <textcolor>Selected</textcolor>
+        </control>
+        <control type="button" id="1000" description="Buttons">
+          <include>FocusButtonsAnimation</include>
+          <width>500</width>
+          <height>68</height>
+          <textoffsetx>0</textoffsetx>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>size20B</font>
+          <texturenofocus border="4">menu/MenuButtonNF.png</texturenofocus>
+          <texturefocus colordiffuse="Selected" border="4">menu/MenuButtonFO.png</texturefocus>
+        </control>
+        <control type="button" id="1009" description="Buttons">
+          <include>FocusButtonsAnimation</include>
+          <width>500</width>
+          <height>68</height>
+          <textoffsetx>0</textoffsetx>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>size20B</font>
+          <label>653</label>
+          <onclick>UpdateLibrary(video)</onclick>
+          <texturenofocus border="4">menu/MenuButtonNF.png</texturenofocus>
+          <texturefocus colordiffuse="Selected" border="4">menu/MenuButtonFO.png</texturefocus>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>

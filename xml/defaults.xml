@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <default type="label">
+    <height>60</height>
+    <align>left</align>
+    <aligny>center</aligny>
+    <font>size20</font>
+    <textcolor>UnfocusedDark</textcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <scrollspeed>50</scrollspeed>
+    <scrollsuffix> &#0000; </scrollsuffix>
+  </default>
+  <default type="fadelabel">
+    <height>60</height>
+    <align>left</align>
+    <aligny>center</aligny>
+    <font>size20</font>
+    <textoffsetx>20</textoffsetx>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <scrollout>false</scrollout>
+    <pauseatend>3000</pauseatend>
+    <scrollsuffix> • </scrollsuffix>
+  </default>
+  <default type="textbox">
+    <font>size20</font>
+    <align>justify</align>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <pagecontrol>61</pagecontrol>
+    <pulseonselect>false</pulseonselect>
+    <autoscroll delay="8000" time="4300" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+  </default>
+  <default type="image">
+    <align>center</align>
+    <aligny>center</aligny>
+    <aspectratio>stretch</aspectratio>
+  </default>
+  <default type="button">
+    <width>390</width>
+    <height>60</height>
+    <align>center</align>
+    <aligny>center</aligny>
+    <font>size20</font>
+    <textoffsetx>20</textoffsetx>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <texturenofocus>-</texturenofocus>
+    <alttexturenofocus>-</alttexturenofocus>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
+    <alttexturefocus border="9">img/SettingsButtonFO.png</alttexturefocus>
+    <include>FocusButtonsAnimation</include>
+    <!--<texturefocus border="9">img/MediaButton2.png</texturefocus>-->
+    <!--<texturenofocus border="8">img/ButtonNF.png</texturenofocus>-->
+    <pulseonselect>false</pulseonselect>
+  </default>
+  <default type="edit">
+    <width>390</width>
+    <height>60</height>
+    <align>center</align>
+    <aligny>center</aligny>
+    <font>size20</font>
+    <textoffsetx>20</textoffsetx>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>Label1</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
+    <texturefocus border="9">img/MediaButton2.png</texturefocus>
+    <include>FocusButtonsAnimation</include>
+  </default>
+  <default type="togglebutton">
+    <width>450</width>
+    <height>60</height>
+    <align>left</align>
+    <aligny>center</aligny>
+    <font>size20</font>
+    <textoffsetx>20</textoffsetx>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <altselectedcolor>Label1FO</altselectedcolor>
+    <align>center</align>
+    <aligny>center</aligny>
+    <pulseonselect>false</pulseonselect>
+    <texturenofocus>-</texturenofocus>
+    <alttexturenofocus>-</alttexturenofocus>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
+    <alttexturefocus border="9">img/SettingsButtonFO.png</alttexturefocus>
+    <include>FocusButtonsAnimation</include>
+  </default>
+  <default type="radiobutton">
+    <height>60</height>
+    <align>left</align>
+    <aligny>center</aligny>
+    <font>size20</font>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <radiowidth>54</radiowidth>
+    <radioheight>28</radioheight>
+    <textoffsetx>20</textoffsetx>
+    <!--<radioposx>20</radioposx>-->
+    <pulseonselect>false</pulseonselect>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <textureradioonfocus colordiffuse="FocusedDark">img/RadioON.png</textureradioonfocus>
+    <textureradioonnofocus colordiffuse="UnfocusedDark">img/RadioON.png</textureradioonnofocus>
+    <textureradioofffocus colordiffuse="FocusedDark">img/RadioOFF.png</textureradioofffocus>
+    <textureradiooffnofocus colordiffuse="UnfocusedDark">img/RadioOFF.png</textureradiooffnofocus>
+    <include>FocusButtonsAnimation</include>
+  </default>
+  <default type="spincontrol">
+    <textureup colordiffuse="UnfocusedDark" flipy="true">img/SpinDW.png</textureup>
+    <textureupfocus colordiffuse="FocusedDark" flipy="true">img/SpinDW.png</textureupfocus>
+    <texturedown colordiffuse="UnfocusedDark">img/SpinDW.png</texturedown>
+    <texturedownfocus colordiffuse="FocusedDark">img/SpinDW.png</texturedownfocus>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <spinwidth>30</spinwidth>
+    <spinheight>40</spinheight>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <textoffsetx>20</textoffsetx>
+    <align>left</align>
+    <aligny>center</aligny>
+    <reverse>yes</reverse>
+    <pulseonselect>false</pulseonselect>
+    <include>FocusButtonsAnimation</include>
+  </default>
+  <default type="spincontrolex">
+    <width>450</width>
+    <height>60</height>
+    <font>size20</font>
+    <textureup colordiffuse="UnfocusedDark" flipy="true">img/SpinDW.png</textureup>
+    <textureupfocus colordiffuse="FocusedDark" flipy="true">img/SpinDW.png</textureupfocus>
+    <texturedown colordiffuse="UnfocusedDark">img/SpinDW.png</texturedown>
+    <texturedownfocus colordiffuse="FocusedDark">img/SpinDW.png</texturedownfocus>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <spinwidth>30</spinwidth>
+    <spinheight>40</spinheight>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <textoffsetx>20</textoffsetx>
+    <align>left</align>
+    <aligny>center</aligny>
+    <reverse>yes</reverse>
+    <pulseonselect>false</pulseonselect>
+    <include>FocusButtonsAnimation</include>
+  </default>
+  <default type="slider" description="Seek Slider">
+    <height>60</height>
+    <width>450</width>
+    <aligny>center</aligny>
+    <font>size20</font>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <sliderwidth>150</sliderwidth>
+    <sliderheight>24</sliderheight>
+    <texturesliderbar border="3,0,3,0">HUD/SliderBG.png</texturesliderbar>
+    <textureslidernib>HUD/SliderNib.png</textureslidernib>
+    <textureslidernibfocus colordiffuse="Selected">HUD/SliderNib.png</textureslidernibfocus>
+    <texturefocus border="9">img/MediaButton2.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <pulseonselect>false</pulseonselect>
+    <include>FocusButtonsAnimation</include>
+  </default>
+  <default type="sliderex" description="Default Slider">
+    <height>60</height>
+    <width>450</width>
+    <aligny>center</aligny>
+    <font>size20</font>
+    <textoffsetx>20</textoffsetx>
+    <textcolor>UnfocusedDark</textcolor>
+    <focusedcolor>FocusedDark</focusedcolor>
+    <selectedcolor>Selected</selectedcolor>
+    <disabledcolor>DisabledDark</disabledcolor>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <sliderwidth>150</sliderwidth>
+    <sliderheight>24</sliderheight>
+    <texturesliderbar border="3,0,3,0">HUD/SliderBG.png</texturesliderbar>
+    <textureslidernib colordiffuse="UnfocusedDark">HUD/SliderNib.png</textureslidernib>
+    <textureslidernibfocus colordiffuse="FocusedDark">HUD/SliderNib.png</textureslidernibfocus>
+    <texturefocus border="9">img/MediaButton2.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <pulseonselect>false</pulseonselect>
+    <include>FocusButtonsAnimation</include>
+  </default>
+  <default type="progress">
+    <reveal>true</reveal>
+    <texturebg>OSD/ProgressBackground.png</texturebg>
+    <lefttexture>controls/ProgressLeft.png</lefttexture>
+    <midtexture>controls/ProgressMid.png</midtexture>
+    <righttexture>controls/ProgressRight.png</righttexture>
+    <overlaytexture>-</overlaytexture>
+  </default>
+  <default type="scrollbar">
+    <width>9</width>
+    <orientation>vertical</orientation>
+    <texturesliderbackground border="0,4,0,4">Scrollbar/ScrollbarBG.png</texturesliderbackground>
+    <texturesliderbar border="0,4,0,4">Scrollbar/ScrollerNF.png</texturesliderbar>
+    <texturesliderbarfocus border="0,4,0,4">Scrollbar/ScrollerFO.png</texturesliderbarfocus>
+    <pulseonselect>false</pulseonselect>
+    <showonepage>false</showonepage>
+  </default>
+</includes>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">51</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+    <control type="visualisation" id="2" description="Visualisation">
+      <left>0</left>
+      <top>0</top>
+      <width>100%</width>
+      <height>100%</height>
+    </control>
+    <control type="group" description="BigList 51">
+      <visible>Control.IsVisible(51)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="Title Party">
+        <visible>MusicPartyMode.Enabled</visible>
+        <left>180</left>
+        <top>80</top>
+        <font>size28B</font>
+        <width>800</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$LOCALIZE[589]</label>
+      </control>
+      <control type="label" description="Title">
+        <visible>!MusicPartyMode.Enabled</visible>
+        <left>180</left>
+        <top>80</top>
+        <font>size28B</font>
+        <width>800</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$LOCALIZE[13350]</label>
+      </control>
+      <control type="label" description="Subtitle">
+        <left>180</left>
+        <top>132</top>
+        <font>size22B</font>
+        <width>800</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$INFO[MusicPlayer.Artist,, - ] $INFO[MusicPlayer.Title,, : ] $INFO[MusicPlayer.TimeRemaining]</label>
+      </control>
+      <control type="label" description="Genre">
+        <left>180</left>
+        <top>200</top>
+        <font>size20B</font>
+        <width>800</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$LOCALIZE[179] $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength]</label>
+      </control>
+      <control type="group" description="Infolist">
+        <left>0</left>
+        <top>0</top>
+        <control type="list" id="51">
+          <left>140</left>
+          <top>390</top>
+          <width>920</width>
+          <height>635</height>
+          <pagecontrol>60</pagecontrol>
+          <onleft>noop</onleft>
+          <onright>9001</onright>
+          <onup>51</onup>
+          <ondown>51</ondown>
+          <viewtype label="537">Big List 51</viewtype>
+          <preloaditems>4</preloaditems>
+          <itemlayout condition="container.content(songs)" width="920" height="106">
+            <control type="image">
+              <left>16</left>
+              <top>9</top>
+              <width>848</width>
+              <height>88</height>
+              <texture border="4">img/SettingsButtonNF.png</texture>
+              <bordersize>-4</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image" description="Thumb">
+              <top>9</top>
+              <left>18</left>
+              <width>86</width>
+              <height>86</height>
+              <texture background="true">$INFO[ListItem.Thumb]</texture>
+              <bordersize>4</bordersize>
+              <aspectratio>scale</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <left>120</left>
+              <right>125</right>
+              <top>0</top>
+              <height>66</height>
+              <font>size20B</font>
+              <scroll>false</scroll>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label" description="Album">
+              <left>120</left>
+              <right>125</right>
+              <bottom>0</bottom>
+              <height>66</height>
+              <font>size16</font>
+              <scroll>false</scroll>
+              <label>$INFO[ListItem.Album]</label>
+            </control>
+            <control type="label" description="Duration">
+              <visible>!ListItem.IsPlaying</visible>
+              <right>76</right>
+              <top>0</top>
+              <height>106</height>
+              <width>330</width>
+              <font>size16</font>
+              <align>right</align>
+              <label>$INFO[ListItem.Duration]</label>
+            </control>
+            <control type="image" description="playing">
+              <visible>ListItem.IsPlaying</visible>
+              <right>76</right>
+              <top>0</top>
+              <height>106</height>
+              <width>36</width>
+              <aspectratio>keep</aspectratio>
+              <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
+            </control>
+          </itemlayout>
+          <focusedlayout condition="container.content(songs)" width="920" height="106">
+            <control type="group">
+              <include>FocusButtonsAnimation</include>
+              <control type="image">
+                <left>16</left>
+                <top>9</top>
+                <width>848</width>
+                <height>88</height>
+                <texture border="4">img/SettingsButtonNF.png</texture>
+                <bordersize>-4</bordersize>
+                <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="image">
+                <visible>Control.HasFocus(51)</visible>
+                <animation effect="fade" time="100">VisibleChange</animation>
+                <left>16</left>
+                <top>9</top>
+                <width>848</width>
+                <height>88</height>
+                <texture border="36">focus/FrameFO.png</texture>
+                <bordersize>-26</bordersize>
+                <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="image" description="Thumb">
+                <top>9</top>
+                <left>18</left>
+                <width>86</width>
+                <height>86</height>
+                <texture background="true">$INFO[ListItem.Thumb]</texture>
+                <bordersize>4</bordersize>
+                <aspectratio>scale</aspectratio>
+              </control>
+              <control type="label" description="Main Label">
+                <left>120</left>
+                <right>125</right>
+                <top>0</top>
+                <height>66</height>
+                <font>size20B</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+              </control>
+              <control type="label" description="Album">
+                <left>120</left>
+                <right>125</right>
+                <bottom>0</bottom>
+                <height>66</height>
+                <font>size16</font>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Album]</label>
+              </control>
+              <control type="label" description="Duration">
+                <visible>!ListItem.IsPlaying</visible>
+                <right>76</right>
+                <top>0</top>
+                <height>106</height>
+                <width>330</width>
+                <font>size16</font>
+                <align>right</align>
+                <textcolor>FocusedDark</textcolor>
+                <label>$INFO[ListItem.Duration]</label>
+              </control>
+              <control type="image" description="playing">
+                <visible>ListItem.IsPlaying</visible>
+                <right>76</right>
+                <top>0</top>
+                <height>106</height>
+                <width>36</width>
+                <aspectratio>keep</aspectratio>
+                <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
+              </control>
+            </control>
+          </focusedlayout>
+        </control>
+      </control>
+      <control type="grouplist" id="9001">
+        <visible>!MusicPartyMode.Enabled</visible>
+        <include>VisibleFadeEffect</include>
+        <left>1192</left>
+        <top>830</top>
+        <width>638</width>
+        <height>150</height>
+        <itemgap>20</itemgap>
+        <onleft>51</onleft>
+        <onright>noop</onright>
+        <onup>51</onup>
+        <ondown>51</ondown>
+        <onback>51</onback>
+        <align>center</align>
+        <orientation>horizontal</orientation>
+        <control type="button" id="23" description="Play">
+          <width>144</width>
+          <height>80</height>
+          <texturefocus>buttons/PlayFO.png</texturefocus>
+          <texturenofocus>buttons/PlayNF.png</texturenofocus>
+          <label>208</label>
+          <font>size14</font>
+          <aligny>top</aligny>
+          <textoffsety>80</textoffsety>
+        </control>
+        <control type="button" id="20" description="Shuffle">
+          <width>144</width>
+          <height>80</height>
+          <texturefocus>buttons/ShuffleFO.png</texturefocus>
+          <texturenofocus>buttons/ShuffleNF.png</texturenofocus>
+          <label>191</label>
+          <font>size14</font>
+          <aligny>top</aligny>
+          <textoffsety>80</textoffsety>
+        </control>
+        <control type="button" id="26" description="Repeat">
+          <width>144</width>
+          <height>80</height>
+          <texturefocus>buttons/RepeatFO.png</texturefocus>
+          <texturenofocus>buttons/RepeatNF.png</texturenofocus>
+          <label>-</label>
+          <font>size14</font>
+          <aligny>top</aligny>
+          <textoffsety>80</textoffsety>
+        </control>
+        <control type="button" id="21" description="Save">
+          <width>144</width>
+          <height>80</height>
+          <texturefocus>buttons/AddFO.png</texturefocus>
+          <texturenofocus>buttons/AddNF.png</texturenofocus>
+          <label>190</label>
+          <font>size14</font>
+          <aligny>top</aligny>
+          <textoffsety>80</textoffsety>
+        </control>
+      </control>
+    </control>
+
+    <!--<control type="group" description="Side menu 9000 group">
+    <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+    <include>MenuFullBG</include>
+    <include>VisibleFadeEffect</include>
+    <control type="grouplist" id="9000">
+      <include>9000GrouplistParameters</include>
+      <control type="radiobutton" id="20" description="Shuffle">
+        <radioleft>630</radioleft>
+        <include>9000Buttons</include>
+        <label>191</label>
+      </control>
+      <control type="button" id="21" description="Save">
+        <include>9000Buttons</include>
+        <label>190</label>
+      </control>
+      <control type="button" id="22" description="Clear">
+        <include>9000Buttons</include>
+        <label>192</label>
+      </control>
+      <control type="button" id="23" description="Play">
+        <include>9000Buttons</include>
+        <label>208</label>
+      </control>
+      <control type="button" id="26" description="Repeat">
+        <include>9000Buttons</include>
+        <label>-</label>
+      </control>
+    </control>
+  </control>-->
+</controls>
+</window>

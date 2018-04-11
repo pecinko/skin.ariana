@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">3</defaultcontrol>
+  <controls>
+    <include>DialogFullBG</include>
+    <control type="group" description="Content">
+      <include>OpenClose</include>
+      <control type="image" description="Sidebar">
+        <left>0</left>
+        <top>0</top>
+        <width>471</width>
+        <height>1080</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>img/Sidebar.png</texture>
+      </control>
+      <control type="label" description="Heading">
+        <include>CenterHeading</include>
+        <label>$LOCALIZE[10004] / $INFO[Control.GetLabel(2)]</label>
+      </control>
+      <control type="label" id="2" description="Category label">
+        <left>650</left>
+        <top>117</top>
+        <width>620</width>
+        <height>72</height>
+        <align>center</align>
+        <font>-</font>
+      </control>
+      <control type="grouplist" id="3" description="Left - Button Area">
+        <left>45</left>
+        <top>165</top>
+        <width>420</width>
+        <height>864</height>
+        <itemgap>5</itemgap>
+        <onleft>5</onleft>
+        <onright>5</onright>
+        <onup>20</onup>
+        <ondown>noop</ondown>
+        <orientation>vertical</orientation>
+      </control>
+      <control type="button" id="10" description="Category Button">
+        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        <align>left</align>
+      </control>
+      <control type="button" id="20" description="Settings level">
+        <left>45</left>
+        <top>60</top>
+        <onright>noop</onright>
+        <onleft>noop</onleft>
+        <onup>noop</onup>
+        <ondown>3</ondown>
+        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        <align>left</align>
+        <onclick>SettingsLevelChange</onclick>
+      </control>
+      <control type="grouplist" id="5" description="Right - Control Area">
+        <left>540</left>
+        <top>165</top>
+        <width>1260</width>
+        <height>660</height>
+        <itemgap>0</itemgap>
+        <onleft>3</onleft>
+        <onright>60</onright>
+        <onup>5</onup>
+        <ondown>5</ondown>
+        <pagecontrol>60</pagecontrol>
+        <orientation>vertical</orientation>
+      </control>
+      <control type="button" id="7" description="Button">
+        <width>1260</width>
+        <align>left</align>
+      </control>
+      <control type="radiobutton" id="8" description="Radio Button">
+        <width>1260</width>
+        <radioleft>1197</radioleft>
+        <align>left</align>
+      </control>
+      <control type="spincontrolex" id="9" description="Spin control">
+        <width>1260</width>
+        <align>left</align>
+      </control>
+      <control type="sliderex" id="13" description="Slider control">
+        <width>1260</width>
+        <align>left</align>
+      </control>
+      <control type="image" description="Separator">
+        <left>560</left>
+        <top>850</top>
+        <height>1</height>
+        <width>1230</width>
+        <aspectratio>stretch</aspectratio>
+        <texture>img/LineST.png</texture>
+      </control>
+      <control type="textbox" id="6" description="Settings description">
+        <left>560</left>
+        <top>880</top>
+        <width>1230</width>
+        <height>126</height>
+        <align>justify</align>
+        <textcolor>TitleDark</textcolor>
+        <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+      </control>
+    </control>
+  </controls>
+</window>

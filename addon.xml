@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.ariana" version="0.0.5" name="Ariana" provider-name="pecinko">
+  <requires>
+    <import addon="xbmc.gui" version="5.12.0"/>
+  </requires>
+  <extension point="xbmc.gui.skin" debugging="true">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">A skin</summary>
+    <description lang="en_GB">A family friend</description>
+    <disclaimer lang="en_GB"></disclaimer>
+    <platform>all</platform>
+    <license></license>
+    <forum>http://mrmc.tv/forum/</forum>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart></fanart>
+    </assets>
+  </extension>
+</addon>

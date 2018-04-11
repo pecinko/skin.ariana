@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+  <defaultcontrol always="true">450</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+    <control type="group" description="List 50 base">
+      <visible>Control.IsVisible(450)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="Main Label">
+        <centerleft>1400</centerleft>
+        <centertop>90</centertop>
+        <align>center</align>
+        <font>size28B</font>
+        <width>850</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>1036</label>
+      </control>
+      <control type="image" description="Thumb">
+        <centerleft>480</centerleft>
+        <centertop>580</centertop>
+        <width>600</width>
+        <height>760</height>
+        <include>Icon_Fade</include>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+        <bordersize>9</bordersize>
+        <aspectratio>keep</aspectratio>
+      </control>
+      <control type="list" id="450">
+        <left>1058</left>
+        <top>180</top>
+        <width>784</width>
+        <height>799</height>
+        <onup>450</onup>
+        <ondown>450</ondown>
+        <viewtype label="535">List</viewtype>
+        <itemlayout width="784" height="80">
+          <control type="label" description="Main Label">
+            <left>20</left>
+            <right>125</right>
+            <top>0</top>
+            <height>80</height>
+            <font>size20</font>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label" description="Label2">
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>124</width>
+            <font>size16</font>
+            <scroll>false</scroll>
+            <align>right</align>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout width="784" height="80">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>4</left>
+              <top>4</top>
+              <width>776</width>
+              <height>72</height>
+              <texture border="36">focus/FrameFO.png</texture>
+              <bordersize>-26</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <left>20</left>
+              <right>125</right>
+              <top>0</top>
+              <height>80</height>
+              <font>size20</font>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label" description="Label2">
+              <right>20</right>
+              <top>0</top>
+              <height>80</height>
+              <width>124</width>
+              <font>size16</font>
+              <align>right</align>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label2]</label>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+  </controls>
+</window>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <controls>
+    <control type="group">
+      <visible>Slideshow.IsActive</visible>
+      <animation condition="Slideshow.IsPaused" effect="fade" start="100" end="0" time="200">conditional</animation>
+      <animation condition="!Slideshow.IsPaused" effect="fade" start="0" end="100" time="400">conditional</animation>
+      <animation condition="!Slideshow.IsPaused" effect="fade" start="100" end="0" delay="2000" time="400">conditional</animation>
+      <left>90</left>
+      <top>870</top>
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>129</width>
+        <height>120</height>
+        <texture>img/BlackDotST2.png</texture>
+      </control>
+      <control type="image">
+        <left>6</left>
+        <top>0</top>
+        <width>120</width>
+        <height>120</height>
+        <texture>OSD/OSDProgressPlay.png</texture>
+      </control>
+    </control>
+    <control type="group" id="13">
+      <visible>Slideshow.IsPaused</visible>
+      <animation effect="fade" start="0" end="100" time="400">Visible</animation>
+      <left>90</left>
+      <top>870</top>
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>129</width>
+        <height>120</height>
+        <texture>img/BlackDotST2.png</texture>
+      </control>
+      <control type="image">
+        <left>6</left>
+        <top>0</top>
+        <width>120</width>
+        <height>120</height>
+        <texture>OSD/OSDProgressPause.png</texture>
+      </control>
+    </control>
+  </controls>
+</window>

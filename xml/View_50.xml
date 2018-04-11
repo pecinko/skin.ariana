@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="View_50" description="50">
+    <control type="group" description="List 50 base">
+      <visible>Control.IsVisible(50)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="Main Label">
+        <centerleft>1400</centerleft>
+        <centertop>90</centertop>
+        <align>center</align>
+        <font>size28B</font>
+        <width>850</width>
+        <textcolor>UnfocusedDark</textcolor>
+        <label>$VAR[GlobalHeadings]</label>
+      </control>
+      <control type="image" description="Thumb">
+        <centerleft>480</centerleft>
+        <centertop>580</centertop>
+        <width>600</width>
+        <height>760</height>
+        <include>Icon_Fade</include>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+        <bordersize>9</bordersize>
+        <aspectratio>keep</aspectratio>
+      </control>
+      <control type="list" id="50">
+        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes)]</visible>
+        <left>1058</left>
+        <top>180</top>
+        <width>784</width>
+        <height>799</height>
+        <pagecontrol>60</pagecontrol>
+        <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
+        <onright condition="Skin.HasSetting(Scrollbars_Active)">9001</onright>
+        <onup>50</onup>
+        <ondown>50</ondown>
+        <viewtype label="535">List</viewtype>
+        <preloaditems>4</preloaditems>
+        <itemlayout width="784" height="80">
+          <control type="label" description="Main Label">
+            <left>20</left>
+            <right>125</right>
+            <top>0</top>
+            <height>80</height>
+            <font>size20</font>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="image" description="arrow">
+            <visible>ListItem.IsFolder + IsEmpty(ListItem.label2)</visible>
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>40</width>
+            <align>right</align>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="UnfocusedDark">img/Arrow.png</texture>
+          </control>
+          <!--<control type="image">
+          <visible>Container.Content(files) | Container.Content(Movies) | Container.Content(episodes)</visible>
+          <right>20</right>
+          <top>0</top>
+          <height>80</height>
+          <width>32</width>
+          <texture align="right">$VAR[Overlay]</texture>
+          <aspectratio>keep</aspectratio>
+        </control>-->
+        <control type="label" description="Label2">
+          <right>20</right>
+          <top>0</top>
+          <height>80</height>
+          <width>124</width>
+          <font>size16</font>
+          <scroll>false</scroll>
+          <align>right</align>
+          <label>$INFO[ListItem.Label2]</label>
+        </control>
+      </itemlayout>
+      <focusedlayout width="784" height="80">
+        <control type="group">
+          <include>FocusButtonsAnimation</include>
+          <control type="image">
+            <animation effect="fade" time="100">VisibleChange</animation>
+            <left>4</left>
+            <top>4</top>
+            <width>776</width>
+            <height>72</height>
+            <texture border="36">focus/FrameFO.png</texture>
+            <bordersize>-26</bordersize>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="label" description="Main Label">
+            <left>20</left>
+            <right>125</right>
+            <top>0</top>
+            <height>80</height>
+            <font>size20</font>
+            <textcolor>FocusedDark</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="image" description="arrow">
+            <visible>ListItem.IsFolder + IsEmpty(ListItem.label2)</visible>
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>40</width>
+            <aspectratio>keep</aspectratio>
+            <align>right</align>
+            <texture colordiffuse="FocusedDark">img/Arrow.png</texture>
+          </control>
+          <!--<control type="image">
+          <visible>Container.Content(files) | Container.Content(Movies) | Container.Content(episodes)</visible>
+          <right>20</right>
+          <top>0</top>
+          <height>80</height>
+          <width>32</width>
+          <texture colordiffuse="Overlay" align="right">$VAR[Overlay]</texture>
+          <aspectratio>keep</aspectratio>
+        </control>-->
+        <control type="label" description="Label2">
+          <right>20</right>
+          <top>0</top>
+          <height>80</height>
+          <width>124</width>
+          <font>size16</font>
+          <align>right</align>
+          <textcolor>FocusedDark</textcolor>
+          <label>$INFO[ListItem.Label2]</label>
+        </control>
+      </control>
+    </focusedlayout>
+  </control>
+  <!-- <control type="group" description="Scroll letter">
+  <visible>Container.Scrolling</visible>
+  <animation effect="fade" start="0" end="100" time="50" delay="0" reversible="false">Visible</animation>
+  <animation effect="fade" start="100" end="0" time="150" delay="300" reversible="false">Hidden</animation>
+  <control type="image">
+    <left>1388</left>
+    <top>975</top>
+    <width>81</width>
+    <height>81</height>
+    <texture border="12">img/SortLetterBG.png</texture>
+  </control>
+  <control type="label">
+    <left>1388</left>
+    <top>975</top>
+    <width>81</width>
+    <height>81</height>
+    <align>center</align>
+    <font>size25</font>
+    <label>$INFO[ListItem.SortLetter]</label>
+  </control>
+</control> -->
+<!--<control type="scrollbar" id="60">
+<left>39r</left>
+<top>147</top>
+<height>882</height>
+<onleft>50</onleft>
+<onright>noop</onright>
+</control>-->
+</control>
+</include>
+</includes>

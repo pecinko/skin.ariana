@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+  <defaultcontrol always="true">5</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+    <control type="group" description="Content">
+      <include>OpenClose</include>
+      <control type="label" id="102" description="Profile Name">
+        <include>CenterHeading</include>
+      </control>
+      <control type="image" id="101" description="Profile image">
+        <centerleft>50%</centerleft>
+        <centertop>252</centertop>
+        <width>168</width>
+        <height>168</height>
+        <texture align="center" diffuse="img/UserDiffuse.png"></texture>
+        <aspectratio scalediffuse="false">scale</aspectratio>
+      </control>
+      <control type="label" id="103" description="Profile Directory">
+        <top>360</top>
+        <font>size18</font>
+        <include>CenterHeading</include>
+      </control>
+      <control type="group">
+        <top>120</top>
+        <control type="grouplist" id="5">
+          <width>700</width>
+          <ondown>28</ondown>
+          <include>9000GrouplistParameters</include>
+        </control>
+        <control type="button" id="7">
+          <align>left</align>
+          <width>700</width>
+          <height>68</height>
+          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        </control>
+        <control type="radiobutton" id="8">
+          <align>left</align>
+          <width>700</width>
+          <height>68</height>
+          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        </control>
+        <control type="spincontrolex" id="9">
+          <width>700</width>
+          <height>68</height>
+          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        </control>
+        <control type="button" id="28" description="OK">
+          <left>600</left>
+          <top>800</top>
+          <height>68</height>
+          <width>330</width>
+          <label>186</label>
+          <onleft>29</onleft>
+          <onright>29</onright>
+          <onup>5</onup>
+          <ondown>5</ondown>
+          <align>center</align>
+          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        </control>
+        <control type="button" id="29" description="Cancel">
+          <left>990</left>
+          <top>800</top>
+          <height>68</height>
+          <width>330</width>
+          <label>222</label>
+          <onleft>28</onleft>
+          <onright>28</onright>
+          <onup>5</onup>
+          <ondown>5</ondown>
+          <align>center</align>
+          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>

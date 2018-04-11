@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">450</defaultcontrol>
+  <controls>
+    <include>DialogFullBG</include>
+    <control type="group" description="Content">
+      <include>OpenClose</include>
+      <control type="image" description="Sidebar">
+        <left>0</left>
+        <top>0</top>
+        <width>500</width>
+        <height>1080</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>img/Sidebar.png</texture>
+      </control>
+      <control type="group" description="Side menu 9000 group">
+        <control type="grouplist" id="9000">
+          <left>45</left>
+          <top>135</top>
+          <width>540</width>
+          <height>608</height>
+          <itemgap>5</itemgap>
+          <onleft>450</onleft>
+          <onright>450</onright>
+          <onup>9000</onup>
+          <ondown>9000</ondown>
+          <orientation>vertical</orientation>
+          <control type="button" id="413" description="Ok">
+            <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+            <label>186</label>
+          </control>
+          <control type="button" id="414" description="Cancel">
+            <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+            <label>222</label>
+          </control>
+          <control type="button" id="415" description="Create folder">
+            <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+            <label>119</label>
+          </control>
+        </control>
+      </control>
+      <control type="label" id="411" description="Heading">
+        <include>HeadingR</include>
+        <label>-</label>
+      </control>
+      <control type="panel" id="450">
+        <left>1058</left>
+        <top>180</top>
+        <width>784</width>
+        <height>799</height>
+        <pagecontrol>60</pagecontrol>
+        <onleft>9000</onleft>
+        <onright>60</onright>
+        <onup>450</onup>
+        <ondown>450</ondown>
+        <itemlayout width="784" height="80">
+          <control type="label" description="Main Label">
+            <left>20</left>
+            <right>125</right>
+            <top>0</top>
+            <height>80</height>
+            <font>size20</font>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="image" description="arrow">
+            <visible>ListItem.IsFolder + IsEmpty(ListItem.label2)</visible>
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>40</width>
+            <align>right</align>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="UnfocusedDark">img/Arrow.png</texture>
+          </control>
+          <control type="label" description="Label2">
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>124</width>
+            <font>size16</font>
+            <scroll>false</scroll>
+            <align>right</align>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout width="784" height="80">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>4</left>
+              <top>4</top>
+              <width>776</width>
+              <height>72</height>
+              <texture border="36">focus/FrameFO.png</texture>
+              <bordersize>-26</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <left>20</left>
+              <right>125</right>
+              <top>0</top>
+              <height>80</height>
+              <font>size20</font>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="image" description="arrow">
+              <visible>ListItem.IsFolder + IsEmpty(ListItem.label2)</visible>
+              <right>20</right>
+              <top>0</top>
+              <height>80</height>
+              <width>40</width>
+              <aspectratio>keep</aspectratio>
+              <align>right</align>
+              <texture colordiffuse="FocusedDark">img/Arrow.png</texture>
+            </control>
+            <control type="label" description="Label2">
+              <right>20</right>
+              <top>0</top>
+              <height>80</height>
+              <width>124</width>
+              <font>size16</font>
+              <align>right</align>
+              <textcolor>FocusedDark</textcolor>
+              <label>$INFO[ListItem.Label2]</label>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="group" description="Thumbs">
+        <left>600</left>
+        <top>480</top>
+        <control type="image" description="Item Thumb NOT FLIPPED">
+          <left>0</left>
+          <top>0</top>
+          <width>350</width>
+          <height>350</height>
+          <fadetime>200</fadetime>
+          <texture>$INFO[ListItem.Thumb]</texture>
+          <aspectratio>keep</aspectratio>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>
