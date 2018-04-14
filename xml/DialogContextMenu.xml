@@ -28,22 +28,8 @@
           <textoffsetx>0</textoffsetx>
           <align>center</align>
           <aligny>center</aligny>
-          <font>size20B</font>
           <texturenofocus border="4">menu/MenuButtonNF.png</texturenofocus>
-          <texturefocus colordiffuse="Selected" border="4">menu/MenuButtonFO.png</texturefocus>
-        </control>
-        <control type="button" id="1009" description="Buttons">
-          <include>FocusButtonsAnimation</include>
-          <width>500</width>
-          <height>68</height>
-          <textoffsetx>0</textoffsetx>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>size20B</font>
-          <label>653</label>
-          <onclick>UpdateLibrary(video)</onclick>
-          <texturenofocus border="4">menu/MenuButtonNF.png</texturenofocus>
-          <texturefocus colordiffuse="Selected" border="4">menu/MenuButtonFO.png</texturefocus>
+          <texturefocus border="4">menu/MenuButtonFO.png</texturefocus>
         </control>
       </control>
     </control>

@@ -12,9 +12,9 @@
         <aligny>top</aligny>
         <width>1920</width>
         <height>75</height>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <font>size28B</font>
-        <label>$LOCALIZE[10004]</label>
+        <label>[B]$LOCALIZE[10004][/B]</label>
       </control>
       <control type="panel" id="9000">
 				<centerleft>50%</centerleft>
@@ -38,7 +38,7 @@
 						<top>20</top>
 						<width>240</width>
 						<bottom>20</bottom>
-						<texture colordiffuse="UnfocusedDark">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="LabelNF">$INFO[ListItem.Icon]</texture>
 						<align>center</align>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -47,6 +47,7 @@
 						<top>0</top>
 						<aligny>center</aligny>
 						<height>150</height>
+            <font>size24B</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
@@ -65,7 +66,7 @@
 							<top>20</top>
 							<width>240</width>
 							<bottom>20</bottom>
-							<texture colordiffuse="FocusedDark">$INFO[ListItem.Icon]</texture>
+							<texture colordiffuse="LabelFO">$INFO[ListItem.Icon]</texture>
 							<align>center</align>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -74,7 +75,8 @@
 							<top>0</top>
 							<aligny>center</aligny>
 							<height>150</height>
-              <textcolor>FocusedDark</textcolor>
+              <font>size22B</font>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>

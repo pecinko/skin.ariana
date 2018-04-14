@@ -4,12 +4,12 @@
   <controls>
     <include>FullBackground</include>
     <control type="image" description="Sidebar">
-      <left>0</left>
+      <left>-150</left>
       <top>0</top>
-      <width>462</width>
-      <height>1080</height>
+      <width>660</width>
+      <height>100%</height>
       <aspectratio>stretch</aspectratio>
-      <texture>img/Sidebar.png</texture>
+      <texture border="60">img/HomeMenuBarV.png</texture>
     </control>
     <control type="group" description="Slider and List">
       <include>SlimListItemCount</include>
@@ -67,7 +67,7 @@
             <align>right</align>
             <font>size18</font>
             <scroll>false</scroll>
-            <textcolor>SubtitleDark</textcolor>
+            <textcolor>Title2</textcolor>
             <label>$INFO[ListItem.Label2]</label>
           </control>
         </itemlayout>
@@ -88,13 +88,13 @@
             <width>270</width>
             <align>right</align>
             <font>size18</font>
-            <textcolor>TitleDark</textcolor>
+            <textcolor>Title</textcolor>
             <label>$INFO[ListItem.Label2]</label>
           </control>
         </focusedlayout>
       </control>
     </control>
-    
+
     <control type="group" description="Thumbs no info">
       <top>240</top>
       <visible>ListItem.IsFolder</visible>
@@ -162,7 +162,7 @@
           <width>555</width>
           <font>size18</font>
           <include>Genre51Commons</include>
-          <textcolor>TitleDark</textcolor>
+          <textcolor>Title</textcolor>
           <label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
         </control>
         <control type="label" description="2 bottom Label">

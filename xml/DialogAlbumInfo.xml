@@ -54,7 +54,7 @@
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <label>$INFO[ListItem.Artist]</label>
         </control>
         <control type="label" description="Styles Label">
@@ -64,7 +64,7 @@
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <scroll>false</scroll>
           <label>$INFO[ListItem.Property(Artist_Style)]</label>
         </control>
@@ -76,7 +76,7 @@
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <scroll>false</scroll>
           <label>$INFO[ListItem.Property(Artist_Mood)]</label>
         </control>
@@ -86,7 +86,7 @@
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]</label>
         </control>
         <control type="label" description="Genre">
@@ -95,7 +95,7 @@
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <label>$INFO[ListItem.Property(Artist_Genre)]</label>
         </control>
         <control type="textbox" id="4" description="Plot">
@@ -117,7 +117,7 @@
       <height>27</height>
       <font>size15</font>
       <align>left</align>
-      <textcolor>SubtitleDark</textcolor>
+      <textcolor>Title2</textcolor>
       <haspath>true</haspath>
       <scroll>true</scroll>
       <label>$INFO[ListItem.FilenameAndPath]</label>

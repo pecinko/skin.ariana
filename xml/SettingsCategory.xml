@@ -6,12 +6,12 @@
     <control type="group" description="Content">
       <include>OpenClose</include>
       <control type="image" description="Sidebar">
-        <left>0</left>
+        <left>-150</left>
         <top>0</top>
-        <width>471</width>
-        <height>1080</height>
+        <width>660</width>
+        <height>100%</height>
         <aspectratio>stretch</aspectratio>
-        <texture>img/Sidebar.png</texture>
+        <texture border="60">img/HomeMenuBarV.png</texture>
       </control>
       <control type="label" description="Heading">
         <include>CenterHeading</include>
@@ -96,7 +96,7 @@
         <width>1230</width>
         <height>126</height>
         <align>justify</align>
-        <textcolor>TitleDark</textcolor>
+        <textcolor>Title</textcolor>
         <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
       </control>
     </control>

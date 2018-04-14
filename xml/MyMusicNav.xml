@@ -70,7 +70,7 @@
                 <width>308</width>
                 <height>30</height>
                 <font>size16</font>
-                <textcolor>UnfocusedDark</textcolor>
+                <textcolor>LabelNF</textcolor>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
               </control>
@@ -88,7 +88,7 @@
         <align>center</align>
         <font>size28B</font>
         <width>850</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$VAR[GlobalHeadings]</label>
       </control>
       <control type="image" description="Thumb">
@@ -106,7 +106,7 @@
         <left>0</left>
         <top>0</top>
         <control type="list" id="52">
-          <visible>container.content(albums) | container.content(artists)</visible>
+          <visible>container.content(albums)</visible>
           <left>1020</left>
           <top>164</top>
           <width>840</width>
@@ -118,14 +118,15 @@
           <ondown>52</ondown>
           <viewtype label="537">Big List</viewtype>
           <preloaditems>4</preloaditems>
-          <itemlayout condition="container.content(albums) | container.content(artists)" width="840" height="106">
+          <itemlayout condition="container.content(albums)" width="840" height="106">
             <control type="label" description="Main Label">
               <left>34</left>
               <right>125</right>
               <top>0</top>
               <height>66</height>
-              <font>size20B</font>
+              <font>size22B</font>
               <scroll>false</scroll>
+              <textcolor>LabelNF</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Label2">
@@ -134,8 +135,9 @@
               <right>125</right>
               <bottom>0</bottom>
               <height>66</height>
-              <font>size16</font>
+              <font>size19</font>
               <scroll>false</scroll>
+              <textcolor>Label2</textcolor>
               <label>$INFO[ListItem.Label2]</label>
             </control>
             <control type="label" description="Label2">
@@ -144,12 +146,13 @@
               <right>125</right>
               <bottom>0</bottom>
               <height>66</height>
-              <font>size16</font>
+              <font>size19</font>
               <scroll>false</scroll>
-              <label>$INFO[ListItem.Year]</label>
+              <textcolor>Label2</textcolor>
+              <label>$INFO[ListItem.Artist]</label>
             </control>
           </itemlayout>
-          <focusedlayout condition="container.content(albums) | container.content(artists)" width="840" height="106">
+          <focusedlayout condition="container.content(albums)" width="840" height="106">
             <control type="group">
               <include>FocusButtonsAnimation</include>
               <control type="image">
@@ -158,8 +161,8 @@
                 <top>9</top>
                 <width>768</width>
                 <height>88</height>
-                <texture border="36">focus/FrameFO.png</texture>
-                <bordersize>-26</bordersize>
+                <texture border="10">focus/FrameFO.png</texture>
+                <bordersize>-10</bordersize>
                 <aspectratio>stretch</aspectratio>
               </control>
               <control type="label" description="Main Label">
@@ -167,8 +170,8 @@
                 <right>125</right>
                 <top>0</top>
                 <height>66</height>
-                <font>size20B</font>
-                <textcolor>FocusedDark</textcolor>
+                <font>size22B</font>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
               <control type="label" description="Label2">
@@ -177,8 +180,8 @@
                 <right>125</right>
                 <bottom>0</bottom>
                 <height>66</height>
-                <font>size16</font>
-                <textcolor>FocusedDark</textcolor>
+                <font>size19</font>
+                <textcolor>Label2</textcolor>
                 <label>$INFO[ListItem.Label2]</label>
               </control>
               <control type="label" description="Label2">
@@ -187,9 +190,9 @@
                 <right>125</right>
                 <bottom>0</bottom>
                 <height>66</height>
-                <font>size16</font>
-                <textcolor>FocusedDark</textcolor>
-                <label>$INFO[ListItem.Year]</label>
+                <font>size19</font>
+                <textcolor>Label2</textcolor>
+                <label>$INFO[ListItem.Artist]</label>
               </control>
             </control>
           </focusedlayout>
@@ -204,15 +207,15 @@
         <top>80</top>
         <font>size28B</font>
         <width>800</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$INFO[ListItem.Artist]</label>
       </control>
-      <control type="label" description="Season Label">
+      <control type="label">
         <left>180</left>
         <top>132</top>
         <font>size22B</font>
         <width>800</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$INFO[ListItem.Album]</label>
       </control>
       <control type="label" description="Genre">
@@ -220,7 +223,7 @@
         <top>200</top>
         <font>size20B</font>
         <width>800</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$INFO[ListItem.Genre]</label>
       </control>
       <control type="textbox" description="Show Plot">
@@ -266,13 +269,13 @@
           <aligny>top</aligny>
           <textoffsety>80</textoffsety>
         </control>
-        <control type="button" id="697" description="Playlist">
+        <control type="button" id="697" description="Queued">
           <onclick>ActivateWindow(musicplaylist)</onclick>
           <width>144</width>
           <height>80</height>
           <texturefocus>buttons/PlaylistFO.png</texturefocus>
           <texturenofocus>buttons/PlaylistNF.png</texturenofocus>
-          <label>$LOCALIZE[31040]</label>
+          <label>$LOCALIZE[31062]</label>
           <wrapmultiline>True</wrapmultiline>
           <font>size14</font>
           <aligny>top</aligny>
@@ -366,8 +369,8 @@
                 <top>9</top>
                 <width>848</width>
                 <height>88</height>
-                <texture border="36">focus/FrameFO.png</texture>
-                <bordersize>-26</bordersize>
+                <texture border="10">focus/FrameFO.png</texture>
+                <bordersize>-10</bordersize>
                 <aspectratio>stretch</aspectratio>
               </control>
               <control type="label" description="Main Label">
@@ -376,7 +379,7 @@
                 <top>0</top>
                 <height>66</height>
                 <font>size20B</font>
-                <textcolor>FocusedDark</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
               <control type="label" description="Album">
@@ -385,7 +388,7 @@
                 <bottom>0</bottom>
                 <height>66</height>
                 <font>size16</font>
-                <textcolor>FocusedDark</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Album]</label>
               </control>
               <control type="label" description="Duration">
@@ -396,7 +399,7 @@
                 <width>330</width>
                 <font>size16</font>
                 <align>right</align>
-                <textcolor>FocusedDark</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Duration]</label>
               </control>
               <control type="image" description="playing">

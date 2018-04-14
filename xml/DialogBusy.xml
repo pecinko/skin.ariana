@@ -22,7 +22,7 @@
         <font>size28</font>
         <align>center</align>
         <aligny>top</aligny>
-        <textcolor>TitleDark</textcolor>
+        <textcolor>Title</textcolor>
 				<label>[B]$LOCALIZE[20186][/B]</label>
       </control>
     </control>

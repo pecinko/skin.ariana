@@ -23,7 +23,7 @@
         <width>520</width>
         <height>1080</height>
         <aspectratio>stretch</aspectratio>
-        <texture>img/Sidebar.png</texture>
+        <texture colordiffuse="Grey">img/Sidebar.png</texture>
       </control>
       <control type="image" description="User Thumb">
         <top>60</top>
@@ -79,7 +79,7 @@
             <left>24</left>
             <right>24</right>
             <height>72</height>
-            <font>size20B</font>
+            <font>size22B</font>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
@@ -93,16 +93,16 @@
               <top>6</top>
               <height>60</height>
               <width>374</width>
-              <texture border="42">focus/FrameFO.png</texture>
-              <bordersize>-28</bordersize>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="label">
               <left>24</left>
               <right>24</right>
               <height>72</height>
-              <font>size20B</font>
-              <textcolor>FocusedDark</textcolor>
+              <font>size22B</font>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
@@ -168,7 +168,7 @@
         <width>496</width>
         <font>size19U</font>
         <label>$LOCALIZE[14022]</label>
-        <textcolor>SubtitleDark</textcolor>
+        <textcolor>Title2</textcolor>
       </control>
       <control type="list" id="300" description="Main menu">
         <top>256</top>
@@ -190,7 +190,7 @@
             <left>24</left>
             <right>24</right>
             <height>72</height>
-            <font>size22B</font>
+            <font>size24B</font>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
@@ -203,16 +203,16 @@
               <top>6</top>
               <height>60</height>
               <width>434</width>
-              <texture border="42">focus/FrameFO.png</texture>
-              <bordersize>-28</bordersize>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="label">
               <left>24</left>
               <right>24</right>
               <height>72</height>
-              <font>size22B</font>
-              <textcolor>FocusedDark</textcolor>
+              <font>size24B</font>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
@@ -231,8 +231,8 @@
               <left>24</left>
               <right>24</right>
               <height>72</height>
-              <font>size22B</font>
-              <textcolor>FocusedDark</textcolor>
+              <font>size24B</font>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
@@ -367,7 +367,7 @@
           <width>260</width>
           <height>45</height>
           <font>size16</font>
-          <textcolor>UnfocusedDark</textcolor>
+          <textcolor>LabelNF</textcolor>
           <align>center</align>
           <label>$INFO[ListItem.Label]</label>
         </control>
@@ -437,7 +437,7 @@
           <width>260</width>
           <height>45</height>
           <font>size16</font>
-          <textcolor>UnfocusedDark</textcolor>
+          <textcolor>LabelNF</textcolor>
           <align>center</align>
           <label>$INFO[ListItem.Label]</label>
         </control>
@@ -507,7 +507,7 @@
           <width>260</width>
           <height>45</height>
           <font>size16</font>
-          <textcolor>UnfocusedDark</textcolor>
+          <textcolor>LabelNF</textcolor>
           <align>center</align>
           <label>$INFO[ListItem.Label]</label>
         </control>
@@ -577,7 +577,7 @@
           <width>260</width>
           <height>45</height>
           <font>size16</font>
-          <textcolor>UnfocusedDark</textcolor>
+          <textcolor>LabelNF</textcolor>
           <align>center</align>
           <label>$INFO[ListItem.Label]</label>
         </control>
@@ -647,7 +647,7 @@
           <width>350</width>
           <height>45</height>
           <font>size16</font>
-          <textcolor>UnfocusedDark</textcolor>
+          <textcolor>LabelNF</textcolor>
           <align>center</align>
           <label>$INFO[ListItem.Label]</label>
         </control>

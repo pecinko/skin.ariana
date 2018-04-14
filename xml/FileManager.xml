@@ -91,7 +91,7 @@
               <height>68</height>
               <font>size18</font>
               <info>ListItem.Label</info>
-              <textcolor>FocusedDark</textcolor>
+              <textcolor>LabelFO</textcolor>
             </control>
             <control type="label">
               <right>20</right>
@@ -100,7 +100,7 @@
               <font>size17</font>
               <info>ListItem.Label2</info>
               <align>right</align>
-              <textcolor>FocusedDark</textcolor>
+              <textcolor>LabelFO</textcolor>
             </control>
             </control>
           </focusedlayout>
@@ -151,7 +151,7 @@
               <height>68</height>
               <font>size18</font>
               <info>ListItem.Label</info>
-              <textcolor>FocusedDark</textcolor>
+              <textcolor>LabelFO</textcolor>
             </control>
             <control type="label">
               <right>20</right>
@@ -160,7 +160,7 @@
               <font>size17</font>
               <info>ListItem.Label2</info>
               <align>right</align>
-              <textcolor>FocusedDark</textcolor>
+              <textcolor>LabelFO</textcolor>
             </control>
             </control>
           </focusedlayout>

@@ -94,7 +94,7 @@
                   <height>81</height>
                   <width>780</width>
                   <info>ListItem.Label</info>
-                  <focusedcolor>FocusedDark</focusedcolor>
+                  <focusedcolor>LabelFO</focusedcolor>
                 </control>
               </control>
             </focusedlayout>

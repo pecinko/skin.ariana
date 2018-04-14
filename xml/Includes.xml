@@ -38,7 +38,6 @@
     <aligny>center</aligny>
     <width>1000</width>
     <height>75</height>
-    <textcolor>Selected</textcolor>
     <font>size26B</font>
   </include>
   <include name="FullBackground">
@@ -50,7 +49,7 @@
       <height>100%</height>
       <aspectratio>scale</aspectratio>
       <fadetime>400</fadetime>
-      <texture background="true" fallback="Home.jpg">$VAR[Home.Fanart]</texture>
+      <texture background="true">$VAR[Home.Fanart]</texture>
     </control>
     <control type="image" description="Art">
       <visible>!Window.IsActive(Home.xml)</visible>
@@ -60,9 +59,9 @@
       <height>100%</height>
       <aspectratio aligny="top">scale</aspectratio>
       <fadetime>400</fadetime>
-      <texture background="true" fallback="Home.jpg">$VAR[Background.Art]</texture>
+      <texture background="true">$VAR[Background.Art]</texture>
     </control>
-    <control type="image" description="BG">
+    <!--<control type="image" description="BG">
       <left>0</left>
       <top>0</top>
       <width>100%</width>
@@ -70,6 +69,14 @@
       <aspectratio>stretch</aspectratio>
       <texture>img/BGOverlay.png</texture>
       <colordiffuse>Overlay</colordiffuse>
+    </control>-->
+    <control type="image" description="BG">
+      <left>0</left>
+      <top>0</top>
+      <width>100%</width>
+      <height>100%</height>
+      <aspectratio>stretch</aspectratio>
+      <texture background="true">$VAR[Background.Overlay]</texture>
     </control>
     <control type="image" description="DebugGrid">
       <visible>Skin.HasSetting(DebugGrid)</visible>
@@ -86,16 +93,16 @@
       <top>0</top>
       <width>100%</width>
       <height>100%</height>
-      <aspectratio aligny="top">scale</aspectratio>
-      <texture background="true">Home.jpg</texture>
+      <aspectratio>stretch</aspectratio>
+      <texture background="true">$VAR[Background.Overlay]</texture>
     </control>
-    <control type="image">
+    <!--<control type="image">
       <centerleft>960</centerleft>
       <centertop>540</centertop>
       <width>100%</width>
       <height>100%</height>
       <texture colordiffuse="Overlay">img/BGOverlay.png</texture>
-    </control>
+    </control>-->
     <control type="image" description="DebugGrid">
       <visible>Skin.HasSetting(DebugGrid)</visible>
       <left>0</left>
@@ -111,7 +118,8 @@
       <centertop>540</centertop>
       <width>100%</width>
       <height>100%</height>
-      <texture colordiffuse="Overlay">img/BGOverlay.png</texture>
+      <texture background="true">$VAR[Background.Overlay]</texture>
+      <colordiffuse>Grey</colordiffuse>
     </control>
   </include>
   <include name="VisibleFadeEffect">
@@ -189,7 +197,7 @@
         <align>right</align>
         <aligny>center</aligny>
         <font>size19</font>
-        <textcolor>SubtitleDark</textcolor>
+        <textcolor>Title2</textcolor>
         <label>$INFO[System.Time]</label>
       </control>
       <control type="label" description="Heading">
@@ -199,7 +207,7 @@
         <aligny>center</aligny>
         <width>1920</width>
         <height>75</height>
-        <textcolor>TitleDark</textcolor>
+        <textcolor>Title</textcolor>
         <font>size28</font>
         <label>$VAR[GlobalHeadings]</label>
       </control>
@@ -217,7 +225,7 @@
     <width>1920</width>
     <align>center</align>
     <font>size24B</font>
-    <textcolor>TitleDark</textcolor>
+    <textcolor>Title</textcolor>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
   <include name="FocusButtonsAnimation">
@@ -391,7 +399,7 @@
   <scroll>false</scroll>
   <align>left</align>
   <font>size24B</font>
-  <textcolor>TitleDark</textcolor>
+  <textcolor>Title</textcolor>
   <animation effect="fade" time="200">VisibleChange</animation>
 </include>
 <include name="FullscreenInfoLabel2">
@@ -414,7 +422,7 @@
       <control type="label" description="Main Label">
         <top>-52</top>
         <font>size20</font>
-        <textcolor>TitleDark</textcolor>
+        <textcolor>Title</textcolor>
         <width>608</width>
         <height>36</height>
         <align>left</align>
@@ -458,7 +466,7 @@
           <width>156</width>
           <height>30</height>
           <align>right</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <label>$LOCALIZE[558]:</label>
         </control>
         <control type="label" description="Genre label 2">
@@ -466,7 +474,7 @@
           <width>156</width>
           <height>30</height>
           <align>right</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <label>$LOCALIZE[515]:</label>
         </control>
         <control type="label" description="Type label 3">
@@ -474,7 +482,7 @@
           <width>156</width>
           <height>30</height>
           <align>right</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <label>$LOCALIZE[564]:</label>
         </control>
         <control type="label" description="Duration label 3">
@@ -482,7 +490,7 @@
           <width>156</width>
           <height>30</height>
           <align>right</align>
-          <textcolor>SubtitleDark</textcolor>
+          <textcolor>Title2</textcolor>
           <label>$LOCALIZE[180]:</label>
         </control>
       </control>
@@ -546,30 +554,6 @@
     <texture>img/ListBG.png</texture>
   </control>
 </include>
-<include name="Slider4">
-  <control type="image">
-    <animation effect="fade" time="100">VisibleChange</animation>
-    <left>0</left>
-    <top>0</top>
-    <width>770</width>
-    <height>81</height>
-    <texture border="42">focus/FrameFO.png</texture>
-    <bordersize>-21</bordersize>
-    <aspectratio>stretch</aspectratio>
-  </control>
-</include>
-<include name="Slider5">
-  <control type="image">
-    <animation effect="fade" time="100">VisibleChange</animation>
-    <left>0</left>
-    <top>0</top>
-    <width>770</width>
-    <height>96</height>
-    <texture border="42">focus/FrameFO.png</texture>
-    <bordersize>-21</bordersize>
-    <aspectratio>stretch</aspectratio>
-  </control>
-</include>
 <include name="52MainLabel">
   <left>27</left>
   <top>0</top>
@@ -583,7 +567,7 @@
   <height>81</height>
   <width>730</width>
   <font>size22</font>
-  <focusedcolor>FocusedDark</focusedcolor>
+  <focusedcolor>LabelFO</focusedcolor>
 </include>
 <include name="52Label2">
   <left>42</left>
@@ -601,7 +585,7 @@
   <width>120</width>
   <font>size16</font>
   <align>left</align>
-  <focusedcolor>FocusedDark</focusedcolor>
+  <focusedcolor>LabelFO</focusedcolor>
 </include>
 <include name="51MainLabel">
   <left>128</left>
@@ -619,7 +603,7 @@
   <width>720</width>
   <aligny>center</aligny>
   <font>size22</font>
-  <focusedcolor>FocusedDark</focusedcolor>
+  <focusedcolor>LabelFO</focusedcolor>
 </include>
 <include name="51Label2">
   <left>27</left>
@@ -638,7 +622,7 @@
   <width>720</width>
   <font>size16</font>
   <align>left</align>
-  <focusedcolor>FocusedDark</focusedcolor>
+  <focusedcolor>LabelFO</focusedcolor>
 </include>
 <include name="Watched_Marks">
   <control type="image">
@@ -697,7 +681,7 @@
     <scroll>true</scroll>
     <align>center</align>
     <scroll>false</scroll>
-    <textcolor>TitleDark</textcolor>
+    <textcolor>Title</textcolor>
     <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
   </control>
 </include>
@@ -712,7 +696,7 @@
     <scroll>true</scroll>
     <align>center</align>
     <scroll>false</scroll>
-    <textcolor>SubtitleDark</textcolor>
+    <textcolor>Title2</textcolor>
     <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
   </control>
 </include>
@@ -749,7 +733,7 @@
     <height>81</height>
     <width>42</width>
     <aspectratio>keep</aspectratio>
-    <texture colordiffuse="UnfocusedDark">img/Arrow.png</texture>
+    <texture colordiffuse="LabelNF">img/Arrow.png</texture>
   </control>
 </include>
 <include name="ArrowFO">
@@ -760,7 +744,7 @@
     <height>81</height>
     <width>42</width>
     <aspectratio>keep</aspectratio>
-    <texture colordiffuse="FocusedDark">img/Arrow.png</texture>
+    <texture colordiffuse="LabelFO">img/Arrow.png</texture>
   </control>
 </include>
 <include name="LargeListAddonsLayout">
@@ -1525,7 +1509,7 @@
 <!--NEW end-->
 <include name="TitleCommons">
   <font>size26B</font>
-  <textcolor>TitleDark</textcolor>
+  <textcolor>Title</textcolor>
 </include>
 <include name="KeyboardButtons">
   <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>

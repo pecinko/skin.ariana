@@ -1,234 +1,276 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
-  <fontset id="Default">
+  <fontset id="Lato">
     <font>
+      <!--<style>bold</style>-->
       <name>font13</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>27</size>
       <color>White</color>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>Scroll</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>100</size>
-			<!--<style>bold</style>-->
-    </font>
-		<font>
-      <name>size14</name>
-      <filename>Default.ttf</filename>
-      <size>21</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
+      <name>size14</name>
+      <filename>Arimo.ttf</filename>
+      <size>20</size>
+    </font>
+    <font>
+      <!--<style>bold</style>-->
       <name>size15</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>22</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size16</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>24</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size16B</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>24</size>
-      <style>bold</style>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size17</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>26</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size18</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>27</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size18B</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>27</size>
-      <style>bold</style>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size19</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>28</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size19B</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>28</size>
-      <style>bold</style>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size19U</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>28</size>
       <style>uppercase bold</style>
       <aspect>0.9</aspect>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size20</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>30</size>
     </font>
-    <font>
+
+      <font>
+        <name>plot</name>
+        <filename>Arimo.ttf</filename>
+        <size>30</size>
+        <linespacing>1.2</linespacing>
+      </font>
+      <font>
+      <!--<style>bold</style>-->
       <name>size20B</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>30</size>
-      <style>bold</style>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size22</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>33</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size22B</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>33</size>
-      <style>bold</style>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size23</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>34</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size24</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>36</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size24B</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>36</size>
-      <style>bold</style>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size25</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>38</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size26</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>39</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size26B</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>39</size>
-      <style>bold</style>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size28</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>42</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size28B</name>
-      <filename>Default.ttf</filename>
+      <filename>Arimo.ttf</filename>
       <size>42</size>
-      <style>bold</style>
+    </font>
+    <font>
+      <!--<style>bold</style>-->
+      <name>size50B</name>
+      <filename>Arimo.ttf</filename>
+      <size>50</size>
     </font>
   </fontset>
   <fontset id="Arial" idloc="31392">
     <font>
+      <!--<style>bold</style>-->
       <name>font13</name>
       <filename>arial.ttf</filename>
       <size>27</size>
       <color>White</color>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size14</name>
       <filename>arial.ttf</filename>
       <size>21</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size15</name>
       <filename>arial.ttf</filename>
       <size>22</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size16</name>
       <filename>arial.ttf</filename>
       <size>24</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size17</name>
       <filename>arial.ttf</filename>
       <size>26</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size18</name>
       <filename>arial.ttf</filename>
       <size>27</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size19</name>
       <filename>arial.ttf</filename>
       <size>28</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size20</name>
       <filename>arial.ttf</filename>
       <size>30</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size22</name>
       <filename>arial.ttf</filename>
       <size>33</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size22B</name>
       <filename>arial.ttf</filename>
       <size>33</size>
-      <!--<style>bold</style>-->
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size23</name>
       <filename>arial.ttf</filename>
       <size>34</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size24</name>
       <filename>arial.ttf</filename>
       <size>36</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size24B</name>
       <filename>arial.ttf</filename>
       <size>36</size>
-      <!--<style>bold</style>-->
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size25</name>
       <filename>arial.ttf</filename>
       <size>38</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size26</name>
       <filename>arial.ttf</filename>
       <size>39</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size26B</name>
       <filename>arial.ttf</filename>
       <size>39</size>
-      <!--<style>bold</style>-->
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size28</name>
       <filename>arial.ttf</filename>
       <size>42</size>
     </font>
     <font>
+      <!--<style>bold</style>-->
       <name>size28B</name>
       <filename>arial.ttf</filename>
       <size>42</size>
-      <!--<style>bold</style>-->
     </font>
   </fontset>
 </fonts>

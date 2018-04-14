@@ -10,7 +10,7 @@
         <align>center</align>
         <font>size28B</font>
         <width>850</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$VAR[GlobalHeadings]</label>
       </control>
       <control type="image" description="Thumb">
@@ -25,7 +25,7 @@
         <aspectratio>keep</aspectratio>
       </control>
       <control type="list" id="50">
-        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes)]</visible>
+        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes) | Container.content(albums) | container.content(songs)]</visible>
         <left>1058</left>
         <top>180</top>
         <width>784</width>
@@ -43,7 +43,7 @@
             <right>125</right>
             <top>0</top>
             <height>80</height>
-            <font>size20</font>
+            <font>size22B</font>
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="image" description="arrow">
@@ -54,7 +54,7 @@
             <width>40</width>
             <align>right</align>
             <aspectratio>keep</aspectratio>
-            <texture colordiffuse="UnfocusedDark">img/Arrow.png</texture>
+            <texture colordiffuse="LabelNF">img/Arrow.png</texture>
           </control>
           <!--<control type="image">
           <visible>Container.Content(files) | Container.Content(Movies) | Container.Content(episodes)</visible>
@@ -70,7 +70,7 @@
           <top>0</top>
           <height>80</height>
           <width>124</width>
-          <font>size16</font>
+          <font>size19</font>
           <scroll>false</scroll>
           <align>right</align>
           <label>$INFO[ListItem.Label2]</label>
@@ -85,8 +85,8 @@
             <top>4</top>
             <width>776</width>
             <height>72</height>
-            <texture border="36">focus/FrameFO.png</texture>
-            <bordersize>-26</bordersize>
+            <texture border="10">focus/FrameFO.png</texture>
+            <bordersize>-10</bordersize>
             <aspectratio>stretch</aspectratio>
           </control>
           <control type="label" description="Main Label">
@@ -94,8 +94,8 @@
             <right>125</right>
             <top>0</top>
             <height>80</height>
-            <font>size20</font>
-            <textcolor>FocusedDark</textcolor>
+            <font>size22B</font>
+            <textcolor>LabelFO</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="image" description="arrow">
@@ -106,7 +106,7 @@
             <width>40</width>
             <aspectratio>keep</aspectratio>
             <align>right</align>
-            <texture colordiffuse="FocusedDark">img/Arrow.png</texture>
+            <texture colordiffuse="LabelFO">img/Arrow.png</texture>
           </control>
           <!--<control type="image">
           <visible>Container.Content(files) | Container.Content(Movies) | Container.Content(episodes)</visible>
@@ -122,9 +122,9 @@
           <top>0</top>
           <height>80</height>
           <width>124</width>
-          <font>size16</font>
+          <font>size19</font>
           <align>right</align>
-          <textcolor>FocusedDark</textcolor>
+          <textcolor>LabelFO</textcolor>
           <label>$INFO[ListItem.Label2]</label>
         </control>
       </control>

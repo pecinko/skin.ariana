@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-
-	<color name="White">FFCCCCCC</color>
-	<!--<color name="White">FFF1F1F1</color>-->
-	<color name="White2">FFFFFFFF</color>
-
+	<color name="White2">FFCCCCCC</color>
+	<color name="White">FFFFFFFF</color>
 	<color name="Blue">FF003366</color>
 	<color name="Black">FF000000</color>
 	<color name="BlackT">55000000</color>
@@ -12,21 +9,17 @@
 	<color name="Silver">FFE2E2E2</color>
 	<color name="Diffuse">FFA0A0A0</color>
 	<color name="Diffuse2">FF474747</color>
-
-	<color name="UnfocusedDark">FFFFFFFF</color>
-  <color name="FocusedDark">FF000000</color>
-  <color name="TitleDark">FFFFFFFF</color>
-  <color name="SubtitleDark">FFABABAB</color>
   <color name="Grey">FFb9b9b9</color> <!-- THEME INDEPENDENT -->
-  <color name="Selected">FFee9d00</color> <!-- THEME INDEPENDENT -->
-  <color name="Red">FFFF0000</color> <!-- THEME INDEPENDENT -->
-  <color name="DisabledDark">FFE2E2E2</color>
+  <color name="Red">FFff3a31</color> <!-- THEME INDEPENDENT -->
+
+  <color name="Overlay">$VAR[Overlay.Color]</color>
+  <color name="LabelNF">FF000000</color>
+  <color name="LabelFO">FF000000</color>
+  <color name="Label2">FF575759</color>
+  <color name="Title">FF000000</color>
+  <color name="Title2">FF909192</color>
+  <color name="Disabled">FF909192</color>
+  <color name="Selected">FFff9501</color>
+
   <color name="systemfocus">FFf6b12b</color>
-
-  <!-- <color name="Overlay">FF1b1e22</color> -->
-  <color name="Overlay">FF2a2c32</color>
-
-  <!-- <color name="Overlay">FFCED5E0</color> --> <!-- whiteish -->
-<!-- <color name="Overlay">FFCED5E0</color> --> <!--silverish -->
-
 </colors>

@@ -69,7 +69,7 @@
                 <width>308</width>
                 <height>30</height>
                 <font>size16</font>
-                <textcolor>UnfocusedDark</textcolor>
+                <textcolor>LabelNF</textcolor>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
               </control>
@@ -97,13 +97,13 @@
           <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
         </control>
         <control type="button" id="6" description="Slideshow">
-          <disabledcolor>DisabledDark</disabledcolor>
+          <disabledcolor>Disabled</disabledcolor>
           <include>9000Buttons</include>
           <label>108</label>
           <visible>!ListItem.IsFolder</visible>
         </control>
         <control type="button" id="7" description="Recursive slideshow">
-          <disabledcolor>DisabledDark</disabledcolor>
+          <disabledcolor>Disabled</disabledcolor>
           <include>9000Buttons</include>
           <label>13318</label>
           <visible>ListItem.IsFolder</visible>

@@ -2,13 +2,13 @@
 <window>
   <defaultcontrol always="true">51</defaultcontrol>
   <controls>
-    <include>FullBackground</include>
     <control type="visualisation" id="2" description="Visualisation">
       <left>0</left>
       <top>0</top>
       <width>100%</width>
       <height>100%</height>
     </control>
+    <include>DialogFullBG</include>
     <control type="group" description="BigList 51">
       <visible>Control.IsVisible(51)</visible>
       <include>ContainerVisibleFade</include>
@@ -18,7 +18,7 @@
         <top>80</top>
         <font>size28B</font>
         <width>800</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$LOCALIZE[589]</label>
       </control>
       <control type="label" description="Title">
@@ -27,7 +27,7 @@
         <top>80</top>
         <font>size28B</font>
         <width>800</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$LOCALIZE[13350]</label>
       </control>
       <control type="label" description="Subtitle">
@@ -35,7 +35,7 @@
         <top>132</top>
         <font>size22B</font>
         <width>800</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$INFO[MusicPlayer.Artist,, - ] $INFO[MusicPlayer.Title,, : ] $INFO[MusicPlayer.TimeRemaining]</label>
       </control>
       <control type="label" description="Genre">
@@ -43,7 +43,7 @@
         <top>200</top>
         <font>size20B</font>
         <width>800</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$LOCALIZE[179] $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength]</label>
       </control>
       <control type="group" description="Infolist">
@@ -61,16 +61,7 @@
           <ondown>51</ondown>
           <viewtype label="537">Big List 51</viewtype>
           <preloaditems>4</preloaditems>
-          <itemlayout condition="container.content(songs)" width="920" height="106">
-            <control type="image">
-              <left>16</left>
-              <top>9</top>
-              <width>848</width>
-              <height>88</height>
-              <texture border="4">img/SettingsButtonNF.png</texture>
-              <bordersize>-4</bordersize>
-              <aspectratio>stretch</aspectratio>
-            </control>
+          <itemlayout width="920" height="106">
             <control type="image" description="Thumb">
               <top>9</top>
               <left>18</left>
@@ -85,8 +76,9 @@
               <right>125</right>
               <top>0</top>
               <height>66</height>
-              <font>size20B</font>
+              <font>size22B</font>
               <scroll>false</scroll>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Album">
@@ -96,6 +88,7 @@
               <height>66</height>
               <font>size16</font>
               <scroll>false</scroll>
+              <textcolor>Label2</textcolor>
               <label>$INFO[ListItem.Album]</label>
             </control>
             <control type="label" description="Duration">
@@ -106,6 +99,7 @@
               <width>330</width>
               <font>size16</font>
               <align>right</align>
+              <textcolor>Label2</textcolor>
               <label>$INFO[ListItem.Duration]</label>
             </control>
             <control type="image" description="playing">
@@ -118,18 +112,9 @@
               <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
             </control>
           </itemlayout>
-          <focusedlayout condition="container.content(songs)" width="920" height="106">
+          <focusedlayout width="920" height="106">
             <control type="group">
               <include>FocusButtonsAnimation</include>
-              <control type="image">
-                <left>16</left>
-                <top>9</top>
-                <width>848</width>
-                <height>88</height>
-                <texture border="4">img/SettingsButtonNF.png</texture>
-                <bordersize>-4</bordersize>
-                <aspectratio>stretch</aspectratio>
-              </control>
               <control type="image">
                 <visible>Control.HasFocus(51)</visible>
                 <animation effect="fade" time="100">VisibleChange</animation>
@@ -137,8 +122,8 @@
                 <top>9</top>
                 <width>848</width>
                 <height>88</height>
-                <texture border="36">focus/FrameFO.png</texture>
-                <bordersize>-26</bordersize>
+                <texture border="10">focus/FrameFO.png</texture>
+                <bordersize>-10</bordersize>
                 <aspectratio>stretch</aspectratio>
               </control>
               <control type="image" description="Thumb">
@@ -155,8 +140,8 @@
                 <right>125</right>
                 <top>0</top>
                 <height>66</height>
-                <font>size20B</font>
-                <textcolor>FocusedDark</textcolor>
+                <font>size22B</font>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
               <control type="label" description="Album">
@@ -165,7 +150,7 @@
                 <bottom>0</bottom>
                 <height>66</height>
                 <font>size16</font>
-                <textcolor>FocusedDark</textcolor>
+                <textcolor>Label2</textcolor>
                 <label>$INFO[ListItem.Album]</label>
               </control>
               <control type="label" description="Duration">
@@ -176,7 +161,7 @@
                 <width>330</width>
                 <font>size16</font>
                 <align>right</align>
-                <textcolor>FocusedDark</textcolor>
+                <textcolor>Label2</textcolor>
                 <label>$INFO[ListItem.Duration]</label>
               </control>
               <control type="image" description="playing">

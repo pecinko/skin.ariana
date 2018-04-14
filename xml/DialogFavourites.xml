@@ -12,7 +12,7 @@
         <align>center</align>
         <font>size28B</font>
         <width>850</width>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>1036</label>
       </control>
       <control type="image" description="Thumb">
@@ -59,12 +59,12 @@
             <include>FocusButtonsAnimation</include>
             <control type="image">
               <animation effect="fade" time="100">VisibleChange</animation>
-              <left>4</left>
-              <top>4</top>
-              <width>776</width>
-              <height>72</height>
-              <texture border="36">focus/FrameFO.png</texture>
-              <bordersize>-26</bordersize>
+              <left>10</left>
+              <top>10</top>
+              <width>750</width>
+              <height>60</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="label" description="Main Label">
@@ -73,7 +73,7 @@
               <top>0</top>
               <height>80</height>
               <font>size20</font>
-              <textcolor>FocusedDark</textcolor>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Label2">
@@ -83,7 +83,7 @@
               <width>124</width>
               <font>size16</font>
               <align>right</align>
-              <textcolor>FocusedDark</textcolor>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label2]</label>
             </control>
           </control>

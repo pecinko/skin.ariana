@@ -50,12 +50,12 @@
             <include>FocusButtonsAnimation</include>
             <control type="image">
               <animation effect="fade" time="100">VisibleChange</animation>
-              <left>4</left>
-              <top>4</top>
+              <left>8</left>
+              <top>8</top>
               <width>776</width>
-              <height>60</height>
-              <texture border="36">focus/FrameFO.png</texture>
-              <bordersize>-26</bordersize>
+              <height>53</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
               <aspectratio>stretch</aspectratio>
             </control>
           <control type="label">
@@ -63,7 +63,7 @@
             <width>750</width>
             <height>69</height>
             <font>size20</font>
-            <textcolor>FocusedDark</textcolor>
+            <textcolor>LabelFO</textcolor>
             <info>ListItem.Label</info>
           </control>
         </control>
@@ -98,7 +98,6 @@
           <left>435</left>
           <top>723</top>
           <width>1080</width>
-          <height>75</height>
           <align>left</align>
           <label>$LOCALIZE[5]</label>
           <onup>5</onup>

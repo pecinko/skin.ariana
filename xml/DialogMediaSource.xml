@@ -13,7 +13,7 @@
         <width>930</width>
         <font>size26B</font>
         <label>-</label>
-        <textcolor>UnfocusedDark</textcolor>
+        <textcolor>LabelNF</textcolor>
         <align>center</align>
       </control>
       <control type="grouplist" id="9001">

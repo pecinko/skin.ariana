@@ -6,12 +6,12 @@
     <control type="group" description="Content">
       <include>OpenClose</include>
       <control type="image" description="Sidebar">
-        <left>0</left>
+        <left>-150</left>
         <top>0</top>
-        <width>471</width>
-        <height>1080</height>
+        <width>660</width>
+        <height>100%</height>
         <aspectratio>stretch</aspectratio>
-        <texture>img/Sidebar.png</texture>
+        <texture border="60">img/HomeMenuBarV.png</texture>
       </control>
       <control type="label" description="Heading">
         <include>CenterHeading</include>
@@ -42,7 +42,7 @@
             <font>size20</font>
             <left>20</left>
             <right>20</right>
-            <textcolor>UnfocusedDark</textcolor>
+            <textcolor>LabelNF</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
@@ -62,7 +62,7 @@
               <font>size20</font>
               <left>20</left>
               <right>20</right>
-              <textcolor>FocusedDark</textcolor>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
@@ -163,8 +163,8 @@
                 <top>9</top>
                 <width>770</width>
                 <height>102</height>
-                <texture border="36">focus/FrameFO.png</texture>
-                <bordersize>-26</bordersize>
+                <texture border="10">focus/FrameFO.png</texture>
+                <bordersize>-10</bordersize>
                 <aspectratio>stretch</aspectratio>
               </control>
               <control type="image" description="Thumb">
@@ -181,7 +181,7 @@
                 <top>0</top>
                 <height>90</height>
                 <font>size20B</font>
-                <textcolor>FocusedDark</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
               <control type="label" description="INFO">
@@ -190,7 +190,7 @@
                 <bottom>0</bottom>
                 <height>66</height>
                 <font>size16</font>
-                <textcolor>FocusedDark</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label2]</label>
               </control>
             </control>

@@ -51,7 +51,7 @@
             <control type="label" description="Notification Local subtitle available">
               <width>1245</width>
               <height>60</height>
-              <textcolor>TitleDark</textcolor>
+              <textcolor>Title</textcolor>
               <label>31287</label>
               <font>size22</font>
               <align>center</align>
@@ -77,7 +77,7 @@
           <height>60</height>
           <font>font13</font>
           <label>$INFO[Player.Filename]</label>
-          <textcolor>TitleDark</textcolor>
+          <textcolor>Title</textcolor>
           <align>center</align>
           <aligny>center</aligny>
           <wrapmultiline>true</wrapmultiline>
@@ -127,7 +127,7 @@
             <height>54</height>
             <font>size18</font>
             <aligny>center</aligny>
-            <textcolor>SubtitleDark</textcolor>
+            <textcolor>Title2</textcolor>
             <scroll>false</scroll>
             <align>left</align>
             <info>ListItem.Label</info>
@@ -157,7 +157,7 @@
             <height>54</height>
             <font>size18</font>
             <aligny>center</aligny>
-            <textcolor>SubtitleDark</textcolor>
+            <textcolor>Title2</textcolor>
             <scroll>false</scroll>
             <align>left</align>
             <info>ListItem.Label2</info>
@@ -251,7 +251,7 @@
         <label>33063</label>
         <font>size17</font>
         <align>center</align>
-        <textcolor>TitleDark</textcolor>
+        <textcolor>Title</textcolor>
       </control>
       <control type="list" id="150">
         <left>25</left>
@@ -293,7 +293,7 @@
             <height>57</height>
             <font>size18</font>
             <aligny>center</aligny>
-            <textcolor>TitleDark</textcolor>
+            <textcolor>Title</textcolor>
             <selectedcolor>Label1FO</selectedcolor>
             <align>left</align>
             <info>ListItem.Label</info>

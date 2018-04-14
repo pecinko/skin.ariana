@@ -4,10 +4,10 @@
     <height>60</height>
     <align>left</align>
     <aligny>center</aligny>
-    <font>size20</font>
-    <textcolor>UnfocusedDark</textcolor>
+    <font>size22</font>
+    <textcolor>LabelNF</textcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <scrollspeed>50</scrollspeed>
     <scrollsuffix> &#0000; </scrollsuffix>
   </default>
@@ -15,23 +15,23 @@
     <height>60</height>
     <align>left</align>
     <aligny>center</aligny>
-    <font>size20</font>
+    <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <scrollout>false</scrollout>
     <pauseatend>3000</pauseatend>
     <scrollsuffix> • </scrollsuffix>
   </default>
   <default type="textbox">
-    <font>size20</font>
+    <font>plot</font>
     <align>justify</align>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <pagecontrol>61</pagecontrol>
     <pulseonselect>false</pulseonselect>
     <autoscroll delay="8000" time="4300" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -46,12 +46,12 @@
     <height>60</height>
     <align>center</align>
     <aligny>center</aligny>
-    <font>size20</font>
+    <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <texturenofocus>-</texturenofocus>
     <alttexturenofocus>-</alttexturenofocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
@@ -66,12 +66,12 @@
     <height>60</height>
     <align>center</align>
     <aligny>center</aligny>
-    <font>size20</font>
+    <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>UnfocusedDark</textcolor>
+    <textcolor>LabelNF</textcolor>
     <focusedcolor>Label1</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
     <texturefocus border="9">img/MediaButton2.png</texturefocus>
     <include>FocusButtonsAnimation</include>
@@ -81,12 +81,12 @@
     <height>60</height>
     <align>left</align>
     <aligny>center</aligny>
-    <font>size20</font>
+    <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <altselectedcolor>Label1FO</altselectedcolor>
     <align>center</align>
     <aligny>center</aligny>
@@ -101,11 +101,11 @@
     <height>60</height>
     <align>left</align>
     <aligny>center</aligny>
-    <font>size20</font>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <font>size22</font>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <radiowidth>54</radiowidth>
     <radioheight>28</radioheight>
     <textoffsetx>20</textoffsetx>
@@ -113,25 +113,25 @@
     <pulseonselect>false</pulseonselect>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus>-</texturenofocus>
-    <textureradioonfocus colordiffuse="FocusedDark">img/RadioON.png</textureradioonfocus>
-    <textureradioonnofocus colordiffuse="UnfocusedDark">img/RadioON.png</textureradioonnofocus>
-    <textureradioofffocus colordiffuse="FocusedDark">img/RadioOFF.png</textureradioofffocus>
-    <textureradiooffnofocus colordiffuse="UnfocusedDark">img/RadioOFF.png</textureradiooffnofocus>
+    <textureradioonfocus colordiffuse="LabelFO">img/RadioON.png</textureradioonfocus>
+    <textureradioonnofocus colordiffuse="LabelNF">img/RadioON.png</textureradioonnofocus>
+    <textureradioofffocus colordiffuse="LabelFO">img/RadioOFF.png</textureradioofffocus>
+    <textureradiooffnofocus colordiffuse="LabelNF">img/RadioOFF.png</textureradiooffnofocus>
     <include>FocusButtonsAnimation</include>
   </default>
   <default type="spincontrol">
-    <textureup colordiffuse="UnfocusedDark" flipy="true">img/SpinDW.png</textureup>
-    <textureupfocus colordiffuse="FocusedDark" flipy="true">img/SpinDW.png</textureupfocus>
-    <texturedown colordiffuse="UnfocusedDark">img/SpinDW.png</texturedown>
-    <texturedownfocus colordiffuse="FocusedDark">img/SpinDW.png</texturedownfocus>
+    <textureup colordiffuse="LabelNF" flipy="true">img/SpinDW.png</textureup>
+    <textureupfocus colordiffuse="LabelFO" flipy="true">img/SpinDW.png</textureupfocus>
+    <texturedown colordiffuse="LabelNF">img/SpinDW.png</texturedown>
+    <texturedownfocus colordiffuse="LabelFO">img/SpinDW.png</texturedownfocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus>-</texturenofocus>
     <spinwidth>30</spinwidth>
     <spinheight>40</spinheight>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <textoffsetx>20</textoffsetx>
     <align>left</align>
     <aligny>center</aligny>
@@ -142,19 +142,19 @@
   <default type="spincontrolex">
     <width>450</width>
     <height>60</height>
-    <font>size20</font>
-    <textureup colordiffuse="UnfocusedDark" flipy="true">img/SpinDW.png</textureup>
-    <textureupfocus colordiffuse="FocusedDark" flipy="true">img/SpinDW.png</textureupfocus>
-    <texturedown colordiffuse="UnfocusedDark">img/SpinDW.png</texturedown>
-    <texturedownfocus colordiffuse="FocusedDark">img/SpinDW.png</texturedownfocus>
+    <font>size22</font>
+    <textureup colordiffuse="LabelNF" flipy="true">img/SpinDW.png</textureup>
+    <textureupfocus colordiffuse="LabelFO" flipy="true">img/SpinDW.png</textureupfocus>
+    <texturedown colordiffuse="LabelNF">img/SpinDW.png</texturedown>
+    <texturedownfocus colordiffuse="LabelFO">img/SpinDW.png</texturedownfocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus>-</texturenofocus>
     <spinwidth>30</spinwidth>
     <spinheight>40</spinheight>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <textoffsetx>20</textoffsetx>
     <align>left</align>
     <aligny>center</aligny>
@@ -166,11 +166,11 @@
     <height>60</height>
     <width>450</width>
     <aligny>center</aligny>
-    <font>size20</font>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <font>size22</font>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus>-</texturenofocus>
     <sliderwidth>150</sliderwidth>
@@ -187,19 +187,19 @@
     <height>60</height>
     <width>450</width>
     <aligny>center</aligny>
-    <font>size20</font>
+    <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>UnfocusedDark</textcolor>
-    <focusedcolor>FocusedDark</focusedcolor>
+    <textcolor>LabelNF</textcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>DisabledDark</disabledcolor>
+    <disabledcolor>Disabled</disabledcolor>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus>-</texturenofocus>
     <sliderwidth>150</sliderwidth>
     <sliderheight>24</sliderheight>
     <texturesliderbar border="3,0,3,0">HUD/SliderBG.png</texturesliderbar>
-    <textureslidernib colordiffuse="UnfocusedDark">HUD/SliderNib.png</textureslidernib>
-    <textureslidernibfocus colordiffuse="FocusedDark">HUD/SliderNib.png</textureslidernibfocus>
+    <textureslidernib colordiffuse="LabelNF">HUD/SliderNib.png</textureslidernib>
+    <textureslidernibfocus colordiffuse="LabelFO">HUD/SliderNib.png</textureslidernibfocus>
     <texturefocus border="9">img/MediaButton2.png</texturefocus>
     <texturenofocus>-</texturenofocus>
     <pulseonselect>false</pulseonselect>

@@ -4,16 +4,29 @@
   <controls>
     <include>FullBackground</include>
 
-    <control type="list" id="50">
-      <left>1058</left>
-      <top>180</top>
-      <width>784</width>
-      <height>799</height>
-      <pagecontrol>60</pagecontrol>
-      <onleft>noop</onleft>
-      <onright>noop</onright>
-      <onup>50</onup>
-      <ondown>50</ondown>
+    <control type="group" description="List 50 base">
+      <visible>Control.IsVisible(50)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="Main Label">
+        <centerleft>1400</centerleft>
+        <centertop>90</centertop>
+        <align>center</align>
+        <font>size28B</font>
+        <width>850</width>
+        <textcolor>$VAR[Title.Color]</textcolor>
+        <label>$VAR[GlobalHeadings]</label>
+      </control>
+      <control type="list" id="50">
+        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes)]</visible>
+        <left>1058</left>
+        <top>180</top>
+        <width>784</width>
+        <height>799</height>
+        <pagecontrol>60</pagecontrol>
+        <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
+        <onright condition="Skin.HasSetting(Scrollbars_Active)">9001</onright>
+        <onup>50</onup>
+        <ondown>50</ondown>
       <itemlayout width="784" height="80">
         <control type="label" description="Main Label">
           <left>20</left>
@@ -23,101 +36,63 @@
           <font>size20</font>
           <label>$INFO[ListItem.Label]</label>
         </control>
-        <control type="image" description="arrow">
-          <visible>ListItem.IsFolder + IsEmpty(ListItem.label2)</visible>
-          <right>20</right>
+        <control type="label" description="Label2">
+        <right>20</right>
+        <top>0</top>
+        <height>80</height>
+        <width>124</width>
+        <font>size16</font>
+        <scroll>false</scroll>
+        <align>right</align>
+        <label>$INFO[ListItem.Label2]</label>
+      </control>
+    </itemlayout>
+    <focusedlayout width="784" height="80">
+      <control type="group">
+        <include>FocusButtonsAnimation</include>
+        <control type="image">
+          <animation effect="fade" time="100">VisibleChange</animation>
+          <left>4</left>
+          <top>4</top>
+          <width>776</width>
+          <height>72</height>
+          <texture border="10">focus/FrameFO.png</texture>
+          <bordersize>-10</bordersize>
+          <aspectratio>stretch</aspectratio>
+        </control>
+        <control type="label" description="Main Label">
+          <left>20</left>
+          <right>125</right>
           <top>0</top>
           <height>80</height>
-          <width>40</width>
-          <align>right</align>
-          <aspectratio>keep</aspectratio>
-          <texture colordiffuse="UnfocusedDark">img/Arrow.png</texture>
+          <font>size20</font>
+          <textcolor>LabelFO</textcolor>
+          <label>$INFO[ListItem.Label]</label>
         </control>
         <control type="label" description="Label2">
-          <right>20</right>
-          <top>0</top>
-          <height>80</height>
-          <width>124</width>
-          <font>size16</font>
-          <scroll>false</scroll>
-          <align>right</align>
-          <label>$INFO[ListItem.Label2]</label>
-        </control>
-        <control type="image" description="Icon">
-          <animation condition="true" effect="fade" start="100" end="60" time="0">Conditional</animation>
-          <right>0</right>
-          <top>0</top>
-          <height>81</height>
-          <width>42</width>
-          <aspectratio>keep</aspectratio>
-          <texture>$INFO[ListItem.Thumb]</texture>
-        </control>
-      </itemlayout>
-      <focusedlayout width="784" height="80">
-        <control type="group">
-          <include>FocusButtonsAnimation</include>
-          <control type="image">
-            <animation effect="fade" time="100">VisibleChange</animation>
-            <left>4</left>
-            <top>4</top>
-            <width>776</width>
-            <height>72</height>
-            <texture border="36">focus/FrameFO.png</texture>
-            <bordersize>-26</bordersize>
-            <aspectratio>stretch</aspectratio>
-          </control>
-          <control type="label" description="Main Label">
-            <left>20</left>
-            <right>125</right>
-            <top>0</top>
-            <height>80</height>
-            <font>size20</font>
-            <textcolor>FocusedDark</textcolor>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
-          <control type="image" description="arrow">
-            <visible>ListItem.IsFolder + IsEmpty(ListItem.label2)</visible>
-            <right>20</right>
-            <top>0</top>
-            <height>80</height>
-            <width>40</width>
-            <aspectratio>keep</aspectratio>
-            <align>right</align>
-            <texture colordiffuse="FocusedDark">img/Arrow.png</texture>
-          </control>
-          <control type="label" description="Label2">
-            <right>20</right>
-            <top>0</top>
-            <height>80</height>
-            <width>124</width>
-            <font>size16</font>
-            <align>right</align>
-            <textcolor>FocusedDark</textcolor>
-            <label>$INFO[ListItem.Label2]</label>
-          </control>
-          <control type="image" description="Icon">
-            <animation effect="fade" start="60" end="100" time="100" delay="200">Focus</animation>
-            <right>0</right>
-            <top>0</top>
-            <height>81</height>
-            <width>42</width>
-            <aspectratio>keep</aspectratio>
-            <texture>$INFO[ListItem.Thumb]</texture>
-          </control>
-        </control>
-      </focusedlayout>
+        <right>20</right>
+        <top>0</top>
+        <height>80</height>
+        <width>124</width>
+        <font>size16</font>
+        <align>right</align>
+        <textcolor>LabelFO</textcolor>
+        <label>$INFO[ListItem.Label2]</label>
+      </control>
+    </control>
+  </focusedlayout>
       <content>
-        <item id="1" description="AutoScroll">
-          <visible>Skin.HasSetting(AutoScroll)</visible>
-          <label>$LOCALIZE[20189]</label>
-          <label2>$LOCALIZE[107]</label2>
-          <onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+        <item id="1" description="Theme">
+          <visible>Skin.HasSetting(DarkTheme)</visible>
+          <label>$LOCALIZE[21895]</label>
+          <label2>$LOCALIZE[374]</label2>
+          <onclick>Skin.ToggleSetting(DarkTheme)</onclick>
         </item>
-        <item id="1" description="AutoScroll">
-          <visible>!Skin.HasSetting(AutoScroll)</visible>
-          <label>$LOCALIZE[20189]</label>
-          <label2>$LOCALIZE[106]</label2>
-          <onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+        <item id="1" description="Theme">
+          <visible>!Skin.HasSetting(DarkTheme)</visible>
+          <label>$LOCALIZE[21895]</label>
+          <label2>$LOCALIZE[375]</label2>
+          <onclick>Skin.ToggleSetting(DarkTheme)</onclick>
         </item>
         <item id="2" description="Fanart">
           <visible>Skin.HasSetting(HideFanart)</visible>
@@ -155,19 +130,6 @@
           <label2>$LOCALIZE[305]</label2>
           <onclick>Skin.ToggleSetting(ViewOptions_Hide)</onclick>
         </item>
-        <item id="8" description="Home screen categories">
-          <label>31990</label>
-          <onclick>ActivateWindow(1116)</onclick>
-        </item>
-        <item id="9" description="Home Menu">
-          <label>31989</label>
-          <onclick>ActivateWindow(1117)</onclick>
-        </item>
-        <item id="10" description="Quit button function">
-          <label>$LOCALIZE[31982]</label>
-          <label2 fallback="33061">$VAR[QuitLabel2]</label2>
-          <onclick>ActivateWindow(1114)</onclick>
-        </item>
         <item id="11" description="Show Clock">
           <visible>Skin.HasSetting(ShowClock)</visible>
           <label>$LOCALIZE[31980]</label>
@@ -183,33 +145,14 @@
         <item id="12" description="Reset Skin">
           <label>$LOCALIZE[31038]</label>
           <onclick>Skin.ResetSettings</onclick>
-          <onclick>XBMC.ReloadSkin()</onclick>
+          <onclick>ReloadSkin()</onclick>
           <icon>DefaultIconWarning.png</icon>
         </item>
       </content>
     </control>
+  </control>
     <control type="group" description="Left panel">
       <top>0</top>
-      <control type="image" description="PVR">
-        <visible>Container(50).HasFocus(0) + !Skin.HasSetting(PVR_Enabled)</visible>
-        <animation effect="fade" time="200">VisibleChange</animation>
-        <left>120</left>
-        <top>168</top>
-        <width>660</width>
-        <height>750</height>
-        <aspectratio>keep</aspectratio>
-        <texture>help/PVROFF.jpg</texture>
-      </control>
-      <control type="image" description="HomeMenu">
-        <visible>Container(50).HasFocus(0) + Skin.HasSetting(PVR_Enabled)</visible>
-        <animation effect="fade" time="200">VisibleChange</animation>
-        <left>120</left>
-        <top>168</top>
-        <width>660</width>
-        <height>750</height>
-        <aspectratio>keep</aspectratio>
-        <texture>help/PVRON.jpg</texture>
-      </control>
       <control type="textbox" description="Plot51">
         <visible>Container(50).HasFocus(1)</visible>
         <animation effect="fade" time="200">VisibleChange</animation>

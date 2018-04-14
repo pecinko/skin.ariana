@@ -8,7 +8,16 @@
     <value condition="Control.HasFocus(8011)">$INFO[Container(8011).ListItem.Art(fanart)]</value>
     <value>$INFO[Container(300).ListItem.Art(fanart)]</value>
   </variable>
+  <variable name="Overlay.Color">
+    <value condition="Skin.HasSetting(DarkTheme)">FF2A2C32</value>
+    <value condition="!Skin.HasSetting(DarkTheme)">FFCED5E0</value>
+  </variable>
+  <variable name="Background.Overlay" description="backgrounds">
+    <value condition="Skin.HasSetting(DarkTheme)">background/DarkBG.png</value>
+    <value condition="!Skin.HasSetting(DarkTheme)">background/LightBG.png</value>
+  </variable>
   <variable name="Background.Art" description="Art backgrounds">
+    <value condition="Skin.HasSetting(HideFanart)">-</value>
     <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
     <value>$INFO[ListItem.Thumb]</value>
   </variable>
@@ -17,7 +26,7 @@
     <value>$INFO[ListItem.Overlay]</value>
   </variable>
   <variable name="GlobalHeadings" description="Global Headings">
-    <value condition="Window.IsActive(56) | Window.IsActive(SkinSettings.xml)">$LOCALIZE[5] - Quartz</value>
+    <value condition="Window.IsActive(56) | Window.IsActive(SkinSettings.xml)">$LOCALIZE[20077]</value>
     <value condition="Window.IsActive(Settings.xml)">$LOCALIZE[5]</value>
     <value condition="Window.IsActive(AddonBrowser.xml) + IsEmpty(Container.FolderName)">$LOCALIZE[31291]</value>
     <value condition="Window.IsActive(MyVideoPlaylist.xml)">$LOCALIZE[20012]</value>
@@ -36,31 +45,19 @@
   <variable name="TopLabel" description="Shown Above Plots and descriptions">
     <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml)">$INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
     <value condition="Container.content(Albums)">$INFO[ListItem.Label]</value>
-    <value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
+    <value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]</value>
     <value condition="Container.Content(Addons)">$INFO[ListItem.Property(Addon.Creator),  ]</value>
     <value condition="Container.Content(songs)">$INFO[ListItem.Album]</value>
     <value condition="Container.Content(MusicVideos)">$INFO[ListItem.Label]</value>
-    <value condition="Container.Content(Movies) + IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.MPAA, • ]</value>
-    <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$VAR[Trailer, • ]$INFO[ListItem.MPAA, • ]</value>
+    <value condition="Container.Content(Movies) + IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Rating,, • ]$INFO[ListItem.MPAA, • ]</value>
+    <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Rating,, • ]$LOCALIZE[20410, • ]$INFO[ListItem.MPAA, • ]</value>
     <value condition="Container.Content(Seasons) | Container.Content(TVShows)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]$INFO[ListItem.MPAA, • ]</value>
     <value>$INFO[ListItem.Label2]</value>
   </variable>
-
-
   <variable name="Fanart.Thumb" description="Thumb fallback for fanart">
     <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
     <value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
     <value>DefaultFolder.png</value>
-  </variable>
-  <variable name="Trailer" description="Trailers check keep in front">
-    <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">$LOCALIZE[20410]</value>
-  </variable>
-  <variable name="QuitLabel2" description="Label2 for skin settings Quit function item">
-    <value condition="StringCompare(Skin.String(shutdown),quit)">$LOCALIZE[13009]</value>
-    <value condition="StringCompare(Skin.String(shutdown),powerdown)">$LOCALIZE[13005]</value>
-    <value condition="StringCompare(Skin.String(shutdown),hibernate)">$LOCALIZE[13010]</value>
-    <value condition="StringCompare(Skin.String(shutdown),suspend)">$LOCALIZE[13011]</value>
-    <value condition="StringCompare(Skin.String(shutdown),reboot)">$LOCALIZE[13013]</value>
   </variable>
   <variable name="MusicPlayingFanartLabel2" description="Label2 for music playing FA">
     <value condition="Skin.HasSetting(MusicPlayingFanart)">$LOCALIZE[449]</value>

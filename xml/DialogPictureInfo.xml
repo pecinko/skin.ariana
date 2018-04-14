@@ -17,7 +17,7 @@
       <width>930</width>
       <label>13406</label>
       <font>size26B</font>
-			<textcolor>TitleDark</textcolor>
+			<textcolor>Title</textcolor>
       <align>center</align>
     </control>
     <control type="group">

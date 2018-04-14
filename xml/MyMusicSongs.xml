@@ -68,7 +68,7 @@
                 <width>308</width>
                 <height>30</height>
                 <font>size16</font>
-                <textcolor>UnfocusedDark</textcolor>
+                <textcolor>LabelNF</textcolor>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
               </control>

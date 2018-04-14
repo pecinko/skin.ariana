@@ -484,7 +484,7 @@
             <height>24</height>
             <font>info1</font>
             <align>center</align>
-            <textcolor>TitleDark</textcolor>
+            <textcolor>Title</textcolor>
             <label>$INFO[VideoPlayer.Time]</label>
           </control>
           <control type="label">
@@ -505,7 +505,7 @@
             <height>24</height>
             <font>info1</font>
             <align>center</align>
-            <textcolor>TitleDark</textcolor>
+            <textcolor>Title</textcolor>
             <label>-$INFO[VideoPlayer.TimeRemaining]</label>
             <visible>!IsEmpty(VideoPlayer.TimeRemaining)</visible>
           </control>-->
