@@ -23,6 +23,7 @@
           <onleft>22</onleft>
           <onup>9001</onup>
           <ondown>12</ondown>
+          <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
         </control>
         <control type="label">
           <description>Name Label</description>
@@ -36,9 +37,6 @@
           <left>15</left>
           <top>246</top>
           <width>1110</width>
-          <height>63</height>
-          <font>size22</font>
-          <textoffsetx>20</textoffsetx>
           <onup>22</onup>
           <onleft>12</onleft>
           <onright>12</onright>
@@ -65,36 +63,39 @@
             <onleft>8999</onleft>
             <onright>8999</onright>
             <ondown>16</ondown>
-            <itemlayout width="800" height="81">
+            <itemlayout width="800" height="62">
               <control type="image">
                 <left>0</left>
                 <top>0</top>
-                <width>840</width>
-                <height>81</height>
+                <width>800</width>
+                <height>60</height>
                 <texture border="8">img/SettingsButtonNF.png</texture>
-                <bordersize>4</bordersize>
               </control>
               <control type="label">
                 <left>30</left>
                 <top>0</top>
                 <width>780</width>
-                <height>81</height>
+                <height>60</height>
                 <info>ListItem.Label</info>
               </control>
             </itemlayout>
-            <focusedlayout width="800" height="81">
+            <focusedlayout width="800" height="62">
               <control type="group">
-                <animation type="Focus" reversible="true">
-                  <effect type="zoom" center="auto" start="100" end="108" time="100" easing="inout"/>
-                </animation>
-                <include>Slider4</include>
+                <include>FocusButtonsAnimation</include>
+                <control type="image">
+                  <left>0</left>
+                  <top>0</top>
+                  <width>800</width>
+                  <height>60</height>
+                  <texture border="8">img/SettingsButtonFO.png</texture>
+                </control>
                 <control type="label">
                   <left>30</left>
                   <top>0</top>
-                  <height>81</height>
+                  <height>60</height>
                   <width>780</width>
                   <info>ListItem.Label</info>
-                  <focusedcolor>LabelFO</focusedcolor>
+                  <textcolor>LabelFO</textcolor>
                 </control>
               </control>
             </focusedlayout>
@@ -105,7 +106,6 @@
               <left>870</left>
               <top>381</top>
               <width>255</width>
-              <height>63</height>
               <label>15019</label>
               <onup>17</onup>
               <onleft>10</onleft>
@@ -119,7 +119,6 @@
               <left>870</left>
               <top>451</top>
               <width>255</width>
-              <height>63</height>
               <label>1210</label>
               <onup>13</onup>
               <onleft>10</onleft>
@@ -133,7 +132,6 @@
               <left>870</left>
               <top>521</top>
               <width>255</width>
-              <height>63</height>
               <label>21435</label>
               <onup>14</onup>
               <onleft>10</onleft>
@@ -157,40 +155,40 @@
             <left>15</left>
             <top>657</top>
             <width>1110</width>
-            <height>63</height>
             <label>21424</label>
             <onright>16</onright>
             <onleft>16</onleft>
             <onup>10</onup>
             <ondown>17</ondown>
+            <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
           </control>
           <control type="spincontrolex" id="17">
             <left>15</left>
             <top>735</top>
             <width>1110</width>
-            <height>63</height>
             <label>21427</label>
             <onright>17</onright>
             <onleft>17</onleft>
             <onup>16</onup>
             <ondown>18</ondown>
+            <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
           </control>
           <control type="spincontrolex" id="18">
             <left>15</left>
             <top>813</top>
-            <width>854</width>
-            <height>63</height>
+            <width>830</width>
             <label>21429</label>
             <onright>19</onright>
             <onleft>19</onleft>
             <onup>17</onup>
             <ondown>9001</ondown>
+            <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
           </control>
           <control type="togglebutton" id="19">
+            <include>FocusButtonsAnimation</include>
             <left>872</left>
             <top>813</top>
             <width>254</width>
-            <height>63</height>
             <label>21431</label>
             <altlabel>21430</altlabel>
             <onright>18</onright>
@@ -199,6 +197,7 @@
             <ondown>9001</ondown>
             <align>center</align>
             <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
+            <alttexturenofocus border="8">img/SettingsButtonNF.png</alttexturenofocus>
           </control>
         </control>
         <control type="group" id="9001">
@@ -208,7 +207,6 @@
             <left>248</left>
             <top>894</top>
             <width>300</width>
-            <height>63</height>
             <label>186</label>
             <onup>18</onup>
             <onleft>21</onleft>
@@ -222,7 +220,6 @@
             <left>592</left>
             <top>894</top>
             <width>300</width>
-            <height>63</height>
             <label>222</label>
             <onup>18</onup>
             <onleft>20</onleft>

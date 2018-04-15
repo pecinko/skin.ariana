@@ -4,8 +4,8 @@
   <include file="defaults.xml" />
   <include file="View_50.xml" />
   <include name="9000GrouplistParameters">
-    <centerleft>960</centerleft>
-    <centertop>540</centertop>
+    <centerleft>50%</centerleft>
+    <centertop>50%</centertop>
     <width>500</width>
     <height>680</height>
     <itemgap>12</itemgap>
@@ -26,10 +26,6 @@
     <align>center</align>
     <aligny>center</aligny>
     <font>size20B</font>
-    <texturenofocus border="4">menu/MenuButtonNF.png</texturenofocus>
-    <alttexturenofocus border="4">menu/MenuButtonNF.png</alttexturenofocus>
-    <texturefocus border="4">menu/MenuButtonFO.png</texturefocus>
-    <alttexturefocus border="4">menu/MenuButtonFO.png</alttexturefocus>
   </include>
   <include name="CenterHeading">
     <centerleft>960</centerleft>
@@ -202,7 +198,7 @@
       </control>
       <control type="label" description="Heading">
         <left>0</left>
-        <top>0</top>
+        <top>60</top>
         <align>center</align>
         <aligny>center</aligny>
         <width>1920</width>
@@ -230,7 +226,7 @@
   </include>
   <include name="FocusButtonsAnimation">
     <animation type="Focus" reversible="true">
-      <effect type="zoom" center="auto" start="100" end="105" time="100" easing="inout"/>
+      <effect type="zoom" center="auto" start="100" end="104" time="100" easing="inout"/>
     </animation>
   </include>
   <include name="DefaultMediaInfo">
@@ -410,128 +406,6 @@
   <align>left</align>
   <textcolor>Subtitle</textcolor>
   <animation effect="fade" time="200">VisibleChange</animation>
-</include>
-<include name="MusicInfo">
-  <control type="group" description="Music info NEW">
-    <visible>!ListItem.IsFolder</visible>
-    <left>120</left>
-    <top>57</top>
-    <control type="group" description="Music Info">
-      <top>765</top>
-      <left>0</left>
-      <control type="label" description="Main Label">
-        <top>-52</top>
-        <font>size20</font>
-        <textcolor>Title</textcolor>
-        <width>608</width>
-        <height>36</height>
-        <align>left</align>
-        <scroll>false</scroll>
-        <label>$INFO[ListItem.Title]</label>
-      </control>
-      <control type="image" description="Rating">
-        <left>615</left>
-        <top>-45</top>
-        <height>27</height>
-        <width>150</width>
-        <colordiffuse>HL</colordiffuse>
-        <aspectratio align="left">keep</aspectratio>
-        <texture>badges/$INFO[ListItem.StarRating]</texture>
-      </control>
-      <control type="image" description="Separator">
-        <left>0</left>
-        <top>0</top>
-        <height>1</height>
-        <width>758</width>
-        <aspectratio>stretch</aspectratio>
-        <texture>img/LineST.png</texture>
-      </control>
-      <control type="image" description="Separator">
-        <left>0</left>
-        <top>180</top>
-        <height>1</height>
-        <width>758</width>
-        <aspectratio>stretch</aspectratio>
-        <texture>img/LineST.png</texture>
-      </control>
-      <control type="grouplist" description="Labels">
-        <left>0</left>
-        <top>18</top>
-        <width>156</width>
-        <height>240</height>
-        <itemgap>7</itemgap>
-        <orientation>vertical</orientation>
-        <control type="label" description="Album label 1">
-          <font>size20</font>
-          <width>156</width>
-          <height>30</height>
-          <align>right</align>
-          <textcolor>Title2</textcolor>
-          <label>$LOCALIZE[558]:</label>
-        </control>
-        <control type="label" description="Genre label 2">
-          <font>size20</font>
-          <width>156</width>
-          <height>30</height>
-          <align>right</align>
-          <textcolor>Title2</textcolor>
-          <label>$LOCALIZE[515]:</label>
-        </control>
-        <control type="label" description="Type label 3">
-          <font>size20</font>
-          <width>156</width>
-          <height>30</height>
-          <align>right</align>
-          <textcolor>Title2</textcolor>
-          <label>$LOCALIZE[564]:</label>
-        </control>
-        <control type="label" description="Duration label 3">
-          <font>size20</font>
-          <width>156</width>
-          <height>30</height>
-          <align>right</align>
-          <textcolor>Title2</textcolor>
-          <label>$LOCALIZE[180]:</label>
-        </control>
-      </control>
-      <control type="grouplist" description="Values">
-        <left>165</left>
-        <top>18</top>
-        <width>570</width>
-        <height>240</height>
-        <itemgap>7</itemgap>
-        <orientation>vertical</orientation>
-        <control type="label" description="Album value 1">
-          <font>size20</font>
-          <width>562</width>
-          <height>30</height>
-          <align>left</align>
-          <label>$INFO[ListItem.Album]</label>
-        </control>
-        <control type="label" description="Genre value 2">
-          <font>size20</font>
-          <width>562</width>
-          <height>30</height>
-          <align>left</align>
-          <label>$INFO[ListItem.Genre]</label>
-        </control>
-        <control type="label" description="Type">
-          <font>size20</font>
-          <width>562</width>
-          <height>30</height>
-          <align>left</align>
-          <label>[UPPERCASE]$INFO[ListItem.FileExtension][/UPPERCASE]</label>
-        </control>
-        <control type="label" description="Duration">
-          <font>size20</font>
-          <width>562</width>
-          <height>30</height>
-          <align>left</align>
-          <label>$INFO[ListItem.Duration]</label>
-        </control>
-      </control>
-    </control>
-  </control>
 </include>
 <include name="10Rating">
   <height>24</height>

@@ -30,7 +30,7 @@
         <top>165</top>
         <width>420</width>
         <height>864</height>
-        <itemgap>5</itemgap>
+        <itemgap>2</itemgap>
         <onleft>5</onleft>
         <onright>5</onright>
         <onup>20</onup>
@@ -56,8 +56,8 @@
         <left>540</left>
         <top>165</top>
         <width>1260</width>
-        <height>660</height>
-        <itemgap>0</itemgap>
+        <height>680</height>
+        <itemgap>2</itemgap>
         <onleft>3</onleft>
         <onright>60</onright>
         <onup>5</onup>
@@ -82,17 +82,9 @@
         <width>1260</width>
         <align>left</align>
       </control>
-      <control type="image" description="Separator">
-        <left>560</left>
-        <top>850</top>
-        <height>1</height>
-        <width>1230</width>
-        <aspectratio>stretch</aspectratio>
-        <texture>img/LineST.png</texture>
-      </control>
       <control type="textbox" id="6" description="Settings description">
         <left>560</left>
-        <top>880</top>
+        <top>888</top>
         <width>1230</width>
         <height>126</height>
         <align>justify</align>

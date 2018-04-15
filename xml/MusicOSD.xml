@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
   <defaultcontrol always="true">602</defaultcontrol>
-  <include>OpenClose</include>
   <controls>
-    <control type="progress" id="23" description="Progress Bar">
-      <visible>true</visible>
-      <left>-840</left>
-      <top>-750</top>
-      <width>747</width>
-      <info>Player.Progress</info>
-      <visible>true</visible>
-    </control>
+    <control type="group">
+    <include>OpenClose</include>
     <control type="image">
       <left>-4</left>
       <top>990</top>
@@ -214,36 +207,28 @@
     </control>
     <control type="group" description="All dialog content">
       <animation effect="fade" start="100" end="0" time="100" condition="!ControlGroup(100).HasFocus()">Conditional</animation>
-      <control type="image">
-        <centerleft>960</centerleft>
-        <centertop>567</centertop>
-        <width>690</width>
-        <height>520</height>
-        <texture border="21">img/DialogNew.png</texture>
-		  </control>
-      <control type="label" description="Dialog heading">
-        <centerleft>960</centerleft>
-        <top>350</top>
-        <width>690</width>
-        <height>52</height>
-        <label>33063</label>
-        <align>center</align>
-        <aligny>center</aligny>
-				<textcolor>Title</textcolor>
-        <include>TitleCommons</include>
-      </control>
+      <include>MenuFullBG</include>
       <control type="grouplist" id="100" description="Music OSD Options">
-        <centerleft>960</centerleft>
-        <centertop>620</centertop>
+        <centerleft>50%</centerleft>
+        <centertop>50%</centertop>
         <align>center</align>
         <width>500</width>
-        <height>483</height>
+        <height max="480">auto</height>
         <onleft>101</onleft>
         <onright>101</onright>
         <onup>100</onup>
         <ondown>100</ondown>
-        <itemgap>10</itemgap>
+        <onback>SetFocus(101)</onback>
+        <itemgap>3</itemgap>
         <scrolltime>280</scrolltime>
+        <control type="label" id="400" description="Dialog heading">
+          <width>500</width>
+          <height>120</height>
+          <label>[B]$LOCALIZE[14018][/B]</label>
+          <align>center</align>
+          <font>size24B</font>
+  				<textcolor>LabelFO</textcolor>
+        </control>
         <control type="button" id="555">
           <description>Playlist</description>
           <width>500</width>
@@ -256,36 +241,22 @@
           <description>Visualisation</description>
           <label>24010</label>
         </control>
-        <control type="button" id="19">
-          <width>500</width>
-          <description>Visualisation settings</description>
-          <label>$LOCALIZE[250] $LOCALIZE[10004]</label>
-          <onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-          <enable>Visualisation.Enabled</enable>
-          <animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.Enabled">Conditional</animation>
-        </control>
         <control type="button" id="301">
           <description>CodecInfo</description>
           <width>500</width>
           <label>21446</label>
           <onclick>CodecInfo</onclick>
+          <onclick>SetFocus(101)</onclick>
         </control>
-        <!--<control type="button" id="20">
-          <description>Visualisation Presets</description>
-          <label>31048</label>
-          <onclick>ActivateWindow(122)</onclick>
-          <enable>Visualisation.Enabled</enable>
-          <animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.Enabled">Conditional</animation>
-        </control>
-        <control type="button" id="9">
+        <!--<control type="button" id="9">
           <description>Lyrics</description>
           <label>24013</label>
           <onclick>Close</onclick>
           <onclick condition="IsEmpty(Skin.String(LyricPath))">Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
           <onclick condition="!IsEmpty(Skin.String(LyricPath))">XBMC.RunScript($INFO[Skin.String(LyricPath)])</onclick>
         </control>-->
-
       </control>
     </control>
+  </control>
   </controls>
 </window>

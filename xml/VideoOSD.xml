@@ -3,263 +3,84 @@
   <defaultcontrol always="true">603</defaultcontrol>
   <zorder>2</zorder>
   <controls>
-  <control type="group" description="OSDMenu">
+    <control type="group" description="OSDMenu">
       <visible>![Window.IsActive(123) | Window.IsActive(124)]</visible>
       <control type="group">
+        <control type="image" description="OSD BG">
+          <visible>!Window.IsActive(dialogseekbar.xml)</visible>
+          <left>0</left>
+          <top>0</top>
+          <height>180</height>
+          <width>100%</width>
+          <texture>OSD/OSDBackground.png</texture>
+        </control>
+        <control type="grouplist" id="100">
+          <width max="1500">auto</width>
+          <top>930</top>
+          <centerleft>50%</centerleft>
+          <height>144</height>
+          <itemgap>0</itemgap>
+          <align>center</align>
+          <orientation>horizontal</orientation>
+
+          <control type="button" id="602">
+            <width>93</width>
+            <height>57</height>
+            <texturenofocus>OSD/Rewind.png</texturenofocus>
+            <texturefocus>OSD/RewindFocused.png</texturefocus>
+            <onclick>PlayerControl(Rewind)</onclick>
+          </control>
+          <control type="button" id="604">
+            <width>93</width>
+            <height>57</height>
+            <texturenofocus>OSD/FastForward.png</texturenofocus>
+            <texturefocus>OSD/FastForwardFocused.png</texturefocus>
+            <onclick>PlayerControl(Forward)</onclick>
+          </control>
+          <control type="button" id="600">
+            <width>93</width>
+            <height>57</height>
+            <texturenofocus>OSD/Stop.png</texturenofocus>
+            <texturefocus>OSD/StopFocused.png</texturefocus>
+            <onclick>PlayerControl(Stop)</onclick>
+          </control>
+          <control type="togglebutton" id="603">
+            <width>93</width>
+            <height>57</height>
+            <texturenofocus>OSD/Play.png</texturenofocus>
+            <texturefocus>OSD/PlayFocused.png</texturefocus>
+            <usealttexture>Player.Playing</usealttexture>
+            <alttexturenofocus>OSD/Pause.png</alttexturenofocus>
+            <alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
+            <onclick>PlayerControl(Play)</onclick>
+          </control>
+          <control type="button" id="606">
+            <width>93</width>
+            <height>57</height>
+            <texturenofocus>OSD/DVD.png</texturenofocus>
+            <texturefocus>OSD/DVDFocused.png</texturefocus>
+            <onclick allowhiddenfocus="true">Control.SetFocus(101)</onclick>
+          </control>
+          <control type="button" id="601">
+            <width>93</width>
+            <height>57</height>
+            <texturenofocus>OSD/SkipBack.png</texturenofocus>
+            <texturefocus>OSD/SkipBackFocused.png</texturefocus>
+            <onclick>PlayerControl(Previous)</onclick>
+          </control>
+          <control type="button" id="605">
+            <width>93</width>
+            <height>57</height>
+            <texturenofocus>OSD/SkipForward.png</texturenofocus>
+            <texturefocus>OSD/SkipForwardFocused.png</texturefocus>
+            <onclick>PlayerControl(Next)</onclick>
+          </control>
+        </control>
         <control type="group">
           <left>154</left>
           <top>843</top>
           <width>1611</width>
           <height>177</height>
-          <control type="image" description="OSD BG">
-            <visible>!Window.IsActive(dialogseekbar.xml)</visible>
-						<left>0</left>
-            <top>0</top>
-            <height>180</height>
-            <width>1611</width>
-            <texture>OSD/OSDBackground.png</texture>
-          </control>
-          <control type="group" id="100">
-            <width>1185</width>
-            <top>90</top>
-            <height>144</height>
-            <itemgap>0</itemgap>
-            <orientation>horizontal</orientation>
-            <control type="button" id="600">
-              <left>476</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/Stop.png</texturenofocus>
-              <texturefocus>OSD/StopFocused.png</texturefocus>
-              <onup>606</onup>
-							<onleft>607</onleft>
-              <onright>601</onright>
-              <onclick>XBMC.PlayerControl(Stop)</onclick>
-            </control>
-            <control type="button" id="601">
-              <left>568</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/SkipBack.png</texturenofocus>
-              <texturefocus>OSD/SkipBackFocused.png</texturefocus>
-              <onup>606</onup>
-							<onleft>600</onleft>
-              <onright>602</onright>
-              <onclick>XBMC.PlayerControl(Previous)</onclick>
-            </control>
-            <control type="button" id="602">
-              <left>662</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/Rewind.png</texturenofocus>
-              <texturefocus>OSD/RewindFocused.png</texturefocus>
-              <onleft>601</onleft>
-              <onright>603</onright>
-              <onup>606</onup>
-							<onclick>XBMC.PlayerControl(Rewind)</onclick>
-            </control>
-            <control type="togglebutton" id="603">
-              <left>754</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/Play.png</texturenofocus>
-              <texturefocus>OSD/PlayFocused.png</texturefocus>
-              <usealttexture>Player.Playing</usealttexture>
-              <alttexturenofocus>OSD/Pause.png</alttexturenofocus>
-              <alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
-              <onleft>602</onleft>
-              <onright>604</onright>
-              <onup>606</onup>
-							<onclick>XBMC.PlayerControl(Play)</onclick>
-            </control>
-            <control type="button" id="604">
-              <left>848</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/FastForward.png</texturenofocus>
-              <texturefocus>OSD/FastForwardFocused.png</texturefocus>
-              <onleft>603</onleft>
-              <onright>605</onright>
-              <onup>606</onup>
-							<onclick>XBMC.PlayerControl(Forward)</onclick>
-            </control>
-            <control type="button" id="605">
-              <left>940</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/SkipForward.png</texturenofocus>
-              <texturefocus>OSD/SkipForwardFocused.png</texturefocus>
-              <onleft>604</onleft>
-              <onright>606</onright>
-              <onup>606</onup>
-							<onclick>XBMC.PlayerControl(Next)</onclick>
-            </control>
-            <control type="button" id="606">
-              <left>1034</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/DVD.png</texturenofocus>
-              <texturefocus>OSD/DVDFocused.png</texturefocus>
-              <onleft>605</onleft>
-              <onright>607</onright>
-							<onup>606</onup>
-              <onclick allowhiddenfocus="true">Control.SetFocus(101)</onclick>
-            </control>
-            <!--<control type="button" id="607">
-              <left>1414</left>
-              <top>1</top>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/AudioSettings.png</texturenofocus>
-              <texturefocus>OSD/AudioSettingsFocused.png</texturefocus>
-              <onup>2016</onup>
-              <ondown>2016</ondown>
-              <onleft>1015</onleft>
-              <onright>1017</onright>
-              <onclick>XBMC.ActivateWindow(124)</onclick>
-            </control>-->
-            <!--<control type="button" id="607">
-              <left>1470</left>
-              <top>-19</top>
-              <width>90</width>
-          		<height>98</height>
-		      		<texturefocus colordiffuse="White2">VideoOSD/OSDOptionsFO.png</texturefocus>
-          		<texturenofocus colordiffuse="White2">VideoOSD/OSDOptionsNF.png</texturenofocus>
-		  		    <onleft>606</onleft>
-              <onright>600</onright>
-              <onclick allowhiddenfocus="true">Control.SetFocus(101)</onclick>
-			</control>-->
-          </control>
-          <!--<control type="group" id="214">
-            <width>1185</width>
-            <top>24</top>
-            <height>144</height>
-            <itemgap>0</itemgap>
-            <orientation>horizontal</orientation>
-            <visible allowhiddenfocus="true">[Control.HasFocus(2009) | Control.HasFocus(2010) | Control.HasFocus(2011) | Control.HasFocus(2012) | Control.HasFocus(2013) | Control.HasFocus(2014) | Control.HasFocus(2015) | Control.HasFocus(2016) | Control.HasFocus(2017)]</visible>
-            <control type="button" id="2009">
-              <left>476</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/Stop.png</texturenofocus>
-              <texturefocus>OSD/StopFocused.png</texturefocus>
-              <onup>1009</onup>
-              <ondown>1009</ondown>
-              <onleft>2017</onleft>
-              <onright>2010</onright>
-              <onclick>XBMC.PlayerControl(Stop)</onclick>
-            </control>
-            <control type="button" id="2010">
-              <left>568</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/SkipBack.png</texturenofocus>
-              <texturefocus>OSD/SkipBackFocused.png</texturefocus>
-              <onup>1010</onup>
-              <ondown>1010</ondown>
-              <onleft>2009</onleft>
-              <onright>2011</onright>
-              <onclick>XBMC.PlayerControl(Previous)</onclick>
-            </control>
-            <control type="button" id="2011">
-              <left>662</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/Rewind.png</texturenofocus>
-              <texturefocus>OSD/RewindFocused.png</texturefocus>
-              <onup>1011</onup>
-              <ondown>1011</ondown>
-              <onleft>2010</onleft>
-              <onright>2012</onright>
-              <onclick>XBMC.PlayerControl(Rewind)</onclick>
-            </control>
-            <control type="togglebutton" id="2012">
-              <left>754</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/Play.png</texturenofocus>
-              <texturefocus>OSD/PlayFocused.png</texturefocus>
-              <usealttexture>Player.Playing</usealttexture>
-              <alttexturenofocus>OSD/Pause.png</alttexturenofocus>
-              <alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
-              <onup>1012</onup>
-              <ondown>1012</ondown>
-              <onleft>2011</onleft>
-              <onright>2013</onright>
-              <onclick>XBMC.PlayerControl(Play)</onclick>
-            </control>
-            <control type="button" id="2013">
-              <left>848</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/FastForward.png</texturenofocus>
-              <texturefocus>OSD/FastForwardFocused.png</texturefocus>
-              <onup>1013</onup>
-              <ondown>1013</ondown>
-              <onleft>2012</onleft>
-              <onright>2014</onright>
-              <onclick>XBMC.PlayerControl(Forward)</onclick>
-            </control>
-            <control type="button" id="2014">
-              <left>940</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/SkipForward.png</texturenofocus>
-              <texturefocus>OSD/SkipForwardFocused.png</texturefocus>
-              <onup>1014</onup>
-              <ondown>1014</ondown>
-              <onleft>2013</onleft>
-              <onright>2015</onright>
-              <onclick>XBMC.PlayerControl(Next)</onclick>
-            </control>
-            <control type="button" id="2015">
-              <left>1034</left>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/DVD.png</texturenofocus>
-              <texturefocus>OSD/DVDFocused.png</texturefocus>
-              <onup>1015</onup>
-              <ondown>1015</ondown>
-              <onleft>2014</onleft>
-              <onright>2016</onright>
-              <onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
-              <visible>VideoPlayer.HasMenu</visible>
-            </control>
-            <control type="button" id="2016">
-              <left>1414</left>
-              <top>1</top>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/AudioSettings.png</texturenofocus>
-              <texturefocus>OSD/AudioSettingsFocused.png</texturefocus>
-              <onup>1016</onup>
-              <ondown>1016</ondown>
-              <onleft>2015</onleft>
-              <onright>2017</onright>
-              <onclick>XBMC.ActivateWindow(124)</onclick>
-            </control>
-            <control type="button" id="2017">
-              <left>1490</left>
-              <top>1</top>
-              <width>93</width>
-              <height>57</height>
-              <texturenofocus>OSD/VideoSettings.png</texturenofocus>
-              <texturefocus>OSD/VideoSettingsFocused.png</texturefocus>
-              <onup>1017</onup>
-              <ondown>1017</ondown>
-              <onleft>2016</onleft>
-              <onright>2009</onright>
-              <onclick>XBMC.ActivateWindow(123)</onclick>
-            </control>
-          </control>-->
-          <!--<control type="image">
-            <left>1034</left>
-            <top>24</top>
-            <texture>OSD/DVDDisabled.png</texture>
-            <width>93</width>
-            <height>57</height>
-            <visible>!VideoPlayer.HasMenu</visible>
-          </control>-->
           <control type="grouplist">
             <left>56</left>
             <top>46</top>
@@ -458,164 +279,76 @@
               <visible>player.forwarding</visible>
             </control>
           </control>
-          <!--<control type="progress" id="23">
-            <description>Progressbar</description>
-            <left>200</left>
-            <top>99</top>
-            <width>1203</width>
-            <height>24</height>
-            <info>Player.Progress</info>
-            <visible>true</visible>
-          </control>-->
-          <!--<control type="label">
-            <left>-8</left>
-            <top>99</top>
-            <width>240</width>
-            <height>24</height>
-            <font>info1</font>
-            <align>center</align>
-            <textcolor>Shadow</textcolor>
-            <label>$INFO[VideoPlayer.Time]</label>
-          </control>
-          <control type="label">
-            <left>-8</left>
-            <top>96</top>
-            <width>240</width>
-            <height>24</height>
-            <font>info1</font>
-            <align>center</align>
-            <textcolor>Title</textcolor>
-            <label>$INFO[VideoPlayer.Time]</label>
-          </control>
-          <control type="label">
-            <left>1374</left>
-            <top>99</top>
-            <width>240</width>
-            <height>24</height>
-            <font>info1</font>
-            <align>center</align>
-            <textcolor>Shadow</textcolor>
-            <label>-$INFO[VideoPlayer.TimeRemaining]</label>
-            <visible>!IsEmpty(VideoPlayer.TimeRemaining)</visible>
-          </control>-->
-          <!--<control type="label">
-            <left>1374</left>
-            <top>96</top>
-            <width>240</width>
-            <height>24</height>
-            <font>info1</font>
-            <align>center</align>
-            <textcolor>Title</textcolor>
-            <label>-$INFO[VideoPlayer.TimeRemaining]</label>
-            <visible>!IsEmpty(VideoPlayer.TimeRemaining)</visible>
-          </control>-->
         </control>
       </control>
-			<control type="group" description="Options content">
-        <visible allowhiddenfocus="true">ControlGroup(101).HasFocus() | Control.HasFocus(701) | Control.HasFocus(702) | Control.HasFocus(703) | Control.HasFocus(704) | Control.HasFocus(705) | Control.HasFocus(706) | Control.HasFocus(707) | Control.HasFocus(708) | Control.HasFocus(709)</visible>
-        <animation type="Visible">
-          <effect type="fade" start="0" end="100" time="240" />
-          <effect type="zoom" tween="cubic" easing="out" start="30" end="100" center="auto" time="240" />
-        </animation>
-        <animation type="Hidden">
-          <effect type="fade" start="100" end="0" time="140" />
-          <effect type="zoom" tween="cubic" easing="in" start="100" end="30" center="auto" time="140" />
-        </animation>
+      <control type="group" description="Options content">
+        <visible allowhiddenfocus="true">ControlGroup(101).HasFocus()</visible>
         <control type="image">
-          <visible>ControlGroup(101).HasFocus()</visible>
-          <centerleft>960</centerleft>
-          <centertop>540</centertop>
-          <width>810</width>
-          <height>630</height>
-          <texture border="128">img/DialogPanel.png</texture>
+          <centerleft>50%</centerleft>
+          <centertop>50%</centertop>
+          <width>100%</width>
+          <height>100%</height>
+          <texture background="true">$VAR[Background.Overlay]</texture>
+          <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
         </control>
-		<control type="grouplist" id="101" description="Video OSD Options">
+        <control type="grouplist" id="101" description="Video OSD Options">
           <visible allowhiddenfocus="true">ControlGroup(101).HasFocus() | Control.HasFocus(701) | Control.HasFocus(702) | Control.HasFocus(703) | Control.HasFocus(704) | Control.HasFocus(705) | Control.HasFocus(706) | Control.HasFocus(707) | Control.HasFocus(708) | Control.HasFocus(709)</visible>
-          <animation type="Visible">
-            <effect type="fade" start="0" end="100" time="240" />
-            <effect type="zoom" tween="cubic" easing="out" start="30" end="100" center="auto" time="240" />
-          </animation>
-          <animation type="Hidden">
-            <effect type="fade" start="100" end="0" time="140" />
-            <effect type="zoom" tween="cubic" easing="in" start="100" end="30" center="auto" time="140" />
-          </animation>
-          <centerleft>960</centerleft>
-          <centertop>540</centertop>
+          <include>VisibleFadeEffect</include>
+          <centerleft>50%</centerleft>
+          <centertop>50%</centertop>
           <width>540</width>
-          <height>300</height>
-          <itemgap>0</itemgap>
+          <height max="450">auto</height>
+          <itemgap>5</itemgap>
           <onleft>602</onleft>
           <onright>602</onright>
           <onup>101</onup>
           <ondown>101</ondown>
-          <itemgap>0</itemgap>
-          <scrolltime>240</scrolltime>
-          <control type="button" id="701" description="Subtitles">
+          <control type="button" id="700" description="Subtitles">
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <include>9000Buttons</include>
             <label>31356</label>
-            <onclick>SetFocus(602)</onclick>
+            <onclick>SetFocus(101)</onclick>
             <onclick>Close</onclick>
             <onclick>ActivateWindow(SubtitleSearch)</onclick>
           </control>
-          <!--<control type="togglebutton" id="702" description="Record">
-            <visible>VideoPlayer.Content(LiveTV)</visible>
-            <enable>Player.CanRecord</enable>
+          <control type="button" id="701" description="Subtitles">
+            <visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
             <include>9000Buttons</include>
-            <label>264</label>
-            <altlabel>265</altlabel>
-            <onclick>PlayerControl(Record)</onclick>
-            <animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
-          </control>-->
+            <label>$LOCALIZE[24012]: $LOCALIZE[209]</label>
+            <onclick>CycleSubtitle</onclick>
+          </control>
+          <control type="button" id="702" description="Subtitles">
+            <visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+            <include>9000Buttons</include>
+            <label>$LOCALIZE[24012]: $LOCALIZE[22006]</label>
+            <onclick>SetFocus(101)</onclick>
+            <onclick>Close</onclick>
+            <onclick>SubtitleDelay</onclick>
+          </control>
           <control type="button" id="703">
             <include>9000Buttons</include>
             <label>13395</label>
+            <onclick>SetFocus(101)</onclick>
+            <onclick>Close</onclick>
             <onclick>ActivateWindow(OSDVideoSettings)</onclick>
           </control>
           <control type="button" id="704">
             <include>9000Buttons</include>
-            <label>$LOCALIZE[292] $LOCALIZE[1397] $LOCALIZE[287]</label>
+            <label>$LOCALIZE[13396]</label>
+            <onclick>SetFocus(101)</onclick>
+            <onclick>Close</onclick>
             <onclick>ActivateWindow(OSDAudioSettings)</onclick>
           </control>
-          <!--<control type="button" id="705">
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
-            <include>9000Buttons</include>
-            <label>298</label>
-            <onclick>ActivateWindow(VideoBookmarks)</onclick>
-          </control>-->
-          <!--<control type="togglebutton" id="706" description="Info">
-            <include>9000Buttons</include>
-            <label>20159</label>
-            <onclick>close</onclick>
-            <onclick>ActivateWindow(142)</onclick>
-            <altclick>close</altclick>
-            <altclick>Dialog.Close(142)</altclick>
-            <usealttexture>Window.IsActive(142)</usealttexture>
-          </control>-->
           <control type="button" id="707">
             <include>9000Buttons</include>
             <label>21445</label>
+            <onclick>SetFocus(101)</onclick>
+            <onclick>Close</onclick>
             <onclick>CodecInfo</onclick>
           </control>
-          <!--<control type="button" id="708">
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
-            <include>9000Buttons</include>
-            <label>31355</label>
-            <onclick>PlayerControl(ShowVideoMenu)</onclick>
-            <enable>VideoPlayer.HasMenu</enable>
-            <animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
-          </control>-->
-          <!--<control type="button" id="709" description="Teletext">
-            <visible>VideoPlayer.Content(LiveTV)</visible>
-            <include>9000Buttons</include>
-            <label>23050</label>
-            <onclick>Dialog.Close(VideoOSD)</onclick>
-            <onclick>ActivateWindow(Teletext)</onclick>
-          </control>-->
         </control>
-		</control>
+      </control>
     </control>
-	
     <control type="group" description="MediaInfo">
       <visible>ControlGroup(214).Hasfocus + ![Window.IsActive(123) | Window.IsActive(124)]</visible>
       <control type="image" id="1">
@@ -754,407 +487,4 @@
       </control>
     </control>
   </controls>
-  <!--<controls>
-    <control type="group">
-      <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-      <animation effect="fade" end="100" time="400">Visible</animation>
-      <animation effect="fade" end="0" time="100">Hidden</animation>
-      <left>0</left>
-      <top>0</top>
-      <control type="group">
-        <control type="group" description="Dialog Background">
-          <visible>Window.IsVisible(videoosd.xml) + !Window.IsActive(dialogseekbar.xml)</visible>
-          <animation type="Conditional" condition="Window.IsActive(videoosd.xml)">
-            <effect type="slide" start="0,0" end="0,-68" time="400" tween="cubic" easing="inout" reversible="true" />
-          </animation>
-          <control type="image">
-            <left>0</left>
-            <top>975</top>
-            <width>1920</width>
-            <height>225</height>
-            <aspectratio>stretch</aspectratio>
-            <texture>VideoOSD/OSDBackground2.png</texture>
-          </control>
-        </control>
-        <control type="label" description="Title">
-          <left>60</left>
-          <top>951</top>
-          <height>60</height>
-          <width>540</width>
-          <scroll>false</scroll>
-          <font>size18</font>
-          
-          <label>$INFO[VideoPlayer.Title]</label>
-        </control>
-		<control type="label" description="Title">
-          <animation type="Conditional" condition="IsEmpty(VideoPlayer.SubtitlesLanguage)">
-            <effect type="slide" start="0,0" end="0,15" time="0" reversible="true" />
-          </animation>
-		  <left>1700</left>
-          <top>951</top>
-          <height>30</height>
-          <width>540</width>
-          <scroll>false</scroll>
-          <font>size14</font>
-		  <align>right</align>
-          <label>$INFO[VideoPlayer.AudioLanguage, $LOCALIZE[292]: ]</label>
-        </control>
-		<control type="label" description="Title">
-          <animation type="Conditional" condition="IsEmpty(VideoPlayer.AudioLanguage)">
-            <effect type="slide" start="0,0" end="0,-20" time="0" reversible="true" />
-          </animation>
-		  <left>1700</left>
-          <top>981</top>
-          <height>30</height>
-          <width>540</width>
-          <scroll>false</scroll>
-          <font>size14</font>
-		  <align>right</align>
-          <label>$INFO[VideoPlayer.SubtitlesLanguage, $LOCALIZE[287]: ]</label>
-        </control>
-      </control>
-      <control type="group" id="100">
-        <visible>!VideoPlayer.Content(LiveTV)</visible>
-        <left>723</left>
-        <top>150r</top>
-        <onup>609</onup>
-        <ondown>609</ondown>
-        <defaultcontrol always="true">602</defaultcontrol>
-        <control type="button" id="600">
-          <left>0</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>210</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDPreviousFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDPreviousNF.png</texturenofocus>
-          <onleft>609</onleft>
-          <onright>601</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Previous)</onclick>
-        </control>
-        <control type="button" id="601">
-          <left>75</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>31354</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDRWFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDRWNF.png</texturenofocus>
-          <onleft>600</onleft>
-          <onright>602</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Rewind)</onclick>
-        </control>
-        <control type="togglebutton" id="602">
-          <left>156</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>31351</label>
-          <altlabel>208</altlabel>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDPauseFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDPauseNF.png</texturenofocus>
-          <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-          <alttexturefocus>VideoOSD/OSDPlayFO.png</alttexturefocus>
-          <alttexturenofocus>VideoOSD/OSDPlayNF.png</alttexturenofocus>
-          <onleft>601</onleft>
-          <onright>603</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Play)</onclick>
-        </control>
-        <control type="button" id="603">
-          <left>225</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>31352</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDStopFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDStopNF.png</texturenofocus>
-          <onleft>602</onleft>
-          <onright>604</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Stop)</onclick>
-        </control>
-        <control type="button" id="604">
-          <left>300</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>31353</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDFWFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDFWNF.png</texturenofocus>
-          <onleft>603</onleft>
-          <onright>605</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Forward)</onclick>
-        </control>
-        <control type="button" id="605">
-          <left>375</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>209</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDNextFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDNextNF.png</texturenofocus>
-          <onleft>604</onleft>
-          <onright>609</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Next)</onclick>
-        </control>
-        <control type="button" id="609">
-          <left>1056</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>33063</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDOptionsFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDOptionsNF.png</texturenofocus>
-          <onleft>605</onleft>
-          <onright>600</onright>
-          <onup>605</onup>
-          <ondown>605</ondown>
-          <onclick allowhiddenfocus="true">Control.SetFocus(701)</onclick>
-        </control>
-      </control>
-      <control type="group" id="100">
-        <visible>VideoPlayer.Content(LiveTV)</visible>
-        <left>723</left>
-        <top>150r</top>
-        <onup>609</onup>
-        <ondown>609</ondown>
-        <defaultcontrol always="true">602</defaultcontrol>
-        <control type="button" id="600">
-          <left>0</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>210</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDChannelDownFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDChannelDownNF.png</texturenofocus>
-          <onleft>609</onleft>
-          <onright>601</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Previous)</onclick>
-        </control>
-        <control type="button" id="601">
-          <left>75</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>31354</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDChannelUpFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDChannelUpNF.png</texturenofocus>
-          <onleft>600</onleft>
-          <onright>602</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Next)</onclick>
-        </control>
-        <control type="togglebutton" id="602">
-          <left>156</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>31351</label>
-          <altlabel>208</altlabel>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDPauseFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDPauseNF.png</texturenofocus>
-          <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-          <alttexturefocus>VideoOSD/OSDPlayFO.png</alttexturefocus>
-          <alttexturenofocus>VideoOSD/OSDPlayNF.png</alttexturenofocus>
-          <onleft>601</onleft>
-          <onright>603</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Play)</onclick>
-        </control>
-        <control type="button" id="603">
-          <left>225</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>31352</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDStopFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDStopNF.png</texturenofocus>
-          <onleft>602</onleft>
-          <onright>604</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>PlayerControl(Stop)</onclick>
-        </control>
-        <control type="button" id="604">
-          <left>300</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>19019</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDChannelsFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDChannelsNF.png</texturenofocus>
-          <onleft>603</onleft>
-          <onright>605</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>ActivateWindow(PVROSDChannels)</onclick>
-          <onclick>Dialog.Close(VideoOSD)</onclick>
-        </control>
-        <control type="button" id="605">
-          <left>375</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>$LOCALIZE[19029] EPG</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDEpgFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDEpgNF.png</texturenofocus>
-          <onleft>604</onleft>
-          <onright>609</onright>
-          <onup>609</onup>
-          <ondown>609</ondown>
-          <onclick>ActivateWindow(PVROSDGuide)</onclick>
-          <onclick>Dialog.Close(VideoOSD)</onclick>
-        </control>
-        <control type="button" id="609">
-          <left>1056</left>
-          <top>0</top>
-          <width>90</width>
-          <height>98</height>
-          <label>33063</label>
-          <font>-</font>
-          <texturefocus>VideoOSD/OSDOptionsFO.png</texturefocus>
-          <texturenofocus>VideoOSD/OSDOptionsNF.png</texturenofocus>
-          <onleft>605</onleft>
-          <onright>600</onright>
-          <onup>605</onup>
-          <ondown>605</ondown>
-          <onclick allowhiddenfocus="true">Control.SetFocus(101)</onclick>
-        </control>
-      </control>
-      <control type="group" description="Options content">
-        <left>630</left>
-        <top>15</top>
-        <visible allowhiddenfocus="true">ControlGroup(101).HasFocus() | Control.HasFocus(701) | Control.HasFocus(702) | Control.HasFocus(703) | Control.HasFocus(704) | Control.HasFocus(705) | Control.HasFocus(706) | Control.HasFocus(707) | Control.HasFocus(708) | Control.HasFocus(709)</visible>
-        <animation type="Visible">
-          <effect type="fade" start="0" end="100" time="240" />
-          <effect type="zoom" tween="cubic" easing="out" start="30" end="100" center="auto" time="240" />
-        </animation>
-        <animation type="Hidden">
-          <effect type="fade" start="100" end="0" time="140" />
-          <effect type="zoom" tween="cubic" easing="in" start="100" end="30" center="auto" time="140" />
-        </animation>
-        <control type="image">
-          <visible>ControlGroup(101).HasFocus()</visible>
-          <left>430</left>
-          <top>66</top>
-          <width>900</width>
-          <height>900</height>
-          <aspectratio>stretch</aspectratio>
-          <texture border="21">img/DialogNew.png</texture><colordiffuse>Overlay</colordiffuse>
-        </control>
-        <control type="grouplist" id="101" description="Video OSD Options">
-          <visible allowhiddenfocus="true">ControlGroup(101).HasFocus() | Control.HasFocus(701) | Control.HasFocus(702) | Control.HasFocus(703) | Control.HasFocus(704) | Control.HasFocus(705) | Control.HasFocus(706) | Control.HasFocus(707) | Control.HasFocus(708) | Control.HasFocus(709)</visible>
-          <animation type="Visible">
-            <effect type="fade" start="0" end="100" time="240" />
-            <effect type="zoom" tween="cubic" easing="out" start="30" end="100" center="auto" time="240" />
-          </animation>
-          <animation type="Hidden">
-            <effect type="fade" start="100" end="0" time="140" />
-            <effect type="zoom" tween="cubic" easing="in" start="100" end="30" center="auto" time="140" />
-          </animation>
-          <left>600</left>
-          <top>246</top>
-          <width>720</width>
-          <height>720</height>
-          <itemgap>0</itemgap>
-          <onleft>602</onleft>
-          <onright>602</onright>
-          <onup>101</onup>
-          <ondown>101</ondown>
-          <itemgap>0</itemgap>
-          <scrolltime>240</scrolltime>
-          <control type="button" id="701" description="Subtitles">
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
-            <include>9000Buttons</include>
-            <label>31356</label>
-            <onclick>SetFocus(602)</onclick>
-            <onclick>Close</onclick>
-            <onclick>ActivateWindow(SubtitleSearch)</onclick>
-          </control>
-          <control type="togglebutton" id="702" description="Record">
-            <visible>VideoPlayer.Content(LiveTV)</visible>
-            <enable>Player.CanRecord</enable>
-            <include>9000Buttons</include>
-            <label>264</label>
-            <altlabel>265</altlabel>
-            <onclick>PlayerControl(Record)</onclick>
-            <animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
-          </control>
-          <control type="button" id="703">
-            <include>9000Buttons</include>
-            <label>13395</label>
-            <onclick>ActivateWindow(OSDVideoSettings)</onclick>
-          </control>
-          <control type="button" id="704">
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[292] $LOCALIZE[1397] $LOCALIZE[287]</label>
-            <onclick>ActivateWindow(OSDAudioSettings)</onclick>
-          </control>
-          <control type="button" id="705">
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
-            <include>9000Buttons</include>
-            <label>298</label>
-            <onclick>ActivateWindow(VideoBookmarks)</onclick>
-          </control>
-          <control type="togglebutton" id="706" description="Info">
-            <include>9000Buttons</include>
-            <label>20159</label>
-            <onclick>close</onclick>
-            <onclick>ActivateWindow(142)</onclick>
-            <altclick>close</altclick>
-            <altclick>Dialog.Close(142)</altclick>
-            <usealttexture>Window.IsActive(142)</usealttexture>
-          </control>
-          <control type="button" id="707">
-            <include>9000Buttons</include>
-            <label>21445</label>
-            <onclick>CodecInfo</onclick>
-          </control>
-          <control type="button" id="708">
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
-            <include>9000Buttons</include>
-            <label>31355</label>
-            <onclick>PlayerControl(ShowVideoMenu)</onclick>
-            <enable>VideoPlayer.HasMenu</enable>
-            <animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
-          </control>
-          <control type="button" id="709" description="Teletext">
-            <visible>VideoPlayer.Content(LiveTV)</visible>
-            <include>9000Buttons</include>
-            <label>23050</label>
-            <onclick>Dialog.Close(VideoOSD)</onclick>
-            <onclick>ActivateWindow(Teletext)</onclick>
-          </control>
-        </control>
-      </control>
-    </control>
-  </controls>-->
 </window>

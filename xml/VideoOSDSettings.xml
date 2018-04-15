@@ -3,8 +3,8 @@
   <defaultcontrol always="true">5</defaultcontrol>
   <controls>
     <control type="image">
-      <centerleft>960</centerleft>
-      <centertop>540</centertop>
+      <centerleft>50%</centerleft>
+      <centertop>50%</centertop>
       <width>100%</width>
       <height>100%</height>
       <texture background="true">$VAR[Background.Overlay]</texture>

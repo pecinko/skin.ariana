@@ -1,159 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <defaultcontrol always="true">300</defaultcontrol>
-
-  <include>OpenClose</include>
-  <coordinates>
-    <origin x="0" y="0" />
-  </coordinates>
+  <defaultcontrol always="true">9001</defaultcontrol>
   <controls>
     <include>FullBackground</include>
     <include>Header</include>
     <control type="group">
-      <control type="group" description="Thumbs">
-        <left>0</left>
-        <top>6</top>
-        <control type="image" description="Icon">
-          <left>1320</left>
-          <top>270</top>
-          <width>570</width>
-          <height>570</height>
-          <aspectratio align="right" aligny="top">keep</aspectratio>
-          <bordertexture border="4">img/CoverOverlay0.png</bordertexture>
-          <bordersize>2</bordersize>
-          <texture fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
-        </control>
+      <include>OpenClose</include>
+      <control type="image" description="Thumb">
+        <centertop>460</centertop>
+        <centerleft>1510</centerleft>
+        <width>640</width>
+        <height>640</height>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <aspectratio align="center" aligny="center">keep</aspectratio>
+        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+        <bordersize>4</bordersize>
       </control>
       <control type="group" description="Top info">
-        <left>-30</left>
-        <top>-486</top>
-        <include>MusicInfo</include>
-        <control type="textbox" description="Plot">
-          <left>90</left>
-          <top>1068</top>
-          <width>1050</width>
-          <height>258</height>
-          <font>size22</font>
-          <align>justify</align>
-          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-          <label>$INFO[ListItem.Property(Album_Description)]</label>
+        <left>94</left>
+        <top>300</top>
+        <control type="label" description="Main Label">
+          <font>size24B</font>
+          <width>840</width>
+          <height>36</height>
+          <label>$INFO[ListItem.Title]</label>
         </control>
-        <control type="textbox" description="Plot">
-          <visible>IsEmpty(ListItem.Property(Album_Description))</visible>
-          <left>90</left>
-          <top>1068</top>
-          <width>1050</width>
-          <height>258</height>
-          <font>size22</font>
-          <align>justify</align>
-          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-          <label>$INFO[ListItem.Property(Artist_Description)]</label>
+        <control type="label" description="Album label 1">
+          <top>60</top>
+          <width>840</width>
+          <label>$LOCALIZE[558]: $INFO[ListItem.Album]</label>
+        </control>
+        <control type="label" description="Genre label 2">
+          <top>110</top>
+          <width>840</width>
+          <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+        </control>
+        <control type="label" description="Type label 3">
+          <top>160</top>
+          <width>840</width>
+          <label>$LOCALIZE[564]: [UPPERCASE]$INFO[ListItem.FileExtension][/UPPERCASE]</label>
+        </control>
+        <control type="label" description="Duration label 3">
+          <top>210</top>
+          <width>840</width>
+          <label>$LOCALIZE[180]: $INFO[ListItem.Duration]</label>
+        </control>
+        <control type="image" description="Rating">
+          <top>300</top>
+          <height>30</height>
+          <colordiffuse>LabelFO</colordiffuse>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>badges/$INFO[ListItem.StarRating]</texture>
         </control>
       </control>
     </control>
     <control type="label" description="Path">
-      <visible>Skin.HasSetting(ShowFileInfo)</visible>
-      <left>60</left>
+      <left>90</left>
       <top>990</top>
       <width>1800</width>
       <height>27</height>
-      <font>size15</font>
+      <font>size19</font>
       <align>left</align>
-      <textcolor>Silver</textcolor>
+      <textcolor>Label2</textcolor>
       <haspath>true</haspath>
       <scroll>true</scroll>
       <label>$INFO[ListItem.FilenameAndPath]</label>
     </control>
-    <control type="image">
-      <left>0</left>
-      <top>1023</top>
-      <height>60</height>
-      <width>1920</width>
-      <aspectratio>stretch</aspectratio>
-      <texture>img/BlackDotT.png</texture>
-    </control>
-    <control type="image" description="Navbar">
-      <left>-82</left>
-      <top>1028</top>
-      <width>2085</width>
-      <height>1</height>
-      <aspectratio>stretch</aspectratio>
-      <texture>img/Line1.png</texture>
-    </control>
-    <control type="group" description="Options">
-      <top>0</top>
-      <left>0</left>
-      <control type="grouplist" id="300">
-        <left>15</left>
-        <top>1026</top>
-        <width>1890</width>
-        <height>58</height>
-        <itemgap>0</itemgap>
-        <aligny>bottom</aligny>
-        <align>center</align>
-        <onup>50</onup>
-        <orientation>horizontal</orientation>
-        <control type="button" id="12" description="Album Info">
-          <height>60</height>
-          <width>270</width>
-          <label>10523</label>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>
-        <control type="button" id="13" description="Get Thumb">
-          <height>60</height>
-          <width>270</width>
-          <label>13405</label>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>
-        <control type="button" id="14" description="Decrease Rating">
-          <height>60</height>
-          <width>270</width>
-          <label>-  $LOCALIZE[563]</label>
-          <onclick>DecreaseRating</onclick>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>
-        <control type="button" id="15" description="Increase Rating">
-          <height>60</height>
-          <width>270</width>
-          <label>+ $LOCALIZE[563]</label>
-          <onclick>IncreaseRating</onclick>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>
-        <control type="button" id="10" description="Save rating">
-          <height>60</height>
-          <width>270</width>
-          <label>186</label>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>
-        <!--<control type="button" id="11" description="Cancel">
-					<height>40</height>
-					<width>180</width>
-					<label>222</label>
-					<font>size18</font>
-					<texturefocus>img/HomeBarFO.png</texturefocus>
-					<alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-				</control>-->
-        <control type="togglebutton" id="8999" description="Path">
-          <height>60</height>
-          <width>270</width>
-          <align>center</align>
-          <font>size18</font>
-          <label>35500</label>
-          <onclick>Skin.ToggleSetting(ShowFileInfo)</onclick>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>
+    <control type="grouplist" id="9001">
+      <left>90</left>
+      <top>754</top>
+      <width>800</width>
+      <height>150</height>
+      <itemgap>20</itemgap>
+      <onleft>9001</onleft>
+      <onright>9001</onright>
+      <onup>9002</onup>
+      <ondown>50</ondown>
+      <align>left</align>
+      <orientation>horizontal</orientation>
+      <control type="button" id="7" description="rating">
+        <width>144</width>
+        <height>80</height>
+        <texturefocus>buttons/StarFO.png</texturefocus>
+        <texturenofocus>buttons/StarNF.png</texturenofocus>
+        <label>$LOCALIZE[563]</label>
+        <wrapmultiline>True</wrapmultiline>
+        <font>size14</font>
+        <aligny>top</aligny>
+        <textoffsety>80</textoffsety>
       </control>
+      <control type="button" id="12" description="albums">
+        <width>144</width>
+        <height>80</height>
+        <texturefocus>buttons/AlbumFO.png</texturefocus>
+        <texturenofocus>buttons/AlbumNF.png</texturenofocus>
+        <label>$LOCALIZE[10523]</label>
+        <wrapmultiline>True</wrapmultiline>
+        <font>size14</font>
+        <aligny>top</aligny>
+        <textoffsety>80</textoffsety>
+      </control>
+      <control type="button" id="13" description="thumb">
+        <width>144</width>
+        <height>80</height>
+        <texturefocus>buttons/ArtworkFO.png</texturefocus>
+        <texturenofocus>buttons/ArtworkNF.png</texturenofocus>
+        <label>$LOCALIZE[13405]</label>
+        <wrapmultiline>True</wrapmultiline>
+        <font>size14</font>
+        <aligny>top</aligny>
+        <textoffsety>80</textoffsety>
+      </control>
+      <!--<control type="button" id="6" description="refresh">
+        <width>144</width>
+        <height>80</height>
+        <texturefocus>buttons/RefreshFO.png</texturefocus>
+        <texturenofocus>buttons/RefreshNF.png</texturenofocus>
+        <label>$LOCALIZE[184]</label>
+        <wrapmultiline>True</wrapmultiline>
+        <font>size14</font>
+        <aligny>top</aligny>
+        <textoffsety>80</textoffsety>
+      </control>-->
     </control>
   </controls>
 </window>

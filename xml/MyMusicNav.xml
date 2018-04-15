@@ -38,7 +38,7 @@
               <texture background="true">$INFO[ListItem.Thumb]</texture>
               <aspectratio aligny="top">scale</aspectratio>
             </control>
-            </itemlayout>
+          </itemlayout>
           <focusedlayout height="408" width="360">
             <control type="group">
               <animation type="Focus" reversible="false">
@@ -226,12 +226,12 @@
         <textcolor>LabelNF</textcolor>
         <label>$INFO[ListItem.Genre]</label>
       </control>
-      <control type="textbox" description="Show Plot">
+      <control type="textbox" description="Plot">
         <left>180</left>
         <top>264</top>
         <width>758</width>
-        <height>84</height>
-        <font>size20</font>
+        <height>80</height>
+        <font>plot</font>
         <align>left</align>
         <aligny>bottom</aligny>
         <label>$INFO[ListItem.Property(Album_Description)]</label>
@@ -248,6 +248,7 @@
         <bordersize>4</bordersize>
       </control>
       <control type="grouplist" id="9001">
+        <visible>!ControlGroup(9000).HasFocus()</visible>
         <left>1192</left>
         <top>830</top>
         <width>638</width>
@@ -295,15 +296,6 @@
           <textoffsety>80</textoffsety>
         </control>
       </control>
-      <control type="textbox" description="Plot51">
-        <top>800</top>
-        <left>1198</left>
-        <width>636</width>
-        <height>168</height>
-        <font>size20</font>
-        <align>left</align>
-        <label>$INFO[ListItem.Property(Album_Description)]</label>
-      </control>
       <control type="group" description="Infolist">
         <left>0</left>
         <top>0</top>
@@ -314,7 +306,7 @@
           <width>920</width>
           <height>635</height>
           <pagecontrol>60</pagecontrol>
-          <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
+          <onleft>9000</onleft>
           <onright>9001</onright>
           <onup>51</onup>
           <ondown>51</ondown>
@@ -416,7 +408,6 @@
         </control>
       </control>
     </control>
-
     <control type="group" description="Side menu 9000 group">
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
       <include>MenuFullBG</include>
@@ -439,23 +430,24 @@
           <label>$LOCALIZE[589]: $LOCALIZE[1223]</label>
           <altlabel>$LOCALIZE[589]: $LOCALIZE[305]</altlabel>
         </control>
-		<control type="togglebutton" id="20" description="Update library">
+        <control type="togglebutton" id="20" description="Update library">
           <include>9000Buttons</include>
           <label>653</label>
-		  <altlabel>13353</altlabel>
-		  <usealttexture>library.isscanningmusic</usealttexture>
+          <altlabel>13353</altlabel>
+          <usealttexture>library.isscanningmusic</usealttexture>
         </control>
-        <control type="button" id="697" description="Playlist">
+        <control type="button" id="800" description="Playlist">
           <include>9000Buttons</include>
-          <label>$LOCALIZE[31040]</label>
+          <label>$LOCALIZE[31062]</label>
           <onclick>ActivateWindow(musicplaylist)</onclick>
         </control>
-		<control type="button" id="698" description="Files">
+        <control type="button" id="801" description="Files">
           <include>9000Buttons</include>
           <label>$LOCALIZE[1024] $LOCALIZE[744]</label>
           <onclick>ActivateWindow(MusicFiles,root)</onclick>
         </control>
-        <control type="togglebutton" id="699" description="Playing">
+        <control type="togglebutton" id="802" description="Playing">
+          <include>FocusButtonsAnimation</include>
           <enable>Player.HasMedia</enable>
           <include>9000Buttons</include>
           <label>$LOCALIZE[16003]</label>
@@ -467,6 +459,5 @@
         </control>
       </control>
     </control>
-
   </controls>
 </window>

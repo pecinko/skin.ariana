@@ -12,11 +12,11 @@
         <itemgap>12</itemgap>
         <align>center</align>
         <aligny>center</aligny>
-        <control type="textbox">
+        <control type="textbox" id="8888">
           <width>100%</width>
           <height>150</height>
-          <font>size22B</font>
-          <label>$INFO[ListItem.Label]</label>
+          <font>size24B</font>
+          <label>[B]$INFO[ListItem.Label][/B]</label>
           <align>center</align>
           <aligny>center</aligny>
           <textcolor>Selected</textcolor>
@@ -24,12 +24,9 @@
         <control type="button" id="1000" description="Buttons">
           <include>FocusButtonsAnimation</include>
           <width>500</width>
-          <height>68</height>
           <textoffsetx>0</textoffsetx>
           <align>center</align>
           <aligny>center</aligny>
-          <texturenofocus border="4">menu/MenuButtonNF.png</texturenofocus>
-          <texturefocus border="4">menu/MenuButtonFO.png</texturefocus>
         </control>
       </control>
     </control>

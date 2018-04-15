@@ -234,22 +234,6 @@
             <align>left</align>
             <label>$VAR[500TopLabel]$INFO[ListItem.MPAA, • ]</label>
           </control>
-          <control type="button" id="9002" description="Plot">
-            <left>0</left>
-            <top>178</top>
-            <width>750</width>
-            <height>212</height>
-            <align>left</align>
-            <font>plot</font>
-            <autoscroll delay="15000" time="5000" repeat="10000">true</autoscroll>
-            <label>
-            </label>
-            <wrapmultiline>true</wrapmultiline>
-            <onclick>Control.SetFocus(9010)</onclick>
-            <ondown>9001</ondown>
-            <onup>9001</onup>
-            <texturefocus border="10">focus/FrameFO.png</texturefocus>
-          </control>
           <control type="textbox" description="Plot">
             <left>0</left>
             <top>180</top>
@@ -318,7 +302,7 @@
           <itemgap>20</itemgap>
           <onleft>9001</onleft>
           <onright>9001</onright>
-          <onup>9002</onup>
+          <onup>noop</onup>
           <ondown>50</ondown>
           <align>center</align>
           <orientation>horizontal</orientation>

@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
   <defaultcontrol always="true">9001</defaultcontrol>
-  <include>DialogOpenClose</include>
   <controls>
-    <control type="image">
-      <centerleft>960</centerleft>
-      <centertop>540</centertop>
-      <width>1560</width>
-      <height>810</height>
-      <texture border="128">img/DialogPanel.png</texture>
-    </control>
+    <include>DialogFullBG</include>
     <control type="group">
+      <include>OpenClose</include>
       <left>360</left>
       <top>330</top>
       <control type="label">
@@ -36,7 +30,7 @@
           <description>Rule Field</description>
           <left>15</left>
           <top>150</top>
-          <width>600</width>
+          <width>590</width>
           <font>-</font>
           <onright>16</onright>
           <onleft>16</onleft>
@@ -75,7 +69,7 @@
         <description>Value Button</description>
         <left>15</left>
         <top>234</top>
-        <width>918</width>
+        <width>900</width>
         <label>-</label>
         <onup>9001</onup>
         <onleft>20</onleft>

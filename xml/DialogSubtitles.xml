@@ -1,108 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <coordinates>
-    <system>1</system>
-    <left>0</left>
-    <top>0</top>
-  </coordinates>
-  <include>OpenClose</include>
   <controls>
-    <include>FullBackground</include>
+    <include>DialogFullBG</include>
     <control type="image" description="Sidebar">
-      <left>0</left>
+      <left>-30</left>
       <top>0</top>
       <width>471</width>
       <height>1080</height>
       <aspectratio>stretch</aspectratio>
-      <texture>img/Sidebar.png</texture>
+      <texture border="60">img/HomeMenuBarV.png</texture>
     </control>
-    <control type="group" id="250">
-      <left>150</left>
-      <control type="button" id="666">
-        <left>1629</left>
-        <top>144</top>
-        <width>81</width>
-        <height>45</height>
-        <texturenofocus>img/Subtitles_OptionsFO.png</texturenofocus>
-        <texturefocus>img/Subtitles_OptionsFO.png</texturefocus>
-        <onclick>Control.SetFocus(150)</onclick>
+    <control type="group" description="controls">
+      <include>OpenClose</include>
+      <control type="image" id="110" description="Service Logo">
+        <centerleft>50%</centerleft>
+        <top>60</top>
+        <width>375</width>
+        <height>60</height>
+        <aspectratio align="center">keep</aspectratio>
       </control>
-      <!-- ** Required ** Do not change <id>or<type>-->
-      <control type="group">
-        <left>300</left>
-        <top>111</top>
-        <control type="image" id="110">
-          <description>Service Logo</description>
-          <left>30</left>
-          <top>27</top>
-          <width>375</width>
-          <height>60</height>
-          <aspectratio>keep</aspectratio>
-        </control>
-        <control type="group" id="111">
-          <control type="grouplist">
-            <left>120</left>
-            <top>741</top>
-            <width>1245</width>
-            <height>60</height>
-            <align>center</align>
-            <orientation>horizontal</orientation>
-            <itemgap>8</itemgap>
-            <control type="label" description="Notification Local subtitle available">
-              <width>1245</width>
-              <height>60</height>
-              <textcolor>Title</textcolor>
-              <label>31287</label>
-              <font>size22</font>
-              <align>center</align>
-              <aligny>center</aligny>
-              <wrapmultiline>true</wrapmultiline>
-            </control>
-          </control>
-        </control>
-        <control type="label" id="100" description="Active service header">
-          <left>75</left>
-          <top>15</top>
-          <width>1320</width>
-          <height>60</height>
-          <textcolor>Silver</textcolor>
-          <align>center</align>
-          <aligny>center</aligny>
-          <wrapmultiline>true</wrapmultiline>
-        </control>
-        <control type="label" description="Video File name">
-          <left>75</left>
-          <top>100</top>
-          <width>1320</width>
-          <height>60</height>
-          <font>font13</font>
-          <label>$INFO[Player.Filename]</label>
-          <textcolor>Title</textcolor>
-          <align>center</align>
-          <aligny>center</aligny>
-          <wrapmultiline>true</wrapmultiline>
-        </control>
-        <control type="label" id="140" description="Searching...">
-          <left>75</left>
-          <top>75</top>
-          <width>1320</width>
-          <height>30</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>font13</font>
-        </control>
-        <control type="image">
-          <description>separator</description>
-          <left>0</left>
-          <top>150</top>
-          <width>1470</width>
-          <height>1</height>
-          <texture>img/Line.png</texture>
-        </control>
+      <control type="label" id="100" description="Active service label">
+        <visible>false</visible>
+        <centerleft>50%</centerleft>
+        <top>120</top>
+        <width>1320</width>
+        <height>60</height>
+        <textcolor>LabelFO</textcolor>
+        <align>center</align>
+        <aligny>center</aligny>
+        <wrapmultiline>true</wrapmultiline>
       </control>
-      <!-- ** Required ** Do not change <id>or<type>-->
-      <control type="list" id="120">
-        <left>375</left>
+      <control type="label" description="Video File name">
+        <centerleft>50%</centerleft>
+        <top>150</top>
+        <width>1320</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>size22</font>
+        <label>$INFO[Player.Filename]</label>
+        <wrapmultiline>true</wrapmultiline>
+      </control>
+      <control type="label" id="140" description="Number of available/Searching...">
+        <centerleft>50%</centerleft>
+        <top>210</top>
+        <width>1320</width>
+        <height>30</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>size19</font>
+      </control>
+      <control type="panel" id="120" description="List of available subtitles">
+        <left>475</left>
         <top>300</top>
         <width>1368</width>
         <height>538</height>
@@ -110,11 +59,10 @@
         <onright>150</onright>
         <onup>120</onup>
         <ondown>120</ondown>
-        <viewtype label="535">list</viewtype>
-        <itemlayout width="1365" height="54">
+        <itemlayout width="1365" height="62">
           <control type="image">
             <left>10</left>
-            <top>0</top>
+            <top>4</top>
             <width>33</width>
             <height>54</height>
             <aspectratio>keep</aspectratio>
@@ -124,17 +72,15 @@
             <left>54</left>
             <top>0</top>
             <width>135</width>
-            <height>54</height>
-            <font>size18</font>
-            <aligny>center</aligny>
-            <textcolor>Title2</textcolor>
+            <font>size19</font>
+            <textcolor>LabelNF</textcolor>
             <scroll>false</scroll>
             <align>left</align>
             <info>ListItem.Label</info>
           </control>
           <control type="image">
             <left>204</left>
-            <top>0</top>
+            <top>4</top>
             <width>60</width>
             <height>54</height>
             <aspectratio>keep</aspectratio>
@@ -143,7 +89,7 @@
           </control>
           <control type="image">
             <left>276</left>
-            <top>0</top>
+            <top>4</top>
             <width>24</width>
             <height>54</height>
             <aspectratio>keep</aspectratio>
@@ -154,106 +100,114 @@
             <left>315</left>
             <top>0</top>
             <width>900</width>
-            <height>54</height>
-            <font>size18</font>
-            <aligny>center</aligny>
-            <textcolor>Title2</textcolor>
+            <font>size19</font>
+            <textcolor>Label2</textcolor>
             <scroll>false</scroll>
             <align>left</align>
             <info>ListItem.Label2</info>
           </control>
           <control type="image">
             <left>1230</left>
-            <top>0</top>
+            <top>4</top>
             <width>120</width>
             <height>54</height>
-            <colordiffuse>Grey</colordiffuse>
+            <colordiffuse>Label2</colordiffuse>
             <aspectratio>keep</aspectratio>
             <texture>badges/rating$INFO[ListItem.ActualIcon].png</texture>
           </control>
         </itemlayout>
-        <focusedlayout width="1365" height="54">
-          <control type="image">
-            <left>0</left>
-            <top>0</top>
-            <width>1365</width>
-            <height>54</height>
-            <texture border="9">img/MediaButton2.png</texture>
-            <visible>Control.HasFocus(120)</visible>
-          </control>
-          <control type="image">
-            <left>10</left>
-            <top>0</top>
-            <width>33</width>
-            <height>54</height>
-            <aspectratio>keep</aspectratio>
-            <texture>flags/$INFO[ListItem.Thumb].gif</texture>
-          </control>
-          <control type="label">
-            <left>54</left>
-            <top>0</top>
-            <width>135</width>
-            <height>54</height>
-            <font>size18</font>
-            <aligny>center</aligny>
-            <textcolor>White2</textcolor>
-            <align>left</align>
-            <info>ListItem.Label</info>
-          </control>
-          <control type="image">
-            <left>204</left>
-            <top>0</top>
-            <width>60</width>
-            <height>54</height>
-            <aspectratio>keep</aspectratio>
-            <texture>icon_sync.png</texture>
-            <visible>ListItem.property(sync)</visible>
-          </control>
-          <control type="image">
-            <left>276</left>
-            <top>0</top>
-            <width>24</width>
-            <height>54</height>
-            <aspectratio>keep</aspectratio>
-            <texture>icon_cc.png</texture>
-            <visible>ListItem.property(hearing_imp)</visible>
-          </control>
-          <control type="label">
-            <left>315</left>
-            <top>0</top>
-            <width>900</width>
-            <height>54</height>
-            <font>size18</font>
-            <aligny>center</aligny>
-            <textcolor>White2</textcolor>
-            <align>left</align>
-            <info>ListItem.Label2</info>
-          </control>
-          <control type="image">
-            <left>1230</left>
-            <top>0</top>
-            <width>120</width>
-            <height>54</height>
-            <aspectratio>keep</aspectratio>
-            <texture>badges/rating$INFO[ListItem.ActualIcon].png</texture>
+        <focusedlayout width="1365" height="62">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <left>5</left>
+              <top>5</top>
+              <width>1355</width>
+              <height>50</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+              <left>10</left>
+              <top>4</top>
+              <width>33</width>
+              <height>54</height>
+              <aspectratio>keep</aspectratio>
+              <texture>flags/$INFO[ListItem.Thumb].gif</texture>
+            </control>
+            <control type="label">
+              <left>54</left>
+              <top>4</top>
+              <width>135</width>
+              <height>54</height>
+              <font>size19</font>
+              <aligny>center</aligny>
+              <textcolor>LabelFO</textcolor>
+              <align>left</align>
+              <info>ListItem.Label</info>
+            </control>
+            <control type="image">
+              <left>204</left>
+              <top>4</top>
+              <width>60</width>
+              <height>54</height>
+              <aspectratio>keep</aspectratio>
+              <texture>icon_sync.png</texture>
+              <visible>ListItem.property(sync)</visible>
+            </control>
+            <control type="image">
+              <left>276</left>
+              <top>4</top>
+              <width>24</width>
+              <height>54</height>
+              <aspectratio>keep</aspectratio>
+              <texture>icon_cc.png</texture>
+              <visible>ListItem.property(hearing_imp)</visible>
+            </control>
+            <control type="label">
+              <left>315</left>
+              <top>1</top>
+              <width>900</width>
+              <height>60</height>
+              <font>size18</font>
+              <aligny>center</aligny>
+              <textcolor>Label2</textcolor>
+              <align>left</align>
+              <info>ListItem.Label2</info>
+            </control>
+            <control type="image">
+              <left>1230</left>
+              <top>4</top>
+              <width>120</width>
+              <height>54</height>
+              <aspectratio>keep</aspectratio>
+              <texture>badges/rating$INFO[ListItem.ActualIcon].png</texture>
+            </control>
           </control>
         </focusedlayout>
       </control>
-    </control>
-    <control type="group" id="250">
-      <left>0</left>
-      <top>90</top>
-      <control type="label" description="Right side options">
+      <control type="label" id="130" description="Notification Local subtitle available">
+        <top>930</top>
+        <centerleft>50%</centerleft>
+        <width>1245</width>
+        <height>60</height>
+        <textcolor>LabelFO</textcolor>
+        <label>31287</label>
+        <align>center</align>
+        <aligny>center</aligny>
+        <wrapmultiline>true</wrapmultiline>
+      </control>
+      <control type="label" description="Left side label">
         <left>25</left>
         <top>231</top>
         <width>360</width>
         <height>30</height>
-        <label>33063</label>
-        <font>size17</font>
+        <label>[B]$LOCALIZE[24018][/B]</label>
         <align>center</align>
-        <textcolor>Title</textcolor>
+        <textcolor>LabelFO</textcolor>
       </control>
-      <control type="list" id="150">
+      <control type="panel" id="150" description="list of services">
         <left>25</left>
         <top>285</top>
         <width>375</width>
@@ -262,41 +216,32 @@
         <onright>120</onright>
         <onup>160</onup>
         <ondown>160</ondown>
-        <viewtype label="535">list</viewtype>
-        <scrolltime>200</scrolltime>
-        <itemlayout width="375" height="54">
+        <itemlayout width="375" height="62">
           <control type="label">
-            <left>15</left>
             <top>0</top>
             <width>345</width>
-            <height>57</height>
-            <font>size18</font>
-            <aligny>center</aligny>
-            <selectedcolor>Label1FO</selectedcolor>
-            <align>left</align>
+            <align>center</align>
             <info>ListItem.Label</info>
           </control>
         </itemlayout>
-        <focusedlayout width="375" height="54">
-          <control type="image">
-            <left>0</left>
-            <top>0</top>
-            <width>375</width>
-            <height>57</height>
-            <texture border="9">img/MediaButton2.png</texture>
-            <visible>Control.HasFocus(150)</visible>
-          </control>
-          <control type="label">
-            <left>15</left>
-            <top>0</top>
-            <width>345</width>
-            <height>57</height>
-            <font>size18</font>
-            <aligny>center</aligny>
-            <textcolor>Title</textcolor>
-            <selectedcolor>Label1FO</selectedcolor>
-            <align>left</align>
-            <info>ListItem.Label</info>
+        <focusedlayout width="375" height="62">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>5</left>
+              <top>5</top>
+              <width>365</width>
+              <height>50</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label">
+              <align>center</align>
+              <textcolor>LabelFO</textcolor>
+              <info>ListItem.Label</info>
+            </control>
           </control>
         </focusedlayout>
       </control>
@@ -304,15 +249,22 @@
         <left>25</left>
         <top>700</top>
         <width>375</width>
-        <height>57</height>
-        <textoffsetx>20</textoffsetx>
-        <align>left</align>
-        <aligny>center</aligny>
-        <font>size18</font>
-        <label>24120</label>
+        <textoffsetx>10</textoffsetx>
+        <label>413</label>
         <onleft>120</onleft>
         <onright>120</onright>
         <onup>150</onup>
+        <ondown>170</ondown>
+      </control>
+      <control type="button" id="170" description="Manual search Button">
+        <left>25</left>
+        <top>770</top>
+        <width>375</width>
+        <textoffsetx>10</textoffsetx>
+        <label>24148</label>
+        <onleft>120</onleft>
+        <onright>120</onright>
+        <onup>160</onup>
         <ondown>150</ondown>
       </control>
     </control>

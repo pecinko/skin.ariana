@@ -102,7 +102,7 @@
         </control>
         <control type="button" id="697" description="Playlist">
           <include>9000Buttons</include>
-          <label>$LOCALIZE[31040]</label>
+          <label>$LOCALIZE[31062]</label>
           <onclick>ActivateWindow(videoplaylist)</onclick>
         </control>
         <control type="button" id="698" description="Browse files">

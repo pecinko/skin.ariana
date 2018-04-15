@@ -81,10 +81,10 @@
           <include>FocusButtonsAnimation</include>
           <control type="image">
             <animation effect="fade" time="100">VisibleChange</animation>
-            <left>4</left>
-            <top>4</top>
-            <width>776</width>
-            <height>72</height>
+            <left>10</left>
+            <top>10</top>
+            <width>764</width>
+            <height>60</height>
             <texture border="10">focus/FrameFO.png</texture>
             <bordersize>-10</bordersize>
             <aspectratio>stretch</aspectratio>

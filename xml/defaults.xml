@@ -27,7 +27,7 @@
   </default>
   <default type="textbox">
     <font>plot</font>
-    <align>justify</align>
+    <align>left</align>
     <textcolor>LabelNF</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
@@ -52,8 +52,8 @@
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <texturenofocus>-</texturenofocus>
-    <alttexturenofocus>-</alttexturenofocus>
+    <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
+    <alttexturenofocus border="9">img/SettingsButtonNF.png</alttexturenofocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <alttexturefocus border="9">img/SettingsButtonFO.png</alttexturefocus>
     <include>FocusButtonsAnimation</include>
@@ -69,11 +69,11 @@
     <font>size22</font>
     <textoffsetx>20</textoffsetx>
     <textcolor>LabelNF</textcolor>
-    <focusedcolor>Label1</focusedcolor>
+    <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
-    <texturefocus border="9">img/MediaButton2.png</texturefocus>
+    <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <include>FocusButtonsAnimation</include>
   </default>
   <default type="togglebutton">
@@ -87,14 +87,14 @@
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <altselectedcolor>Label1FO</altselectedcolor>
+    <altselectedcolor>Selected</altselectedcolor>
     <align>center</align>
     <aligny>center</aligny>
     <pulseonselect>false</pulseonselect>
-    <texturenofocus>-</texturenofocus>
-    <alttexturenofocus>-</alttexturenofocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <alttexturefocus border="9">img/SettingsButtonFO.png</alttexturefocus>
+    <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
+    <alttexturenofocus border="9">img/SettingsButtonNF.png</alttexturenofocus>
     <include>FocusButtonsAnimation</include>
   </default>
   <default type="radiobutton">
@@ -112,20 +112,20 @@
     <!--<radioposx>20</radioposx>-->
     <pulseonselect>false</pulseonselect>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
+    <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <textureradioonfocus colordiffuse="LabelFO">img/RadioON.png</textureradioonfocus>
-    <textureradioonnofocus colordiffuse="LabelNF">img/RadioON.png</textureradioonnofocus>
+    <textureradioonnofocus colordiffuse="Label2">img/RadioON.png</textureradioonnofocus>
     <textureradioofffocus colordiffuse="LabelFO">img/RadioOFF.png</textureradioofffocus>
-    <textureradiooffnofocus colordiffuse="LabelNF">img/RadioOFF.png</textureradiooffnofocus>
+    <textureradiooffnofocus colordiffuse="Label2">img/RadioOFF.png</textureradiooffnofocus>
     <include>FocusButtonsAnimation</include>
   </default>
   <default type="spincontrol">
-    <textureup colordiffuse="LabelNF" flipy="true">img/SpinDW.png</textureup>
+    <textureup colordiffuse="Label2" flipy="true">img/SpinDW.png</textureup>
     <textureupfocus colordiffuse="LabelFO" flipy="true">img/SpinDW.png</textureupfocus>
-    <texturedown colordiffuse="LabelNF">img/SpinDW.png</texturedown>
+    <texturedown colordiffuse="Label2">img/SpinDW.png</texturedown>
     <texturedownfocus colordiffuse="LabelFO">img/SpinDW.png</texturedownfocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
+    <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <spinwidth>30</spinwidth>
     <spinheight>40</spinheight>
     <textcolor>LabelNF</textcolor>
@@ -143,12 +143,12 @@
     <width>450</width>
     <height>60</height>
     <font>size22</font>
-    <textureup colordiffuse="LabelNF" flipy="true">img/SpinDW.png</textureup>
+    <textureup colordiffuse="Label2" flipy="true">img/SpinDW.png</textureup>
     <textureupfocus colordiffuse="LabelFO" flipy="true">img/SpinDW.png</textureupfocus>
-    <texturedown colordiffuse="LabelNF">img/SpinDW.png</texturedown>
+    <texturedown colordiffuse="Label2">img/SpinDW.png</texturedown>
     <texturedownfocus colordiffuse="LabelFO">img/SpinDW.png</texturedownfocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
+    <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <spinwidth>30</spinwidth>
     <spinheight>40</spinheight>
     <textcolor>LabelNF</textcolor>
@@ -172,14 +172,12 @@
     <selectedcolor>Selected</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
+    <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <sliderwidth>150</sliderwidth>
     <sliderheight>24</sliderheight>
     <texturesliderbar border="3,0,3,0">HUD/SliderBG.png</texturesliderbar>
     <textureslidernib>HUD/SliderNib.png</textureslidernib>
     <textureslidernibfocus colordiffuse="Selected">HUD/SliderNib.png</textureslidernibfocus>
-    <texturefocus border="9">img/MediaButton2.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
     <pulseonselect>false</pulseonselect>
     <include>FocusButtonsAnimation</include>
   </default>
@@ -194,14 +192,12 @@
     <selectedcolor>Selected</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
+    <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <sliderwidth>150</sliderwidth>
     <sliderheight>24</sliderheight>
     <texturesliderbar border="3,0,3,0">HUD/SliderBG.png</texturesliderbar>
-    <textureslidernib colordiffuse="LabelNF">HUD/SliderNib.png</textureslidernib>
+    <textureslidernib colordiffuse="Label2">HUD/SliderNib.png</textureslidernib>
     <textureslidernibfocus colordiffuse="LabelFO">HUD/SliderNib.png</textureslidernibfocus>
-    <texturefocus border="9">img/MediaButton2.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
     <pulseonselect>false</pulseonselect>
     <include>FocusButtonsAnimation</include>
   </default>
