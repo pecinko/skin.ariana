@@ -3,12 +3,12 @@
   <requires>
     <import addon="xbmc.gui" version="5.12.0"/>
   </requires>
-  <extension point="xbmc.gui.skin" debugging="true">
+  <extension point="xbmc.gui.skin" debugging="false">
     <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">A skin</summary>
-    <description lang="en_GB">A family friend</description>
+    <summary lang="en_GB">Ariana skin for MrMC</summary>
+    <description lang="en_GB">A nice and simple skin. Family friend.</description>
     <disclaimer lang="en_GB"></disclaimer>
     <platform>all</platform>
     <license></license>

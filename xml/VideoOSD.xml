@@ -424,7 +424,7 @@
           <width>1245</width>
           <left>225</left>
           <align>left</align>
-          <label>$INFO[VideoPlayer.TVShowTitle], $LOCALIZE[31003] $INFO[VideoPlayer.Season], $LOCALIZE[31001] $INFO[VideoPlayer.Episode]</label>
+          <label>$INFO[VideoPlayer.TVShowTitle], $LOCALIZE[31003] $INFO[VideoPlayer.Season], $INFO[VideoPlayer.Episode]</label>
           <textcolor>DarkGray</textcolor>
           <font>info1</font>
           <visible>VideoPlayer.Content(episodes)</visible>

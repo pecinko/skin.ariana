@@ -27,7 +27,6 @@
         <font>size17</font>
         <haspath>true</haspath>
       </control>
-
       <control type="label" id="12" description="Footer Label Left">
         <left>90</left>
         <top>930</top>
@@ -36,7 +35,6 @@
         <font>size17</font>
         <label>-</label>
       </control>
-
       <control type="label" id="13" description="Footer Label Right">
         <right>90</right>
         <top>930</top>
@@ -45,100 +43,39 @@
         <font>size17</font>
         <label>-</label>
       </control>
-
-        <control type="panel" id="20" description="Left File List">
-          <left>90</left>
-          <top>240</top>
-          <width>840</width>
-          <height>679</height>
-          <onleft>21</onleft>
-          <onright>21</onright>
-          <itemlayout height="68" width="840">
-            <control type="image">
-              <width>840</width>
-              <height>68</height>
-              <texture border="4">menu/MenuButtonNF.png</texture>
-              <bordersize>4</bordersize>
-            </control>
-            <control type="label">
-              <left>20</left>
-              <right>140</right>
-              <height>68</height>
-              <font>size18</font>
-              <info>ListItem.Label</info>
-            </control>
-            <control type="label">
-              <right>20</right>
-              <height>60</height>
-              <width>120</width>
-              <font>size17</font>
-              <info>ListItem.Label2</info>
-              <align>right</align>
-            </control>
-          </itemlayout>
-          <focusedlayout height="68" width="840">
-            <control type="group">
-              <include>FocusButtonsAnimation</include>
-            <control type="image">
-              <width>840</width>
-              <height>68</height>
-              <texture border="4">menu/MenuButtonFO.png</texture>
-              <bordersize>4</bordersize>
-            </control>
-            <control type="label">
-              <left>20</left>
-              <right>140</right>
-              <height>68</height>
-              <font>size18</font>
-              <info>ListItem.Label</info>
-              <textcolor>LabelFO</textcolor>
-            </control>
-            <control type="label">
-              <right>20</right>
-              <height>60</height>
-              <width>120</width>
-              <font>size17</font>
-              <info>ListItem.Label2</info>
-              <align>right</align>
-              <textcolor>LabelFO</textcolor>
-            </control>
-            </control>
-          </focusedlayout>
-        </control>
-
-        <control type="panel" id="21" description="Left File List">
-          <right>90</right>
-          <top>240</top>
-          <width>840</width>
-          <height>679</height>
-          <onleft>20</onleft>
-          <onright>20</onright>
-          <itemlayout height="68" width="840">
-            <control type="image">
-              <width>840</width>
-              <height>68</height>
-              <texture border="4">menu/MenuButtonNF.png</texture>
-              <bordersize>4</bordersize>
-            </control>
-            <control type="label">
-              <left>20</left>
-              <right>140</right>
-              <height>68</height>
-              <font>size18</font>
-              <info>ListItem.Label</info>
-            </control>
-            <control type="label">
-              <right>20</right>
-              <height>60</height>
-              <width>120</width>
-              <font>size17</font>
-              <info>ListItem.Label2</info>
-              <align>right</align>
-            </control>
-          </itemlayout>
-          <focusedlayout height="68" width="840">
-            <control type="group">
-              <include>FocusButtonsAnimation</include>
+      <control type="panel" id="20" description="Left File List">
+        <left>90</left>
+        <top>240</top>
+        <width>840</width>
+        <height>679</height>
+        <onleft>21</onleft>
+        <onright>21</onright>
+        <itemlayout height="68" width="840">
+          <control type="image">
+            <width>840</width>
+            <height>68</height>
+            <texture border="4">menu/MenuButtonNF.png</texture>
+            <bordersize>4</bordersize>
+          </control>
+          <control type="label">
+            <left>20</left>
+            <right>140</right>
+            <height>68</height>
+            <font>size18</font>
+            <info>ListItem.Label</info>
+          </control>
+          <control type="label">
+            <right>20</right>
+            <height>60</height>
+            <width>120</width>
+            <font>size17</font>
+            <info>ListItem.Label2</info>
+            <align>right</align>
+          </control>
+        </itemlayout>
+        <focusedlayout height="68" width="840">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
             <control type="image">
               <width>840</width>
               <height>68</height>
@@ -162,9 +99,68 @@
               <align>right</align>
               <textcolor>LabelFO</textcolor>
             </control>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="panel" id="21" description="Left File List">
+        <right>90</right>
+        <top>240</top>
+        <width>840</width>
+        <height>679</height>
+        <onleft>20</onleft>
+        <onright>20</onright>
+        <itemlayout height="68" width="840">
+          <control type="image">
+            <width>840</width>
+            <height>68</height>
+            <texture border="4">menu/MenuButtonNF.png</texture>
+            <bordersize>4</bordersize>
+          </control>
+          <control type="label">
+            <left>20</left>
+            <right>140</right>
+            <height>68</height>
+            <font>size18</font>
+            <info>ListItem.Label</info>
+          </control>
+          <control type="label">
+            <right>20</right>
+            <height>60</height>
+            <width>120</width>
+            <font>size17</font>
+            <info>ListItem.Label2</info>
+            <align>right</align>
+          </control>
+        </itemlayout>
+        <focusedlayout height="68" width="840">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <width>840</width>
+              <height>68</height>
+              <texture border="4">menu/MenuButtonFO.png</texture>
+              <bordersize>4</bordersize>
             </control>
-          </focusedlayout>
-        </control>
+            <control type="label">
+              <left>20</left>
+              <right>140</right>
+              <height>68</height>
+              <font>size18</font>
+              <info>ListItem.Label</info>
+              <textcolor>LabelFO</textcolor>
+            </control>
+            <control type="label">
+              <right>20</right>
+              <height>60</height>
+              <width>120</width>
+              <font>size17</font>
+              <info>ListItem.Label2</info>
+              <align>right</align>
+              <textcolor>LabelFO</textcolor>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
     </control>
   </controls>
 </window>

@@ -50,7 +50,7 @@
           <height>30</height>
           <colordiffuse>LabelFO</colordiffuse>
           <aspectratio align="left">keep</aspectratio>
-          <texture>badges/$INFO[ListItem.StarRating]</texture>
+          <texture>$INFO[ListItem.StarRating,badges/]</texture>
         </control>
       </control>
     </control>
