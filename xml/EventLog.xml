@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <menucontrol>9000</menucontrol>
+	<views>570</views>
+  <defaultcontrol>9000</defaultcontrol>
+  <controls>
+    <include>DialogFullBG</include>
+    <control type="group" description="Content">
+      <include>OpenClose</include>
+      <control type="image" description="Sidebar">
+        <left>-150</left>
+        <top>0</top>
+        <width>660</width>
+        <height>100%</height>
+        <aspectratio>stretch</aspectratio>
+        <texture border="60">img/HomeMenuBarV.png</texture>
+      </control>
+      <control type="label" description="Heading">
+        <include>CenterHeading</include>
+        <label>$LOCALIZE[14111]</label>
+      </control>
+      <control type="grouplist" id="9000" description="Left - Button Area">
+        <left>45</left>
+        <top>210</top>
+        <width>420</width>
+        <height>864</height>
+        <itemgap>2</itemgap>
+        <onleft>570</onleft>
+        <onright>570</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <orientation>vertical</orientation>
+        <control type="togglebutton" id="4">
+          <description>Sort asc</description>
+          <label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
+          <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
+          <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+          <width>420</width>
+          <align>left</align>
+        </control>
+        <control type="button" id="20" description="clear">
+          <width>420</width>
+          <align>left</align>
+          <label>19185</label>
+        </control>
+        <control type="button" id="21" description="Levels">
+          <width>420</width>
+          <align>left</align>
+        </control>
+        <control type="radiobutton" id="22" description="current level">
+          <width>420</width>
+          <align>left</align>
+        </control>
+      </control>
+      <control type="panel" id="570">
+        <left>600</left>
+        <top>207</top>
+        <width>1204</width>
+        <height>719</height>
+        <onup>570</onup>
+        <ondown>570</ondown>
+        <onleft>9000</onleft>
+        <itemlayout width="1204" height="120">
+          <control type="image">
+            <left>2</left>
+            <top>2</top>
+            <width>1200</width>
+            <height>116</height>
+            <texture border="4">img/SettingsButtonNF.png</texture>
+            <bordersize>0</bordersize>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="image" description="Thumb">
+            <top>4</top>
+            <left>4</left>
+            <width>112</width>
+            <height>112</height>
+            <texture>$INFO[ListItem.Icon]</texture>
+            <aspectratio>scale</aspectratio>
+          </control>
+          <control type="label" description="Main Label">
+            <left>140</left>
+            <right>20</right>
+            <top>0</top>
+            <height>50</height>
+            <font>size19</font>
+            <textcolor>LabelNF</textcolor>
+            <label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
+          </control>
+          <control type="textbox" description="Description">
+            <left>140</left>
+            <right>20</right>
+            <top>40</top>
+            <height>60</height>
+            <align>left</align>
+            <font>size19</font>
+            <textcolor>Label2</textcolor>
+            <label>$INFO[ListItem.Property(Event.Description)]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout width="1204" height="120">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <left>4</left>
+              <top>4</top>
+              <width>1196</width>
+              <height>112</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image" description="Thumb">
+              <top>4</top>
+              <left>4</left>
+              <width>112</width>
+              <height>112</height>
+              <texture>$INFO[ListItem.Icon]</texture>
+              <aspectratio>scale</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <left>140</left>
+              <right>20</right>
+              <top>0</top>
+              <height>50</height>
+              <autoscroll>true</autoscroll>
+              <font>size19</font>
+              <textcolor>LabelFO</textcolor>
+              <label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
+            </control>
+            <control type="textbox" description="Description">
+              <left>140</left>
+              <right>20</right>
+              <top>40</top>
+              <height>60</height>
+              <align>left</align>
+              <autoscroll>true</autoscroll>
+              <font>size19</font>
+              <textcolor>Label2</textcolor>
+              <label>$INFO[ListItem.Property(Event.Description)]</label>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+  </controls>
+</window>
