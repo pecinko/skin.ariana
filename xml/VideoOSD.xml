@@ -5,6 +5,7 @@
   <controls>
     <control type="group" description="OSDMenu">
       <visible>![Window.IsActive(123) | Window.IsActive(124)]</visible>
+      <include>VisibleFadeEffect</include>
       <control type="group">
         <control type="image" description="OSD BG">
           <visible>!Window.IsActive(dialogseekbar.xml)</visible>
@@ -14,15 +15,26 @@
           <width>100%</width>
           <texture>OSD/OSDBackground.png</texture>
         </control>
-        <control type="grouplist" id="100">
+        <control type="slider" id="87" description="Slider">
+          <centerleft>50%</centerleft>
+					<top>1020</top>
+					<width>1200</width>
+					<height>24</height>
+  				<onup>100</onup>
+          <ondown>noop</ondown>
+          <onleft>87</onleft>
+          <onright>87</onright>
+          <action>seek</action>
+        </control>
+        <control type="grouplist" id="100" description="player buttons">
           <width max="1500">auto</width>
           <top>930</top>
           <centerleft>50%</centerleft>
-          <height>144</height>
+          <height>57</height>
           <itemgap>0</itemgap>
           <align>center</align>
           <orientation>horizontal</orientation>
-
+          <ondown>87</ondown>
           <control type="button" id="602">
             <width>93</width>
             <height>57</height>
@@ -76,7 +88,7 @@
             <onclick>PlayerControl(Next)</onclick>
           </control>
         </control>
-        <control type="group">
+        <control type="group" description="player state small feedback icons">
           <left>154</left>
           <top>843</top>
           <width>1611</width>
@@ -351,6 +363,7 @@
     </control>
     <control type="group" description="MediaInfo">
       <visible>ControlGroup(214).Hasfocus + ![Window.IsActive(123) | Window.IsActive(124)]</visible>
+      <include>VisibleFadeEffect</include>
       <control type="image" id="1">
         <left>165</left>
         <top>74</top>

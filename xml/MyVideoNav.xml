@@ -5,11 +5,10 @@
     <include>FullBackground</include>
     <control type="group" description="Content">
       <include>OpenClose</include>
-      <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
       <animation effect="fade" delay="100" time="300">Visible</animation>
       <animation effect="fade" time="0">Hidden</animation>
       <include>View_50</include>
-      <control type="group" description="51">
+      <control type="group" description="51 episodes">
         <visible>Control.IsVisible(51)</visible>
         <include>ContainerVisibleFade</include>
         <control type="label" description="Main Label">
@@ -21,7 +20,7 @@
           <textcolor>LabelFO</textcolor>
           <label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
         </control>
-        <control type="group" description="Media info Top">
+        <control type="group" description="Media info left">
           <left>420</left>
           <top>600</top>
           <control type="label" description="Main Label">
@@ -152,22 +151,31 @@
       <control type="group" description="Thumbnails 53">
         <visible>Control.IsVisible(53)</visible>
         <include>ContainerVisibleFade</include>
+        <control type="label" description="Main Label">
+          <centerleft>50%</centerleft>
+          <centertop>75</centertop>
+          <align>center</align>
+          <font>size28B</font>
+          <width>850</width>
+          <textcolor>LabelNF</textcolor>
+          <label>[B]$VAR[GlobalHeadings][/B]</label>
+        </control>
         <control type="group" description="Container">
           <control type="panel" id="53" description="Grid">
             <visible>[Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)]</visible>
             <visible>!SubString(ListItem.Path,videodb://movies/sets/)</visible>
             <viewtype label="536">Thumbnails</viewtype>
             <left>60</left>
-            <top>90</top>
+            <top>140</top>
             <width>1800</width>
             <height>980</height>
             <orientation>vertical</orientation>
-            <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
-            <onright condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onright>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
             <onup>PageUp</onup>
             <ondown>PageDown</ondown>
             <preloaditems>4</preloaditems>
-            <itemlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="490" width="300">
+            <itemlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="450" width="300">
               <control type="image">
                 <left>24</left>
                 <top>24</top>
@@ -217,7 +225,7 @@
                 <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
               </control>
             </itemlayout>
-            <focusedlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="490" width="300">
+            <focusedlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="450" width="300">
               <control type="group">
                 <animation type="Focus" reversible="false">
                   <effect type="zoom" center="150,245" start="100" end="110" time="120" easing="inout"/>
@@ -247,7 +255,7 @@
                   <top>400</top>
                   <width>290</width>
                   <height>45</height>
-                  <font>size16</font>
+                  <font>size19</font>
                   <textcolor>LabelNF</textcolor>
                   <align>center</align>
                   <label>$INFO[ListItem.Label]</label>
@@ -330,7 +338,7 @@
             <control type="textbox" description="Plot">
               <top>58</top>
               <width>758</width>
-              <height>176</height>
+              <height>170</height>
               <font>plot</font>
               <align>left</align>
               <aligny>bottom</aligny>

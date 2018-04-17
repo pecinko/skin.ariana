@@ -2,7 +2,7 @@
 <window type="dialog">
   <defaultcontrol always="true">901</defaultcontrol>
   <include>OpenClose</include>
-  <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+  <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
   <visible>Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching]</visible>
   <animation effect="fade" start="0" end="100" time="400">Visible</animation>
   <animation effect="fade" start="100" end="0" time="100">Hidden</animation>
@@ -143,17 +143,18 @@
         <righttexture border="0,6,12,6">VideoOSD/BufferRight.png</righttexture>
         <info>Player.ProgressCache</info>
       </control>-->
-      
+
 			<control type="progress" id="23">
-					<description>Progressbar</description>
+          <visible>false</visible>
+          <description>Progressbar</description>
 					<left>360</left>
 					<top>3</top>
 					<width>1200</width>
 					<height>24</height>
 					<info>Player.Progress</info>
 				</control>
-			
-			
+        
+
 					<!--<control type="progress" id="23" description="Progress Bar">
         <left>300</left>
         <top>6</top>
