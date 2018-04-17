@@ -119,11 +119,11 @@
             <onclick>ActivateWindow(favourites)</onclick>
             <visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
           </item>
-          <item id="8">
+          <!--<item id="8">
             <label>$LOCALIZE[20094]</label>
             <onclick>ActivateWindow(MediaSources,root)</onclick>
             <visible>!Skin.HasSetting(HomeMenuNoMediaSourceButton)</visible>
-          </item>
+          </item>-->
           <!--<item id="13">
             <label>$LOCALIZE[24001]</label>
             <onclick>ActivateWindow(Programs,Addons,return)</onclick>
@@ -144,11 +144,11 @@
             <label>$LOCALIZE[10004]</label>
             <onclick>ActivateWindow(settings)</onclick>
           </item>
-          <item id="12">
+          <!--<item id="12">
             <label>$LOCALIZE[13009]</label>
             <onclick>ActivateWindow(shutdownmenu)</onclick>
             <visible>!System.Platform.IOS + !System.Platform.TVOS</visible>
-          </item>
+          </item>-->
         </content>
       </control>
     </control>
