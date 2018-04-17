@@ -6,7 +6,7 @@
     <value condition="Control.HasFocus(8000)">$INFO[Container(8002).ListItem.Art(fanart)]</value>
     <value condition="Control.HasFocus(8010)">$INFO[Container(8010).ListItem.Art(fanart)]</value>
     <value condition="Control.HasFocus(8011)">$INFO[Container(8011).ListItem.Art(fanart)]</value>
-    <value>$INFO[Container(300).ListItem.Art(fanart)]</value>
+    <value>img/BlackDot.png</value>
   </variable>
   <variable name="Overlay.Color">
     <value condition="Skin.HasSetting(DarkTheme)">FF2A2C32</value>
@@ -19,7 +19,8 @@
   <variable name="Background.Art" description="Art backgrounds">
     <value condition="Skin.HasSetting(HideFanart)">-</value>
     <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-    <value>$INFO[ListItem.Thumb]</value>
+    <value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+    <value>img/BlackDot.png</value>
   </variable>
   <variable name="Overlay" description="Overlay image">
     <value condition="ListItem.IsResumable">OverlayInProgress.png</value>
