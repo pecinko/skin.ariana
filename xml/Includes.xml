@@ -9,8 +9,8 @@
     <width>500</width>
     <height>680</height>
     <itemgap>12</itemgap>
-    <onleft>50</onleft>
-    <onright>50</onright>
+    <onleft>noop</onleft>
+    <onright>noop</onright>
     <onup>9000</onup>
     <ondown>9000</ondown>
     <onback>50</onback>
@@ -296,5 +296,144 @@
         <texture>$INFO[ListItem.Thumb]</texture>
       </control>
     </focusedlayout>
+  </include>
+  <include name="PostersShelfNF">
+    <control type="image">
+      <left>24</left>
+      <top>24</top>
+      <width>250</width>
+      <height>375</height>
+      <texture border="12">img/ThumbBorder.png</texture>
+      <bordersize>-9</bordersize>
+    </control>
+    <control type="image">
+      <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+      <left>24</left>
+      <top>24</top>
+      <width>250</width>
+      <height>375</height>
+      <texture background="true">$INFO[ListItem.Thumb]</texture>
+      <aspectratio>scale</aspectratio>
+    </control>
+    <control type="image">
+      <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+      <left>24</left>
+      <top>24</top>
+      <width>250</width>
+      <height>375</height>
+      <texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+      <aspectratio>scale</aspectratio>
+    </control>
+    <control type="group" description="Overlay">
+      <control type="image">
+        <visible>!IsEmpty(ListItem.Thumb)</visible>
+        <right>26</right>
+        <top>24</top>
+        <height>64</height>
+        <width>64</width>
+        <aspectratio>keep</aspectratio>
+        <texture>OverlayBG.png</texture>
+      </control>
+      <control type="image">
+        <visible>!IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+        <right>30</right>
+        <top>28</top>
+        <height>28</height>
+        <width>28</width>
+        <aspectratio>keep</aspectratio>
+        <texture>$VAR[Overlay]</texture>
+      </control>
+    </control>
+    <control type="label" description="Label2">
+      <visible>container.content(TVshows) | container.content(seasons)</visible>
+      <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+      <right>26</right>
+      <top>17</top>
+      <height>42</height>
+      <width>42</width>
+      <font>size14</font>
+      <align>center</align>
+      <textcolor>LabelFO</textcolor>
+      <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+    </control>
+  </include>
+  <include name="PostersShelfFO">
+    <control type="group">
+      <animation type="Focus" reversible="false">
+        <effect type="zoom" center="150,245" start="100" end="110" time="120" easing="inout"/>
+      </animation>
+      <animation type="UnFocus" reversible="false">
+        <effect type="zoom" center="150,245" start="110" end="100" time="120" easing="inout"/>
+      </animation>
+      <control type="image">
+        <left>24</left>
+        <top>24</top>
+        <width>250</width>
+        <height>375</height>
+        <texture border="12">img/ThumbBorder.png</texture>
+        <bordersize>-9</bordersize>
+      </control>
+      <control type="image">
+        <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+        <left>24</left>
+        <top>24</top>
+        <width>250</width>
+        <height>375</height>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
+      <control type="image">
+        <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+        <left>24</left>
+        <top>24</top>
+        <width>250</width>
+        <height>375</height>
+        <texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
+      <control type="label">
+        <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+        <left>5</left>
+        <top>400</top>
+        <width>290</width>
+        <height>45</height>
+        <font>size19</font>
+        <textcolor>LabelNF</textcolor>
+        <align>center</align>
+        <label>$INFO[ListItem.Label]</label>
+      </control>
+      <control type="group" description="Overlay">
+        <control type="image">
+          <visible>!IsEmpty(ListItem.Thumb)</visible>
+          <right>26</right>
+          <top>24</top>
+          <height>62</height>
+          <width>62</width>
+          <aspectratio>keep</aspectratio>
+          <texture>OverlayBG.png</texture>
+        </control>
+        <control type="image">
+          <visible>!IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+          <right>30</right>
+          <top>28</top>
+          <height>28</height>
+          <width>28</width>
+          <aspectratio>keep</aspectratio>
+          <texture>$VAR[Overlay]</texture>
+        </control>
+      </control>
+      <control type="label" description="Label2">
+        <visible>container.content(TVshows) | container.content(seasons)</visible>
+        <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+        <right>25</right>
+        <top>17</top>
+        <height>42</height>
+        <width>42</width>
+        <font>size14</font>
+        <align>center</align>
+        <textcolor>LabelFO</textcolor>
+        <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+      </control>
+    </control>
   </include>
 </includes>
