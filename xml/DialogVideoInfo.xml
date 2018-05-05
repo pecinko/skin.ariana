@@ -369,9 +369,7 @@
           <texture border="60">img/HomeMenuBar.png</texture>
           <bordersize>-60</bordersize>
         </control>
-        <control type="fixedlist" id="50" description="50 actors">
-          <focusposition>1</focusposition>
-          <movement>4</movement>
+        <control type="panel" id="50" description="50 actors">
           <left>60</left>
           <top>800</top>
           <width>1800</width>
@@ -388,7 +386,7 @@
               <top>15</top>
               <width>270</width>
               <height>270</height>
-              <texture aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
+              <texture fallback="unknown-user.png" aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
               <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
           </itemlayout>
@@ -405,7 +403,7 @@
                 <top>15</top>
                 <width>270</width>
                 <height>270</height>
-                <texture aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
+                <texture fallback="unknown-user.png" aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
               </control>
               <control type="label" description="Main Label">
