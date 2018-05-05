@@ -302,13 +302,13 @@
         <visible>Control.IsVisible(52)</visible>
         <include>ContainerVisibleFade</include>
         <control type="label" description="MainHeading">
-          <top>66</top>
-          <right>66</right>
-          <width>780</width>
+          <top>40</top>
+          <centerleft>50%</centerleft>
+          <width>800</width>
           <font>size50B</font>
           <label>[B]$VAR[GlobalHeadings][/B]</label>
           <textcolor>LabelNF</textcolor>
-          <align>left</align>
+          <align>center</align>
         </control>
         <control type="group" description="Media info">
           <visible>container.content(movies) | container.content(tvshows) | container.content(seasons) | container.content(episodes)</visible>
