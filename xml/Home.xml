@@ -226,7 +226,7 @@
         <aligny>top</aligny>
         <itemgap>40</itemgap>
         <control type="panel" id="8010" description="Movies OnDeck">
-          <!--<visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>-->
+          <visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>440</top>
           <left>60</left>
@@ -244,10 +244,9 @@
           <focusedlayout width="300" height="450">
             <include>PostersShelfFO</include>
           </focusedlayout>
-          <content target="videos" sortorder="descending" limit="10">videodb://movies/titles/</content>
         </control>
         <control type="panel" id="8011" description="Shows OnDeck">
-          <!--<visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>-->
+          <visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>600</top>
           <left>60</left>
@@ -264,10 +263,9 @@
           <focusedlayout width="300" height="450">
             <include>PostersShelfFO</include>
           </focusedlayout>
-          <content target="videos" sortorder="descending" limit="10">videodb://tvshows/titles/</content>
         </control>
         <control type="panel" id="8000" description="Movies RA">
-          <!--<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>-->
+          <visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>176</top>
           <left>60</left>
@@ -285,10 +283,9 @@
           <focusedlayout width="300" height="450">
             <include>PostersShelfFO</include>
           </focusedlayout>
-          <content target="videos" sortorder="ascending" limit="10">videodb://recentlyaddedmovies/</content>
         </control>
         <control type="panel" id="8001" description="Shows RA">
-          <!--<visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>-->
+          <visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>176</top>
           <left>60</left>
@@ -305,10 +302,9 @@
           <focusedlayout width="300" height="450">
             <include>PostersShelfFO</include>
           </focusedlayout>
-          <content target="videos" sortorder="ascending" limit="10">videodb://recentlyaddedepisodes/</content>
         </control>
         <control type="panel" id="8002" description="Music RA">
-          <!--<visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>-->
+          <visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>366</top>
           <left>60</left>
@@ -374,7 +370,6 @@
               </control>
             </control>
           </focusedlayout>
-          <content target="music" sortby="artist" sortorder="ascending" limit="10">musicdb://recentlyaddedalbums/</content>
         </control>
       </control>
     </control>
