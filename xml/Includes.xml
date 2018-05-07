@@ -356,6 +356,17 @@
       <textcolor>LabelFO</textcolor>
       <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
     </control>
+    <control type="label" description="Label2">
+      <visible>Window.IsActive(home)</visible>
+      <left>5</left>
+      <top>400</top>
+      <width>290</width>
+      <height>45</height>
+      <font>size19</font>
+      <textcolor>LabelNF</textcolor>
+      <align>center</align>
+      <label>$INFO[ListItem.Season,S,-]$INFO[ListItem.Episode,E]</label>
+    </control>
   </include>
   <include name="PostersShelfFO">
     <control type="group">

@@ -75,7 +75,7 @@
               <top>0</top>
               <aligny>center</aligny>
               <height>140</height>
-              <font>size22B</font>
+              <font>size24B</font>
               <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>

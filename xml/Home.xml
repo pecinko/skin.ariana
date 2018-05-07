@@ -26,10 +26,10 @@
         <textcolor>Label2</textcolor>
         <align>left</align>
       </control>
-      <control type="grouplist" id="9001">
+      <control type="grouplist" id="9001" description="Top right row buttons">
         <right>84</right>
         <top>90</top>
-        <width max="500">auto</width>
+        <width max="608">auto</width>
         <height>110</height>
         <itemgap>10</itemgap>
         <ondown>300</ondown>
@@ -89,8 +89,8 @@
         </control>
       </control>
       <control type="panel" id="300" description="Main menu">
-        <top>210</top>
-        <centerleft>50%</centerleft>
+        <top>240</top>
+        <left>60</left>
         <width>1800</width>
         <height>300</height>
         <onup>9001</onup>
@@ -99,26 +99,27 @@
         <onleft>300</onleft>
         <onright>300</onright>
         <orientation>horizontal</orientation>
-        <itemlayout height="200" width="300">
+        <itemlayout height="225" width="360">
           <control type="image">
-            <left>24</left>
-            <top>24</top>
-            <height>152</height>
-            <width>252</width>
-            <texture border="10">focus/FrameFO.png</texture>
+            <left>26</left>
+            <top>10</top>
+            <height>175</height>
+            <width>308</width>
+            <texture border="11">$INFO[ListItem.Thumb]</texture>
             <bordersize>-10</bordersize>
             <aspectratio>stretch</aspectratio>
           </control>
           <control type="image">
+            <include>VisibleFadeEffect</include>
             <centerleft>50%</centerleft>
-            <centertop>50%</centertop>
-            <height>50</height>
-            <width>50</width>
-            <texture>$INFO[ListItem.Icon]</texture>
+            <centertop>100</centertop>
+            <height>100</height>
+            <width>100</width>
+            <texture>$INFO[ListItem.Property(art)]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
-            <top>180</top>
+            <top>190</top>
             <left>0</left>
             <right>0</right>
             <height>40</height>
@@ -128,33 +129,35 @@
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
-        <focusedlayout height="200" width="300">
+        <focusedlayout height="225" width="360">
           <control type="group" description="List in FO">
             <animation type="Focus">
-              <effect type="zoom" center="auto" start="100" end="110" time="100" easing="in"/>
+              <effect type="zoom" center="auto" start="100" end="118" time="100" easing="in"/>
             </animation>
             <animation type="UnFocus">
-              <effect type="zoom" center="auto" start="110" end="100" time="100" easing="out"/>
+              <effect type="zoom" center="auto" start="118" end="100" time="100" easing="out"/>
             </animation>
             <control type="image">
-              <left>24</left>
-              <top>24</top>
-              <height>152</height>
-              <width>252</width>
-              <texture border="10">focus/FrameFO.png</texture>
+              <left>26</left>
+              <top>10</top>
+              <height>175</height>
+              <width>308</width>
+              <texture border="11">$INFO[ListItem.Thumb]</texture>
               <bordersize>-10</bordersize>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
+              <visible>Control.HasFocus(300)</visible>
+              <include>VisibleFadeEffect</include>
               <centerleft>50%</centerleft>
-              <centertop>50%</centertop>
-              <height>50</height>
-              <width>50</width>
-              <texture colordiffuse="LabelFO">$INFO[ListItem.Icon]</texture>
+              <centertop>100</centertop>
+              <height>100</height>
+              <width>100</width>
+              <texture>$INFO[ListItem.Property(art)]</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
-              <top>180</top>
+              <top>190</top>
               <left>0</left>
               <right>0</right>
               <height>40</height>
@@ -170,68 +173,76 @@
             <visible>Library.HasServices | Library.HasContent(Movies)</visible>
             <label>$LOCALIZE[342]</label>
             <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-            <property name="id">movies</property>
-            <icon>buttons/HomeMovies.png</icon>
+            <thumb>focus/HomeFrameMovies.png</thumb>
+            <property name="art">buttons/HomeMovies.png</property>
           </item>
           <item id="2">
             <visible>Library.HasServices | Library.HasContent(TVShows)</visible>
             <label>$LOCALIZE[20343]</label>
             <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-            <property name="id">tvshows</property>
-            <icon>buttons/HomeTV.png</icon>
+            <thumb>focus/HomeFrameTV.png</thumb>
+            <property name="art">buttons/HomeTV.png</property>
           </item>
           <item id="3">
-            <visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
             <label>$LOCALIZE[3]</label>
             <onclick>ActivateWindow(Video,Files,return)</onclick>
-            <property name="id">videos</property>
-            <icon>buttons/HomeVideos.png</icon>
+            <thumb>focus/HomeFrameVideos.png</thumb>
+            <property name="art">buttons/HomeVideos.png</property>
           </item>
           <item id="4">
-            <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
             <label>$LOCALIZE[2]</label>
             <onclick>ActivateWindow(Music,root,return)</onclick>
-            <property name="id">music</property>
-            <icon>buttons/HomeMusic.png</icon>
+            <thumb>focus/HomeFrameMusic.png</thumb>
+            <property name="art">buttons/HomeMusic.png</property>
           </item>
           <item id="5">
-            <visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton) + [Library.HasServices | Library.HasContent(musicvideos)]</visible>
+            <visible>[Library.HasServices | Library.HasContent(musicvideos)]</visible>
             <label>$LOCALIZE[20389]</label>
             <onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
-            <property name="id">musicvideos</property>
-            <icon>buttons/HomeVideos.png</icon>
+            <thumb>focus/HomeFrameVideos.png</thumb>
+            <property name="art">buttons/HomeVideos.png</property>
           </item>
           <item id="6">
-            <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
             <label>$LOCALIZE[1]</label>
             <onclick>ActivateWindow(Pictures)</onclick>
-            <property name="id">pictures</property>
-            <icon>buttons/HomePictures.png</icon>
+            <thumb>focus/HomeFramePictures.png</thumb>
+            <property name="art">buttons/HomePictures.png</property>
           </item>
           <item id="7">
-            <visible>!Skin.HasSetting(HomeMenuNoAddonsButton)</visible>
             <label>$LOCALIZE[24001]</label>
             <onclick>ActivateWindow(Programs,Addons,return)</onclick>
-            <property name="id">addons</property>
-            <icon>buttons/HomeAddons.png</icon>
+            <thumb>focus/HomeFrameAddons.png</thumb>
+            <property name="art">buttons/HomeAddons.png</property>
           </item>
         </content>
       </control>
-      <control type="grouplist" id="9000">
-        <top>550</top>
+      <control type="grouplist" id="9000" description="home shelves">
+        <top>540</top>
         <left>60</left>
         <onup>300</onup>
         <ondown>noop</ondown>
         <height max="999">auto</height>
         <aligny>top</aligny>
-        <itemgap>40</itemgap>
+        <align>left</align>
+        <itemgap>20</itemgap>
+        <control type="label" id="80100" description="ShelfHeading">
+          <visible>Control.IsVisible(8010)</visible>
+          <top>440</top>
+          <left>24</left>
+          <height>24</height>
+          <width>1860</width>
+          <font>size20B</font>
+          <label>$LOCALIZE[31026]</label>
+          <textcolor>Label2</textcolor>
+          <align>left</align>
+        </control>
         <control type="panel" id="8010" description="Movies OnDeck">
           <visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>440</top>
           <left>60</left>
           <width>1860</width>
-          <height>450</height>
+          <height>480</height>
           <orientation>horizontal</orientation>
           <onleft>300</onleft>
           <onright>8010</onright>
@@ -245,13 +256,24 @@
             <include>PostersShelfFO</include>
           </focusedlayout>
         </control>
+        <control type="label" id="80110" description="ShelfHeading">
+          <visible>Control.IsVisible(8011)</visible>
+          <top>440</top>
+          <left>24</left>
+          <height>24</height>
+          <width>1860</width>
+          <font>size20B</font>
+          <label>$LOCALIZE[31026]</label>
+          <textcolor>Label2</textcolor>
+          <align>left</align>
+        </control>
         <control type="panel" id="8011" description="Shows OnDeck">
           <visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>600</top>
           <left>60</left>
           <width>1860</width>
-          <height>450</height>
+          <height>480</height>
           <orientation>horizontal</orientation>
           <onleft>300</onleft>
           <onup>8001</onup>
@@ -264,13 +286,24 @@
             <include>PostersShelfFO</include>
           </focusedlayout>
         </control>
+        <control type="label" id="80000" description="ShelfHeading">
+          <visible>Control.IsVisible(8000)</visible>
+          <top>440</top>
+          <left>24</left>
+          <height>24</height>
+          <width>1860</width>
+          <font>size20B</font>
+          <label>$LOCALIZE[681]</label>
+          <textcolor>Label2</textcolor>
+          <align>left</align>
+        </control>
         <control type="panel" id="8000" description="Movies RA">
           <visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>176</top>
           <left>60</left>
           <width>1860</width>
-          <height>450</height>
+          <height>480</height>
           <orientation>horizontal</orientation>
           <onleft>8000</onleft>
           <onright>8000</onright>
@@ -283,6 +316,17 @@
           <focusedlayout width="300" height="450">
             <include>PostersShelfFO</include>
           </focusedlayout>
+        </control>
+        <control type="label" id="80010" description="ShelfHeading">
+          <visible>Control.IsVisible(8001)</visible>
+          <top>440</top>
+          <left>24</left>
+          <height>24</height>
+          <width>1860</width>
+          <font>size20B</font>
+          <label>$LOCALIZE[681]</label>
+          <textcolor>Label2</textcolor>
+          <align>left</align>
         </control>
         <control type="panel" id="8001" description="Shows RA">
           <visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
@@ -302,6 +346,17 @@
           <focusedlayout width="300" height="450">
             <include>PostersShelfFO</include>
           </focusedlayout>
+        </control>
+        <control type="label" id="80020" description="ShelfHeading">
+          <visible>Control.IsVisible(8002)</visible>
+          <top>440</top>
+          <left>24</left>
+          <height>24</height>
+          <width>1860</width>
+          <font>size20B</font>
+          <label>$LOCALIZE[681]</label>
+          <textcolor>Label2</textcolor>
+          <align>left</align>
         </control>
         <control type="panel" id="8002" description="Music RA">
           <visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>
