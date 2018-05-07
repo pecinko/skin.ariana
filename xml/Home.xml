@@ -13,8 +13,8 @@
         <left>84</left>
         <width>1920</width>
         <font>size50B</font>
-        <label>[B]MRMC[/B]</label>
-        <textcolor>LabelFO</textcolor>
+        <label>[B]MrMC[/B]</label>
+        <textcolor>red</textcolor>
         <align>left</align>
       </control>
       <control type="label" description="MainHeading">
@@ -22,7 +22,7 @@
         <left>84</left>
         <width>1920</width>
         <font>size20B</font>
-        <label>$INFO[system.profilename]</label>
+        <label>$INFO[system.profilename,$LOCALIZE[31027]: ]</label>
         <textcolor>Label2</textcolor>
         <align>left</align>
       </control>
@@ -227,14 +227,8 @@
         <itemgap>20</itemgap>
         <control type="label" id="80100" description="ShelfHeading">
           <visible>Control.IsVisible(8010)</visible>
-          <top>440</top>
-          <left>24</left>
-          <height>24</height>
-          <width>1860</width>
-          <font>size20B</font>
+          <include>HeaderLabelShelf</include>
           <label>$LOCALIZE[31026]</label>
-          <textcolor>Label2</textcolor>
-          <align>left</align>
         </control>
         <control type="panel" id="8010" description="Movies OnDeck">
           <visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
@@ -258,14 +252,8 @@
         </control>
         <control type="label" id="80110" description="ShelfHeading">
           <visible>Control.IsVisible(8011)</visible>
-          <top>440</top>
-          <left>24</left>
-          <height>24</height>
-          <width>1860</width>
-          <font>size20B</font>
+          <include>HeaderLabelShelf</include>
           <label>$LOCALIZE[31026]</label>
-          <textcolor>Label2</textcolor>
-          <align>left</align>
         </control>
         <control type="panel" id="8011" description="Shows OnDeck">
           <visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
@@ -288,14 +276,8 @@
         </control>
         <control type="label" id="80000" description="ShelfHeading">
           <visible>Control.IsVisible(8000)</visible>
-          <top>440</top>
-          <left>24</left>
-          <height>24</height>
-          <width>1860</width>
-          <font>size20B</font>
+          <include>HeaderLabelShelf</include>
           <label>$LOCALIZE[681]</label>
-          <textcolor>Label2</textcolor>
-          <align>left</align>
         </control>
         <control type="panel" id="8000" description="Movies RA">
           <visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
@@ -319,14 +301,8 @@
         </control>
         <control type="label" id="80010" description="ShelfHeading">
           <visible>Control.IsVisible(8001)</visible>
-          <top>440</top>
-          <left>24</left>
-          <height>24</height>
-          <width>1860</width>
-          <font>size20B</font>
+          <include>HeaderLabelShelf</include>
           <label>$LOCALIZE[681]</label>
-          <textcolor>Label2</textcolor>
-          <align>left</align>
         </control>
         <control type="panel" id="8001" description="Shows RA">
           <visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
@@ -349,14 +325,8 @@
         </control>
         <control type="label" id="80020" description="ShelfHeading">
           <visible>Control.IsVisible(8002)</visible>
-          <top>440</top>
-          <left>24</left>
-          <height>24</height>
-          <width>1860</width>
-          <font>size20B</font>
+          <include>HeaderLabelShelf</include>
           <label>$LOCALIZE[681]</label>
-          <textcolor>Label2</textcolor>
-          <align>left</align>
         </control>
         <control type="panel" id="8002" description="Music RA">
           <visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>

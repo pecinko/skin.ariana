@@ -305,6 +305,14 @@
       </control>
     </focusedlayout>
   </include>
+  <include name="HeaderLabelShelf">
+    <textoffsetx>24</textoffsetx>
+    <height>24</height>
+    <width>1860</width>
+    <font>size22B</font>
+    <textcolor>Label2</textcolor>
+    <align>left</align>
+  </include>
   <include name="PostersShelfNF">
     <control type="image">
       <left>24</left>

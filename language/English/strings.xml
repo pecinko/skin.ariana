@@ -2,7 +2,9 @@
 <strings>
   <string id="31025">Items</string>
   <string id="31026">Continue watching</string>
+  <string id="31027">User</string>
   <string id="31049">Ends</string><!--Time when currently playing video will end -->
+
   <!-- Playlist Editor labels -->
   <string id="31055">Open playlist</string>
   <string id="31056">Save playlist</string>
