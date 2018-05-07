@@ -75,6 +75,14 @@
     </control>
   </include>
   <include name="DialogFullBG">
+    <control type="image" description="BG">
+      <left>0</left>
+      <top>0</top>
+      <width>100%</width>
+      <height>100%</height>
+      <aspectratio>stretch</aspectratio>
+      <texture>img/WhiteDot.png</texture>
+    </control>
     <control type="image" description="Art">
       <left>0</left>
       <top>0</top>

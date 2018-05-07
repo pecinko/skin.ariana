@@ -8,6 +8,16 @@
       <animation effect="slide" start="0,0" end="0,-400" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
       <control type="group" description="Media Info and buttons">
         <control type="image" description="Media Thumb">
+          <visible>!IsEmpty(ListItem.Art(fanart))</visible>
+          <right>60</right>
+          <top>0</top>
+          <width>660</width>
+          <height>660</height>
+          <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+          <aspectratio align="center" aligny="center">keep</aspectratio>
+        </control>
+        <control type="image" description="Media Thumb">
+          <visible>IsEmpty([ListItem.Art(fanart))</visible>
           <right>60</right>
           <top>60</top>
           <width>660</width>
@@ -71,9 +81,9 @@
               <content>
                 <item>
                   <label>$LOCALIZE[20360]</label>
-                  <label2>$INFO[listitem.episode] [COLOR=Grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label2>
+                  <label2>$INFO[ListItem.Property(TotalEpisodes)]</label2>
                   <onclick>noop</onclick>
-                  <visible>!IsEmpty(ListItem.Episode)</visible>
+                  <visible>!IsEmpty(ListItem.Property(TotalEpisodes))</visible>
                 </item>
                 <item>
                   <label>$LOCALIZE[31322]</label>
@@ -211,7 +221,7 @@
           <height>60</height>
           <width>150</width>
           <aspectratio aligny="center" align="right">keep</aspectratio>
-          <texture>$INFO[ListItem.Rating,badges/,.png]</texture>
+          <texture colordiffuse="LabelFO">$INFO[ListItem.Rating,badges/,.png]</texture>
         </control>
         <control type="group" description="top">
           <left>390</left>
@@ -304,7 +314,7 @@
           <onright>9001</onright>
           <onup>noop</onup>
           <ondown>50</ondown>
-          <align>center</align>
+          <align>left</align>
           <orientation>horizontal</orientation>
           <control type="togglebutton" id="8" description="Play">
             <width>144</width>

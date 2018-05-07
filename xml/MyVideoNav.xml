@@ -33,18 +33,18 @@
           <control type="label">
             <top>40</top>
             <width>758</width>
-            <label>$INFO[ListItem.Season,$LOCALIZE[20373] ]</label>
+            <label>$VAR[TopLabel]</label>
           </control>
           <control type="label" description="Details">
             <top>90</top>
             <width>758</width>
             <font>size19</font>
-            <label>$VAR[TopLabel]</label>
+            <label>$VAR[CodecList]</label>
           </control>
           <control type="textbox" description="Plot">
             <top>160</top>
             <width>758</width>
-            <height>176</height>
+            <height>174</height>
             <font>plot</font>
             <align>left</align>
             <aligny>bottom</aligny>
@@ -52,7 +52,7 @@
           </control>
         </control>
         <control type="group" description="Container">
-          <control type="fixedlist" id="51" description="51 slide">
+          <control type="fixedlist" id="51" description="51 Wide">
             <visible>Container.Content(episodes)</visible>
             <viewtype label="539">Wide 51</viewtype>
             <focusposition>1</focusposition>
@@ -346,24 +346,16 @@
               <label>$VAR[Plots]</label>
             </control>
             <control type="label">
-              <visible>!Container.Content(episodes)</visible>
               <top>240</top>
               <width>758</width>
               <font>size19</font>
-              <label>$INFO[ListItem.Genre]</label>
-            </control>
-            <control type="label">
-              <visible>Container.Content(episodes)</visible>
-              <top>240</top>
-              <width>758</width>
-              <font>size19</font>
-              <label>$INFO[ListItem.Season,$LOCALIZE[20373] ]</label>
+              <label>$VAR[TopLabel]</label>
             </control>
             <control type="label" description="Details">
               <top>278</top>
               <width>758</width>
               <font>size19</font>
-              <label>$VAR[TopLabel]</label>
+              <label>$VAR[CodecList-Genre]</label>
             </control>
           </control>
         </control>

@@ -6,7 +6,7 @@
     <value condition="Control.HasFocus(8000)">$INFO[Container(8002).ListItem.Art(fanart)]</value>
     <value condition="Control.HasFocus(8010)">$INFO[Container(8010).ListItem.Art(fanart)]</value>
     <value condition="Control.HasFocus(8011)">$INFO[Container(8011).ListItem.Art(fanart)]</value>
-    <value>img/BlackDot.png</value>
+    <value>img/WhiteDot.png</value>
   </variable>
   <variable name="Overlay.Color">
     <value condition="Skin.HasSetting(DarkTheme)">FF2A2C32</value>
@@ -17,10 +17,10 @@
     <value condition="!Skin.HasSetting(DarkTheme)">background/LightBG.png</value>
   </variable>
   <variable name="Background.Art" description="Art backgrounds">
+    <value condition="Window.IsActive(MyPics.xml) + !IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
     <value condition="Skin.HasSetting(HideFanart)">-</value>
     <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-    <value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
-    <value>img/BlackDot.png</value>
+    <value>img/WhiteDot.png</value>
   </variable>
   <variable name="Overlay" description="Overlay image">
     <value condition="ListItem.IsResumable">OverlayInProgress.png</value>
@@ -46,14 +46,18 @@
   <variable name="TopLabel" description="Shown Above Plots and descriptions">
     <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml)">$INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
     <value condition="Container.content(Albums)">$INFO[ListItem.Label]</value>
-    <value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]</value>
+    <value condition="Container.Content(Episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] , • ]$INFO[ListItem.Premiered,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]</value>
     <value condition="Container.Content(Addons)">$INFO[ListItem.Property(Addon.Creator),  ]</value>
     <value condition="Container.Content(songs)">$INFO[ListItem.Album]</value>
     <value condition="Container.Content(MusicVideos)">$INFO[ListItem.Label]</value>
-    <value condition="Container.Content(Movies) + IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Rating,, • ]$INFO[ListItem.MPAA, • ]</value>
-    <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Rating,, • ]$LOCALIZE[20410, • ]$INFO[ListItem.MPAA, • ]</value>
+    <value condition="Container.Content(Movies)">$INFO[ListItem.Year]$INFO[ListItem.Rating, • ]$INFO[ListItem.MPAA, • ]$INFO[ListItem.Genre, • ]</value>
     <value condition="Container.Content(Seasons) | Container.Content(TVShows)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]$INFO[ListItem.MPAA, • ]</value>
     <value>$INFO[ListItem.Label2]</value>
+  </variable>
+  <variable name="CodecList-Genre" description="Shown with Plots and descriptions">
+    <value condition="Container.Content(Episodes) | Container.Content(Movies) | Container.Content(musicvideos)">$LOCALIZE[544]: [UPPERCASE]$INFO[ListItem.VideoCodec]$INFO[ListItem.VideoResolution, / ]$INFO[ListItem.AudioCodec, • ]$INFO[ListItem.AudioChannels, / ][/UPPERCASE]</value>
+    <value condition="Container.Content(songs)">$LOCALIZE[544]: [UPPERCASE]$INFO[ListItem.AudioCodec, • ]$INFO[ListItem.AudioChannels, • ][/UPPERCASE]</value>
+    <value>$INFO[ListItem.Genre]</value>
   </variable>
   <variable name="500TopLabel" description="Shown Above Plots and descriptions">
     <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml)">$INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
