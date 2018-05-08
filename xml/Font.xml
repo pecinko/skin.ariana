@@ -33,6 +33,13 @@
       <size>24</size>
     </font>
     <font>
+      <name>size16U</name>
+      <filename>Arimo.ttf</filename>
+      <size>24</size>
+      <style>uppercase bold</style>
+      <aspect>0.9</aspect>
+    </font>
+    <font>
       <name>size17</name>
       <filename>Arimo.ttf</filename>
       <size>26</size>
@@ -46,6 +53,13 @@
       <name>size18B</name>
       <filename>Arimo.ttf</filename>
       <size>27</size>
+    </font>
+    <font>
+      <name>size18U</name>
+      <filename>Arimo.ttf</filename>
+      <size>27</size>
+      <style>uppercase bold</style>
+      <aspect>0.93</aspect>
     </font>
     <font>
       <name>size19</name>
@@ -62,7 +76,7 @@
       <filename>Arimo.ttf</filename>
       <size>28</size>
       <style>uppercase bold</style>
-      <aspect>0.9</aspect>
+      <aspect>0.93</aspect>
     </font>
     <font>
       <name>size20</name>

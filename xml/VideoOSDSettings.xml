@@ -2,31 +2,33 @@
 <window>
   <defaultcontrol always="true">5</defaultcontrol>
   <controls>
-    <control type="image">
-      <centerleft>50%</centerleft>
-      <centertop>50%</centertop>
-      <width>100%</width>
-      <height>100%</height>
-      <texture background="true">$VAR[Background.Overlay]</texture>
-      <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
-    </control>
-    <control type="label" id="2" description="Settings">
-      <centerleft>50%</centerleft>
-      <top>60</top>
-      <width>1050</width>
-      <font>size24B</font>
-      <align>center</align>
-    </control>
+    <control type="group">
+      <include>OpenClose</include>
+      <control type="image">
+        <centerleft>50%</centerleft>
+        <centertop>50%</centertop>
+        <width>100%</width>
+        <height>100%</height>
+        <texture background="true">$VAR[Background.Overlay]</texture>
+        <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+      </control>
+      <control type="label" id="2" description="Settings">
+        <visible>false</visible>
+        <centerleft>50%</centerleft>
+        <top>60</top>
+        <width>1050</width>
+        <font>size24B</font>
+        <align>center</align>
+      </control>
       <control type="grouplist" id="5" description="Control Area">
         <animation effect="fade" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
-        <include>OpenClose</include>
         <centerleft>50%</centerleft>
         <centertop>50%</centertop>
         <width>840</width>
-        <height max="860">auto</height>
-        <itemgap>0</itemgap>
+        <height max="960">auto</height>
+        <aligny>center</aligny>
+        <itemgap>2</itemgap>
         <orientation>vertical</orientation>
-        <pagecontrol>60</pagecontrol>
         <onup>5</onup>
         <ondown>5</ondown>
       </control>
@@ -45,5 +47,6 @@
       <control type="sliderex" id="13">
         <description>Default Slider</description>
       </control>
+    </control>
   </controls>
 </window>

@@ -153,7 +153,7 @@
 					<height>24</height>
 					<info>Player.Progress</info>
 				</control>
-        
+
 
 					<!--<control type="progress" id="23" description="Progress Bar">
         <left>300</left>

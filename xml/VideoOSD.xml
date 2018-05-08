@@ -318,7 +318,7 @@
           <control type="button" id="700" description="Subtitles">
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <include>9000Buttons</include>
-            <label>31356</label>
+            <label>$LOCALIZE[31029]</label>
             <onclick>SetFocus(101)</onclick>
             <onclick>Close</onclick>
             <onclick>ActivateWindow(SubtitleSearch)</onclick>

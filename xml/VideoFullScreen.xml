@@ -14,7 +14,7 @@
         <top>-9</top>
         <width>1920</width>
         <height>216</height>
-        <texture colordiffuse="Overlay">background/DiffuseBG.png</texture>
+        <texture>$VAR[Background.Overlay]</texture>
       </control>
       <control type="label" id="10" description="row 1 sys label">
         <left>60</left>

@@ -6,19 +6,19 @@
   <controls>
     <control type="group">
       <control type="image">
-        <left>0</left>
+        <centerleft>50%</centerleft>
         <top>0</top>
-        <width>1920</width>
+        <width>100%</width>
         <height>96</height>
-        <texture>HUD/Notification.png</texture>
+        <texture>$VAR[Background.Overlay]</texture>
       </control>
       <control type="label" id="9000" description="Real label">
-        <top>3</top>
-        <left>30</left>
-        <width>930</width>
-        <height>60</height>
-        <align>left</align>
-				<label>$INFO[Control.GetLabel(401)]$INFO[Control.GetLabel(402),[COLOR=HL] • [/COLOR]]</label>
+        <top>0</top>
+        <centerleft>50%</centerleft>
+        <width>100%</width>
+        <height>66</height>
+        <align>center</align>
+				<label>$INFO[Control.GetLabel(401)]$INFO[Control.GetLabel(402), • ]</label>
       </control>
 			<control type="label" id="401" description="Heading">
         <top>3</top>
