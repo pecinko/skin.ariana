@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-  <!-- <defaultcontrol always="true">901</defaultcontrol> -->
+  <defaultcontrol always="true">901</defaultcontrol>
   <include>OpenClose</include>
   <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
   <visible>Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching]</visible>
@@ -144,18 +144,18 @@
         <info>Player.ProgressCache</info>
       </control>-->
 
-      <control type="progress" id="23">
-          <visible>System.HasAppleTVSlider + !VideoPlayer.Content(livetv) + !Window.IsActive(videoosd.xml)</visible>
+			<control type="progress" id="23">
+          <visible>false</visible>
           <description>Progressbar</description>
-          <left>360</left>
-          <top>3</top>
-          <width>1200</width>
-          <height>24</height>
-          <info>Player.Progress</info>
-        </control>
+					<left>360</left>
+					<top>3</top>
+					<width>1200</width>
+					<height>24</height>
+					<info>Player.Progress</info>
+				</control>
         
 
-          <!--<control type="progress" id="23" description="Progress Bar">
+					<!--<control type="progress" id="23" description="Progress Bar">
         <left>300</left>
         <top>6</top>
         <width>1407</width>
