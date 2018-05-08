@@ -18,7 +18,7 @@
         <width>990</width>
         <align>center</align>
         <font>size24B</font>
-        <textcolor>Title</textcolor>
+        <textcolor>white</textcolor>
       </control>
       <control type="slider" id="11" description="Slider">
         <centerleft>960</centerleft>
@@ -35,6 +35,7 @@
         <centertop>609</centertop>
 				<width>690</width>
         <align>center</align>
+        <textcolor>white</textcolor>
         <font>size22</font>
       </control>
     </control>

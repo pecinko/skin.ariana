@@ -203,10 +203,10 @@
   </default>
   <default type="progress">
     <reveal>true</reveal>
-    <texturebg>OSD/ProgressBackground.png</texturebg>
-    <lefttexture>controls/ProgressLeft.png</lefttexture>
-    <midtexture>controls/ProgressMid.png</midtexture>
-    <righttexture>controls/ProgressRight.png</righttexture>
+    <texturebg border="36,0,36,0">OSD/ProgressBackground.png</texturebg>
+    <lefttexture>OSD/ProgressLeft.png</lefttexture>
+    <midtexture>OSD/ProgressMid.png</midtexture>
+    <righttexture border="0,18,8,18">OSD/ProgressRight.png</righttexture>
     <overlaytexture>-</overlaytexture>
   </default>
   <default type="scrollbar">

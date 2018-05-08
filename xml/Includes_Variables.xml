@@ -26,6 +26,11 @@
     <value condition="ListItem.IsResumable">OverlayInProgress.png</value>
     <value>$INFO[ListItem.Overlay]</value>
   </variable>
+  <variable name="CurrentSubs" description="VideoMenu">
+    <value condition="VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled">$LOCALIZE[462]: $LOCALIZE[305]</value>
+    <value condition="VideoPlayer.HasSubtitles + !VideoPlayer.SubtitlesEnabled">$LOCALIZE[462]: $LOCALIZE[1223]</value>
+    <value>$LOCALIZE[462]: $LOCALIZE[16018]</value>
+  </variable>
   <variable name="GlobalHeadings" description="Global Headings">
     <value condition="Window.IsActive(56) | Window.IsActive(SkinSettings.xml)">$LOCALIZE[20077]</value>
     <value condition="Window.IsActive(Settings.xml)">$LOCALIZE[5]</value>

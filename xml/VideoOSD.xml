@@ -1,503 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <defaultcontrol always="true">603</defaultcontrol>
+  <defaultcontrol always="true">9000</defaultcontrol>
   <zorder>2</zorder>
   <controls>
-    <control type="group" description="OSDMenu">
-      <visible>![Window.IsActive(123) | Window.IsActive(124)]</visible>
+    <control type="group">
+      <include>OpenClose</include>
+      <visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(videoosdsettings.xml) | Window.IsActive(dialogslider.xml)]</visible>
       <include>VisibleFadeEffect</include>
-      <control type="group">
-        <control type="image" description="OSD BG">
-          <visible>!Window.IsActive(dialogseekbar.xml)</visible>
-          <left>0</left>
-          <top>0</top>
-          <height>180</height>
-          <width>100%</width>
-          <texture>OSD/OSDBackground.png</texture>
+      <control type="image" description="Background">
+        <animation condition="!ControlGroup(9000).HasFocus(101)" effect="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="inout" reversible="true">Conditional</animation>
+        <left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>390</height>
+        <texture>$VAR[Background.Overlay]</texture>
+      </control>
+      <control type="image" description="Background">
+        <left>0</left>
+        <top>90</top>
+        <width>1920</width>
+        <height>1</height>
+        <texture>img/LineST.png</texture>
+      </control>
+      <control type="grouplist" id="9000">
+        <centerleft>50%</centerleft>
+        <top>0</top>
+        <width>1500</width>
+        <height>90</height>
+        <itemgap>0</itemgap>
+        <onleft>9000</onleft>
+        <onright>9000</onright>
+        <onup>noop</onup>
+        <ondown>9001</ondown>
+        <align>center</align>
+        <orientation>horizontal</orientation>
+        <control type="button" id="101">
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[31030][/B]</label>
         </control>
-        <control type="slider" id="87" description="Slider">
-          <centerleft>50%</centerleft>
-					<top>1020</top>
-					<width>1200</width>
-					<height>24</height>
-  				<onup>100</onup>
-          <ondown>noop</ondown>
-          <onleft>87</onleft>
-          <onright>87</onright>
-          <action>seek</action>
+        <control type="button" id="102">
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[292][/B]</label>
         </control>
-        <control type="grouplist" id="100" description="player buttons">
-          <width max="1500">auto</width>
-          <top>930</top>
-          <centerleft>50%</centerleft>
-          <height>57</height>
-          <itemgap>0</itemgap>
-          <align>center</align>
-          <orientation>horizontal</orientation>
-          <ondown>87</ondown>
-          <control type="button" id="602">
-            <width>93</width>
-            <height>57</height>
-            <texturenofocus>OSD/Rewind.png</texturenofocus>
-            <texturefocus>OSD/RewindFocused.png</texturefocus>
-            <onclick>PlayerControl(Rewind)</onclick>
-          </control>
-          <control type="button" id="604">
-            <width>93</width>
-            <height>57</height>
-            <texturenofocus>OSD/FastForward.png</texturenofocus>
-            <texturefocus>OSD/FastForwardFocused.png</texturefocus>
-            <onclick>PlayerControl(Forward)</onclick>
-          </control>
-          <control type="button" id="600">
-            <width>93</width>
-            <height>57</height>
-            <texturenofocus>OSD/Stop.png</texturenofocus>
-            <texturefocus>OSD/StopFocused.png</texturefocus>
-            <onclick>PlayerControl(Stop)</onclick>
-          </control>
-          <control type="togglebutton" id="603">
-            <width>93</width>
-            <height>57</height>
-            <texturenofocus>OSD/Play.png</texturenofocus>
-            <texturefocus>OSD/PlayFocused.png</texturefocus>
-            <usealttexture>Player.Playing</usealttexture>
-            <alttexturenofocus>OSD/Pause.png</alttexturenofocus>
-            <alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
-            <onclick>PlayerControl(Play)</onclick>
-          </control>
-          <control type="button" id="606">
-            <width>93</width>
-            <height>57</height>
-            <texturenofocus>OSD/DVD.png</texturenofocus>
-            <texturefocus>OSD/DVDFocused.png</texturefocus>
-            <onclick allowhiddenfocus="true">Control.SetFocus(101)</onclick>
-          </control>
-          <control type="button" id="601">
-            <width>93</width>
-            <height>57</height>
-            <texturenofocus>OSD/SkipBack.png</texturenofocus>
-            <texturefocus>OSD/SkipBackFocused.png</texturefocus>
-            <onclick>PlayerControl(Previous)</onclick>
-          </control>
-          <control type="button" id="605">
-            <width>93</width>
-            <height>57</height>
-            <texturenofocus>OSD/SkipForward.png</texturenofocus>
-            <texturefocus>OSD/SkipForwardFocused.png</texturefocus>
-            <onclick>PlayerControl(Next)</onclick>
-          </control>
+        <control type="button" id="103">
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[287][/B]</label>
         </control>
-        <control type="group" description="player state small feedback icons">
-          <left>154</left>
-          <top>843</top>
-          <width>1611</width>
-          <height>177</height>
-          <control type="grouplist">
-            <left>56</left>
-            <top>46</top>
-            <width>300</width>
-            <align>left</align>
-            <itemgap>15</itemgap>
-            <orientation>horizontal</orientation>
-            <control type="label">
-              <width>39</width>
-              <label>-</label>
-              <visible>player.rewinding</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>2X</label>
-              <visible>player.forwarding2x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>2X</label>
-              <visible>player.rewinding2x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>4X</label>
-              <visible>player.forwarding4x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>4X</label>
-              <visible>player.rewinding4x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>8X</label>
-              <visible>player.forwarding8x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>8X</label>
-              <visible>player.rewinding8x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>16X</label>
-              <visible>player.forwarding16x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>16X</label>
-              <visible>player.rewinding16x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>32X</label>
-              <visible>player.forwarding32x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Shadow</textcolor>
-              <label>32X</label>
-              <visible>player.rewinding32x</visible>
-            </control>
-            <control type="label">
-              <width>39</width>
-              <label>-</label>
-              <visible>player.forwarding</visible>
-            </control>
-          </control>
-          <control type="grouplist">
-            <left>56</left>
-            <top>44</top>
-            <width>300</width>
-            <align>left</align>
-            <itemgap>15</itemgap>
-            <orientation>horizontal</orientation>
-            <control type="image">
-              <texture flipx="true">OSD/PlayerSpeed.png</texture>
-              <width>39</width>
-              <height>24</height>
-              <visible>player.rewinding</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>2X</label>
-              <visible>player.forwarding2x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>2X</label>
-              <visible>player.rewinding2x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>4X</label>
-              <visible>player.forwarding4x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>4X</label>
-              <visible>player.rewinding4x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>8X</label>
-              <visible>player.forwarding8x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>8X</label>
-              <visible>player.rewinding8x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>16X</label>
-              <visible>player.forwarding16x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>16X</label>
-              <visible>player.rewinding16x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>32X</label>
-              <visible>player.forwarding32x</visible>
-            </control>
-            <control type="label">
-              <width min="0" max="60">auto</width>
-              <height>18</height>
-              <font>osd</font>
-              <textcolor>Gray</textcolor>
-              <label>32X</label>
-              <visible>player.rewinding32x</visible>
-            </control>
-            <control type="image">
-              <texture>OSD/PlayerSpeed.png</texture>
-              <width>39</width>
-              <height>24</height>
-              <visible>player.forwarding</visible>
-            </control>
+        <control type="button" id="104">
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[10004][/B]</label>
+        </control>
+      </control>
+      <control type="group" description="101 Info">
+        <visible>ControlGroup(9000).HasFocus(101)</visible>
+        <include>VisibleFadeEffect</include>
+        <include>VideoMenuInfo</include>
+      </control>
+      <control type="grouplist" id="9001" description="Main menu">
+        <visible>!ControlGroup(9000).HasFocus(101)</visible>
+        <include>VisibleFadeEffect</include>
+        <top>100</top>
+        <centerleft>50%</centerleft>
+        <width max="1800">auto</width>
+        <height>80</height>
+        <onup>9000</onup>
+        <onleft>9001</onleft>
+        <onright>9001</onright>
+        <orientation>horizontal</orientation>
+        <align>center</align>
+        <control type="togglebutton" id="1041" description="subs on-off">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$VAR[CurrentSubs]</label>
+          <onclick>ShowSubtitles</onclick>
+        </control>
+        <control type="button" id="1042" description="subs toggle">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>VideoPlayer.SubtitlesEnabled</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[31031] : $INFO[VideoPlayer.SubtitlesLanguage]</label>
+          <onclick>CycleSubtitle</onclick>
+        </control>
+        <control type="button" id="1043" description="subs delay">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[22006]</label>
+          <onclick>SubtitleDelay</onclick>
+        </control>
+        <control type="button" id="1044">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>!VideoPlayer.Content(LiveTV)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[33003]</label>
+          <onclick>Close</onclick>
+          <onclick>Dialog.Close()</onclick>
+          <onclick>ActivateWindow(SubtitleSearch)</onclick>
+        </control>
+        <control type="button" id="1045">
+          <visible>ControlGroup(9000).HasFocus(102)</visible>
+          <visible>ADSP.HasModes</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[15020]</label>
+          <onclick>ActivateWindow(AudioDSPManager)</onclick>
+        </control>
+        <control type="togglebutton" id="1046">
+          <visible>ControlGroup(9000).HasFocus(102)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[31031] : $INFO[VideoPlayer.AudioLanguage]</label>
+          <onclick>AudioNextLanguage</onclick>
+        </control>
+        <control type="button" id="1047">
+          <visible>ControlGroup(9000).HasFocus(104)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[292]</label>
+          <onclick>ActivateWindow(osdaudiosettings)</onclick>
+        </control>
+        <control type="button" id="1048">
+          <visible>ControlGroup(9000).HasFocus(104)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[157]</label>
+          <onclick>ActivateWindow(osdvideosettings)</onclick>
+        </control>
+        <control type="button" id="1049">
+          <visible>ControlGroup(9000).HasFocus(104)</visible>
+          <visible>System.HasCMS</visible>
+          <include>VideoMenuButtons</include>
+          <label>CMS</label>
+          <onclick>ActivateWindow(osdcmssettings)</onclick>
+        </control>
+      </control>
+      <!--
+      <control type="group" description="Slider">
+        <visible>![Window.IsActive(123) | Window.IsActive(124)]</visible>
+        <include>VisibleFadeEffect</include>
+        <control type="group">
+          <control type="slider" id="87" description="Slider">
+            <centerleft>50%</centerleft>
+            <top>90%</top>
+            <width>1800</width>
+            <height>24</height>
+            <onup>9000</onup>
+            <ondown>9000</ondown>
+            <onleft>87</onleft>
+            <onright>87</onright>
+            <action>seek</action>
           </control>
         </control>
       </control>
-      <control type="group" description="Options content">
-        <visible allowhiddenfocus="true">ControlGroup(101).HasFocus()</visible>
-        <control type="image">
-          <centerleft>50%</centerleft>
-          <centertop>50%</centertop>
-          <width>100%</width>
-          <height>100%</height>
-          <texture background="true">$VAR[Background.Overlay]</texture>
-          <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
-        </control>
-        <control type="grouplist" id="101" description="Video OSD Options">
-          <visible allowhiddenfocus="true">ControlGroup(101).HasFocus() | Control.HasFocus(701) | Control.HasFocus(702) | Control.HasFocus(703) | Control.HasFocus(704) | Control.HasFocus(705) | Control.HasFocus(706) | Control.HasFocus(707) | Control.HasFocus(708) | Control.HasFocus(709)</visible>
-          <include>VisibleFadeEffect</include>
-          <centerleft>50%</centerleft>
-          <centertop>50%</centertop>
-          <width>540</width>
-          <height max="450">auto</height>
-          <itemgap>5</itemgap>
-          <onleft>602</onleft>
-          <onright>602</onright>
-          <onup>101</onup>
-          <ondown>101</ondown>
-          <control type="button" id="700" description="Subtitles">
-            <visible>!VideoPlayer.Content(LiveTV)</visible>
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[31029]</label>
-            <onclick>SetFocus(101)</onclick>
-            <onclick>Close</onclick>
-            <onclick>ActivateWindow(SubtitleSearch)</onclick>
-          </control>
-          <control type="button" id="701" description="Subtitles">
-            <visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[24012]: $LOCALIZE[209]</label>
-            <onclick>CycleSubtitle</onclick>
-          </control>
-          <control type="button" id="702" description="Subtitles">
-            <visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[24012]: $LOCALIZE[22006]</label>
-            <onclick>SetFocus(101)</onclick>
-            <onclick>Close</onclick>
-            <onclick>SubtitleDelay</onclick>
-          </control>
-          <control type="button" id="703">
-            <include>9000Buttons</include>
-            <label>13395</label>
-            <onclick>SetFocus(101)</onclick>
-            <onclick>Close</onclick>
-            <onclick>ActivateWindow(OSDVideoSettings)</onclick>
-          </control>
-          <control type="button" id="704">
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[13396]</label>
-            <onclick>SetFocus(101)</onclick>
-            <onclick>Close</onclick>
-            <onclick>ActivateWindow(OSDAudioSettings)</onclick>
-          </control>
-          <control type="button" id="707">
-            <include>9000Buttons</include>
-            <label>21445</label>
-            <onclick>SetFocus(101)</onclick>
-            <onclick>Close</onclick>
-            <onclick>CodecInfo</onclick>
-          </control>
-        </control>
-      </control>
-    </control>
-    <control type="group" description="MediaInfo">
-      <visible>ControlGroup(214).Hasfocus + ![Window.IsActive(123) | Window.IsActive(124)]</visible>
-      <include>VisibleFadeEffect</include>
-      <control type="image" id="1">
-        <left>165</left>
-        <top>74</top>
-        <height>423</height>
-        <width>1593</width>
-        <texture>OSD/MediaInfoBackground.png</texture>
-        <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
-      </control>
-      <control type="image">
-        <left>214</left>
-        <top>438</top>
-        <width>213</width>
-        <height>315</height>
-        <texture diffuse="OSD/osd_reflection_poster.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
-        <aspectratio scalediffuse="false">scale</aspectratio>
-        <visible>VideoPlayer.Content(movies)</visible>
-      </control>
-      <control type="image">
-        <left>214</left>
-        <top>123</top>
-        <width>213</width>
-        <height>315</height>
-        <texture diffuse="OSD/osd_diffuse_poster.png">$INFO[VideoPlayer.Cover]</texture>
-        <aspectratio scalediffuse="false">scale</aspectratio>
-        <bordertexture>OSD/osd_border_poster.png</bordertexture>
-        <visible>VideoPlayer.Content(movies)</visible>
-      </control>
-      <control type="image">
-        <left>214</left>
-        <top>438</top>
-        <width>315</width>
-        <height>315</height>
-        <texture diffuse="OSD/osd_reflection_square.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
-        <aspectratio scalediffuse="false">scale</aspectratio>
-        <visible>[VideoPlayer.Content(episodes)]</visible>
-      </control>
-      <control type="image">
-        <left>214</left>
-        <top>123</top>
-        <width>315</width>
-        <height>315</height>
-        <texture diffuse="OSD/osd_diffuse_square.png">$INFO[VideoPlayer.Cover]</texture>
-        <aspectratio scalediffuse="false">scale</aspectratio>
-        <bordertexture>OSD/osd_border_square.png</bordertexture>
-        <visible>[VideoPlayer.Content(episodes)]</visible>
-      </control>
-      <control type="group" id="1">
-        <left>231</left>
-        <top>111</top>
-        <visible>VideoPlayer.Content(movies)</visible>
-        <control type="label" id="1">
-          <width>1245</width>
-          <left>225</left>
-          <label>$INFO[VideoPlayer.Title]</label>
-          <align>left</align>
-          <textcolor>Orange</textcolor>
-          <font>title1</font>
-        </control>
-        <control type="label" id="1">
-          <top>39</top>
-          <width>1245</width>
-          <left>225</left>
-          <align>left</align>
-          <label>$INFO[VideoPlayer.Year]</label>
-          <textcolor>DarkGray</textcolor>
-          <font>info1</font>
-          <visible>VideoPlayer.Content(movies)</visible>
-        </control>
-        <control type="label" id="1">
-          <top>39</top>
-          <width>1245</width>
-          <left>225</left>
-          <align>left</align>
-          <label>$INFO[VideoPlayer.TVShowTitle], $LOCALIZE[31003] $INFO[VideoPlayer.Season], $INFO[VideoPlayer.Episode]</label>
-          <textcolor>DarkGray</textcolor>
-          <font>info1</font>
-          <visible>VideoPlayer.Content(episodes)</visible>
-        </control>
-        <control type="textbox" id="8">
-          <top>90</top>
-          <left>225</left>
-          <width>1245</width>
-          <height>225</height>
-          <align>justify</align>
-          <label>$INFO[VideoPlayer.PlotOutline]</label>
-          <textcolor>Gray</textcolor>
-          <font>plot1</font>
-          <autoscroll delay="5000" time="1500" repeat="10000">!Control.HasFocus(13)</autoscroll>
-        </control>
-      </control>
-      <control type="group" id="1">
-        <left>332</left>
-        <top>111</top>
-        <visible>VideoPlayer.Content(episodes)</visible>
-        <control type="label" id="1">
-          <width>1144</width>
-          <left>225</left>
-          <label>$INFO[VideoPlayer.Episode]. $INFO[VideoPlayer.Title]</label>
-          <align>left</align>
-          <textcolor>Orange</textcolor>
-          <font>title1</font>
-        </control>
-        <control type="label" id="1">
-          <top>39</top>
-          <width>1245</width>
-          <left>225</left>
-          <align>left</align>
-          <label>$INFO[VideoPlayer.Year]</label>
-          <textcolor>DarkGray</textcolor>
-          <font>info1</font>
-          <visible>VideoPlayer.Content(movies)</visible>
-        </control>
-        <control type="label" id="1">
-          <top>39</top>
-          <width>1144</width>
-          <left>225</left>
-          <align>left</align>
-          <label>$INFO[VideoPlayer.TVShowTitle], $LOCALIZE[31003] $INFO[VideoPlayer.Season]</label>
-          <textcolor>DarkGray</textcolor>
-          <font>info1</font>
-          <visible>VideoPlayer.Content(episodes)</visible>
-        </control>
-        <control type="textbox" id="8">
-          <top>90</top>
-          <left>225</left>
-          <width>1144</width>
-          <height>225</height>
-          <align>justify</align>
-          <label>$INFO[VideoPlayer.PlotOutline]</label>
-          <textcolor>Gray</textcolor>
-          <font>plot1</font>
-          <autoscroll delay="5000" time="1500" repeat="10000">!Control.HasFocus(13)</autoscroll>
-        </control>
-      </control>
+    -->
     </control>
   </controls>
 </window>

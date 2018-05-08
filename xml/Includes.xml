@@ -18,6 +18,76 @@
     <aligny>center</aligny>
     <orientation>vertical</orientation>
   </include>
+  <include name="VideoMenuInfo">
+    <control type="group" description="Info group">
+      <top>90</top>
+      <control type="image">
+        <left>15</left>
+        <top>30</top>
+        <width>256</width>
+        <height>256</height>
+        <texture>$INFO[VideoPlayer.Cover]</texture>
+        <aspectratio align="center" aligny="top">keep</aspectratio>
+      </control>
+      <control type="group">
+        <left>-30</left>
+        <top>30</top>
+        <control type="label" description="Main label">
+          <visible>![VideoPlayer.Content(MusicVideos)]</visible>
+          <include>FullscreenInfoLabelMain</include>
+          <label>[B]$INFO[VideoPlayer.Title][/B]</label>
+        </control>
+        <control type="label" description="Main label">
+          <visible>VideoPlayer.Content(MusicVideos)</visible>
+          <include>FullscreenInfoLabelMain</include>
+          <label>[B]$INFO[VideoPlayer.Artist][/B]</label>
+        </control>
+        <control type="label" description="Label 2">
+          <visible>VideoPlayer.Content(MusicVideos)</visible>
+          <include>FullscreenInfoLabel2</include>
+          <label>$INFO[VideoPlayer.Album]</label>
+        </control>
+        <control type="label" description="Label 2">
+          <visible>VideoPlayer.Content(Episodes)</visible>
+          <include>FullscreenInfoLabel2</include>
+          <label>$INFO[VideoPlayer.TVShowTitle] - $LOCALIZE[20373] $INFO[VideoPlayer.Season], $LOCALIZE[20359] $INFO[VideoPlayer.Episode]</label>
+        </control>
+        <control type="label" description="Label 2">
+          <visible>![VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
+          <include>FullscreenInfoLabel2</include>
+          <label>$INFO[VideoPlayer.Genre]</label>
+        </control>
+        <control type="textbox">
+          <left>300</left>
+          <top>99</top>
+          <width>1500</width>
+          <height>132</height>
+          <label>$INFO[VideoPlayer.Plot]</label>
+          <align>left</align>
+          <autoscroll>false</autoscroll>
+          <font>plot</font>
+        </control>
+        <control type="label" description="Details">
+          <top>214</top>
+          <font>size16</font>
+          <include>FullscreenInfoLabel2</include>
+          <label>[UPPERCASE]$INFO[VideoPlayer.VideoCodec]$INFO[VideoPlayer.VideoResolution, / ]$INFO[VideoPlayer.AudioCodec, • ]$INFO[VideoPlayer.AudioChannels, / ][/UPPERCASE]</label>
+        </control>
+      </control>
+    </control>
+  </include>
+  <include name="VideoMenuButtons">
+    <width>300</width>
+    <height>90</height>
+    <font>size22B</font>
+    <align>center</align>
+    <aligny>center</aligny>
+    <texturefocus/>
+    <texturenofocus/>
+    <alttexturefocus/>
+    <alttexturenofocus/>
+    <focusedcolor>FFFFFFFF</focusedcolor>
+  </include>
   <include name="9000Buttons">
     <include>FocusButtonsAnimation</include>
     <width>500</width>
