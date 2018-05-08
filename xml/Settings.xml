@@ -34,11 +34,12 @@
             <bordersize>18</bordersize>
           </control>
           <control type="image">
-            <left>20</left>
+            <left>0</left>
             <top>20</top>
             <width>240</width>
             <bottom>20</bottom>
             <texture colordiffuse="LabelNF">$INFO[ListItem.Icon]</texture>
+            <bordersize>24</bordersize>
             <align>center</align>
             <aspectratio>keep</aspectratio>
           </control>
@@ -62,11 +63,12 @@
               <bordersize>18</bordersize>
             </control>
             <control type="image">
-              <left>20</left>
+              <left>0</left>
               <top>20</top>
               <width>240</width>
               <bottom>20</bottom>
               <texture colordiffuse="LabelFO">$INFO[ListItem.Icon]</texture>
+              <bordersize>24</bordersize>
               <align>center</align>
               <aspectratio>keep</aspectratio>
             </control>
@@ -85,62 +87,62 @@
           <item>
             <label>$LOCALIZE[20094]</label>
             <onclick>ActivateWindow(MediaSources,root)</onclick>
-            <icon>settings/filemanager.png</icon>
+            <icon>icons/NAS.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[480]</label>
             <onclick>ActivateWindow(AppearanceSettings)</onclick>
-            <icon>settings/appearance.png</icon>
+            <icon>icons/Appearance.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[14036]</label>
             <onclick>ActivateWindow(ServiceSettings)</onclick>
-            <icon>settings/network.png</icon>
+            <icon>icons/Network.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[13200]</label>
             <onclick>ActivateWindow(Profiles)</onclick>
-            <icon>settings/profiles.png</icon>
+            <icon>icons/Profiles.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[157]</label>
             <onclick>ActivateWindow(VideosSettings)</onclick>
-            <icon>settings/video.png</icon>
+            <icon>icons/Videos.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[13000]</label>
             <onclick>ActivateWindow(SystemSettings)</onclick>
-            <icon>settings/system.png</icon>
+            <icon>icons/System.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[1]</label>
             <onclick>ActivateWindow(PicturesSettings)</onclick>
-            <icon>settings/pictures.png</icon>
+            <icon>icons/Pictures.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[21412]</label>
             <onclick>ActivateWindow(informationproviderbrowser)</onclick>
-            <icon>settings/media.png</icon>
+            <icon>icons/Metadata.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[2]</label>
             <onclick>ActivateWindow(MusicSettings)</onclick>
-            <icon>settings/music.png</icon>
+            <icon>icons/Music.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[138]</label>
             <onclick>ActivateWindow(systeminfo)</onclick>
-            <icon>settings/sysinfo.png</icon>
+            <icon>icons/SysInfo.png</icon>
           </item>
           <item>
-            <label>$LOCALIZE[19020]</label>
+            <label>$LOCALIZE[31033]</label>
             <onclick>ActivateWindow(PVRSettings)</onclick>
-            <icon>settings/livetv.png</icon>
+            <icon>icons/LiveTV.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[10003]</label>
             <onclick>ActivateWindow(filemanager)</onclick>
-            <icon>settings/filemanager.png</icon>
+            <icon>icons/FileMan.png</icon>
           </item>
         </content>
       </control>

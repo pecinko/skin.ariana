@@ -8,16 +8,6 @@
       <animation effect="slide" start="0,0" end="0,-400" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
       <control type="group" description="Media Info and buttons">
         <control type="image" description="Media Thumb">
-          <visible>!IsEmpty(ListItem.Art(fanart))</visible>
-          <right>60</right>
-          <top>0</top>
-          <width>660</width>
-          <height>660</height>
-          <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-          <aspectratio align="center" aligny="center">keep</aspectratio>
-        </control>
-        <control type="image" description="Media Thumb">
-          <visible>IsEmpty(ListItem.Art(fanart))</visible>
           <right>60</right>
           <top>60</top>
           <width>660</width>
@@ -356,7 +346,7 @@
               <top>15</top>
               <width>270</width>
               <height>270</height>
-              <texture fallback="unknown-user.png" aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
+              <texture aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Icon]</texture>
               <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
           </itemlayout>
@@ -373,7 +363,7 @@
                 <top>15</top>
                 <width>270</width>
                 <height>270</height>
-                <texture fallback="unknown-user.png" aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
+                <texture aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Icon]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
               </control>
               <control type="label" description="Main Label">

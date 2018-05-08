@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">50</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+
+    <control type="group" description="List 50 base">
+      <visible>Control.IsVisible(50)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="Main Label">
+        <centerleft>1400</centerleft>
+        <centertop>90</centertop>
+        <align>center</align>
+        <font>size28B</font>
+        <width>850</width>
+        <label>$LOCALIZE[20077]</label>
+      </control>
+      <control type="list" id="50">
+        <left>1058</left>
+        <top>180</top>
+        <width>784</width>
+        <height>799</height>
+        <onup>50</onup>
+        <ondown>50</ondown>
+      <itemlayout width="784" height="80">
+        <control type="label" description="Main Label">
+          <left>20</left>
+          <right>125</right>
+          <top>0</top>
+          <height>80</height>
+          <font>size20</font>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="label" description="Label2">
+        <right>20</right>
+        <top>0</top>
+        <height>80</height>
+        <width>124</width>
+        <font>size16</font>
+        <scroll>false</scroll>
+        <align>right</align>
+        <label>$INFO[ListItem.Label2]</label>
+      </control>
+    </itemlayout>
+    <focusedlayout width="784" height="80">
+      <control type="group">
+        <include>FocusButtonsAnimation</include>
+        <control type="image">
+          <animation effect="fade" time="100">VisibleChange</animation>
+          <left>10</left>
+          <top>10</top>
+          <width>764</width>
+          <height>60</height>
+          <texture border="10">focus/FrameFO.png</texture>
+          <bordersize>-10</bordersize>
+          <aspectratio>stretch</aspectratio>
+        </control>
+        <control type="label" description="Main Label">
+          <left>20</left>
+          <right>125</right>
+          <top>0</top>
+          <height>80</height>
+          <font>size20</font>
+          <textcolor>LabelFO</textcolor>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="label" description="Label2">
+        <right>20</right>
+        <top>0</top>
+        <height>80</height>
+        <width>124</width>
+        <font>size16</font>
+        <align>right</align>
+        <textcolor>LabelFO</textcolor>
+        <label>$INFO[ListItem.Label2]</label>
+      </control>
+    </control>
+  </focusedlayout>
+      <content>
+        <item id="0" description="Credits">
+          <label>$LOCALIZE[470]</label>
+          <onclick>-</onclick>
+        </item>
+        <!--
+        <item id="1" description="List">
+          <visible>Skin.HasSetting(ListView)</visible>
+          <label>$LOCALIZE[31032]</label>
+          <label2>$LOCALIZE[107]</label2>
+          <onclick>Skin.ToggleSetting(ListView)</onclick>
+        </item>
+        <item id="1" description="List">
+          <visible>!Skin.HasSetting(ListView)</visible>
+          <label>$LOCALIZE[31032]</label>
+          <label2>$LOCALIZE[106]</label2>
+          <onclick>Skin.ToggleSetting(ListView)</onclick>
+        </item>
+        <item id="2" description="List">
+          <visible>Skin.HasSetting(ListView)</visible>
+          <label>$LOCALIZE[31032]</label>
+          <label2>$LOCALIZE[107]</label2>
+          <onclick>Skin.ToggleSetting(ListView)</onclick>
+        </item>
+        <item id="1" description="List">
+          <visible>!Skin.HasSetting(ListView)</visible>
+          <label>$LOCALIZE[31032]</label>
+          <label2>$LOCALIZE[106]</label2>
+          <onclick>Skin.ToggleSetting(ListView)</onclick>
+        </item>
+
+        <item id="1" description="Theme">
+          <visible>Skin.HasSetting(DarkTheme)</visible>
+          <label>$LOCALIZE[21895]</label>
+          <label2>$LOCALIZE[374]</label2>
+          <onclick>Skin.ToggleSetting(DarkTheme)</onclick>
+        </item>
+        <item id="1" description="Theme">
+          <visible>!Skin.HasSetting(DarkTheme)</visible>
+          <label>$LOCALIZE[21895]</label>
+          <label2>$LOCALIZE[375]</label2>
+          <onclick>Skin.ToggleSetting(DarkTheme)</onclick>
+        </item>
+
+
+        <item id="4" description="Scrollbars">
+          <visible>Skin.HasSetting(Scrollbars_Active)</visible>
+          <label>$LOCALIZE[31999]</label>
+          <label2>$LOCALIZE[107]</label2>
+          <onclick>Skin.ToggleSetting(Scrollbars_Active)</onclick>
+        </item>
+        <item id="4" description="Scrollbars">
+          <visible>!Skin.HasSetting(Scrollbars_Active)</visible>
+          <label>$LOCALIZE[31999]</label>
+          <label2>$LOCALIZE[106]</label2>
+          <onclick>Skin.ToggleSetting(Scrollbars_Active)</onclick>
+        </item>
+        <item id="5" description="Options dialog">
+          <visible>Skin.HasSetting(ViewOptions_Hide)</visible>
+          <label>$LOCALIZE[31996]</label>
+          <label2>$LOCALIZE[1223]</label2>
+          <onclick>Skin.ToggleSetting(ViewOptions_Hide)</onclick>
+        </item>
+        <item id="5" description="Options dialog">
+          <visible>!Skin.HasSetting(ViewOptions_Hide)</visible>
+          <label>$LOCALIZE[31996]</label>
+          <label2>$LOCALIZE[305]</label2>
+          <onclick>Skin.ToggleSetting(ViewOptions_Hide)</onclick>
+        </item>
+        <item id="11" description="Show Clock">
+          <visible>Skin.HasSetting(ShowClock)</visible>
+          <label>$LOCALIZE[31980]</label>
+          <label2>107</label2>
+          <onclick>Skin.ToggleSetting(ShowClock)</onclick>
+        </item>
+        <item id="11" description="Show Clock">
+          <visible>!Skin.HasSetting(ShowClock)</visible>
+          <label>$LOCALIZE[31980]</label>
+          <label2>106</label2>
+          <onclick>Skin.ToggleSetting(ShowClock)</onclick>
+        </item>
+        <item id="12" description="Reset Skin">
+          <label>$LOCALIZE[31038]</label>
+          <onclick>Skin.ResetSettings</onclick>
+          <onclick>ReloadSkin()</onclick>
+          <icon>DefaultIconWarning.png</icon>
+        </item>
+        -->
+      </content>
+    </control>
+  </control>
+    <control type="group" description="Left panel">
+      <top>0</top>
+      <control type="textbox" description="Plot51">
+        <visible>Container(50).HasFocus(0)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>360</top>
+        <width>660</width>
+        <height>378</height>
+        <font>plot</font>
+        <align>center</align>
+        <label>$LOCALIZE[31000]</label>
+      </control>
+      <control type="image" description="Logo">
+        <visible>Container(50).HasFocus(2) | Container(50).HasFocus(3)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>348</top>
+        <width>660</width>
+        <height>384</height>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <texture>DefaultAddon.png</texture>
+      </control>
+      <control type="image" description="HomeMenu">
+        <visible>Container(50).HasFocus(4) + !Skin.HasSetting(Scrollbars_Active)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>168</top>
+        <width>660</width>
+        <height>750</height>
+        <aspectratio>keep</aspectratio>
+        <texture>help/ScrollOFF.jpg</texture>
+      </control>
+      <control type="image" description="HomeMenu">
+        <visible>Container(50).HasFocus(4) + Skin.HasSetting(Scrollbars_Active)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>168</top>
+        <width>660</width>
+        <height>750</height>
+        <aspectratio>keep</aspectratio>
+        <texture>help/ScrollON.jpg</texture>
+      </control>
+      <control type="image" description="Menu">
+        <visible>Container(50).HasFocus(5)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>348</top>
+        <width>660</width>
+        <height>384</height>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <texture>help/OptionsMenu.png</texture>
+      </control>
+      <control type="image" description="Menu">
+        <visible>Container(50).HasFocus(5) + Skin.HasSetting(ViewOptions_Hide)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>348</top>
+        <width>660</width>
+        <height>384</height>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <texture>help/OptionsMenuOFF.png</texture>
+      </control>
+      <control type="image" description="Views">
+        <visible>Container(50).HasFocus(7)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>198</top>
+        <width>660</width>
+        <height>684</height>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <texture>help/Grid.png</texture>
+      </control>
+      <control type="image" description="Views">
+        <visible>Container(50).HasFocus(7) + !Skin.HasSetting(AddViews)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>60</left>
+        <top>198</top>
+        <width>780</width>
+        <height>684</height>
+        <aspectratio>keep</aspectratio>
+        <texture>help/OptionsMenuOFF.png</texture>
+      </control>
+      <control type="image" description="HomeMenu">
+        <visible>Container(50).HasFocus(8)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>198</top>
+        <width>660</width>
+        <height>684</height>
+        <aspectratio>keep</aspectratio>
+        <texture>help/HomeMenu.png</texture>
+      </control>
+      <control type="image" description="HomeMenu">
+        <visible>Container(50).HasFocus(9)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>198</top>
+        <width>660</width>
+        <height>684</height>
+        <aspectratio>keep</aspectratio>
+        <texture>help/Shelf.png</texture>
+      </control>
+      <control type="image" description="HomeMenu">
+        <visible>Container(50).HasFocus(10)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>198</top>
+        <width>660</width>
+        <height>684</height>
+        <aspectratio>keep</aspectratio>
+        <texture>help/Quit.png</texture>
+      </control>
+      <control type="image" description="HomeMenu">
+        <visible>Container(50).HasFocus(11)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>198</top>
+        <width>660</width>
+        <height>684</height>
+        <aspectratio>keep</aspectratio>
+        <texture>help/Clock.png</texture>
+      </control>
+      <control type="image" description="HomeMenu">
+        <visible>Container(50).HasFocus(12)</visible>
+        <animation effect="fade" time="200">VisibleChange</animation>
+        <left>120</left>
+        <top>378</top>
+        <width>660</width>
+        <height>234</height>
+        <aspectratio>keep</aspectratio>
+        <texture>help/Warning.png</texture>
+      </control>
+    </control>
+  </controls>
+</window>
