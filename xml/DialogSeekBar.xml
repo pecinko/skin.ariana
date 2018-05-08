@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
   <defaultcontrol always="true">901</defaultcontrol>
-  <include>OpenClose</include>
   <visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(videoosdsettings.xml) | Window.IsActive(dialogslider.xml) | Window.IsActive(videoosd.xml)]</visible>
-  <visible>Window.IsVisible(FullScreenVideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching]</visible>
-  <animation effect="fade" start="0" end="100" time="400">Visible</animation>
-  <animation effect="fade" start="100" end="0" time="100">Hidden</animation>
+  <visible>Window.IsVisible(FullScreenVideo) + [System.HasAppleTVSlider | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching]</visible>
   <controls>
     <control type="group">
+      <include>OpenClose</include>
       <top>88%</top>
       <control type="label">
         <left>60</left>
