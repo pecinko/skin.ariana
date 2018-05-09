@@ -7,6 +7,15 @@
     <control type="group" description="Thumbnails 53">
       <visible>Control.IsVisible(53)</visible>
       <include>ContainerVisibleFade</include>
+      <control type="label" description="MainHeading">
+        <top>66</top>
+        <left>84</left>
+        <width>1920</width>
+        <font>size50B</font>
+        <label>[B]$VAR[GlobalHeadings][/B]</label>
+        <textcolor>LabelNF</textcolor>
+        <align>left</align>
+      </control>
         <control type="panel" id="53" description="Grid">
           <viewtype label="21371">Thumbnails</viewtype>
           <left>60</left>
@@ -14,8 +23,8 @@
           <width>1800</width>
           <height>980</height>
           <orientation>vertical</orientation>
-          <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
-          <onright condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onright>
+          <onleft>9000</onleft>
+          <onright>9000</onright>
           <onup>PageUp</onup>
           <ondown>PageDown</ondown>
           <preloaditems>4</preloaditems>
@@ -76,6 +85,7 @@
           </focusedlayout>
         </control>
     </control>
+    <include>OptionsButton</include>
     <control type="group" description="Side menu 9000 group">
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
       <include>MenuFullBG</include>
@@ -115,5 +125,6 @@
       <include>HeadingR</include>
       <label>2</label>
     </control>
+    <include>SortLetter</include>
   </controls>
 </window>

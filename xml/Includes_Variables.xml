@@ -45,7 +45,7 @@
     <value condition="Container.content(movies) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20342]</value>
     <value condition="Container.content(tvshows) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20343]</value>
     <value condition="Container.content(musicvideos) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20389]</value>
-    <value condition="Window.IsActive(weather)">$INFO[Window(Weather).Property(WeatherProvider)]</value>
+    <value condition="Window.IsActive(mypics.xml) + IsEmpty(Container.FolderName)">$LOCALIZE[1]</value>
     <value>$INFO[Container.FolderName]</value>
   </variable>
   <variable name="TopLabel" description="Shown Above Plots and descriptions">

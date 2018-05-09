@@ -13,10 +13,11 @@
         <include>ContainerVisibleFade</include>
         <control type="label" description="Main Label">
           <left>420</left>
-          <centertop>90</centertop>
+          <top>160</top>
           <align>left</align>
           <font>size50B</font>
           <width>850</width>
+          <height>40</height>
           <textcolor>LabelFO</textcolor>
           <label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
         </control>
@@ -28,7 +29,7 @@
             <width>758</width>
             <font>size22B</font>
             <textcolor>LabelNF</textcolor>
-            <label>[B]$INFO[ListItem.Title][/B]</label>
+            <label>[B]$INFO[ListItem.Label][/B]</label>
           </control>
           <control type="label">
             <top>40</top>
@@ -39,7 +40,7 @@
             <top>90</top>
             <width>758</width>
             <font>size19</font>
-            <label>$VAR[CodecList]</label>
+            <label>$VAR[CodecList-Genre]</label>
           </control>
           <control type="textbox" description="Plot">
             <top>160</top>
@@ -105,10 +106,10 @@
             <focusedlayout height="408" width="360">
               <control type="group">
                 <animation type="Focus" reversible="false">
-                  <effect type="zoom" center="auto" start="100" end="115" time="120" easing="inout"/>
+                  <effect type="zoom" center="180,180" start="100" end="115" time="120" easing="inout"/>
                 </animation>
                 <animation type="UnFocus" reversible="false">
-                  <effect type="zoom" center="auto" start="115" end="100" time="120" easing="inout"/>
+                  <effect type="zoom" center="180,180" start="115" end="100" time="120" easing="inout"/>
                 </animation>
                 <control type="image">
                   <left>15</left>
@@ -151,7 +152,6 @@
       <control type="group" description="Thumbnails 53">
         <visible>Control.IsVisible(53)</visible>
         <include>ContainerVisibleFade</include>
-
         <control type="group" description="Container">
           <control type="label" description="MainHeading">
             <top>66</top>
@@ -302,9 +302,10 @@
         <visible>Control.IsVisible(52)</visible>
         <include>ContainerVisibleFade</include>
         <control type="label" description="MainHeading">
-          <top>40</top>
-          <centerleft>50%</centerleft>
+          <right>66</right>
+          <top>60</top>
           <width>800</width>
+          <height>40</height>
           <font>size50B</font>
           <label>[B]$VAR[GlobalHeadings][/B]</label>
           <textcolor>LabelNF</textcolor>
@@ -316,12 +317,25 @@
           <left>100</left>
           <top>-75</top>
           <control type="image" description="Thumb">
+            <visible>!Skin.HasSetting(FanartInList)</visible>
             <top>186</top>
             <left>0</left>
             <width>756</width>
             <height>495</height>
             <include>Icon_Fade</include>
             <texture background="true">$INFO[ListItem.Thumb]</texture>
+            <aspectratio aligny="bottom">keep</aspectratio>
+            <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+            <bordersize>4</bordersize>
+          </control>
+          <control type="image" description="FA">
+            <visible>Skin.HasSetting(FanartInList)</visible>
+            <top>186</top>
+            <left>0</left>
+            <width>756</width>
+            <height>495</height>
+            <include>Fanart_Fade</include>
+            <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
             <aspectratio aligny="bottom">keep</aspectratio>
             <bordertexture border="12">img/ThumbBorder.png</bordertexture>
             <bordersize>4</bordersize>
@@ -362,9 +376,9 @@
         <control type="list" id="52">
           <visible>container.content(Movies) | container.content(TVshows) | container.content(seasons) | container.content(episodes) | container.content(musicvideos) | container.content(files)</visible>
           <right>66</right>
-          <top>164</top>
+          <top>248</top>
           <width>800</width>
-          <height>839</height>
+          <height>755</height>
           <pagecontrol>60</pagecontrol>
           <onleft>PageUp</onleft>
           <onright>PageDown</onright>
@@ -470,29 +484,7 @@
           </focusedlayout>
         </control>
       </control>
-      <control type="grouplist" id="9001" description="Options button">
-        <right>84</right>
-        <top>40</top>
-        <width max="500">auto</width>
-        <height>110</height>
-        <itemgap>10</itemgap>
-        <ondown>50</ondown>
-        <align>right</align>
-        <aligny>center</aligny>
-        <orientation>horizontal</orientation>
-        <control type="button" id="1">
-          <onclick>Control.SetFocus(9000)</onclick>
-          <width>144</width>
-          <height>80</height>
-          <texturefocus>buttons/MoreFO.png</texturefocus>
-          <texturenofocus>buttons/MoreNF.png</texturenofocus>
-          <label>$LOCALIZE[33063]</label>
-          <wrapmultiline>True</wrapmultiline>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
-        </control>
-      </control>
+      <include>OptionsButton</include>
       <control type="group" description="Side menu 9000 group">
         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
         <include>MenuFullBG</include>
@@ -536,5 +528,6 @@
         </control>
       </control>
     </control>
+    <include>SortLetter</include>
   </controls>
 </window>

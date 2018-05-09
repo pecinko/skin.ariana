@@ -181,6 +181,48 @@
       <colordiffuse>Grey</colordiffuse>
     </control>
   </include>
+  <include name="OptionsButton">
+    <control type="grouplist" id="9001" description="Options button">
+      <animation condition="Control.IsVisible(53)" effect="slide" start="0,0" end="270,-84" time="0" reversible="true">Conditional</animation>
+      <animation condition="Window.IsActive(mymusicnav.xml) + Control.IsVisible(51)" effect="slide" start="0,0" end="-1154,150" time="0" reversible="true">Conditional</animation>
+      <right>66</right>
+      <top>145</top>
+      <width>800</width>
+      <height>60</height>
+      <itemgap>10</itemgap>
+      <ondown>50</ondown>
+      <align>center</align>
+      <aligny>center</aligny>
+      <orientation>horizontal</orientation>
+      <control type="button" id="1">
+        <onclick>Control.SetFocus(9000)</onclick>
+        <width>240</width>
+        <height>54</height>
+        <font>size18</font>
+        <label>$LOCALIZE[14018]</label>
+      </control>
+    </control>
+  </include>
+  <include name="SortLetter">
+    <control type="button" id="60" description="Sort">
+      <visible>Skin.HasSetting(ShowScrollLetter)</visible>
+      <visible allowhiddenfocus="false">Container.Scrolling</visible>
+      <animation effect="fade" time="0">Visible</animation>
+      <animation effect="fade" delay="500" time="100">Hidden</animation>
+      <centertop>50%</centertop>
+      <centerleft>50%</centerleft>
+      <width>180</width>
+      <height>180</height>
+      <textoffsetx>0</textoffsetx>
+      <align>center</align>
+      <aligny>center</aligny>
+      <font>SortLetter</font>
+      <texturenofocus>HUD/Scroll.png</texturenofocus>
+      <texturefocus>HUD/Scroll.png</texturefocus>
+      <label>[B]$INFO[ListItem.SortLetter][/B]</label>
+      <onclick>noop</onclick>
+    </control>
+  </include>
   <include name="VisibleFadeEffect">
     <animation effect="fade" time="200">VisibleChange</animation>
     <animation effect="fade" time="200">Hidden</animation>

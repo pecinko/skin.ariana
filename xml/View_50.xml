@@ -4,14 +4,15 @@
     <control type="group" description="List 50 base">
       <visible>Control.IsVisible(50)</visible>
       <include>ContainerVisibleFade</include>
-      <control type="label" description="Main Label">
-        <centerleft>1400</centerleft>
-        <centertop>90</centertop>
-        <align>center</align>
-        <font>size28B</font>
-        <width>850</width>
+      <control type="label" description="MainHeading">
+        <right>66</right>
+        <top>60</top>
+        <width>800</width>
+        <height>40</height>
+        <font>size50B</font>
+        <label>[B]$VAR[GlobalHeadings][/B]</label>
         <textcolor>LabelNF</textcolor>
-        <label>$VAR[GlobalHeadings]</label>
+        <align>center</align>
       </control>
       <control type="image" description="Thumb">
         <centerleft>480</centerleft>
@@ -27,9 +28,9 @@
       <control type="list" id="50">
         <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes) | Container.content(albums) | container.content(songs)]</visible>
         <left>1058</left>
-        <top>180</top>
+        <top>260</top>
         <width>784</width>
-        <height>799</height>
+        <height>719</height>
         <pagecontrol>60</pagecontrol>
         <onleft>PageUp</onleft>
         <onright>PageDown</onright>
@@ -139,34 +140,6 @@
           </control>
         </focusedlayout>
       </control>
-      <!-- <control type="group" description="Scroll letter">
-      <visible>Container.Scrolling</visible>
-      <animation effect="fade" start="0" end="100" time="50" delay="0" reversible="false">Visible</animation>
-      <animation effect="fade" start="100" end="0" time="150" delay="300" reversible="false">Hidden</animation>
-      <control type="image">
-        <left>1388</left>
-        <top>975</top>
-        <width>81</width>
-        <height>81</height>
-        <texture border="12">img/SortLetterBG.png</texture>
-      </control>
-      <control type="label">
-        <left>1388</left>
-        <top>975</top>
-        <width>81</width>
-        <height>81</height>
-        <align>center</align>
-        <font>size25</font>
-        <label>$INFO[ListItem.SortLetter]</label>
-      </control>
-    </control> -->
-    <!--<control type="scrollbar" id="60">
-    <left>39r</left>
-    <top>147</top>
-    <height>882</height>
-    <onleft>50</onleft>
-    <onright>noop</onright>
-  </control>-->
-</control>
-</include>
+    </control>
+  </include>
 </includes>

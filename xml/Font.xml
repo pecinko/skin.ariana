@@ -149,5 +149,10 @@
       <filename>Arimo.ttf</filename>
       <size>50</size>
     </font>
+    <font>
+      <name>SortLetter</name>
+      <filename>Arimo.ttf</filename>
+      <size>90</size>
+    </font>
   </fontset>
 </fonts>

@@ -91,13 +91,14 @@
       <visible>Control.IsVisible(52)</visible>
       <include>ContainerVisibleFade</include>
       <control type="label" description="MainHeading">
-        <top>66</top>
         <right>66</right>
-        <width>820</width>
+        <top>60</top>
+        <width>800</width>
+        <height>40</height>
         <font>size50B</font>
         <label>[B]$VAR[GlobalHeadings][/B]</label>
         <textcolor>LabelNF</textcolor>
-        <align>left</align>
+        <align>center</align>
       </control>
       <control type="image" description="Thumb">
         <centerleft>480</centerleft>
@@ -116,9 +117,9 @@
         <control type="list" id="52">
           <visible>container.content(albums)</visible>
           <right>80</right>
-          <top>164</top>
+          <top>270</top>
           <width>840</width>
-          <height>847</height>
+          <height>741</height>
           <pagecontrol>60</pagecontrol>
           <onleft>PageUp</onleft>
           <onright>PageDown</onright>
@@ -216,7 +217,7 @@
         <font>size28B</font>
         <width>800</width>
         <textcolor>LabelNF</textcolor>
-        <label>$INFO[ListItem.Artist]</label>
+        <label>[B]$INFO[ListItem.Artist][/B]</label>
       </control>
       <control type="label">
         <left>180</left>
@@ -245,7 +246,7 @@
         <bordertexture border="12">img/ThumbBorder.png</bordertexture>
         <bordersize>4</bordersize>
       </control>
-      <control type="grouplist" id="9001">
+      <control type="grouplist" id="9002">
         <visible>!ControlGroup(9000).HasFocus()</visible>
         <left>1192</left>
         <top>830</top>
@@ -317,8 +318,8 @@
           <height>635</height>
           <pagecontrol>60</pagecontrol>
           <onleft>noop</onleft>
-          <onright>9001</onright>
-          <onup>51</onup>
+          <onright>9002</onright>
+          <onup>9001</onup>
           <ondown>51</ondown>
           <viewtype label="537">Big List 51</viewtype>
           <preloaditems>4</preloaditems>
@@ -418,30 +419,7 @@
         </control>
       </control>
     </control>
-    <control type="grouplist" id="9001" description="Options button">
-      <visible>!container.content(songs)</visible>
-      <right>84</right>
-      <top>40</top>
-      <width max="500">auto</width>
-      <height>110</height>
-      <itemgap>10</itemgap>
-      <ondown>50</ondown>
-      <align>right</align>
-      <aligny>center</aligny>
-      <orientation>horizontal</orientation>
-      <control type="button" id="1">
-        <onclick>Control.SetFocus(9000)</onclick>
-        <width>144</width>
-        <height>80</height>
-        <texturefocus>buttons/MoreFO.png</texturefocus>
-        <texturenofocus>buttons/MoreNF.png</texturenofocus>
-        <label>$LOCALIZE[33063]</label>
-        <wrapmultiline>True</wrapmultiline>
-        <font>size14</font>
-        <aligny>top</aligny>
-        <textoffsety>80</textoffsety>
-      </control>
-    </control>
+    <include>OptionsButton</include>
     <control type="group" description="Side menu 9000 group">
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
       <include>MenuFullBG</include>
@@ -493,5 +471,6 @@
         </control>
       </control>
     </control>
+    <include>SortLetter</include>
   </controls>
 </window>

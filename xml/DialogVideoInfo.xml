@@ -9,9 +9,9 @@
       <control type="group" description="Media Info and buttons">
         <control type="image" description="Media Thumb">
           <right>60</right>
-          <top>60</top>
-          <width>660</width>
-          <height>660</height>
+          <top>64</top>
+          <width>648</width>
+          <height>648</height>
           <texture>$INFO[ListItem.Thumb]</texture>
           <aspectratio align="center" aligny="center">keep</aspectratio>
         </control>
@@ -255,8 +255,8 @@
           </control>
         </control>
         <control type="grouplist" id="9001">
-          <left>380</left>
-          <top>600</top>
+          <left>388</left>
+          <top>636</top>
           <width>638</width>
           <height>150</height>
           <itemgap>20</itemgap>
