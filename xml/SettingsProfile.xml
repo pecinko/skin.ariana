@@ -42,7 +42,7 @@
             <font>size20</font>
             <left>20</left>
             <right>20</right>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColour]</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>

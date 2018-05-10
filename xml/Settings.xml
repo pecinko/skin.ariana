@@ -12,7 +12,7 @@
         <aligny>top</aligny>
         <width>1920</width>
         <height>75</height>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
         <font>size28B</font>
         <label>[B]$LOCALIZE[10004][/B]</label>
       </control>

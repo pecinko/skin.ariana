@@ -28,7 +28,7 @@
               <height>70</height>
               <width>600</width>
               <scroll>false</scroll>
-              <textcolor>LabelNF</textcolor>
+              <textcolor>$VAR[LabelNFColour]</textcolor>
               <info>ListItem.Label</info>
             </control>
             <control type="label">
@@ -38,7 +38,7 @@
               <align>right</align>
               <scroll>false</scroll>
               <font>size19</font>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Colour]</textcolor>
               <info>ListItem.Label2</info>
             </control>
           </itemlayout>
@@ -68,7 +68,7 @@
                 <width>435</width>
                 <align>right</align>
                 <font>size19</font>
-                <textcolor>Label2</textcolor>
+                <textcolor>$VAR[Label2Colour]</textcolor>
                 <info>ListItem.Label2</info>
               </control>
             </control>

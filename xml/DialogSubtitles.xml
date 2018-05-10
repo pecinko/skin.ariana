@@ -73,7 +73,7 @@
             <top>0</top>
             <width>135</width>
             <font>size19</font>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColour]</textcolor>
             <scroll>false</scroll>
             <align>left</align>
             <info>ListItem.Label</info>
@@ -101,7 +101,7 @@
             <top>0</top>
             <width>900</width>
             <font>size19</font>
-            <textcolor>Label2</textcolor>
+            <textcolor>$VAR[Label2Colour]</textcolor>
             <scroll>false</scroll>
             <align>left</align>
             <info>ListItem.Label2</info>
@@ -111,7 +111,7 @@
             <top>4</top>
             <width>120</width>
             <height>54</height>
-            <colordiffuse>Label2</colordiffuse>
+            <colordiffuse>$VAR[Label2Colour]</colordiffuse>
             <aspectratio>keep</aspectratio>
             <texture>badges/rating$INFO[ListItem.ActualIcon].png</texture>
           </control>
@@ -172,7 +172,7 @@
               <height>60</height>
               <font>size18</font>
               <aligny>center</aligny>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Colour]</textcolor>
               <align>left</align>
               <info>ListItem.Label2</info>
             </control>

@@ -12,7 +12,7 @@
         <align>center</align>
         <font>size28B</font>
         <width>850</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
         <label>1036</label>
       </control>
       <control type="image" description="Thumb">

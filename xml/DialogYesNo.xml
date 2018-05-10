@@ -13,7 +13,7 @@
         <width>100%</width>
         <font>size24B</font>
         <align>center</align>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
       </control>
       <control type="textbox" id="9" description="Labels">
         <top>340</top>

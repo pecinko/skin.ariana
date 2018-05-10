@@ -5,9 +5,9 @@
     <align>left</align>
     <aligny>center</aligny>
     <font>size22</font>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <scrollspeed>50</scrollspeed>
     <scrollsuffix> &#0000; </scrollsuffix>
   </default>
@@ -17,10 +17,10 @@
     <aligny>center</aligny>
     <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <scrollout>false</scrollout>
     <pauseatend>3000</pauseatend>
     <scrollsuffix> • </scrollsuffix>
@@ -28,10 +28,10 @@
   <default type="textbox">
     <font>plot</font>
     <align>left</align>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <pagecontrol>61</pagecontrol>
     <pulseonselect>false</pulseonselect>
     <autoscroll delay="8000" time="4300" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -48,10 +48,10 @@
     <aligny>center</aligny>
     <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <alttexturenofocus border="9">img/SettingsButtonNF.png</alttexturenofocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
@@ -68,10 +68,10 @@
     <aligny>center</aligny>
     <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <include>FocusButtonsAnimation</include>
@@ -83,10 +83,10 @@
     <aligny>center</aligny>
     <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <altselectedcolor>Selected</altselectedcolor>
     <align>center</align>
     <aligny>center</aligny>
@@ -102,10 +102,10 @@
     <align>left</align>
     <aligny>center</aligny>
     <font>size22</font>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <radiowidth>54</radiowidth>
     <radioheight>28</radioheight>
     <textoffsetx>20</textoffsetx>
@@ -128,10 +128,10 @@
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <spinwidth>30</spinwidth>
     <spinheight>40</spinheight>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <textoffsetx>20</textoffsetx>
     <align>left</align>
     <aligny>center</aligny>
@@ -151,10 +151,10 @@
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <spinwidth>30</spinwidth>
     <spinheight>40</spinheight>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <textoffsetx>20</textoffsetx>
     <align>left</align>
     <aligny>center</aligny>
@@ -167,10 +167,10 @@
     <width>450</width>
     <aligny>center</aligny>
     <font>size22</font>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <sliderwidth>150</sliderwidth>
@@ -187,10 +187,10 @@
     <aligny>center</aligny>
     <font>size22</font>
     <textoffsetx>20</textoffsetx>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColour]</textcolor>
     <focusedcolor>LabelFO</focusedcolor>
     <selectedcolor>Selected</selectedcolor>
-    <disabledcolor>Disabled</disabledcolor>
+    <disabledcolor>$VAR[DisabledColour]</disabledcolor>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <sliderwidth>150</sliderwidth>

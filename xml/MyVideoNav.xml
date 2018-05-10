@@ -28,7 +28,7 @@
             <top>-14</top>
             <width>758</width>
             <font>size22B</font>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColour]</textcolor>
             <label>[B]$INFO[ListItem.Label][/B]</label>
           </control>
           <control type="label">
@@ -159,7 +159,7 @@
             <width>1920</width>
             <font>size50B</font>
             <label>[B]$VAR[GlobalHeadings][/B]</label>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColour]</textcolor>
             <align>left</align>
           </control>
           <control type="panel" id="53" description="Grid">
@@ -257,7 +257,7 @@
                   <width>290</width>
                   <height>45</height>
                   <font>size19</font>
-                  <textcolor>LabelNF</textcolor>
+                  <textcolor>$VAR[LabelNFColour]</textcolor>
                   <align>center</align>
                   <label>$INFO[ListItem.Label]</label>
                 </control>
@@ -308,7 +308,7 @@
           <height>40</height>
           <font>size50B</font>
           <label>[B]$VAR[GlobalHeadings][/B]</label>
-          <textcolor>LabelNF</textcolor>
+          <textcolor>$VAR[LabelNFColour]</textcolor>
           <align>center</align>
         </control>
         <control type="group" description="Media info">
@@ -347,7 +347,7 @@
               <top>-14</top>
               <width>758</width>
               <font>size22B</font>
-              <textcolor>LabelNF</textcolor>
+              <textcolor>$VAR[LabelNFColour]</textcolor>
               <label>[B]$INFO[ListItem.Title][/B]</label>
             </control>
             <control type="textbox" description="Plot">
@@ -402,7 +402,7 @@
               <height>84</height>
               <font>size22B</font>
               <scroll>false</scroll>
-              <textcolor>LabelNF</textcolor>
+              <textcolor>$VAR[LabelNFColour]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Label2">
@@ -413,7 +413,7 @@
               <height>84</height>
               <font>size19</font>
               <scroll>false</scroll>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Colour]</textcolor>
               <label>$INFO[ListItem.Duration,, $LOCALIZE[31297]]</label>
             </control>
             <control type="label" description="Label2">
@@ -425,7 +425,7 @@
               <height>84</height>
               <font>size19</font>
               <scroll>false</scroll>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Colour]</textcolor>
               <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
             </control>
           </itemlayout>
@@ -466,7 +466,7 @@
                 <align>right</align>
                 <height>84</height>
                 <font>size19</font>
-                <textcolor>Label2</textcolor>
+                <textcolor>$VAR[Label2Colour]</textcolor>
                 <label>$INFO[ListItem.Duration,, $LOCALIZE[31297]]</label>
               </control>
               <control type="label" description="Label2">
@@ -477,7 +477,7 @@
                 <align>right</align>
                 <height>84</height>
                 <font>size19</font>
-                <textcolor>Label2</textcolor>
+                <textcolor>$VAR[Label2Colour]</textcolor>
                 <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
               </control>
             </control>

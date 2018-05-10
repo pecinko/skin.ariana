@@ -18,7 +18,7 @@
         <top>80</top>
         <font>size28B</font>
         <width>800</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
         <label>$LOCALIZE[589]</label>
       </control>
       <control type="label" description="Title">
@@ -27,7 +27,7 @@
         <top>80</top>
         <font>size28B</font>
         <width>800</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
         <label>$LOCALIZE[13350]</label>
       </control>
       <control type="label" description="Subtitle">
@@ -35,7 +35,7 @@
         <top>132</top>
         <font>size22B</font>
         <width>800</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
         <label>$INFO[VideoPlayer.Artist,, - ] $INFO[VideoPlayer.Title,, : ] $INFO[VideoPlayer.TimeRemaining]</label>
       </control>
       <control type="label" description="Genre">
@@ -43,7 +43,7 @@
         <top>200</top>
         <font>size20B</font>
         <width>800</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
         <label>$LOCALIZE[179] $INFO[VideoPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[VideoPlayer.PlaylistLength]</label>
       </control>
       <control type="group" description="Infolist">
@@ -87,7 +87,7 @@
               <height>66</height>
               <font>size16</font>
               <scroll>false</scroll>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Colour]</textcolor>
               <label>$INFO[ListItem.Album]</label>
             </control>
             <control type="label" description="Duration">
@@ -98,7 +98,7 @@
               <width>330</width>
               <font>size16</font>
               <align>right</align>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Colour]</textcolor>
               <label>$INFO[ListItem.Duration]</label>
             </control>
             <control type="image" description="playing">
@@ -149,7 +149,7 @@
                 <bottom>0</bottom>
                 <height>66</height>
                 <font>size16</font>
-                <textcolor>Label2</textcolor>
+                <textcolor>$VAR[Label2Colour]</textcolor>
                 <label>$INFO[ListItem.Album]</label>
               </control>
               <control type="label" description="Duration">
@@ -160,7 +160,7 @@
                 <width>330</width>
                 <font>size16</font>
                 <align>right</align>
-                <textcolor>Label2</textcolor>
+                <textcolor>$VAR[Label2Colour]</textcolor>
                 <label>$INFO[ListItem.Duration]</label>
               </control>
               <control type="image" description="playing">

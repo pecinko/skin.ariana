@@ -29,7 +29,7 @@
             <left>20</left>
             <right>60</right>
             <height>80</height>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColour]</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="image">

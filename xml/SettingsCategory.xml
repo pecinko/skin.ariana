@@ -88,7 +88,7 @@
         <width>1230</width>
         <height>126</height>
         <align>justify</align>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
         <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
       </control>
     </control>

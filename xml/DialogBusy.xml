@@ -22,7 +22,7 @@
         <font>size28</font>
         <align>center</align>
         <aligny>top</aligny>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
 				<label>[B]$LOCALIZE[31037][/B]</label>
       </control>
     </control>

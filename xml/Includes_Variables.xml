@@ -9,7 +9,7 @@
     <value>img/WhiteDot.png</value>
   </variable>
   <variable name="Background.Overlay" description="backgrounds">
-    <value condition="!StringCompare(Skin.CurrentColourTheme,light)">background/DarkBG.png</value>
+    <value condition="System.IsDarkInterface">background/DarkBG.png</value>
     <value>background/LightBG.png</value>
   </variable>
   <variable name="Background.Art" description="Art backgrounds">
@@ -78,5 +78,21 @@
     <value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
     <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
     <value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+  </variable>
+  <variable name="OverlayColour" description="Overlay">
+    <value condition="!System.IsDarkInterface">FFCED5E0</value>
+    <value>FF2A2C32</value>
+  </variable>
+  <variable name="LabelNFColour" description="LabelNF">
+    <value condition="!System.IsDarkInterface">FF111111</value>
+    <value>FFFFFFFF</value>
+  </variable>
+  <variable name="Label2Colour" description="Label2">
+    <value condition="!System.IsDarkInterface">FF575759</value>
+    <value>FF838485</value>
+  </variable>
+  <variable name="DisabledColour" description="Disabled">
+    <value condition="!System.IsDarkInterface">FF5e5e60</value>
+    <value>FF909192</value>
   </variable>
 </includes>

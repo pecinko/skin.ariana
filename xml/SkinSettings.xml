@@ -13,7 +13,7 @@
         <height>40</height>
         <font>size50B</font>
         <label>[B]$VAR[GlobalHeadings][/B]</label>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColour]</textcolor>
         <align>center</align>
       </control>
       <control type="list" id="50">

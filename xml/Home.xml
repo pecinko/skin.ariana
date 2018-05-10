@@ -23,7 +23,7 @@
         <width>1920</width>
         <font>size20B</font>
         <label>$INFO[system.profilename,$LOCALIZE[31027]: ]</label>
-        <textcolor>Label2</textcolor>
+        <textcolor>$VAR[Label2Colour]</textcolor>
         <align>left</align>
       </control>
       <control type="grouplist" id="9001" description="Top right row buttons">
@@ -106,7 +106,7 @@
             <height>40</height>
             <font>size20B</font>
             <align>center</align>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColour]</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
@@ -144,7 +144,7 @@
               <height>40</height>
               <font>size20B</font>
               <align>center</align>
-              <textcolor>LabelNF</textcolor>
+              <textcolor>$VAR[LabelNFColour]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
@@ -379,7 +379,7 @@
                 <width>308</width>
                 <height>30</height>
                 <font>size16</font>
-                <textcolor>LabelNF</textcolor>
+                <textcolor>$VAR[LabelNFColour]</textcolor>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
               </control>
