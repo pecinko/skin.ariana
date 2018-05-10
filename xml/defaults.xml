@@ -202,7 +202,7 @@
     <include>FocusButtonsAnimation</include>
   </default>
   <default type="progress">
-    <reveal>true</reveal>
+    <reveal>false</reveal>
     <texturebg border="36,0,36,0">OSD/ProgressBackground.png</texturebg>
     <lefttexture>OSD/ProgressLeft.png</lefttexture>
     <midtexture>OSD/ProgressMid.png</midtexture>
