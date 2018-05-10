@@ -13,7 +13,7 @@
         <height>40</height>
         <font>size50B</font>
         <label>[B]$VAR[GlobalHeadings][/B]</label>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <align>center</align>
       </control>
       <control type="list" id="50">
@@ -62,7 +62,7 @@
               <top>0</top>
               <height>80</height>
               <font>size20</font>
-              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Label2">
@@ -72,7 +72,7 @@
               <height>80</height>
               <font>size16</font>
               <align>right</align>
-              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label2]</label>
             </control>
           </control>

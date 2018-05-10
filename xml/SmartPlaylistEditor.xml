@@ -95,7 +95,7 @@
                   <height>60</height>
                   <width>780</width>
                   <info>ListItem.Label</info>
-                  <textcolor>$VAR[LabelFOColor]</textcolor>
+                  <textcolor>LabelFO</textcolor>
                 </control>
               </control>
             </focusedlayout>

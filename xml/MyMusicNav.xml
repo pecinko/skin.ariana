@@ -13,7 +13,7 @@
         <width>1920</width>
         <font>size50B</font>
         <label>[B]$VAR[GlobalHeadings][/B]</label>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <align>left</align>
       </control>
       <control type="group" description="Container">
@@ -78,7 +78,7 @@
                 <width>308</width>
                 <height>30</height>
                 <font>size16</font>
-                <textcolor>$VAR[LabelNFColor]</textcolor>
+                <textcolor>LabelNF</textcolor>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
               </control>
@@ -97,7 +97,7 @@
         <height>40</height>
         <font>size50B</font>
         <label>[B]$VAR[GlobalHeadings][/B]</label>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <align>center</align>
       </control>
       <control type="image" description="Thumb">
@@ -135,7 +135,7 @@
               <height>66</height>
               <font>size22</font>
               <scroll>false</scroll>
-              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <textcolor>LabelNF</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Label2">
@@ -146,7 +146,7 @@
               <height>66</height>
               <font>size19</font>
               <scroll>false</scroll>
-              <textcolor>$VAR[Label2Color]</textcolor>
+              <textcolor>Label2</textcolor>
               <label>$INFO[ListItem.Label2]</label>
             </control>
             <control type="label" description="Label2">
@@ -157,7 +157,7 @@
               <height>66</height>
               <font>size19</font>
               <scroll>false</scroll>
-              <textcolor>$VAR[Label2Color]</textcolor>
+              <textcolor>Label2</textcolor>
               <label>$INFO[ListItem.Artist]</label>
             </control>
           </itemlayout>
@@ -180,7 +180,7 @@
                 <top>0</top>
                 <height>66</height>
                 <font>size22</font>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
               <control type="label" description="Label2">
@@ -190,7 +190,7 @@
                 <bottom>0</bottom>
                 <height>66</height>
                 <font>size19</font>
-                <textcolor>$VAR[Label2Color]</textcolor>
+                <textcolor>Label2</textcolor>
                 <label>$INFO[ListItem.Label2]</label>
               </control>
               <control type="label" description="Label2">
@@ -200,7 +200,7 @@
                 <bottom>0</bottom>
                 <height>66</height>
                 <font>size19</font>
-                <textcolor>$VAR[Label2Color]</textcolor>
+                <textcolor>Label2</textcolor>
                 <label>$INFO[ListItem.Artist]</label>
               </control>
             </control>
@@ -216,7 +216,7 @@
         <top>80</top>
         <font>size28B</font>
         <width>800</width>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>[B]$INFO[ListItem.Artist][/B]</label>
       </control>
       <control type="label">
@@ -224,7 +224,7 @@
         <top>132</top>
         <font>size22</font>
         <width>800</width>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$INFO[ListItem.Album]</label>
       </control>
       <control type="label" description="Genre">
@@ -232,7 +232,7 @@
         <top>200</top>
         <font>size20</font>
         <width>800</width>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <label>$INFO[ListItem.Genre]</label>
       </control>
       <control type="image" description="Thumb">
@@ -359,7 +359,7 @@
               <height>106</height>
               <width>36</width>
               <aspectratio>keep</aspectratio>
-              <texture colordiffuse="$VAR[SelectedColor]">img/NowPlayingFO.png</texture>
+              <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
             </control>
           </itemlayout>
           <focusedlayout condition="container.content(songs)" width="920" height="106">
@@ -382,7 +382,7 @@
                 <top>0</top>
                 <height>66</height>
                 <font>size20</font>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
               <control type="label" description="Album">
@@ -391,7 +391,7 @@
                 <bottom>0</bottom>
                 <height>66</height>
                 <font>size16</font>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Album]</label>
               </control>
               <control type="label" description="Duration">
@@ -402,7 +402,7 @@
                 <width>330</width>
                 <font>size16</font>
                 <align>right</align>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
+                <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Duration]</label>
               </control>
               <control type="image" description="playing">
@@ -412,7 +412,7 @@
                 <height>106</height>
                 <width>36</width>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="$VAR[SelectedColor]">img/NowPlayingFO.png</texture>
+                <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
               </control>
             </control>
           </focusedlayout>

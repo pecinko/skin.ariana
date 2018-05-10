@@ -29,8 +29,8 @@
   <include name="SquareButtonCommons">
     <width>144</width>
     <height>80</height>
-    <focusedcolor>$VAR[LabelNFColor]</focusedcolor>
-    <altfocusedcolor>$VAR[LabelNFColor]</altfocusedcolor>
+    <focusedcolor>LabelNF</focusedcolor>
+    <altfocusedcolor>LabelNF</altfocusedcolor>
     <wrapmultiline>True</wrapmultiline>
     <font>size14</font>
     <aligny>top</aligny>
@@ -104,8 +104,8 @@
     <texturenofocus/>
     <alttexturefocus/>
     <alttexturenofocus/>
-    <textcolor>$VAR[Label2Color]</textcolor>
-    <focusedcolor>$VAR[LabelNFColor]</focusedcolor>
+    <textcolor>Label2</textcolor>
+    <focusedcolor>LabelNF</focusedcolor>
   </include>
   <include name="9000Buttons">
     <include>FocusButtonsAnimation</include>
@@ -280,7 +280,7 @@
     <height>75</height>
     <align>center</align>
     <aligny>bottom</aligny>
-    <textcolor>$VAR[SelectedColor]</textcolor>
+    <textcolor>Selected</textcolor>
     <font>size28</font>
   </include>
   <include name="Dimensions_Fullscreen">
@@ -299,7 +299,7 @@
         <aligny>center</aligny>
         <width>1920</width>
         <height>75</height>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <font>size28</font>
         <label>$VAR[GlobalHeadings]</label>
       </control>
@@ -317,7 +317,7 @@
     <width>1920</width>
     <align>center</align>
     <font>size24B</font>
-    <textcolor>$VAR[LabelNFColor]</textcolor>
+    <textcolor>LabelNF</textcolor>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
   <include name="FocusButtonsAnimation">
@@ -332,7 +332,7 @@
     <scroll>false</scroll>
     <align>left</align>
     <font>size24B</font>
-    <textcolor>$VAR[LabelNFColor]</textcolor>
+    <textcolor>LabelNF</textcolor>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
   <include name="FullscreenInfoLabel2">
@@ -341,7 +341,7 @@
     <width>1200</width>
     <scroll>false</scroll>
     <align>left</align>
-    <textcolor>$VAR[LabelNFColor]</textcolor>
+    <textcolor>LabelNF</textcolor>
     <font>plot</font>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
@@ -415,7 +415,7 @@
         <font style="uppercase">size16U</font>
         <align>right</align>
         <aligny>center</aligny>
-        <selectedcolor>$VAR[SelectedColor]</selectedcolor>
+        <selectedcolor>Selected</selectedcolor>
         <label>$INFO[ListItem.Label]</label>
       </control>
       <control type="label">
@@ -442,7 +442,7 @@
     <height>24</height>
     <width>1860</width>
     <font>size22</font>
-    <textcolor>$VAR[Label2Color]</textcolor>
+    <textcolor>Label2</textcolor>
     <align>left</align>
   </include>
   <include name="PostersShelfNF">
@@ -472,7 +472,7 @@
       <texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
       <aspectratio>scale</aspectratio>
     </control>
-    <control type="group" description="WatchedMarks">
+    <control type="group" description="Overlay">
       <control type="image">
         <visible>!IsEmpty(ListItem.Thumb)</visible>
         <right>26</right>
@@ -501,7 +501,7 @@
       <width>42</width>
       <font>size14</font>
       <align>center</align>
-      <textcolor>$VAR[LabelFOColor]</textcolor>
+      <textcolor>LabelFO</textcolor>
       <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
     </control>
     <control type="label" description="Label2">
@@ -511,7 +511,7 @@
       <width>290</width>
       <height>45</height>
       <font>size19</font>
-      <textcolor>$VAR[LabelNFColor]</textcolor>
+      <textcolor>LabelNF</textcolor>
       <align>center</align>
       <label>$INFO[ListItem.Season,S,-]$INFO[ListItem.Episode,E]</label>
     </control>
@@ -557,11 +557,11 @@
         <width>290</width>
         <height>45</height>
         <font>size19</font>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <align>center</align>
         <label>$INFO[ListItem.Label]</label>
       </control>
-      <control type="group" description="WatchedMarks">
+      <control type="group" description="Overlay">
         <control type="image">
           <visible>!IsEmpty(ListItem.Thumb)</visible>
           <right>26</right>
@@ -590,7 +590,7 @@
         <width>42</width>
         <font>size14</font>
         <align>center</align>
-        <textcolor>$VAR[LabelFOColor]</textcolor>
+        <textcolor>LabelFO</textcolor>
         <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
       </control>
     </control>

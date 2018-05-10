@@ -13,7 +13,7 @@
         <width>1920</width>
         <font>size50B</font>
         <label>[B]$VAR[GlobalHeadings][/B]</label>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <align>left</align>
       </control>
         <control type="panel" id="53" description="Grid">
@@ -77,7 +77,7 @@
                 <width>308</width>
                 <height>30</height>
                 <font>size16</font>
-                <textcolor>$VAR[LabelNFColor]</textcolor>
+                <textcolor>LabelNF</textcolor>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
               </control>

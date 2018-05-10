@@ -36,7 +36,7 @@
         <width>1780</width>
         <height>30</height>
         <font>size14</font>
-        <textcolor>$VAR[LabelFOColor]</textcolor>
+        <textcolor>LabelFO</textcolor>
         <scroll>false</scroll>
         <label>$INFO[Control.GetLabel(32),,%]  $INFO[Control.GetLabel(30)] • $INFO[Control.GetLabel(31)]</label>
       </control>

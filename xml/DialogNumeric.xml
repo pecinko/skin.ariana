@@ -21,7 +21,7 @@
           <top>270</top>
         <width>692</width>
         <font>size22</font>
-        <textcolor>$VAR[SelectedColor]</textcolor>
+        <textcolor>Selected</textcolor>
         <align>center</align>
       </control>
       <control type="image">

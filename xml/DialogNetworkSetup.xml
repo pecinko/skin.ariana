@@ -14,7 +14,7 @@
         <font>size26B</font>
         <label>1007</label>
         <align>center</align>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
       </control>
       <control type="spincontrolex" id="10">
         <description>Protocol</description>

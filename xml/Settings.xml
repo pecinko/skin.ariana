@@ -12,7 +12,7 @@
         <aligny>top</aligny>
         <width>1920</width>
         <height>75</height>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <textcolor>LabelNF</textcolor>
         <font>size28B</font>
         <label>[B]$LOCALIZE[10004][/B]</label>
       </control>
@@ -38,7 +38,7 @@
             <top>20</top>
             <width>240</width>
             <bottom>20</bottom>
-            <texture colordiffuse="$VAR[LabelNFColor]">$INFO[ListItem.Icon]</texture>
+            <texture colordiffuse="LabelNF">$INFO[ListItem.Icon]</texture>
             <bordersize>24</bordersize>
             <align>center</align>
             <aspectratio>keep</aspectratio>
@@ -67,7 +67,7 @@
               <top>20</top>
               <width>240</width>
               <bottom>20</bottom>
-              <texture colordiffuse="$VAR[LabelFOColor]">$INFO[ListItem.Icon]</texture>
+              <texture colordiffuse="LabelFO">$INFO[ListItem.Icon]</texture>
               <bordersize>24</bordersize>
               <align>center</align>
               <aspectratio>keep</aspectratio>
@@ -78,7 +78,7 @@
               <aligny>center</aligny>
               <height>140</height>
               <font>size24B</font>
-              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
