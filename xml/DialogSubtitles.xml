@@ -267,7 +267,7 @@
         <top>700</top>
         <width>375</width>
         <textoffsetx>10</textoffsetx>
-        <label>$LOCALIZE[24120]</label>
+        <label>$LOCALIZE[413]</label>
         <onleft>120</onleft>
         <onright>120</onright>
         <onup>150</onup>
