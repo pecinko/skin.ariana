@@ -39,15 +39,15 @@
           <include>VideoMenuButtons</include>
           <label>[B]$LOCALIZE[31030][/B]</label>
         </control>
-        <control type="button" id="102">
-          <font>size22</font>
-          <include>VideoMenuButtons</include>
-          <label>[B]$LOCALIZE[292][/B]</label>
-        </control>
         <control type="button" id="103">
           <font>size22</font>
           <include>VideoMenuButtons</include>
           <label>[B]$LOCALIZE[287][/B]</label>
+        </control>
+        <control type="button" id="102">
+          <font>size22</font>
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[292][/B]</label>
         </control>
         <control type="button" id="104">
           <font>size22</font>
@@ -72,26 +72,7 @@
         <onright>9001</onright>
         <orientation>horizontal</orientation>
         <align>center</align>
-        <control type="togglebutton" id="1041" description="subs on-off">
-          <visible>ControlGroup(9000).HasFocus(103)</visible>
-          <include>VideoMenuButtons</include>
-          <label>$VAR[CurrentSubs]</label>
-          <onclick>ShowSubtitles</onclick>
-        </control>
-        <control type="button" id="1042" description="subs toggle">
-          <visible>ControlGroup(9000).HasFocus(103)</visible>
-          <visible>VideoPlayer.SubtitlesEnabled</visible>
-          <include>VideoMenuButtons</include>
-          <label>$LOCALIZE[31031] : $INFO[VideoPlayer.SubtitlesLanguage]</label>
-          <onclick>CycleSubtitle</onclick>
-        </control>
-        <control type="button" id="1043" description="subs delay">
-          <visible>ControlGroup(9000).HasFocus(103)</visible>
-          <include>VideoMenuButtons</include>
-          <label>$LOCALIZE[22006]</label>
-          <onclick>SubtitleDelay</onclick>
-        </control>
-        <control type="button" id="1044">
+        <control type="button" id="1041">
           <visible>ControlGroup(9000).HasFocus(103)</visible>
           <visible>!VideoPlayer.Content(LiveTV)</visible>
           <include>VideoMenuButtons</include>
@@ -99,6 +80,27 @@
           <onclick>Close</onclick>
           <onclick>Dialog.Close()</onclick>
           <onclick>ActivateWindow(SubtitleSearch)</onclick>
+        </control>
+        <control type="togglebutton" id="1042" description="subs on-off">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>VideoPlayer.HasSubtitles</visible>
+          <include>VideoMenuButtons</include>
+          <label>$VAR[CurrentSubs]</label>
+          <onclick>ShowSubtitles</onclick>
+        </control>
+        <control type="button" id="1043" description="subs toggle">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>VideoPlayer.SubtitlesEnabled</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[31031] : $INFO[VideoPlayer.SubtitlesLanguage]</label>
+          <onclick>CycleSubtitle</onclick>
+        </control>
+        <control type="button" id="1044" description="subs delay">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>VideoPlayer.HasSubtitles</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[22006]</label>
+          <onclick>SubtitleDelay</onclick>
         </control>
         <control type="button" id="1045">
           <visible>ControlGroup(9000).HasFocus(102)</visible>
