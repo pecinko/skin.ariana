@@ -20,7 +20,7 @@
           <align>center</align>
           <width>750</width>
           <height>45</height>
-					<textcolor>Title</textcolor>
+					<textcolor>LabelNF</textcolor>
         </control>
         <control type="textbox" id="5" description="Textarea">
           <left>90</left>

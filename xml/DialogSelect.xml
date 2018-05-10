@@ -15,7 +15,7 @@
         <texture border="60">img/HomeMenuBarV.png</texture>
       </control>
       <control type="label" id="1" description="Header label">
-        <include>Heading</include>
+        <include>CenterHeading</include>
         <label>13406</label>
       </control>
       <control type="panel" id="3">

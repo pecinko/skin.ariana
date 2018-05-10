@@ -117,37 +117,22 @@
       <align>left</align>
       <orientation>horizontal</orientation>
       <control type="button" id="6" description="refresh">
-        <width>144</width>
-        <height>80</height>
         <texturefocus>buttons/RefreshFO.png</texturefocus>
         <texturenofocus>buttons/RefreshNF.png</texturenofocus>
         <label>$LOCALIZE[184]</label>
-        <wrapmultiline>True</wrapmultiline>
-        <font>size14</font>
-        <aligny>top</aligny>
-        <textoffsety>80</textoffsety>
+        <include>SquareButtonCommons</include>
       </control>
       <control type="button" id="10" description="art">
-        <width>144</width>
-        <height>80</height>
         <texturefocus>buttons/ArtworkFO.png</texturefocus>
         <texturenofocus>buttons/ArtworkNF.png</texturenofocus>
         <label>$LOCALIZE[13405]</label>
-        <wrapmultiline>True</wrapmultiline>
-        <font>size14</font>
-        <aligny>top</aligny>
-        <textoffsety>80</textoffsety>
+        <include>SquareButtonCommons</include>
       </control>
       <control type="button" id="12" description="fanart">
-        <width>144</width>
-        <height>80</height>
         <texturefocus>buttons/ArtworkFO.png</texturefocus>
         <texturenofocus>buttons/ArtworkNF.png</texturenofocus>
         <label>$LOCALIZE[20413]</label>
-        <wrapmultiline>True</wrapmultiline>
-        <font>size14</font>
-        <aligny>top</aligny>
-        <textoffsety>80</textoffsety>
+        <include>SquareButtonCommons</include>
       </control>
     </control>
   </controls>

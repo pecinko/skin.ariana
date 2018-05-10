@@ -100,7 +100,7 @@
                 <height>28</height>
                 <width>28</width>
                 <aspectratio>keep</aspectratio>
-                <texture>$VAR[Overlay]</texture>
+                <texture colordiffuse="Black">$VAR[Overlay]</texture>
               </control>
             </itemlayout>
             <focusedlayout height="408" width="360">
@@ -142,7 +142,7 @@
                   <height>28</height>
                   <width>28</width>
                   <aspectratio>keep</aspectratio>
-                  <texture>$VAR[Overlay]</texture>
+                  <texture colordiffuse="Black">$VAR[Overlay]</texture>
                 </control>
               </control>
             </focusedlayout>
@@ -210,7 +210,7 @@
                   <height>28</height>
                   <width>28</width>
                   <aspectratio>keep</aspectratio>
-                  <texture>$VAR[Overlay]</texture>
+                  <texture colordiffuse="Black">$VAR[Overlay]</texture>
                 </control>
               </control>
               <control type="label" description="Label2">
@@ -278,7 +278,7 @@
                     <height>28</height>
                     <width>28</width>
                     <aspectratio>keep</aspectratio>
-                    <texture>$VAR[Overlay]</texture>
+                    <texture colordiffuse="Black">$VAR[Overlay]</texture>
                   </control>
                 </control>
                 <control type="label" description="Label2">
@@ -392,7 +392,7 @@
               <top>0</top>
               <height>84</height>
               <width>28</width>
-              <texture align="left" aligny="center">$VAR[Overlay]</texture>
+              <texture colordiffuse="LabelNF" align="left" aligny="center">$VAR[Overlay]</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label" description="Main Label">
@@ -447,7 +447,7 @@
                 <top>0</top>
                 <height>84</height>
                 <width>28</width>
-                <texture align="left">$VAR[Overlay]</texture>
+                <texture colordiffuse="LabelFO" align="left">$VAR[Overlay]</texture>
                 <aspectratio>keep</aspectratio>
               </control>
               <control type="label" description="Main Label">
@@ -491,14 +491,6 @@
         <include>VisibleFadeEffect</include>
         <control type="grouplist" id="9000">
           <include>9000GrouplistParameters</include>
-          <control type="label" id="555">
-            <width>100%</width>
-            <height>90</height>
-            <font>size22B</font>
-            <label>$LOCALIZE[14018]</label>
-            <align>center</align>
-            <aligny>center</aligny>
-          </control>
           <control type="button" id="2" description="Views">
             <include>9000Buttons</include>
           </control>

@@ -2,8 +2,7 @@
 <window>
   <defaultcontrol always="true">11</defaultcontrol>
   <controls>
-    <include>FullBackground</include>
-    
+    <include>DialogFullBG</include>
     <control type="group" description="Content">
       <include>OpenClose</include>
       <centerleft>50%</centerleft>
@@ -16,7 +15,7 @@
         <textcolor>LabelNF</textcolor>
         <align>center</align>
       </control>
-      <control type="grouplist" id="9001">
+      <control type="grouplist" id="9000">
         <top>142</top>
         <width>930</width>
         <itemgap>33</itemgap>
@@ -67,23 +66,23 @@
           </control>
         </itemlayout>
         <focusedlayout height="75" width="930">
-        <control type="group">
-          <animation type="Focus" reversible="true">
-            <effect type="zoom" center="auto" start="100" end="106" time="100" easing="inout"/>
-          </animation>
-          <control type="image">
-            <width>930</width>
-            <height>75</height>
-            <texture border="9">img/MediaButton2.png</texture>
+          <control type="group">
+            <animation type="Focus" reversible="true">
+              <effect type="zoom" center="auto" start="100" end="106" time="100" easing="inout"/>
+            </animation>
+            <control type="image">
+              <width>930</width>
+              <height>75</height>
+              <texture border="9">img/MediaButton2.png</texture>
+            </control>
+            <control type="label" description="Path label">
+              <left>30</left>
+              <aligny>center</aligny>
+              <height>75</height>
+              <width>600</width>
+              <info>ListItem.Label</info>
+            </control>
           </control>
-          <control type="label" description="Path label">
-            <left>30</left>
-            <aligny>center</aligny>
-            <height>75</height>
-            <width>600</width>
-            <info>ListItem.Label</info>
-          </control>
-        </control>
         </focusedlayout>
       </control>
       <control type="label" id="0" description="Source Name Label">
@@ -107,7 +106,7 @@
         <top>690</top>
         <width>930</width>
         <onup>12</onup>
-        <ondown>9001</ondown>
+        <ondown>9000</ondown>
         <align>center</align>
         <itemgap>75</itemgap>
         <orientation>horizontal</orientation>

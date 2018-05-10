@@ -12,11 +12,11 @@
   <color name="Grey">FFb9b9b9</color> <!-- THEME INDEPENDENT -->
   <color name="Red">FFff3a31</color> <!-- THEME INDEPENDENT -->
 
-  <color name="Overlay">FF2A2C32</color>
-  <color name="LabelNF">FFFFFFFF</color>
+  <color name="Overlay">FFCED5E0</color>
+  <color name="LabelNF">FF111111</color>
   <color name="LabelFO">FF111111</color>
-  <color name="Label2">FF838485</color>
-  <color name="Disabled">FF909192</color>
+  <color name="Label2">FF575759</color>
+  <color name="Disabled">FF5e5e60</color>
   <color name="Selected">FFff9501</color>
 
   <color name="systemfocus">FFf6b12b</color>

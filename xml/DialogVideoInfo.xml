@@ -8,6 +8,7 @@
       <animation effect="slide" start="0,0" end="0,-400" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
       <control type="group" description="Media Info and buttons">
         <control type="image" description="Media Thumb">
+          <visible>!Skin.HasSetting(InfoPosterHide)</visible>
           <right>60</right>
           <top>64</top>
           <width>648</width>
@@ -211,7 +212,7 @@
           <height>60</height>
           <width>150</width>
           <aspectratio aligny="center" align="right">keep</aspectratio>
-          <texture colordiffuse="LabelFO">$INFO[ListItem.Rating,badges/,.png]</texture>
+          <texture colordiffuse="Overlay">$INFO[ListItem.Rating,badges/,.png]</texture>
         </control>
         <control type="group" description="top">
           <left>390</left>
@@ -230,7 +231,7 @@
             <width>750</width>
             <height>45</height>
             <font>size19</font>
-            <textcolor>Title</textcolor>
+            <textcolor>LabelNF</textcolor>
             <align>left</align>
             <label>$VAR[500TopLabel]$INFO[ListItem.MPAA, • ]</label>
           </control>
@@ -239,7 +240,7 @@
             <width>750</width>
             <height>45</height>
             <font>size16</font>
-            <textcolor>Title</textcolor>
+            <textcolor>LabelNF</textcolor>
             <align>left</align>
             <label>[UPPERCASE]$INFO[ListItem.VideoCodec]$INFO[ListItem.VideoResolution, / ]$INFO[ListItem.AudioCodec, • ]$INFO[ListItem.AudioChannels, / ][/UPPERCASE]</label>
           </control>
@@ -267,53 +268,32 @@
           <align>left</align>
           <orientation>horizontal</orientation>
           <control type="togglebutton" id="8" description="Play">
-            <width>144</width>
-            <height>80</height>
             <texturefocus>buttons/PlayFO.png</texturefocus>
             <texturenofocus>buttons/PlayNF.png</texturenofocus>
             <alttexturefocus>buttons/EpisodesFO.png</alttexturefocus>
             <alttexturenofocus>buttons/EpisodesNF.png</alttexturenofocus>
-            <font>size14</font>
-            <align>center</align>
-            <aligny>top</aligny>
-            <textoffsety>80</textoffsety>
             <label>208</label>
             <altlabel>1024</altlabel>
             <usealttexture>Container.Content(TVShows)</usealttexture>
+            <include>SquareButtonCommons</include>
           </control>
           <control type="button" id="11" description="Trailer">
             <visible>!IsEmpty(ListItem.Trailer)</visible>
-            <width>144</width>
-            <height>80</height>
             <texturefocus>buttons/TrailerFO.png</texturefocus>
             <texturenofocus>buttons/TrailerNF.png</texturenofocus>
             <label>20410</label>
-            <wrapmultiline>True</wrapmultiline>
-            <font>size14</font>
-            <aligny>top</aligny>
-            <textoffsety>80</textoffsety>
+            <include>SquareButtonCommons</include>
           </control>
           <control type="button" id="6" description="refresh">
-            <width>144</width>
-            <height>80</height>
             <texturefocus>buttons/RefreshFO.png</texturefocus>
             <texturenofocus>buttons/RefreshNF.png</texturenofocus>
-            <label>$LOCALIZE[184]</label>
-            <wrapmultiline>True</wrapmultiline>
-            <font>size14</font>
-            <aligny>top</aligny>
-            <textoffsety>80</textoffsety>
+            <include>SquareButtonCommons</include>
           </control>
           <control type="button" id="10" description="art">
-            <width>144</width>
-            <height>80</height>
             <texturefocus>buttons/ArtworkFO.png</texturefocus>
             <texturenofocus>buttons/ArtworkNF.png</texturenofocus>
             <label>$LOCALIZE[13511]</label>
-            <wrapmultiline>True</wrapmultiline>
-            <font>size14</font>
-            <aligny>top</aligny>
-            <textoffsety>80</textoffsety>
+            <include>SquareButtonCommons</include>
           </control>
         </control>
       </control>

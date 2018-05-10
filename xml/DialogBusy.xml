@@ -10,7 +10,7 @@
         <centertop>50%</centertop>
         <width>210</width>
         <height>201</height>
-        <imagepath>HUD/loading</imagepath>
+        <imagepath colordiffuse="LabelNF">HUD/loading</imagepath>
         <timeperimage>80</timeperimage>
         <loop>yes</loop>
       </control>
@@ -22,8 +22,8 @@
         <font>size28</font>
         <align>center</align>
         <aligny>top</aligny>
-        <textcolor>Title</textcolor>
-				<label>[B]$LOCALIZE[20186][/B]</label>
+        <textcolor>LabelNF</textcolor>
+				<label>[B]$LOCALIZE[31037][/B]</label>
       </control>
     </control>
   </controls>

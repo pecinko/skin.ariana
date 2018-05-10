@@ -8,7 +8,7 @@
     <centertop>50%</centertop>
     <width>500</width>
     <height>680</height>
-    <itemgap>12</itemgap>
+    <itemgap>8</itemgap>
     <onleft>noop</onleft>
     <onright>noop</onright>
     <onup>9000</onup>
@@ -17,6 +17,24 @@
     <align>center</align>
     <aligny>center</aligny>
     <orientation>vertical</orientation>
+    <control type="label" id="555">
+      <width>100%</width>
+      <height>60</height>
+      <font>size22B</font>
+      <label>[B]$LOCALIZE[14018][/B]</label>
+      <align>center</align>
+      <aligny>center</aligny>
+    </control>
+  </include>
+  <include name="SquareButtonCommons">
+    <width>144</width>
+    <height>80</height>
+    <focusedcolor>LabelNF</focusedcolor>
+    <altfocusedcolor>LabelNF</altfocusedcolor>
+    <wrapmultiline>True</wrapmultiline>
+    <font>size14</font>
+    <aligny>top</aligny>
+    <textoffsety>80</textoffsety>
   </include>
   <include name="VideoMenuInfo">
     <control type="group" description="Info group">
@@ -24,7 +42,7 @@
       <control type="image">
         <left>15</left>
         <top>30</top>
-        <width>256</width>
+        <width>240</width>
         <height>256</height>
         <texture>$INFO[VideoPlayer.Cover]</texture>
         <aspectratio align="center" aligny="top">keep</aspectratio>
@@ -79,14 +97,15 @@
   <include name="VideoMenuButtons">
     <width>300</width>
     <height>90</height>
-    <font>size22B</font>
+    <font>size16U</font>
     <align>center</align>
     <aligny>center</aligny>
     <texturefocus/>
     <texturenofocus/>
     <alttexturefocus/>
     <alttexturenofocus/>
-    <focusedcolor>FFFFFFFF</focusedcolor>
+    <textcolor>Label2</textcolor>
+    <focusedcolor>LabelNF</focusedcolor>
   </include>
   <include name="9000Buttons">
     <include>FocusButtonsAnimation</include>
@@ -280,7 +299,7 @@
         <aligny>center</aligny>
         <width>1920</width>
         <height>75</height>
-        <textcolor>Title</textcolor>
+        <textcolor>LabelNF</textcolor>
         <font>size28</font>
         <label>$VAR[GlobalHeadings]</label>
       </control>
@@ -298,7 +317,7 @@
     <width>1920</width>
     <align>center</align>
     <font>size24B</font>
-    <textcolor>Title</textcolor>
+    <textcolor>LabelNF</textcolor>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
   <include name="FocusButtonsAnimation">
@@ -313,7 +332,7 @@
     <scroll>false</scroll>
     <align>left</align>
     <font>size24B</font>
-    <textcolor>Title</textcolor>
+    <textcolor>LabelNF</textcolor>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
   <include name="FullscreenInfoLabel2">
@@ -322,7 +341,7 @@
     <width>1200</width>
     <scroll>false</scroll>
     <align>left</align>
-    <textcolor>Title</textcolor>
+    <textcolor>LabelNF</textcolor>
     <font>plot</font>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
@@ -470,7 +489,7 @@
         <height>28</height>
         <width>28</width>
         <aspectratio>keep</aspectratio>
-        <texture>$VAR[Overlay]</texture>
+        <texture colordiffuse="Black">$VAR[Overlay]</texture>
       </control>
     </control>
     <control type="label" description="Label2">
@@ -559,7 +578,7 @@
           <height>28</height>
           <width>28</width>
           <aspectratio>keep</aspectratio>
-          <texture>$VAR[Overlay]</texture>
+          <texture colordiffuse="Black">$VAR[Overlay]</texture>
         </control>
       </control>
       <control type="label" description="Label2">

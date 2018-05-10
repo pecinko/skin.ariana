@@ -2,7 +2,7 @@
 <window>
   <defaultcontrol always="true">9000</defaultcontrol>
   <controls>
-    <include>FullBackground</include>
+    <include>DialogFullBG</include>
     <control type="group">
       <include>OpenClose</include>
       <control type="label" description="Heading">
@@ -59,7 +59,7 @@
               <left>0</left>
               <right>0</right>
               <bottom>0</bottom>
-              <texture border="4">img/SettingsButtonFO.png</texture>
+              <texture border="9">img/SettingsButtonFO.png</texture>
               <bordersize>18</bordersize>
             </control>
             <control type="image">
