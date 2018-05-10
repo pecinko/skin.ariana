@@ -20,7 +20,7 @@
     <control type="label" id="555">
       <width>100%</width>
       <height>60</height>
-      <font>size22B</font>
+      <font>size22</font>
       <label>[B]$LOCALIZE[14018][/B]</label>
       <align>center</align>
       <aligny>center</aligny>
@@ -114,7 +114,7 @@
     <textoffsetx>0</textoffsetx>
     <align>center</align>
     <aligny>center</aligny>
-    <font>size20B</font>
+    <font>size20</font>
   </include>
   <include name="CenterHeading">
     <centerleft>960</centerleft>
@@ -441,7 +441,7 @@
     <textoffsetx>24</textoffsetx>
     <height>24</height>
     <width>1860</width>
-    <font>size22B</font>
+    <font>size22</font>
     <textcolor>Label2</textcolor>
     <align>left</align>
   </include>

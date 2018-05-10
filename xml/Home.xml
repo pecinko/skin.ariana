@@ -21,7 +21,7 @@
         <top>136</top>
         <left>84</left>
         <width>1920</width>
-        <font>size20B</font>
+        <font>size20</font>
         <label>$INFO[system.profilename,$LOCALIZE[31027]: ]</label>
         <textcolor>Label2</textcolor>
         <align>left</align>
@@ -104,7 +104,7 @@
             <left>0</left>
             <right>0</right>
             <height>40</height>
-            <font>size20B</font>
+            <font>size20</font>
             <align>center</align>
             <textcolor>LabelNF</textcolor>
             <label>$INFO[ListItem.Label]</label>
@@ -142,7 +142,7 @@
               <left>0</left>
               <right>0</right>
               <height>40</height>
-              <font>size20B</font>
+              <font>size20</font>
               <align>center</align>
               <textcolor>LabelNF</textcolor>
               <label>$INFO[ListItem.Label]</label>
