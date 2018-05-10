@@ -53,7 +53,7 @@
             <right>125</right>
             <top>0</top>
             <height>80</height>
-            <font>size22B</font>
+            <font>size22</font>
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="image" description="arrow">
@@ -113,7 +113,7 @@
               <right>125</right>
               <top>0</top>
               <height>80</height>
-              <font>size22B</font>
+              <font>size22</font>
               <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>

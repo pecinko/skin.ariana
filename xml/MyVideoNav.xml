@@ -27,7 +27,7 @@
           <control type="label" description="Main Label">
             <top>-14</top>
             <width>758</width>
-            <font>size22B</font>
+            <font>size22</font>
             <textcolor>LabelNF</textcolor>
             <label>[B]$INFO[ListItem.Label][/B]</label>
           </control>
@@ -346,7 +346,7 @@
             <control type="label" description="Main Label">
               <top>-14</top>
               <width>758</width>
-              <font>size22B</font>
+              <font>size22</font>
               <textcolor>LabelNF</textcolor>
               <label>[B]$INFO[ListItem.Title][/B]</label>
             </control>
@@ -400,7 +400,7 @@
               <width>600</width>
               <top>0</top>
               <height>84</height>
-              <font>size22B</font>
+              <font>size22</font>
               <scroll>false</scroll>
               <textcolor>LabelNF</textcolor>
               <label>$INFO[ListItem.Label]</label>
@@ -455,7 +455,7 @@
                 <width>600</width>
                 <top>0</top>
                 <height>84</height>
-                <font>size22B</font>
+                <font>size22</font>
                 <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
