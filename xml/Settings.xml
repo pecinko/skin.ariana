@@ -120,9 +120,9 @@
             <icon>icons/Pictures.png</icon>
           </item>
           <item>
-            <label>$LOCALIZE[21412]</label>
-            <onclick>ActivateWindow(informationproviderbrowser)</onclick>
-            <icon>icons/Metadata.png</icon>
+            <label>$LOCALIZE[24001]</label>
+            <onclick>ActivateWindow(addonbrowser)</onclick>
+            <icon>icons/Addons.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[2]</label>
