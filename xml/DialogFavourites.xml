@@ -12,7 +12,7 @@
         <align>center</align>
         <font>size28B</font>
         <width>850</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <label>1036</label>
       </control>
       <control type="image" description="Thumb">
@@ -43,7 +43,7 @@
             <font>size20</font>
             <label>$INFO[ListItem.Label]</label>
           </control>
-          <control type="label" description="Label2">
+          <control type="label" description="Label">
             <right>20</right>
             <top>0</top>
             <height>80</height>
@@ -73,17 +73,17 @@
               <top>0</top>
               <height>80</height>
               <font>size20</font>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
-            <control type="label" description="Label2">
+            <control type="label" description="Label">
               <right>20</right>
               <top>0</top>
               <height>80</height>
               <width>124</width>
               <font>size16</font>
               <align>right</align>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label2]</label>
             </control>
           </control>

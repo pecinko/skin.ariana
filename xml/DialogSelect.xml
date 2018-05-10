@@ -29,7 +29,7 @@
             <left>20</left>
             <right>60</right>
             <height>80</height>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="image">
@@ -38,7 +38,7 @@
             <top>0</top>
             <width>30</width>
             <height>80</height>
-            <texture colordiffuse="LabelNF">img/RadioON.png</texture>
+            <texture colordiffuse="$VAR[LabelNFColor]">img/RadioON.png</texture>
             <aspectratio align="right">keep</aspectratio>
           </control>
         </itemlayout>
@@ -59,7 +59,7 @@
               <left>20</left>
               <right>60</right>
               <height>80</height>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="image">
@@ -68,7 +68,7 @@
               <top>0</top>
               <width>30</width>
               <height>80</height>
-              <texture colordiffuse="LabelFO">img/RadioON.png</texture>
+              <texture colordiffuse="$VAR[LabelFOColor]">img/RadioON.png</texture>
               <aspectratio align="right">keep</aspectratio>
             </control>
           </control>
@@ -94,7 +94,7 @@
             <top>0</top>
             <width>30</width>
             <height>81</height>
-            <texture colordiffuse="LabelNF">img/RadioON.png</texture>
+            <texture colordiffuse="$VAR[LabelNFColor]">img/RadioON.png</texture>
             <aspectratio>keep</aspectratio>
           </control>
         </itemlayout>
@@ -115,7 +115,7 @@
               <left>30</left>
               <right>60</right>
               <height>81</height>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="image">
@@ -124,7 +124,7 @@
               <top>0</top>
               <width>30</width>
               <height>81</height>
-              <texture colordiffuse="LabelFO">img/RadioON.png</texture>
+              <texture colordiffuse="$VAR[LabelFOColor]">img/RadioON.png</texture>
               <aspectratio>keep</aspectratio>
             </control>
           </control>

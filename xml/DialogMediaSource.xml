@@ -12,7 +12,7 @@
         <width>930</width>
         <font>size26B</font>
         <label>-</label>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <align>center</align>
       </control>
       <control type="grouplist" id="9000">

@@ -48,7 +48,7 @@
         <control type="image" description="Rating">
           <top>300</top>
           <height>30</height>
-          <colordiffuse>LabelFO</colordiffuse>
+          <colordiffuse>$VAR[LabelFOColor]</colordiffuse>
           <aspectratio align="left">keep</aspectratio>
           <texture>$INFO[ListItem.StarRating,badges/]</texture>
         </control>
@@ -61,7 +61,7 @@
       <height>27</height>
       <font>size19</font>
       <align>left</align>
-      <textcolor>Label2</textcolor>
+      <textcolor>$VAR[Label2Color]</textcolor>
       <haspath>true</haspath>
       <scroll>true</scroll>
       <label>$INFO[ListItem.FilenameAndPath]</label>
