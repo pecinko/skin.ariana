@@ -36,7 +36,7 @@
             <right>15</right>
             <top>0</top>
             <width>570</width>
-            <font>size22</font>
+            <font>size22B</font>
             <height>60</height>
             <align>right</align>
             <scroll>false</scroll>
@@ -60,7 +60,7 @@
               <right>15</right>
               <top>0</top>
               <width>570</width>
-              <font>size22</font>
+              <font>size22B</font>
               <height>60</height>
               <align>right</align>
               <info>ListItem.Label</info>
@@ -178,7 +178,7 @@
             <left>15</left>
             <top>0</top>
             <width>570</width>
-            <font>size22</font>
+            <font>size22B</font>
             <height>60</height>
             <scroll>false</scroll>
             <info>ListItem.Label</info>

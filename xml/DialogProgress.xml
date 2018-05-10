@@ -21,7 +21,7 @@
         <width>960</width>
         <height>50</height>
         <align>center</align>
-        <font>size20</font>
+        <font>size20B</font>
         <label>111111</label>
       </control>
       <control type="label" id="3" description="Line 2">
@@ -30,7 +30,7 @@
         <width>960</width>
         <height>50</height>
         <align>center</align>
-        <font>size20</font>
+        <font>size20B</font>
         <label>222222</label>
       </control>
       <control type="label" id="4" description="Line 3">
@@ -39,7 +39,7 @@
         <width>960</width>
         <height>50</height>
         <align>center</align>
-        <font>size20</font>
+        <font>size20B</font>
         <label>333333</label>
       </control>
       <control type="label" id="21" description="Progress">

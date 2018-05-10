@@ -35,22 +35,22 @@
         <align>center</align>
         <orientation>horizontal</orientation>
         <control type="button" id="101">
-          <font>size22</font>
+          <font>size22B</font>
           <include>VideoMenuButtons</include>
           <label>[B]$LOCALIZE[31030][/B]</label>
         </control>
         <control type="button" id="102">
-          <font>size22</font>
+          <font>size22B</font>
           <include>VideoMenuButtons</include>
           <label>[B]$LOCALIZE[292][/B]</label>
         </control>
         <control type="button" id="103">
-          <font>size22</font>
+          <font>size22B</font>
           <include>VideoMenuButtons</include>
           <label>[B]$LOCALIZE[287][/B]</label>
         </control>
         <control type="button" id="104">
-          <font>size22</font>
+          <font>size22B</font>
           <include>VideoMenuButtons</include>
           <label>[B]$LOCALIZE[10004][/B]</label>
         </control>

@@ -90,7 +90,7 @@
       <linespacing>1.2</linespacing>
     </font>
     <font>
-      <name>size20</name>
+      <name>size20B</name>
       <filename>Arimo.ttf</filename>
       <size>30</size>
     </font>
@@ -103,7 +103,6 @@
       <name>size22B</name>
       <filename>Arimo.ttf</filename>
       <size>33</size>
-      <style>bold</style>
     </font>
 
     <font>
