@@ -33,7 +33,7 @@
       <control type="label" description="Subtitle">
         <left>180</left>
         <top>132</top>
-        <font>size22B</font>
+        <font>size22</font>
         <width>800</width>
         <textcolor>$VAR[LabelNFColour]</textcolor>
         <label>$INFO[MusicPlayer.Artist,, - ] $INFO[MusicPlayer.Title,, : ] $INFO[MusicPlayer.TimeRemaining]</label>
@@ -41,7 +41,7 @@
       <control type="label" description="Genre">
         <left>180</left>
         <top>200</top>
-        <font>size20B</font>
+        <font>size20</font>
         <width>800</width>
         <textcolor>$VAR[LabelNFColour]</textcolor>
         <label>$LOCALIZE[179] $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength]</label>
@@ -76,7 +76,7 @@
               <right>125</right>
               <top>0</top>
               <height>66</height>
-              <font>size22B</font>
+              <font>size22</font>
               <scroll>false</scroll>
               <textcolor>LabelFO</textcolor>
               <label>$INFO[ListItem.Label]</label>
@@ -140,7 +140,7 @@
                 <right>125</right>
                 <top>0</top>
                 <height>66</height>
-                <font>size22B</font>
+                <font>size22</font>
                 <textcolor>LabelFO</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
