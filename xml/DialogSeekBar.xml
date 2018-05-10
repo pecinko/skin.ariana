@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
   <defaultcontrol always="true">901</defaultcontrol>
-  <visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(videoosdsettings.xml) | Window.IsActive(dialogslider.xml) | Window.IsActive(videoosd.xml)]</visible>
-  <visible>Window.IsVisible(FullScreenVideo) + [System.HasAppleTVSlider | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching]</visible>
+  <visible>[[Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd)] + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + [Player.Showinfo | Window.IsActive(musicosd)]] | !IsEmpty(Player.SeekNumeric) | Window.IsActive(playercontrols)</visible>
+  <visible>!Window.IsActive(sliderdialog) + !Window.IsActive(subtitlesearch)</visible>
   <controls>
     <control type="group">
       <include>OpenClose</include>
