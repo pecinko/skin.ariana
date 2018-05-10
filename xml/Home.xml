@@ -41,51 +41,32 @@
           <visible>IntegerGreaterThan(System.ProfileCount,1)</visible>
           <onclick>dialog.close(all,true)</onclick>
           <onclick>System.LogOff</onclick>
-          <width>144</width>
-          <height>80</height>
           <texturefocus>buttons/ProfilesFO.png</texturefocus>
           <texturenofocus>buttons/ProfilesNF.png</texturenofocus>
           <label>$LOCALIZE[20126]</label>
-          <wrapmultiline>True</wrapmultiline>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
+          <include>SquareButtonCommons</include>
         </control>
         <control type="button" id="2" description="Player Fullscreen">
           <visible>Player.HasMedia</visible>
           <onclick condition="Player.HasMedia">fullscreen</onclick>
-          <width>144</width>
-          <height>80</height>
           <texturefocus>buttons/FullscreenFO.png</texturefocus>
           <texturenofocus>buttons/FullscreenNF.png</texturenofocus>
           <label>$LOCALIZE[16003]</label>
-          <wrapmultiline>True</wrapmultiline>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
+          <include>SquareButtonCommons</include>
         </control>
         <control type="button" id="3" description="favourites">
           <onclick>ActivateWindow(favourites)</onclick>
-          <width>144</width>
-          <height>80</height>
           <texturefocus>buttons/FavFO.png</texturefocus>
           <texturenofocus>buttons/FavNF.png</texturenofocus>
           <label>$LOCALIZE[10134]</label>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
+          <include>SquareButtonCommons</include>
         </control>
         <control type="button" id="4" description="settings">
           <onclick>ActivateWindow(settings)</onclick>
-          <width>144</width>
-          <height>80</height>
           <texturefocus>buttons/SettingsFO.png</texturefocus>
           <texturenofocus>buttons/SettingsNF.png</texturenofocus>
           <label>$LOCALIZE[10004]</label>
-          <wrapmultiline>True</wrapmultiline>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
+          <include>SquareButtonCommons</include>
         </control>
       </control>
       <control type="panel" id="300" description="Main menu">
@@ -163,7 +144,7 @@
               <height>40</height>
               <font>size20B</font>
               <align>center</align>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>LabelNF</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
@@ -183,32 +164,43 @@
             <thumb>focus/HomeFrameTV.png</thumb>
             <property name="art">icons/TV.png</property>
           </item>
+          <!--
           <item id="3">
             <label>$LOCALIZE[3]</label>
             <onclick>ActivateWindow(Video,Files,return)</onclick>
             <thumb>focus/HomeFrameVideos.png</thumb>
             <property name="art">icons/Videos.png</property>
           </item>
+        -->
           <item id="4">
+            <visible>Library.HasServices | Library.HasContent(music)</visible>
             <label>$LOCALIZE[2]</label>
             <onclick>ActivateWindow(Music,root,return)</onclick>
             <thumb>focus/HomeFrameMusic.png</thumb>
             <property name="art">icons/Music.png</property>
           </item>
           <item id="5">
-            <visible>[Library.HasServices | Library.HasContent(musicvideos)]</visible>
+            <visible>Library.HasServices | Library.HasContent(musicvideos)</visible>
             <label>$LOCALIZE[20389]</label>
             <onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
             <thumb>focus/HomeFrameVideos.png</thumb>
             <property name="art">icons/Videos.png</property>
           </item>
           <item id="6">
+            <visible>Library.HasServices | Library.HasContent(pictures)</visible>
             <label>$LOCALIZE[1]</label>
             <onclick>ActivateWindow(Pictures)</onclick>
             <thumb>focus/HomeFramePictures.png</thumb>
             <property name="art">icons/Pictures.png</property>
           </item>
           <item id="7">
+            <visible>!Library.HasContent(movies) + !Library.HasContent(pictures) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos)</visible>
+            <label>$LOCALIZE[20094]</label>
+            <onclick>ActivateWindow(MediaSources,root)</onclick>
+            <thumb>focus/HomeFrameMovies.png</thumb>
+            <property name="art">icons/NAS.png</property>
+          </item>
+          <item id="8">
             <label>$LOCALIZE[24001]</label>
             <onclick>ActivateWindow(Programs,Addons,return)</onclick>
             <thumb>focus/HomeFrameAddons.png</thumb>
@@ -336,10 +328,8 @@
           <width>1860</width>
           <height>410</height>
           <orientation>horizontal</orientation>
-          <onleft>300</onleft>
-          <onup>noop</onup>
-          <ondown>8010</ondown>
-          <onright>8000</onright>
+          <onleft>8002</onleft>
+          <onright>8002</onright>
           <itemlayout width="360" height="410">
             <control type="image">
               <left>26</left>
@@ -354,7 +344,7 @@
               <top>10</top>
               <width>308</width>
               <height>308</height>
-              <texture background="true">$INFO[ListItem.Thumb]</texture>
+              <texture background="true">$INFO[ListItem.Property(Thumb)]</texture>
               <aspectratio aligny="top">scale</aspectratio>
             </control>
           </itemlayout>
@@ -379,7 +369,7 @@
                 <top>10</top>
                 <width>308</width>
                 <height>308</height>
-                <texture background="true">$INFO[ListItem.Thumb]</texture>
+                <texture background="true">$INFO[ListItem.Property(Thumb)]</texture>
                 <aspectratio aligny="top">scale</aspectratio>
               </control>
               <control type="label">

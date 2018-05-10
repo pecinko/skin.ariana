@@ -45,7 +45,7 @@
             <top>0</top>
             <height>80</height>
             <width>28</width>
-            <texture align="left" aligny="center">$VAR[Overlay]</texture>
+            <texture colordiffuse="LabelNF" align="left" aligny="center">$VAR[Overlay]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label" description="Main Label">
@@ -72,7 +72,7 @@
             <top>0</top>
             <height>80</height>
             <width>32</width>
-            <texture align="right">$VAR[Overlay]</texture>
+            <texture colordiffuse="LabelNF" align="right">$VAR[Overlay]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label" description="Label2">
@@ -105,7 +105,7 @@
               <top>0</top>
               <height>80</height>
               <width>28</width>
-              <texture align="left" aligny="center">$VAR[Overlay]</texture>
+              <texture colordiffuse="LabelFO" align="left" aligny="center">$VAR[Overlay]</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label" description="Main Label">

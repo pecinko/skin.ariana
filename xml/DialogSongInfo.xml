@@ -79,49 +79,23 @@
       <align>left</align>
       <orientation>horizontal</orientation>
       <control type="button" id="7" description="rating">
-        <width>144</width>
-        <height>80</height>
         <texturefocus>buttons/StarFO.png</texturefocus>
         <texturenofocus>buttons/StarNF.png</texturenofocus>
         <label>$LOCALIZE[563]</label>
-        <wrapmultiline>True</wrapmultiline>
-        <font>size14</font>
-        <aligny>top</aligny>
-        <textoffsety>80</textoffsety>
+        <include>SquareButtonCommons</include>
       </control>
       <control type="button" id="12" description="albums">
-        <width>144</width>
-        <height>80</height>
         <texturefocus>buttons/AlbumFO.png</texturefocus>
         <texturenofocus>buttons/AlbumNF.png</texturenofocus>
         <label>$LOCALIZE[10523]</label>
-        <wrapmultiline>True</wrapmultiline>
-        <font>size14</font>
-        <aligny>top</aligny>
-        <textoffsety>80</textoffsety>
+        <include>SquareButtonCommons</include>
       </control>
       <control type="button" id="13" description="thumb">
-        <width>144</width>
-        <height>80</height>
         <texturefocus>buttons/ArtworkFO.png</texturefocus>
         <texturenofocus>buttons/ArtworkNF.png</texturenofocus>
         <label>$LOCALIZE[13405]</label>
-        <wrapmultiline>True</wrapmultiline>
-        <font>size14</font>
-        <aligny>top</aligny>
-        <textoffsety>80</textoffsety>
+        <include>SquareButtonCommons</include>
       </control>
-      <!--<control type="button" id="6" description="refresh">
-        <width>144</width>
-        <height>80</height>
-        <texturefocus>buttons/RefreshFO.png</texturefocus>
-        <texturenofocus>buttons/RefreshNF.png</texturenofocus>
-        <label>$LOCALIZE[184]</label>
-        <wrapmultiline>True</wrapmultiline>
-        <font>size14</font>
-        <aligny>top</aligny>
-        <textoffsety>80</textoffsety>
-      </control>-->
     </control>
   </controls>
 </window>

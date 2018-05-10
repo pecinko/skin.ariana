@@ -25,7 +25,7 @@
           <width>1080</width>
           <height>60</height>
           <font>size28</font>
-          <textcolor>Title</textcolor>
+          <textcolor>LabelNF</textcolor>
           <align>center</align>
         </control>
         <control type="group">

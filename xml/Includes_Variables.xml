@@ -8,18 +8,13 @@
     <value condition="Control.HasFocus(8011)">$INFO[Container(8011).ListItem.Art(fanart)]</value>
     <value>img/WhiteDot.png</value>
   </variable>
-  <variable name="Overlay.Color">
-    <value condition="Skin.HasSetting(DarkTheme)">FF2A2C32</value>
-    <value condition="!Skin.HasSetting(DarkTheme)">FFCED5E0</value>
-  </variable>
   <variable name="Background.Overlay" description="backgrounds">
-    <value condition="Skin.HasSetting(DarkTheme)">background/DarkBG.png</value>
-    <value condition="!Skin.HasSetting(DarkTheme)">background/LightBG.png</value>
+    <value condition="!StringCompare(Skin.CurrentColourTheme,light)">background/DarkBG.png</value>
+    <value>background/LightBG.png</value>
   </variable>
   <variable name="Background.Art" description="Art backgrounds">
     <value condition="Window.IsActive(MyPics.xml) + !IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
-    <value condition="Skin.HasSetting(HideFanart)">-</value>
-    <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+    <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(HideFanart)">$INFO[ListItem.Art(fanart)]</value>
     <value>img/WhiteDot.png</value>
   </variable>
   <variable name="Overlay" description="Overlay image">
@@ -34,7 +29,7 @@
   <variable name="GlobalHeadings" description="Global Headings">
     <value condition="Window.IsActive(56) | Window.IsActive(SkinSettings.xml)">$LOCALIZE[20077]</value>
     <value condition="Window.IsActive(Settings.xml)">$LOCALIZE[5]</value>
-    <value condition="Window.IsActive(AddonBrowser.xml) + IsEmpty(Container.FolderName)">$LOCALIZE[31291]</value>
+    <value condition="Window.IsActive(AddonBrowser.xml) + IsEmpty(Container.FolderName)">$LOCALIZE[24001]</value>
     <value condition="Window.IsActive(MyVideoPlaylist.xml)">$LOCALIZE[20012]</value>
     <value condition="Window.IsActive(MyMusicPlaylist.xml)">$LOCALIZE[20011]</value>
     <value condition="Window.IsActive(DialogVideoInfo.xml)">$LOCALIZE[20159]</value>

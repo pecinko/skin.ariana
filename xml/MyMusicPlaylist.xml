@@ -193,44 +193,28 @@
         <align>center</align>
         <orientation>horizontal</orientation>
         <control type="button" id="23" description="Play">
-          <width>144</width>
-          <height>80</height>
           <texturefocus>buttons/PlayFO.png</texturefocus>
           <texturenofocus>buttons/PlayNF.png</texturenofocus>
           <label>208</label>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
+          <include>SquareButtonCommons</include>
         </control>
         <control type="button" id="20" description="Shuffle">
-          <width>144</width>
-          <height>80</height>
           <texturefocus>buttons/ShuffleFO.png</texturefocus>
           <texturenofocus>buttons/ShuffleNF.png</texturenofocus>
           <label>191</label>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
+          <include>SquareButtonCommons</include>
         </control>
         <control type="button" id="26" description="Repeat">
-          <width>144</width>
-          <height>80</height>
           <texturefocus>buttons/RepeatFO.png</texturefocus>
           <texturenofocus>buttons/RepeatNF.png</texturenofocus>
           <label>-</label>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
+          <include>SquareButtonCommons</include>
         </control>
         <control type="button" id="21" description="Save">
-          <width>144</width>
-          <height>80</height>
           <texturefocus>buttons/AddFO.png</texturefocus>
           <texturenofocus>buttons/AddNF.png</texturenofocus>
           <label>190</label>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
+          <include>SquareButtonCommons</include>
         </control>
       </control>
     </control>

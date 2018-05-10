@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.ariana" version="0.0.9" name="Ariana" provider-name="pecinko">
+<addon id="skin.ariana" version="1.0.0" name="Ariana" provider-name="pecinko">
   <requires>
     <import addon="xbmc.gui" version="5.12.0"/>
   </requires>
@@ -7,8 +7,8 @@
     <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Ariana skin for MrMC</summary>
-    <description lang="en_GB">A nice and simple skin. Family friend.</description>
+    <summary lang="en_GB">Ariana - skin for MrMC</summary>
+    <description lang="en_GB">It doesn't suck. TLDR</description>
     <disclaimer lang="en_GB"></disclaimer>
     <platform>all</platform>
     <license></license>
