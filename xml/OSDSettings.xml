@@ -1,74 +1,140 @@
-
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>Dialog.Close(fullscreeninfo)</onload>
-	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">SetFocus(704)</onload>
-	<depth>DepthOSD</depth>
-	<defaultcontrol always="true">704</defaultcontrol>
-	<controls>
-		<control type="button">
-			<description>background close area</description>
-			<left>0</left>
-			<top>0</top>
-			<width>100%</width>
-			<bottom>280</bottom>
-			<texturefocus />
-			<texturenofocus />
-			<onclick>Action(close)</onclick>
-		</control>
-		<control type="group">
-			<top>0</top>
-			<height>240</height>
-			<!-- <visible>Window.IsTopMostModal(videoosd)</visible> -->
-			<animation effect="fade" time="200">VisibleChange</animation>
-			<include>Animation_TopSlide</include>
-			<control type="grouplist" id="202">
-				<right>50</right>
-				<top>65</top>
-				<left>50</left>
-				<height>135</height>
-				<align>center</align>
-				<itemgap>20</itemgap>
-				<scrolltime tween="sine">200</scrolltime>
-				<orientation>horizontal</orientation>
-				<onup>201</onup>
-				<ondown>201</ondown>
-				<onleft>202</onleft>
-				<onright>202</onright>
-				<include>FocusButtonsAnimation</include>
-				<control type="button" id="704">
-					<label>$LOCALIZE[24012]</label>
-					<height>66</height>
-					<width>270</width>
-					<align>center</align>
-					<font>size22</font>
-					<onclick>SetProperty(settingslist_content,subtitle,home)</onclick>
-					<onclick>SetProperty(settingslist_header,$LOCALIZE[24012],home)</onclick>
-					<onclick>ActivateWindow(1101)</onclick>
-					<visible>!VideoPlayer.Content(LiveTV) | VideoPlayer.HasSubtitles</visible>
-				</control>
-				<control type="button" id="255">
-					<label>$LOCALIZE[36501]</label>
-					<height>66</height>
-					<width>270</width>
-					<align>center</align>
-					<font>size22</font>
-					<visible>VideoPlayer.IsStereoscopic</visible>
-					<onclick>SetProperty(settingslist_content,3d,home)</onclick>
-					<onclick>SetProperty(settingslist_header,$LOCALIZE[36501],home)</onclick>
-					<onclick>ActivateWindow(1101)</onclick>
-				</control>
-				<control type="button" id="70043">
-					<label>$LOCALIZE[10004]</label>
-					<height>66</height>
-					<width>270</width>
-					<align>center</align>
-					<font>size22</font>
-					<onclick>SetProperty(settingslist_content,osd,home)</onclick>
-					<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
-					<onclick>ActivateWindow(1101)</onclick>
-				</control>
-			</control>
-		</control>
-	</controls>
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <zorder>2</zorder>
+  <controls>
+    <control type="group">
+      <include>OpenClose</include>
+      <visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(videoosdsettings.xml) | Window.IsActive(dialogslider.xml)]</visible>
+      <include>VisibleFadeEffect</include>
+      <control type="image" description="Background">
+        <animation condition="!ControlGroup(9000).HasFocus(101)" effect="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="inout" reversible="true">Conditional</animation>
+        <left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>390</height>
+        <texture>$VAR[Background.Overlay]</texture>
+      </control>
+      <control type="image" description="Background">
+        <left>0</left>
+        <top>90</top>
+        <width>1920</width>
+        <height>1</height>
+        <texture>img/LineST.png</texture>
+      </control>
+      <control type="grouplist" id="9000">
+        <centerleft>50%</centerleft>
+        <top>0</top>
+        <width>1500</width>
+        <height>90</height>
+        <itemgap>0</itemgap>
+        <onleft>9000</onleft>
+        <onright>9000</onright>
+        <onup>Close</onup>
+        <ondown>87</ondown>
+        <align>center</align>
+        <orientation>horizontal</orientation>
+        <control type="button" id="101">
+          <font>size22</font>
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[31030][/B]</label>
+        </control>
+        <control type="button" id="103">
+          <font>size22</font>
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[287][/B]</label>
+        </control>
+        <control type="button" id="102">
+          <font>size22</font>
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[292][/B]</label>
+        </control>
+        <control type="button" id="104">
+          <font>size22</font>
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[10004][/B]</label>
+        </control>
+      </control>
+      <control type="group" description="101 Info">
+        <visible>ControlGroup(9000).HasFocus(101)</visible>
+        <include>VisibleFadeEffect</include>
+        <include>VideoMenuInfo</include>
+      </control>
+      <control type="grouplist" id="9001" description="Main menu">
+        <visible>!ControlGroup(9000).HasFocus(101)</visible>
+        <include>VisibleFadeEffect</include>
+        <top>100</top>
+        <centerleft>50%</centerleft>
+        <width max="1800">auto</width>
+        <height>80</height>
+        <onup>9000</onup>
+        <onleft>9001</onleft>
+        <onright>9001</onright>
+        <orientation>horizontal</orientation>
+        <align>center</align>
+        <control type="button" id="1041">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>!VideoPlayer.Content(LiveTV)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[33003]</label>
+          <onclick>Close</onclick>
+          <onclick>Dialog.Close()</onclick>
+          <onclick>ActivateWindow(SubtitleSearch)</onclick>
+        </control>
+        <control type="togglebutton" id="1042" description="subs on-off">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>VideoPlayer.HasSubtitles</visible>
+          <include>VideoMenuButtons</include>
+          <label>$VAR[CurrentSubs]</label>
+          <onclick>ShowSubtitles</onclick>
+        </control>
+        <control type="button" id="1043" description="subs toggle">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>VideoPlayer.SubtitlesEnabled</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[31031] : $INFO[VideoPlayer.SubtitlesLanguage]</label>
+          <onclick>CycleSubtitle</onclick>
+        </control>
+        <control type="button" id="1044" description="subs delay">
+          <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>VideoPlayer.HasSubtitles</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[22006]</label>
+          <onclick>SubtitleDelay</onclick>
+        </control>
+        <control type="button" id="1045">
+          <visible>ControlGroup(9000).HasFocus(102)</visible>
+          <visible>ADSP.HasModes</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[15020]</label>
+          <onclick>ActivateWindow(AudioDSPManager)</onclick>
+        </control>
+        <control type="togglebutton" id="1046">
+          <visible>ControlGroup(9000).HasFocus(102)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[31031] : $INFO[VideoPlayer.AudioLanguage]</label>
+          <onclick>AudioNextLanguage</onclick>
+        </control>
+        <control type="button" id="1047">
+          <visible>ControlGroup(9000).HasFocus(104)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[292]</label>
+          <onclick>ActivateWindow(osdaudiosettings)</onclick>
+        </control>
+        <control type="button" id="1048">
+          <visible>ControlGroup(9000).HasFocus(104)</visible>
+          <include>VideoMenuButtons</include>
+          <label>$LOCALIZE[157]</label>
+          <onclick>ActivateWindow(osdvideosettings)</onclick>
+        </control>
+        <control type="button" id="1049">
+          <visible>ControlGroup(9000).HasFocus(104)</visible>
+          <visible>System.HasCMS</visible>
+          <include>VideoMenuButtons</include>
+          <label>CMS</label>
+          <onclick>ActivateWindow(osdcmssettings)</onclick>
+        </control>
+      </control>
+    </control>
+  </controls>
 </window>
