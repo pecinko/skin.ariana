@@ -30,8 +30,9 @@
         <itemgap>0</itemgap>
         <onleft>9000</onleft>
         <onright>9000</onright>
-        <onup>Close</onup>
-        <ondown>87</ondown>
+        <onup>-</onup>
+        <ondown>9001</ondown>
+        <onback>close</onback>
         <align>center</align>
         <orientation>horizontal</orientation>
         <control type="button" id="101">
@@ -90,6 +91,7 @@
         </control>
         <control type="button" id="1043" description="subs toggle">
           <visible>ControlGroup(9000).HasFocus(103)</visible>
+          <visible>VideoPlayer.HasSubtitles</visible>
           <visible>VideoPlayer.SubtitlesEnabled</visible>
           <include>VideoMenuButtons</include>
           <label>$LOCALIZE[31031] : $INFO[VideoPlayer.SubtitlesLanguage]</label>
@@ -98,6 +100,7 @@
         <control type="button" id="1044" description="subs delay">
           <visible>ControlGroup(9000).HasFocus(103)</visible>
           <visible>VideoPlayer.HasSubtitles</visible>
+          <visible>VideoPlayer.SubtitlesEnabled</visible>
           <include>VideoMenuButtons</include>
           <label>$LOCALIZE[22006]</label>
           <onclick>SubtitleDelay</onclick>
