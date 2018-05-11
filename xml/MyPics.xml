@@ -14,7 +14,7 @@
           <width>1920</width>
           <font>size50B</font>
           <label>[B]$VAR[GlobalHeadings][/B]</label>
-          <textcolor>LabelNF</textcolor>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
           <align>left</align>
         </control>
         <control type="panel" id="53" description="Grid">
@@ -78,7 +78,7 @@
                 <width>308</width>
                 <height>30</height>
                 <font>size16</font>
-                <textcolor>LabelNF</textcolor>
+                <textcolor>$VAR[LabelNFColor]</textcolor>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
               </control>
@@ -107,13 +107,13 @@
           <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
         </control>
         <control type="button" id="6" description="Slideshow">
-          <disabledcolor>Disabled</disabledcolor>
+          <disabledcolor>$VAR[DisabledColor]</disabledcolor>
           <include>9000Buttons</include>
           <label>108</label>
           <visible>!ListItem.IsFolder</visible>
         </control>
         <control type="button" id="7" description="Recursive slideshow">
-          <disabledcolor>Disabled</disabledcolor>
+          <disabledcolor>$VAR[DisabledColor]</disabledcolor>
           <include>9000Buttons</include>
           <label>13318</label>
           <visible>ListItem.IsFolder</visible>

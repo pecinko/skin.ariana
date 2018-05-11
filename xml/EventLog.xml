@@ -84,7 +84,7 @@
             <top>0</top>
             <height>50</height>
             <font>size19</font>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
             <label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
           </control>
           <control type="textbox" description="Description">
@@ -94,7 +94,7 @@
             <height>60</height>
             <align>left</align>
             <font>size19</font>
-            <textcolor>Label2</textcolor>
+            <textcolor>$VAR[Label2Color]</textcolor>
             <label>$INFO[ListItem.Property(Event.Description)]</label>
           </control>
         </itemlayout>
@@ -125,7 +125,7 @@
               <height>50</height>
               <autoscroll>true</autoscroll>
               <font>size19</font>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
             </control>
             <control type="textbox" description="Description">
@@ -136,7 +136,7 @@
               <align>left</align>
               <autoscroll>true</autoscroll>
               <font>size19</font>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Color]</textcolor>
               <label>$INFO[ListItem.Property(Event.Description)]</label>
             </control>
           </control>

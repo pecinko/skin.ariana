@@ -12,7 +12,7 @@
         <aligny>top</aligny>
         <width>1920</width>
         <height>75</height>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <font>size28B</font>
         <label>[B]$LOCALIZE[10004][/B]</label>
       </control>
@@ -30,7 +30,7 @@
             <left>0</left>
             <right>0</right>
             <bottom>0</bottom>
-            <texture border="4">img/SettingsButtonNF.png</texture>
+            <texture border="8">img/SettingsButtonNF.png</texture>
             <bordersize>18</bordersize>
           </control>
           <control type="image">
@@ -38,7 +38,7 @@
             <top>20</top>
             <width>240</width>
             <bottom>20</bottom>
-            <texture colordiffuse="LabelNF">$INFO[ListItem.Icon]</texture>
+            <texture colordiffuse="$VAR[LabelNFColor]">$INFO[ListItem.Icon]</texture>
             <bordersize>24</bordersize>
             <align>center</align>
             <aspectratio>keep</aspectratio>
@@ -59,7 +59,7 @@
               <left>0</left>
               <right>0</right>
               <bottom>0</bottom>
-              <texture border="9">img/SettingsButtonFO.png</texture>
+              <texture border="18">img/SettingsButtonFO.png</texture>
               <bordersize>18</bordersize>
             </control>
             <control type="image">
@@ -67,7 +67,7 @@
               <top>20</top>
               <width>240</width>
               <bottom>20</bottom>
-              <texture colordiffuse="LabelFO">$INFO[ListItem.Icon]</texture>
+              <texture colordiffuse="$VAR[LabelFOColor]">$INFO[ListItem.Icon]</texture>
               <bordersize>24</bordersize>
               <align>center</align>
               <aspectratio>keep</aspectratio>
@@ -78,7 +78,7 @@
               <aligny>center</aligny>
               <height>140</height>
               <font>size24B</font>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
@@ -121,8 +121,8 @@
           </item>
           <item>
             <label>$LOCALIZE[24001]</label>
- +          <onclick>ActivateWindow(addonbrowser)</onclick>
- +          <icon>icons/Addons.png</icon>
+            <onclick>ActivateWindow(addonbrowser)</onclick>
+            <icon>icons/Addons.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[2]</label>

@@ -19,7 +19,7 @@
           <label>[B]$INFO[ListItem.Label][/B]</label>
           <align>center</align>
           <aligny>center</aligny>
-          <textcolor>Selected</textcolor>
+          <textcolor>$VAR[SelectedColor]</textcolor>
         </control>
         <control type="button" id="1000" description="Buttons">
           <include>FocusButtonsAnimation</include>

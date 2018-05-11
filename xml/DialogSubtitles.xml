@@ -25,7 +25,7 @@
         <top>120</top>
         <width>1320</width>
         <height>60</height>
-        <textcolor>LabelFO</textcolor>
+        <textcolor>$VAR[LabelFOColor]</textcolor>
         <align>center</align>
         <aligny>center</aligny>
         <wrapmultiline>true</wrapmultiline>
@@ -73,7 +73,7 @@
             <top>0</top>
             <width>135</width>
             <font>size19</font>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
             <scroll>false</scroll>
             <align>left</align>
             <info>ListItem.Label</info>
@@ -101,7 +101,7 @@
             <top>0</top>
             <width>900</width>
             <font>size19</font>
-            <textcolor>Label2</textcolor>
+            <textcolor>$VAR[Label2Color]</textcolor>
             <scroll>false</scroll>
             <align>left</align>
             <info>ListItem.Label2</info>
@@ -143,7 +143,7 @@
               <height>54</height>
               <font>size19</font>
               <aligny>center</aligny>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <align>left</align>
               <info>ListItem.Label</info>
             </control>
@@ -172,7 +172,7 @@
               <height>60</height>
               <font>size18</font>
               <aligny>center</aligny>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Color]</textcolor>
               <align>left</align>
               <info>ListItem.Label2</info>
             </control>
@@ -192,7 +192,7 @@
         <left>475</left>
         <width>1368</width>
         <height>60</height>
-        <textcolor>Label2</textcolor>
+        <textcolor>$VAR[Label2Color]</textcolor>
         <font>size24</font>
         <label>$LOCALIZE[31287]</label>
         <align>center</align>
@@ -207,7 +207,7 @@
         <label>[B]$LOCALIZE[24018][/B]</label>
         <align>center</align>
         <font>size24</font>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
       </control>
       <control type="list" id="150" description="list of services">
         <left>25</left>
@@ -247,7 +247,7 @@
               <left>5</left>
               <width>365</width>
               <align>center</align>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <info>ListItem.Label</info>
             </control>
             <control type="label">
@@ -256,7 +256,7 @@
               <left>5</left>
               <width>365</width>
               <align>center</align>
-              <textcolor>Selected</textcolor>
+              <textcolor>$VAR[SelectedColor]</textcolor>
               <info>ListItem.Label</info>
             </control>
           </control>

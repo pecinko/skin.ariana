@@ -18,7 +18,7 @@
         <top>80</top>
         <font>size28B</font>
         <width>800</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <label>$LOCALIZE[589]</label>
       </control>
       <control type="label" description="Title">
@@ -27,7 +27,7 @@
         <top>80</top>
         <font>size28B</font>
         <width>800</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <label>$LOCALIZE[13350]</label>
       </control>
       <control type="label" description="Subtitle">
@@ -35,7 +35,7 @@
         <top>132</top>
         <font>size22</font>
         <width>800</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <label>$INFO[MusicPlayer.Artist,, - ] $INFO[MusicPlayer.Title,, : ] $INFO[MusicPlayer.TimeRemaining]</label>
       </control>
       <control type="label" description="Genre">
@@ -43,7 +43,7 @@
         <top>200</top>
         <font>size20</font>
         <width>800</width>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <label>$LOCALIZE[179] $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength]</label>
       </control>
       <control type="group" description="Infolist">
@@ -78,7 +78,7 @@
               <height>66</height>
               <font>size22</font>
               <scroll>false</scroll>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Album">
@@ -88,7 +88,7 @@
               <height>66</height>
               <font>size16</font>
               <scroll>false</scroll>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Color]</textcolor>
               <label>$INFO[ListItem.Album]</label>
             </control>
             <control type="label" description="Duration">
@@ -99,7 +99,7 @@
               <width>330</width>
               <font>size16</font>
               <align>right</align>
-              <textcolor>Label2</textcolor>
+              <textcolor>$VAR[Label2Color]</textcolor>
               <label>$INFO[ListItem.Duration]</label>
             </control>
             <control type="image" description="playing">
@@ -109,7 +109,7 @@
               <height>106</height>
               <width>36</width>
               <aspectratio>keep</aspectratio>
-              <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
+              <texture colordiffuse="$VAR[SelectedColor]">img/NowPlayingFO.png</texture>
             </control>
           </itemlayout>
           <focusedlayout width="920" height="106">
@@ -141,7 +141,7 @@
                 <top>0</top>
                 <height>66</height>
                 <font>size22</font>
-                <textcolor>LabelFO</textcolor>
+                <textcolor>$VAR[LabelFOColor]</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
               <control type="label" description="Album">
@@ -150,7 +150,7 @@
                 <bottom>0</bottom>
                 <height>66</height>
                 <font>size16</font>
-                <textcolor>Label2</textcolor>
+                <textcolor>$VAR[Label2Color]</textcolor>
                 <label>$INFO[ListItem.Album]</label>
               </control>
               <control type="label" description="Duration">
@@ -161,7 +161,7 @@
                 <width>330</width>
                 <font>size16</font>
                 <align>right</align>
-                <textcolor>Label2</textcolor>
+                <textcolor>$VAR[Label2Color]</textcolor>
                 <label>$INFO[ListItem.Duration]</label>
               </control>
               <control type="image" description="playing">
@@ -171,7 +171,7 @@
                 <height>106</height>
                 <width>36</width>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="Selected">img/NowPlayingFO.png</texture>
+                <texture colordiffuse="$VAR[SelectedColor]">img/NowPlayingFO.png</texture>
               </control>
             </control>
           </focusedlayout>

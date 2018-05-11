@@ -104,7 +104,7 @@
     <texturenofocus/>
     <alttexturefocus/>
     <alttexturenofocus/>
-    <textcolor>Label2</textcolor>
+    <textcolor>$VAR[Label2Color]</textcolor>
     <focusedcolor>LabelNF</focusedcolor>
   </include>
   <include name="9000Buttons">
@@ -280,7 +280,7 @@
     <height>75</height>
     <align>center</align>
     <aligny>bottom</aligny>
-    <textcolor>Selected</textcolor>
+    <textcolor>$VAR[SelectedColor]</textcolor>
     <font>size28</font>
   </include>
   <include name="Dimensions_Fullscreen">
@@ -299,7 +299,7 @@
         <aligny>center</aligny>
         <width>1920</width>
         <height>75</height>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <font>size28</font>
         <label>$VAR[GlobalHeadings]</label>
       </control>
@@ -317,7 +317,7 @@
     <width>1920</width>
     <align>center</align>
     <font>size24B</font>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColor]</textcolor>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
   <include name="FocusButtonsAnimation">
@@ -332,7 +332,7 @@
     <scroll>false</scroll>
     <align>left</align>
     <font>size24B</font>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColor]</textcolor>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
   <include name="FullscreenInfoLabel2">
@@ -341,7 +341,7 @@
     <width>1200</width>
     <scroll>false</scroll>
     <align>left</align>
-    <textcolor>LabelNF</textcolor>
+    <textcolor>$VAR[LabelNFColor]</textcolor>
     <font>plot</font>
     <animation effect="fade" time="200">VisibleChange</animation>
   </include>
@@ -415,7 +415,7 @@
         <font style="uppercase">size16U</font>
         <align>right</align>
         <aligny>center</aligny>
-        <selectedcolor>Selected</selectedcolor>
+        <selectedcolor>$VAR[SelectedColor]</selectedcolor>
         <label>$INFO[ListItem.Label]</label>
       </control>
       <control type="label">
@@ -442,7 +442,7 @@
     <height>24</height>
     <width>1860</width>
     <font>size22</font>
-    <textcolor>Label2</textcolor>
+    <textcolor>$VAR[Label2Color]</textcolor>
     <align>left</align>
   </include>
   <include name="PostersShelfNF">
@@ -501,7 +501,7 @@
       <width>42</width>
       <font>size14</font>
       <align>center</align>
-      <textcolor>LabelFO</textcolor>
+      <textcolor>$VAR[LabelFOColor]</textcolor>
       <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
     </control>
     <control type="label" description="Label2">
@@ -511,7 +511,7 @@
       <width>290</width>
       <height>45</height>
       <font>size19</font>
-      <textcolor>LabelNF</textcolor>
+      <textcolor>$VAR[LabelNFColor]</textcolor>
       <align>center</align>
       <label>$INFO[ListItem.Season,S,-]$INFO[ListItem.Episode,E]</label>
     </control>
@@ -557,7 +557,7 @@
         <width>290</width>
         <height>45</height>
         <font>size19</font>
-        <textcolor>LabelNF</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
         <align>center</align>
         <label>$INFO[ListItem.Label]</label>
       </control>
@@ -590,7 +590,7 @@
         <width>42</width>
         <font>size14</font>
         <align>center</align>
-        <textcolor>LabelFO</textcolor>
+        <textcolor>$VAR[LabelFOColor]</textcolor>
         <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
       </control>
     </control>

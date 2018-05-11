@@ -227,7 +227,7 @@
           <label>[B]$LOCALIZE[14018][/B]</label>
           <align>center</align>
           <font>size24B</font>
-  				<textcolor>LabelFO</textcolor>
+  				<textcolor>$VAR[LabelFOColor]</textcolor>
         </control>
         <control type="button" id="555">
           <description>Playlist</description>
