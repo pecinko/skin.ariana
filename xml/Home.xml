@@ -194,13 +194,14 @@
             <property name="art">icons/Pictures.png</property>
           </item>
           <item id="7">
-            <visible>!Library.HasContent(movies) + !Library.HasContent(pictures) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos)</visible>
-            <label>$LOCALIZE[20094]</label>
+            <visible>!Library.HasContent(movies) + !Library.HasContent(pictures) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos) + Library.HasContent(files)</visible>
+            <label>$LOCALIZE[744]</label>
             <onclick>ActivateWindow(MediaSources,root)</onclick>
             <thumb>focus/HomeFrameMovies.png</thumb>
             <property name="art">icons/NAS.png</property>
           </item>
           <item id="8">
+            <visible>System.HasExtensions</visible>
             <label>$LOCALIZE[24001]</label>
             <onclick>ActivateWindow(Programs,Addons,return)</onclick>
             <thumb>focus/HomeFrameAddons.png</thumb>
