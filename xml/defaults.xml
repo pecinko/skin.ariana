@@ -179,7 +179,6 @@
     <textureslidernib>HUD/SliderNib.png</textureslidernib>
     <textureslidernibfocus colordiffuse="$VAR[SelectedColor]">HUD/SliderNib.png</textureslidernibfocus>
     <pulseonselect>false</pulseonselect>
-    <include>FocusButtonsAnimation</include>
   </default>
   <default type="sliderex" description="Default Slider">
     <height>60</height>
@@ -203,10 +202,10 @@
   </default>
   <default type="progress">
     <reveal>false</reveal>
-    <texturebg border="36,0,36,0">OSD/ProgressBackground.png</texturebg>
-    <lefttexture></lefttexture>
-    <midtexture colordiffuse="$VAR[Diffuse2Color]" border="36,0,36,0">OSD/ProgressBackground.png</midtexture>
-    <righttexture></righttexture>
+    <texturebg border="8,0,8,0">OSD/ProgressBackground.png</texturebg>
+    <lefttexture border="1">-</lefttexture>
+    <midtexture border="1">-</midtexture>
+    <righttexture border="1">-</righttexture>
     <overlaytexture>-</overlaytexture>
   </default>
 </includes>

@@ -29,6 +29,7 @@
         <ondown>noop</ondown>
         <onleft>11</onleft>
         <onright>11</onright>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="label" id="12" description="Slider value">
         <centerleft>960</centerleft>

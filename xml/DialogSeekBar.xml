@@ -9,7 +9,7 @@
       <top>88%</top>
       <control type="label">
         <left>60</left>
-        <top>-36</top>
+        <top>-54</top>
         <height>30</height>
         <width>180</width>
         <align>left</align>
@@ -19,7 +19,7 @@
       </control>
       <control type="label">
         <right>60</right>
-        <top>-36</top>
+        <top>-54</top>
         <height>30</height>
         <width>180</width>
         <align>right</align>
@@ -30,12 +30,25 @@
       <control type="progress" id="23">
         <centerleft>50%</centerleft>
         <width>1800</width>
-        <height>36</height>
+        <height>20</height>
         <info>Player.Progress</info>
+      </control>
+      <control type="slider" description="Slider">
+        <centerleft>50%</centerleft>
+        <width>1800</width>
+        <height>20</height>
+        <onup>9000</onup>
+        <ondown>-</ondown>
+        <onleft>87</onleft>
+        <onright>87</onright>
+        <texturesliderbar border="8,0,8,0">OSD/ProgressBackground.png</texturesliderbar>
+        <textureslidernib>OSD/ProgressNib.png</textureslidernib>
+        <textureslidernibfocus colordiffuse="$VAR[SelectedColor]">OSD/ProgressNib.png</textureslidernibfocus>
+        <action>seek</action>
       </control>
       <control type="label">
         <left>60</left>
-        <top>50</top>
+        <top>42</top>
         <height>30</height>
         <width>180</width>
         <align>left</align>
@@ -45,7 +58,7 @@
       </control>
       <control type="image" description="Buffer icon">
         <visible>Player.Caching</visible>
-        <top>50</top>
+        <top>42</top>
         <centerleft>50%</centerleft>
         <include>SeekbarIconsCommons</include>
         <texture border="2">busy/Busy.png</texture>

@@ -31,7 +31,7 @@
         <onleft>9000</onleft>
         <onright>9000</onright>
         <onup>Close</onup>
-        <ondown>9001</ondown>
+        <ondown>87</ondown>
         <align>center</align>
         <orientation>horizontal</orientation>
         <control type="button" id="101">
@@ -135,25 +135,24 @@
           <onclick>ActivateWindow(osdcmssettings)</onclick>
         </control>
       </control>
-      <!--
-      <control type="group" description="Slider">
-        <visible>![Window.IsActive(123) | Window.IsActive(124)]</visible>
-        <include>VisibleFadeEffect</include>
-        <control type="group">
-          <control type="slider" id="87" description="Slider">
-            <centerleft>50%</centerleft>
-            <top>90%</top>
-            <width>1800</width>
-            <height>24</height>
-            <onup>9000</onup>
-            <ondown>9000</ondown>
-            <onleft>87</onleft>
-            <onright>87</onright>
-            <action>seek</action>
-          </control>
-        </control>
-      </control>
-    -->
     </control>
+    <!--<control type="group" description="Slider">
+      <top>88%</top>
+      <visible>![Window.IsActive(123) | Window.IsActive(124)]</visible>
+      <include>VisibleFadeEffect</include>
+      <control type="slider" description="Slider" id="87">
+        <centerleft>50%</centerleft>
+        <width>1800</width>
+        <height>20</height>
+        <onup>9000</onup>
+        <ondown>-</ondown>
+        <onleft>87</onleft>
+        <onright>87</onright>
+        <texturesliderbar border="8,0,8,0">OSD/ProgressBackground.png</texturesliderbar>
+        <textureslidernib>OSD/ProgressNib.png</textureslidernib>
+        <textureslidernibfocus colordiffuse="$VAR[SelectedColor]">OSD/ProgressNib.png</textureslidernibfocus>
+        <action>seek</action>
+      </control>
+    </control>-->
   </controls>
 </window>
