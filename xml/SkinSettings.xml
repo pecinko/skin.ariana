@@ -78,6 +78,18 @@
           </control>
         </focusedlayout>
         <content>
+          <item id="5" description="Theme force dark">
+            <visible>!Skin.HasSetting(DarkInterface)</visible>
+            <label>$LOCALIZE[480]</label>
+            <label2>$LOCALIZE[14061]</label2>
+            <onclick>Skin.SetBool(DarkInterface)</onclick>
+          </item>
+          <item id="6" description="Theme reset fallback light">
+            <visible>Skin.HasSetting(DarkInterface)</visible>
+            <label>$LOCALIZE[480]</label>
+            <label2>$LOCALIZE[31024]</label2>
+            <onclick>Skin.Reset(DarkInterface)</onclick>
+          </item>
           <item id="1" description="List">
             <visible>Skin.HasSetting(FanartInList)</visible>
             <label>$LOCALIZE[31032]</label>
@@ -102,11 +114,7 @@
             <label2>$LOCALIZE[106]</label2>
             <onclick>Skin.ToggleSetting(ShowScrollLetter)</onclick>
           </item>
-          <!--<item id="5" description="Theme">
-          <label>$LOCALIZE[21895]</label>
-          <label2>$INFO[Skin.CurrentTheme]</label2>
-          <onclick>Skin.Theme(1)</onclick>
-        </item>-->
+
         <item id="7" description="InfoPoster">
           <visible>Skin.HasSetting(InfoPosterHide)</visible>
           <label>$LOCALIZE[31035]</label>
