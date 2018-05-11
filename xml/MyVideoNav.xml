@@ -310,8 +310,21 @@
           <textcolor>$VAR[LabelNFColor]</textcolor>
           <align>center</align>
         </control>
+        <control type="image" description="Thumb">
+          <visible>ListItem.IsCollection</visible>
+          <centerleft>480</centerleft>
+          <centertop>580</centertop>
+          <width>600</width>
+          <height>760</height>
+          <include>Icon_Fade</include>
+          <texture background="true">$INFO[ListItem.Thumb]</texture>
+          <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+          <bordersize>9</bordersize>
+          <aspectratio>keep</aspectratio>
+        </control>
         <control type="group" description="Media info">
           <visible>container.content(movies) | container.content(tvshows) | container.content(seasons) | container.content(episodes)</visible>
+          <visible>!ListItem.IsCollection</visible>
           <left>100</left>
           <top>-75</top>
           <control type="image" description="Thumb">
@@ -371,6 +384,7 @@
             </control>
           </control>
         </control>
+
         <control type="list" id="52">
           <visible>container.content(Movies) | container.content(TVshows) | container.content(seasons) | container.content(episodes) | container.content(musicvideos) | container.content(files)</visible>
           <right>66</right>
