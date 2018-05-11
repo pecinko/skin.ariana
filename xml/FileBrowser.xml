@@ -70,7 +70,7 @@
             <width>40</width>
             <align>right</align>
             <aspectratio>keep</aspectratio>
-            <texture colordiffuse="LabelNF">img/Arrow.png</texture>
+            <texture colordiffuse="$VAR[LabelNFColor]">img/Arrow.png</texture>
           </control>
           <control type="label" description="Label2">
             <right>20</right>
@@ -102,7 +102,7 @@
               <top>0</top>
               <height>80</height>
               <font>size20</font>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="image" description="arrow">
@@ -113,7 +113,7 @@
               <width>40</width>
               <aspectratio>keep</aspectratio>
               <align>right</align>
-              <texture colordiffuse="LabelFO">img/Arrow.png</texture>
+              <texture colordiffuse="$VAR[LabelFOColor]">img/Arrow.png</texture>
             </control>
             <control type="label" description="Label2">
               <right>20</right>
@@ -122,7 +122,7 @@
               <width>124</width>
               <font>size16</font>
               <align>right</align>
-              <textcolor>LabelFO</textcolor>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label2]</label>
             </control>
           </control>

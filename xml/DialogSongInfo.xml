@@ -61,7 +61,7 @@
       <height>27</height>
       <font>size19</font>
       <align>left</align>
-      <textcolor>Label2</textcolor>
+      <textcolor>$VAR[Label2Color]</textcolor>
       <haspath>true</haspath>
       <scroll>true</scroll>
       <label>$INFO[ListItem.FilenameAndPath]</label>

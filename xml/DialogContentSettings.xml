@@ -63,7 +63,7 @@
             <width>750</width>
             <height>69</height>
             <font>size20</font>
-            <textcolor>LabelFO</textcolor>
+            <textcolor>$VAR[LabelFOColor]</textcolor>
             <info>ListItem.Label</info>
           </control>
         </control>

@@ -212,7 +212,7 @@
           <height>60</height>
           <width>150</width>
           <aspectratio aligny="center" align="right">keep</aspectratio>
-          <texture colordiffuse="Overlay">$INFO[ListItem.Rating,badges/,.png]</texture>
+          <texture colordiffuse="$VAR[OverlayColor]">$INFO[ListItem.Rating,badges/,.png]</texture>
         </control>
         <control type="group" description="top">
           <left>390</left>
@@ -231,7 +231,7 @@
             <width>750</width>
             <height>45</height>
             <font>size19</font>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
             <align>left</align>
             <label>$VAR[500TopLabel]$INFO[ListItem.MPAA, • ]</label>
           </control>
@@ -240,7 +240,7 @@
             <width>750</width>
             <height>45</height>
             <font>size16</font>
-            <textcolor>LabelNF</textcolor>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
             <align>left</align>
             <label>[UPPERCASE]$INFO[ListItem.VideoCodec]$INFO[ListItem.VideoResolution, / ]$INFO[ListItem.AudioCodec, • ]$INFO[ListItem.AudioChannels, / ][/UPPERCASE]</label>
           </control>
@@ -353,7 +353,7 @@
                 <height>66</height>
                 <font>size19</font>
                 <align>center</align>
-                <textcolor>Label2</textcolor>
+                <textcolor>$VAR[Label2Color]</textcolor>
                 <label>$INFO[ListItem.Label]</label>
               </control>
             </control>
