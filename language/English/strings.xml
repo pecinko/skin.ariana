@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
   <string id="31000">Many thanks to Icons8 for providing great icons that are used in this project. They offer more than 69.000 free and paid icons for all platforms.[CR][CR]Go check them out[CR][CR][B]https://icons8.com[/B]</string>
+  <string id="31024">Dark</string>
   <string id="31025">Items</string>
   <string id="31026">Continue watching</string>
   <string id="31027">User</string>
@@ -8,7 +9,7 @@
   <string id="31029">Download subtitles</string>
   <string id="31030">Info</string>
   <string id="31031">TRACK</string>
-  <string id="31032">Use fanart in list view</string>
+  <string id="31032">Fanart thumbs in list view</string>
   <string id="31033">LiveTV</string>
   <string id="31034">Show sort letter while scrolling</string>
   <string id="31035">Show movie poster in info screen</string>
