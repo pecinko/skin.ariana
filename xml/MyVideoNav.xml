@@ -164,7 +164,6 @@
           </control>
           <control type="panel" id="53" description="Grid">
             <visible>[Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)]</visible>
-            <visible>!SubString(ListItem.Path,videodb://movies/sets/)</visible>
             <viewtype label="536">Thumbnails</viewtype>
             <left>60</left>
             <top>150</top>
@@ -313,7 +312,6 @@
         </control>
         <control type="group" description="Media info">
           <visible>container.content(movies) | container.content(tvshows) | container.content(seasons) | container.content(episodes)</visible>
-          <visible>!SubString(ListItem.Path,videodb://movies/sets/)</visible>
           <left>100</left>
           <top>-75</top>
           <control type="image" description="Thumb">
