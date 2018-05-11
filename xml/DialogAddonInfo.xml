@@ -6,10 +6,8 @@
   </coordinates>
   <controls>
     <include>FullBackground</include>
-		
     <control type="group" description="Content">
       <include>OpenClose</include>
-      
       <control type="group">
         <control type="group" description="Thumbs">
           <left>0</left>
@@ -94,53 +92,53 @@
         <top>993</top>
         <width>1920</width>
         <height>88</height>
-        <itemgap>0</itemgap>
+        <itemgap>10</itemgap>
         <aligny>bottom</aligny>
         <align>center</align>
         <orientation>horizontal</orientation>
-        <control type="button" id="6" description="Install">
-          <height>66</height>
-          <width>270</width>
-          <align>center</align>
-          <font>size22</font>
-          <label>24038</label>
-        </control>
-        <control type="button" id="7" description="Disable">
-          <height>66</height>
-          <width>270</width>
-          <align>center</align>
-          <font>size22</font>
-          <label>24021</label>
-        </control>
-        <control type="button" id="8" description="update">
-          <height>66</height>
-          <width>270</width>
-          <align>center</align>
-          <font>size22</font>
-          <label>24069</label>
-        </control>
-        <control type="button" id="9" description="settings">
-          <height>66</height>
-          <width>270</width>
-          <align>center</align>
-          <font>size22</font>
-          <label>5</label>
-        </control>
-        <control type="button" id="10" description="changelog">
-          <height>66</height>
-          <width>270</width>
-          <align>center</align>
-          <font>size22</font>
-          <label>24054</label>
-        </control>
-        <control type="button" id="11" description="rollback">
-          <height>66</height>
-          <width>270</width>
-          <align>center</align>
-          <font>size22</font>
-          <label>$LOCALIZE[24048]</label>
-        </control>
+        <!--<control type="button" id="6" description="Install">
+        <height>66</height>
+        <width>270</width>
+        <align>center</align>
+        <font>size22</font>
+        <label>24038</label>
+      </control>-->
+      <control type="button" id="7" description="Disable">
+        <height>66</height>
+        <width>270</width>
+        <align>center</align>
+        <font>size22</font>
+        <label>24021</label>
       </control>
+      <control type="button" id="9" description="settings">
+        <height>66</height>
+        <width>270</width>
+        <align>center</align>
+        <font>size22</font>
+        <label>5</label>
+      </control>
+      <!--<control type="button" id="10" description="changelog">
+      <height>66</height>
+      <width>270</width>
+      <align>center</align>
+      <font>size22</font>
+      <label>24054</label>
     </control>
-  </controls>
+    <control type="button" id="8" description="update">
+      <height>66</height>
+      <width>270</width>
+      <align>center</align>
+      <font>size22</font>
+      <label>24069</label>
+    </control>
+    <control type="button" id="11" description="rollback">
+      <height>66</height>
+      <width>270</width>
+      <align>center</align>
+      <font>size22</font>
+      <label>$LOCALIZE[24048]</label>
+    </control>      -->
+  </control>
+</control>
+</controls>
 </window>
