@@ -50,13 +50,13 @@
     <value condition="Container.Content(Addons)">$INFO[ListItem.Property(Addon.Creator),  ]</value>
     <value condition="Container.Content(songs)">$INFO[ListItem.Album]</value>
     <value condition="Container.Content(MusicVideos)">$INFO[ListItem.Label]</value>
-    <value condition="Container.Content(Movies)">$INFO[ListItem.Year]$INFO[ListItem.Rating, • ]$INFO[ListItem.MPAA, • ]$INFO[ListItem.Genre, • ]</value>
-    <value condition="Container.Content(Seasons) | Container.Content(TVShows)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]$INFO[ListItem.MPAA, • ]</value>
+    <value condition="Container.Content(Movies)">$INFO[ListItem.Year]$INFO[ListItem.Rating, • ][UPPERCASE]$INFO[ListItem.MPAA, • ][/UPPERCASE]$INFO[ListItem.Genre, • ]</value>
+    <value condition="Container.Content(Seasons) | Container.Content(TVShows)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]][UPPERCASE]$INFO[ListItem.MPAA, • ][/UPPERCASE]</value>
     <value>$INFO[ListItem.Label2]</value>
   </variable>
   <variable name="CodecList-Genre" description="Shown with Plots and descriptions">
-    <value condition="Container.Content(Episodes) | Container.Content(Movies) | Container.Content(musicvideos)">$LOCALIZE[544]: [UPPERCASE]$INFO[ListItem.VideoCodec]$INFO[ListItem.VideoResolution, / ]$INFO[ListItem.AudioCodec, • ]$INFO[ListItem.AudioChannels, / ][/UPPERCASE]</value>
-    <value condition="Container.Content(songs)">$LOCALIZE[544]: [UPPERCASE]$INFO[ListItem.AudioCodec, • ]$INFO[ListItem.AudioChannels, • ][/UPPERCASE]</value>
+    <value condition="[Container.Content(Episodes) | Container.Content(Movies) | Container.Content(musicvideos)] + !IsEmpty(ListItem.VideoCodec)">[UPPERCASE]$INFO[ListItem.VideoCodec]$INFO[ListItem.VideoResolution, / ]$INFO[ListItem.AudioCodec, • ]$INFO[ListItem.AudioChannels, / ][/UPPERCASE]</value>
+    <value condition="Container.Content(songs) + !IsEmpty(ListItem.AudioCodec)">[UPPERCASE]$INFO[ListItem.AudioCodec, • ]$INFO[ListItem.AudioChannels, • ][/UPPERCASE]</value>
     <value>$INFO[ListItem.Genre]</value>
   </variable>
   <variable name="500TopLabel" description="Shown Above Plots and descriptions">
