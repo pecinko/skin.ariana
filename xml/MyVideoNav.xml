@@ -8,7 +8,7 @@
       <animation effect="fade" delay="100" time="300">Visible</animation>
       <animation effect="fade" time="0">Hidden</animation>
       <include>View_50</include>
-      <control type="group" description="51 episodes">
+      <control type="group" description="51 episodes ">
         <visible>Control.IsVisible(51)</visible>
         <include>ContainerVisibleFade</include>
         <control type="label" description="Main Label">
@@ -312,6 +312,7 @@
         </control>
         <control type="image" description="Thumb">
           <visible>ListItem.IsCollection</visible>
+          <include>VisibleFadeEffect</include>
           <centerleft>480</centerleft>
           <centertop>580</centertop>
           <width>600</width>
@@ -325,6 +326,7 @@
         <control type="group" description="Media info">
           <visible>container.content(movies) | container.content(tvshows) | container.content(seasons) | container.content(episodes)</visible>
           <visible>!ListItem.IsCollection</visible>
+          <include>VisibleFadeEffect</include>
           <left>100</left>
           <top>-75</top>
           <control type="image" description="Thumb">
@@ -384,7 +386,6 @@
             </control>
           </control>
         </control>
-
         <control type="list" id="52">
           <visible>container.content(Movies) | container.content(TVshows) | container.content(seasons) | container.content(episodes) | container.content(musicvideos) | container.content(files)</visible>
           <right>66</right>
@@ -440,6 +441,16 @@
               <textcolor>$VAR[Label2Color]</textcolor>
               <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
             </control>
+            <control type="image" description="arrow">
+              <visible>ListItem.IsCollection</visible>
+              <right>20</right>
+              <top>0</top>
+              <height>80</height>
+              <width>40</width>
+              <align>right</align>
+              <aspectratio>keep</aspectratio>
+              <texture colordiffuse="$VAR[Label2Color]">img/Arrow.png</texture>
+            </control>
           </itemlayout>
           <focusedlayout width="800" height="84">
             <control type="group">
@@ -491,6 +502,16 @@
                 <font>size19</font>
                 <textcolor>$VAR[Label2Color]</textcolor>
                 <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+              </control>
+              <control type="image" description="arrow">
+                <visible>ListItem.IsCollection</visible>
+                <right>30</right>
+                <top>0</top>
+                <height>80</height>
+                <width>40</width>
+                <aspectratio>keep</aspectratio>
+                <align>right</align>
+                <texture colordiffuse="$VAR[LabelFOColor]">img/Arrow.png</texture>
               </control>
             </control>
           </focusedlayout>
