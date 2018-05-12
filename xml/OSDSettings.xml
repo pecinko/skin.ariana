@@ -30,9 +30,8 @@
         <itemgap>0</itemgap>
         <onleft>9000</onleft>
         <onright>9000</onright>
-        <onup>-</onup>
+        <onup>Close</onup>
         <ondown>9001</ondown>
-        <onback>close</onback>
         <align>center</align>
         <orientation>horizontal</orientation>
         <control type="button" id="101">
