@@ -212,7 +212,7 @@
           <height>60</height>
           <width>150</width>
           <aspectratio aligny="center" align="right">keep</aspectratio>
-          <texture colordiffuse="$VAR[OverlayColor]">$INFO[ListItem.Rating,badges/,.png]</texture>
+          <texture colordiffuse="$VAR[LabelNFColor]">$INFO[ListItem.Rating,badges/,.png]</texture>
         </control>
         <control type="group" description="top">
           <left>390</left>
@@ -287,6 +287,7 @@
           <control type="button" id="6" description="refresh">
             <texturefocus>buttons/RefreshFO.png</texturefocus>
             <texturenofocus>buttons/RefreshNF.png</texturenofocus>
+            <label>184</label>
             <include>SquareButtonCommons</include>
           </control>
           <control type="button" id="10" description="art">

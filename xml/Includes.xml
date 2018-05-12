@@ -29,12 +29,14 @@
   <include name="SquareButtonCommons">
     <width>144</width>
     <height>80</height>
-    <focusedcolor>LabelNF</focusedcolor>
-    <altfocusedcolor>LabelNF</altfocusedcolor>
+    <focusedcolor>$VAR[LabelNFColor]</focusedcolor>
+    <altfocusedcolor>$VAR[LabelNFColor]</altfocusedcolor>
     <wrapmultiline>True</wrapmultiline>
     <font>size14</font>
     <aligny>top</aligny>
     <textoffsety>80</textoffsety>
+    <textoffsetx>0</textoffsetx>
+    <align>center</align>
   </include>
   <include name="VideoMenuInfo">
     <control type="group" description="Info group">
@@ -105,7 +107,7 @@
     <alttexturefocus/>
     <alttexturenofocus/>
     <textcolor>$VAR[Label2Color]</textcolor>
-    <focusedcolor>LabelNF</focusedcolor>
+    <focusedcolor>$VAR[LabelNFColor]</focusedcolor>
   </include>
   <include name="9000Buttons">
     <include>FocusButtonsAnimation</include>
