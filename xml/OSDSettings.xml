@@ -32,6 +32,7 @@
         <onright>9000</onright>
         <onup>Close</onup>
         <ondown>9001</ondown>
+        <onback>Close</onback>
         <align>center</align>
         <orientation>horizontal</orientation>
         <control type="button" id="101">
