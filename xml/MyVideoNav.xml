@@ -8,7 +8,7 @@
       <animation effect="fade" delay="100" time="300">Visible</animation>
       <animation effect="fade" time="0">Hidden</animation>
       <include>View_50</include>
-      <control type="group" description="51 episodes ">
+      <control type="group" description="51 episodes GridWide">
         <visible>Control.IsVisible(51)</visible>
         <include>ContainerVisibleFade</include>
         <control type="label" description="Main Label">
@@ -297,7 +297,7 @@
           </control>
         </control>
       </control>
-      <control type="group" description="List 52 with Info">
+      <control type="group" description="List 52 Infolist">
         <visible>Control.IsVisible(52)</visible>
         <include>ContainerVisibleFade</include>
         <control type="label" description="MainHeading">

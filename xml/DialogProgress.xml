@@ -13,7 +13,7 @@
         <width>100%</width>
         <font>size28B</font>
         <align>center</align>
-        <textcolor>$VAR[SelectedColor]</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
       </control>
       <control type="label" id="2" description="Line 1">
         <top>340</top>
