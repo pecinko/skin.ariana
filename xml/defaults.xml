@@ -53,9 +53,9 @@
     <focusedcolor>$VAR[LabelFOColor]</focusedcolor>
     <selectedcolor>$VAR[SelectedColor]</selectedcolor>
     <disabledcolor>$VAR[DisabledColor]</disabledcolor>
+    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <alttexturenofocus border="9">img/SettingsButtonNF.png</alttexturenofocus>
-    <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <alttexturefocus border="9">img/SettingsButtonFO.png</alttexturefocus>
     <include>FocusButtonsAnimation</include>
     <pulseonselect>false</pulseonselect>
@@ -113,15 +113,15 @@
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <textureradioonfocus colordiffuse="$VAR[LabelFOColor]">img/RadioON.png</textureradioonfocus>
-    <textureradioonnofocus colordiffuse="$VAR[LabelNFColor]">img/RadioON.png</textureradioonnofocus>
+    <textureradioonnofocus colordiffuse="$VAR[Label2Color]">img/RadioON.png</textureradioonnofocus>
     <textureradioofffocus colordiffuse="$VAR[LabelFOColor]">img/RadioOFF.png</textureradioofffocus>
-    <textureradiooffnofocus colordiffuse="$VAR[LabelNFColor]">img/RadioOFF.png</textureradiooffnofocus>
+    <textureradiooffnofocus colordiffuse="$VAR[Label2Color]">img/RadioOFF.png</textureradiooffnofocus>
     <include>FocusButtonsAnimation</include>
   </default>
   <default type="spincontrol">
-    <textureup colordiffuse="$VAR[LabelNFColor]" flipy="true">img/SpinDW.png</textureup>
+    <textureup colordiffuse="$VAR[Label2Color]" flipy="true">img/SpinDW.png</textureup>
     <textureupfocus colordiffuse="$VAR[LabelFOColor]" flipy="true">img/SpinDW.png</textureupfocus>
-    <texturedown colordiffuse="$VAR[LabelNFColor]">img/SpinDW.png</texturedown>
+    <texturedown colordiffuse="$VAR[Label2Color]">img/SpinDW.png</texturedown>
     <texturedownfocus colordiffuse="$VAR[LabelFOColor]">img/SpinDW.png</texturedownfocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
@@ -142,9 +142,9 @@
     <width>450</width>
     <height>60</height>
     <font>size22</font>
-    <textureup colordiffuse="$VAR[LabelNFColor]" flipy="true">img/SpinDW.png</textureup>
+    <textureup colordiffuse="$VAR[Label2Color]" flipy="true">img/SpinDW.png</textureup>
     <textureupfocus colordiffuse="$VAR[LabelFOColor]" flipy="true">img/SpinDW.png</textureupfocus>
-    <texturedown colordiffuse="$VAR[LabelNFColor]">img/SpinDW.png</texturedown>
+    <texturedown colordiffuse="$VAR[Label2Color]">img/SpinDW.png</texturedown>
     <texturedownfocus colordiffuse="$VAR[LabelFOColor]">img/SpinDW.png</texturedownfocus>
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
