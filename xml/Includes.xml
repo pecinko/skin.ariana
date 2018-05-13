@@ -97,16 +97,16 @@
     </control>
   </include>
   <include name="VideoMenuButtons">
-    <width>300</width>
+    <width min="270" max="500">auto</width>
     <height>90</height>
-    <font>size16U</font>
+    <font>size16USys</font>
     <align>center</align>
     <aligny>center</aligny>
     <texturefocus/>
     <texturenofocus/>
     <alttexturefocus/>
     <alttexturenofocus/>
-    <textcolor>$VAR[Label2Color]</textcolor>
+    <textcolor>Grey</textcolor>
     <focusedcolor>$VAR[LabelNFColor]</focusedcolor>
   </include>
   <include name="9000Buttons">
@@ -204,7 +204,7 @@
   </include>
   <include name="OptionsButton">
     <control type="grouplist" id="9001" description="Options button">
-      <animation condition="Control.IsVisible(53)" effect="slide" start="0,0" end="270,-84" time="0" reversible="true">Conditional</animation>
+      <animation condition="Control.IsVisible(53)" effect="slide" start="0,0" end="270,-96" time="0" reversible="true">Conditional</animation>
       <animation condition="Window.IsActive(mymusicnav.xml) + Control.IsVisible(51)" effect="slide" start="0,0" end="-1154,150" time="0" reversible="true">Conditional</animation>
       <right>66</right>
       <top>145</top>

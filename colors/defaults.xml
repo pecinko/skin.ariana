@@ -9,7 +9,7 @@
 	<color name="Silver">FFE2E2E2</color>
 	<color name="Diffuse">FFA0A0A0</color>
 	<color name="Diffuse2">FF474747</color>
-  <color name="Grey">FFb9b9b9</color> <!-- THEME INDEPENDENT -->
+  <color name="Grey">FF777777</color> <!-- THEME INDEPENDENT -->
   <color name="Red">FFff3a31</color> <!-- THEME INDEPENDENT -->
 
   <color name="Overlay">$VAR[OverlayColor]</color>

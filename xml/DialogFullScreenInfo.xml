@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-  <zorder>2</zorder>
-  <defaultcontrol always="true">300</defaultcontrol>
-  <controls>
-    <control type="group">
-      <include>OpenClose</include>
-      <control type="image" description="Background">
-        <left>0</left>
-        <top>0</top>
-        <width>1920</width>
-        <height>390</height>
-        <texture>$VAR[Background.Overlay]</texture>
-      </control>
-      <control type="label">
-        <centerleft>50%</centerleft>
-        <top>0</top>
-        <height>90</height>
-        <width>100%</width>
-        <align>center</align>
-        <textcolor>white</textcolor>
-        <label>$LOCALIZE[31030]</label>
-      </control>
-      <control type="image" description="Background">
-        <left>0</left>
-        <top>90</top>
-        <width>1920</width>
-        <height>1</height>
-        <texture>img/LineST.png</texture>
-      </control>
-
-      <include>VideoMenuInfo</include>
-    </control>
-  </controls>
+  <onload>ReplaceWindow(OSDSettings)</onload>
+  <controls/>
 </window>

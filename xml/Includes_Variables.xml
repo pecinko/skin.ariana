@@ -85,12 +85,12 @@
     <value>FF2A2C32</value>
   </variable>
   <variable name="LabelNFColor" description="LabelNF">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF111111</value>
+    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF000000</value>
     <value>FFFFFFFF</value>
   </variable>
   <variable name="LabelFOColor" description="LabelFO">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF111111</value>
-    <value>FF111111</value>
+    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF000000</value>
+    <value>FF000000</value>
   </variable>
   <variable name="Label2Color" description="Label2">
     <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF575759</value>
@@ -101,7 +101,7 @@
     <value>FF909192</value>
   </variable>
   <variable name="SelectedColor" description="Selected">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FFff9501</value>
-    <value>FFff9501</value>
+    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FFffaa62</value>
+    <value>FFffaa62</value>
   </variable>
 </includes>
