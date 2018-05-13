@@ -8,24 +8,13 @@
       <animation type="Conditional" condition="ControlGroup(9000).HasFocus()" reversible="true">
         <effect type="slide" end="0,-475" time="200" tween="sine" easing="inout"/>
       </animation>
-      <control type="label" description="MainHeading">
-        <top>90</top>
-        <left>84</left>
-        <width>1920</width>
-        <font>size50B</font>
-        <label>[B]MrMC[/B]</label>
-        <textcolor>red</textcolor>
-        <align>left</align>
-      </control>
-      <control type="label" description="MainHeading">
-        <visible>IntegerGreaterThan(System.ProfileCount,1)</visible>
-        <top>136</top>
-        <left>84</left>
-        <width>1920</width>
-        <font>size20</font>
-        <label>$INFO[system.profilename]</label>
-        <textcolor>$VAR[Label2Color]</textcolor>
-        <align>left</align>
+      <control type="image">
+        <top>84</top>
+        <left>66</left>
+        <width>300</width>
+        <height>90</height>
+        <texture>Logo.png</texture>
+        <aspectratio align="left">keep</aspectratio>
       </control>
       <control type="grouplist" id="9001" description="Top right row buttons">
         <right>84</right>
@@ -44,7 +33,7 @@
           <onclick>System.LogOff</onclick>
           <texturefocus>buttons/ProfilesFO.png</texturefocus>
           <texturenofocus>buttons/ProfilesNF.png</texturenofocus>
-          <label>$LOCALIZE[20126]</label>
+          <label>$INFO[system.profilename]</label>
           <include>SquareButtonCommons</include>
         </control>
         <control type="button" id="2" description="Player Fullscreen">
@@ -114,10 +103,10 @@
         <focusedlayout height="225" width="360">
           <control type="group" description="List in FO">
             <animation type="Focus">
-              <effect type="zoom" center="auto" start="100" end="110" time="100" easing="in"/>
+              <effect type="zoom" center="auto" start="100" end="118" time="100" easing="in"/>
             </animation>
             <animation type="UnFocus">
-              <effect type="zoom" center="auto" start="110" end="100" time="100" easing="out"/>
+              <effect type="zoom" center="auto" start="118" end="100" time="100" easing="out"/>
             </animation>
             <control type="image">
               <left>26</left>
