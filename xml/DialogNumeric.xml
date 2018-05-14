@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
   <defaultcontrol always="true">21</defaultcontrol>
-  <coordinates>
-    <origin x="0" y="0" />
-  </coordinates>
   <controls>
-
+    <include>DialogFullBG</include>
     <control type="group">
-
-      <control type="image">
-        <centerleft>50%</centerleft>
-        <centertop>50%</centertop>
-        <width>690</width>
-        <height>570</height>
-        <texture border="128">img/DialogPanel.png</texture>
-        <bordersize>-128</bordersize>
-      </control>
+      <include>OpenClose</include>
       <control type="label" id="1" description="Heading">
         <centerleft>50%</centerleft>
-          <top>270</top>
+        <top>270</top>
         <width>692</width>
-        <font>size22</font>
-        <textcolor>$VAR[SelectedColor]</textcolor>
+        <font>size28</font>
         <align>center</align>
       </control>
       <control type="image">
@@ -31,10 +19,9 @@
         <height>60</height>
         <texture border="24,8,24,8">HUD/KeyEdit.png</texture>
       </control>
-
       <control type="label" id="4" description="Edit Text">
         <centerleft>50%</centerleft>
-        <top>370</top>
+        <top>358</top>
         <width>660</width>
         <height>60</height>
         <align>center</align>
@@ -42,171 +29,180 @@
         <scroll>true</scroll>
         <font>size24B</font>
       </control>
-        <control type="group">
-          <centerleft>960</centerleft>
-          <top>470</top>
-          <width>400</width>
-          <control type="button" id="11">
-            <description>1 button</description>
-            <left>0</left>
-            <top>0</top>
-            <label>$LOCALIZE[12311]</label>
-            <onleft>23</onleft>
-            <onright>12</onright>
-            <onup>20</onup>
-            <ondown>14</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="12">
-            <description>2 button</description>
-            <left>90</left>
-            <top>0</top>
-            <label>$LOCALIZE[12312]</label>
-            <onleft>11</onleft>
-            <onright>13</onright>
-            <onup>10</onup>
-            <ondown>15</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="13">
-            <description>3 button</description>
-            <left>180</left>
-            <top>0</top>
-            <label>$LOCALIZE[12313]</label>
-            <onleft>12</onleft>
-            <onright>23</onright>
-            <onup>22</onup>
-            <ondown>16</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="14">
-            <description>4 button</description>
-            <left>0</left>
-            <top>72</top>
-            <label>$LOCALIZE[12314]</label>
-            <onleft>23</onleft>
-            <onright>15</onright>
-            <onup>11</onup>
-            <ondown>17</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="15">
-            <description>5 button</description>
-            <left>90</left>
-            <top>72</top>
-            <label>$LOCALIZE[12315]</label>
-            <onleft>14</onleft>
-            <onright>16</onright>
-            <onup>12</onup>
-            <ondown>18</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="16">
-            <description>6 button</description>
-            <left>180</left>
-            <top>72</top>
-            <label>$LOCALIZE[12316]</label>
-            <onleft>15</onleft>
-            <onright>23</onright>
-            <onup>13</onup>
-            <ondown>19</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="17">
-            <description>7 button</description>
-            <left>0</left>
-            <top>144</top>
-            <label>$LOCALIZE[12317]</label>
-            <onleft>21</onleft>
-            <onright>18</onright>
-            <onup>14</onup>
-            <ondown>20</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="18">
-            <description>8 button</description>
-            <left>90</left>
-            <top>144</top>
-            <label>$LOCALIZE[12318]</label>
-            <onleft>17</onleft>
-            <onright>19</onright>
-            <onup>15</onup>
-            <ondown>10</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="19">
-            <description>9 button</description>
-            <left>180</left>
-            <top>144</top>
-            <label>$LOCALIZE[12319]</label>
-            <onleft>18</onleft>
-            <onright>21</onright>
-            <onup>16</onup>
-            <ondown>22</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="20">
-            <description>previous button</description>
-            <left>0</left>
-            <top>216</top>
-            <label>&lt;</label>
-            <onleft>21</onleft>
-            <onright>10</onright>
-            <onup>17</onup>
-            <ondown>11</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="10">
-            <description>0 button</description>
-            <left>90</left>
-            <top>216</top>
-            <label>$LOCALIZE[12310]</label>
-            <onleft>20</onleft>
-            <onright>22</onright>
-            <onup>18</onup>
-            <ondown>12</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="22">
-            <description>next button</description>
-            <left>180</left>
-            <top>216</top>
-            <label>&gt;</label>
-            <onleft>10</onleft>
-            <onright>21</onright>
-            <onup>19</onup>
-            <ondown>23</ondown>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="23">
-            <description>BACKSPACE button</description>
-            <label>20181</label>
-            <left>300</left>
-            <top>0</top>
-            <onleft>16</onleft>
-            <onright>14</onright>
-            <onup>20</onup>
-            <ondown>21</ondown>
-            <font>ListDetails</font>
-            <height>120</height>
-            <width>120</width>
-            <include>KeyboardButtons</include>
-          </control>
-          <control type="button" id="21" description="DONE button">
-            <left>300</left>
-            <top>164</top>
-            <height>120</height>
-            <width>120</width>
-            <label>[UPPERCASE]$LOCALIZE[20177][/UPPERCASE]</label>
-            <onleft>22</onleft>
-            <onright>20</onright>
-            <onup>23</onup>
-            <ondown>20</ondown>
-            <textcolor>FF4fe805</textcolor>
-            <font>ListDetails</font>
-            <include>KeyboardButtons</include>
-          </control>
+      <control type="group">
+        <centerleft>50%</centerleft>
+        <top>470</top>
+        <width>400</width>
+        <control type="button" id="11">
+          <description>1 button</description>
+          <left>0</left>
+          <top>0</top>
+          <label>$LOCALIZE[12311]</label>
+          <onleft>23</onleft>
+          <onright>12</onright>
+          <onup>20</onup>
+          <ondown>14</ondown>
+          <include>KeyboardButtons</include>
         </control>
+        <control type="button" id="12">
+          <description>2 button</description>
+          <left>90</left>
+          <top>0</top>
+          <label>$LOCALIZE[12312]</label>
+          <onleft>11</onleft>
+          <onright>13</onright>
+          <onup>10</onup>
+          <ondown>15</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="13">
+          <description>3 button</description>
+          <left>180</left>
+          <top>0</top>
+          <label>$LOCALIZE[12313]</label>
+          <onleft>12</onleft>
+          <onright>23</onright>
+          <onup>22</onup>
+          <ondown>16</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="14">
+          <description>4 button</description>
+          <left>0</left>
+          <top>72</top>
+          <label>$LOCALIZE[12314]</label>
+          <onleft>23</onleft>
+          <onright>15</onright>
+          <onup>11</onup>
+          <ondown>17</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="15">
+          <description>5 button</description>
+          <left>90</left>
+          <top>72</top>
+          <label>$LOCALIZE[12315]</label>
+          <onleft>14</onleft>
+          <onright>16</onright>
+          <onup>12</onup>
+          <ondown>18</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="16">
+          <description>6 button</description>
+          <left>180</left>
+          <top>72</top>
+          <label>$LOCALIZE[12316]</label>
+          <onleft>15</onleft>
+          <onright>23</onright>
+          <onup>13</onup>
+          <ondown>19</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="17">
+          <description>7 button</description>
+          <left>0</left>
+          <top>144</top>
+          <label>$LOCALIZE[12317]</label>
+          <onleft>21</onleft>
+          <onright>18</onright>
+          <onup>14</onup>
+          <ondown>20</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="18">
+          <description>8 button</description>
+          <left>90</left>
+          <top>144</top>
+          <label>$LOCALIZE[12318]</label>
+          <onleft>17</onleft>
+          <onright>19</onright>
+          <onup>15</onup>
+          <ondown>10</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="19">
+          <description>9 button</description>
+          <left>180</left>
+          <top>144</top>
+          <label>$LOCALIZE[12319]</label>
+          <onleft>18</onleft>
+          <onright>21</onright>
+          <onup>16</onup>
+          <ondown>22</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="20">
+          <description>previous button</description>
+          <left>0</left>
+          <top>216</top>
+          <label>&lt;</label>
+          <onleft>21</onleft>
+          <onright>10</onright>
+          <onup>17</onup>
+          <ondown>11</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="10">
+          <description>0 button</description>
+          <left>90</left>
+          <top>216</top>
+          <label>$LOCALIZE[12310]</label>
+          <onleft>20</onleft>
+          <onright>22</onright>
+          <onup>18</onup>
+          <ondown>12</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="22">
+          <description>next button</description>
+          <left>180</left>
+          <top>216</top>
+          <label>&gt;</label>
+          <onleft>10</onleft>
+          <onright>21</onright>
+          <onup>19</onup>
+          <ondown>23</ondown>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="button" id="23">
+          <description>BACKSPACE button</description>
+          <label>20181</label>
+          <left>300</left>
+          <top>72</top>
+          <onleft>16</onleft>
+          <onright>14</onright>
+          <onup>21</onup>
+          <ondown>21</ondown>
+          <font>-</font>
+          <height>68</height>
+          <width>120</width>
+          <include>KeyboardButtons</include>
+        </control>
+        <control type="image" description="Delete Backspace img">
+          <left>300</left>
+          <top>72</top>
+          <width>120</width>
+          <height>68</height>
+          <aspectratio>keep</aspectratio>
+          <include>KeyboardButtons</include>
+          <texture colordiffuse="$VAR[SelectedColor]">HUD/KeyButtonDel.png</texture>
+        </control>
+        <control type="button" id="21" description="DONE button">
+          <left>300</left>
+          <top>218</top>
+          <height>68</height>
+          <width>120</width>
+          <label>[UPPERCASE]$LOCALIZE[20177][/UPPERCASE]</label>
+          <onleft>22</onleft>
+          <onright>20</onright>
+          <onup>23</onup>
+          <ondown>23</ondown>
+          <textcolor>FF4fe805</textcolor>
+          <font>ListDetails</font>
+          <include>KeyboardButtons</include>
+        </control>
+      </control>
     </control>
   </controls>
 </window>

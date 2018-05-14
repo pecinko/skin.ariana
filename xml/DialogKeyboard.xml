@@ -2,43 +2,37 @@
 <window>
   <defaultcontrol always="true">300</defaultcontrol>
   <controls>
+    <include>DialogFullBG</include>
     <control type="group">
+      <include>OpenClose</include>
       <visible>!Window.IsVisible(numericinput)</visible>
-      <control type="image">
-        <centerleft>960</centerleft>
-        <centertop>744</centertop>
-        <width>1500</width>
-        <height>816</height>
-        <texture border="128">img/DialogPanel.png</texture>
-      </control>
-      <control type="image">
-        <centerleft>960</centerleft>
-        <top>540</top>
-        <width>1230</width>
-        <height>60</height>
-        <texture border="24,8,24,8">HUD/KeyEdit.png</texture>
-      </control>
       <control type="group" description="content">
         <control type="label" id="311" description="Heading">
-          <centerleft>960</centerleft>
+          <centerleft>50%</centerleft>
           <top>465</top>
-          <width>1080</width>
+          <width>100%</width>
           <height>60</height>
           <font>size28</font>
           <textcolor>$VAR[LabelNFColor]</textcolor>
           <align>center</align>
         </control>
+        <control type="image">
+          <centerleft>50%</centerleft>
+          <top>540</top>
+          <width>1040</width>
+          <height>60</height>
+          <texture border="24,8,24,8">HUD/KeyEdit.png</texture>
+        </control>
         <control type="group">
-          <centerleft>960</centerleft>
+          <centerleft>50%</centerleft>
           <centertop>720</centertop>
-          <width>1230</width>
+          <width>1040</width>
           <height>600</height>
           <control type="edit" id="312">
             <description>Edit Text</description>
             <top>126</top>
-            <width>1230</width>
+            <width>1040</width>
             <height>45</height>
-            <textcolor>White2</textcolor>
             <font>size26</font>
             <scroll>true</scroll>
             <align>center</align>
@@ -59,6 +53,7 @@
                 <label>&lt;</label>
                 <onup>309</onup>
                 <ondown>304</ondown>
+                <width>72</width>
                 <include>KeyboardButtons</include>
               </control>
               <control type="button" id="306">
@@ -66,15 +61,15 @@
                 <label>&gt;</label>
                 <onup>309</onup>
                 <ondown>304</ondown>
+                <width>72</width>
                 <include>KeyboardButtons</include>
               </control>
               <control type="button" id="8">
                 <description>BACKSPACE button</description>
-                <label>
-                </label>
+                <label/>
                 <onup>309</onup>
                 <ondown>307</ondown>
-                <width>149</width>
+                <width>150</width>
                 <include>KeyboardButtons</include>
               </control>
               <control type="button" id="100">
@@ -158,7 +153,7 @@
               <width>150</width>
               <aspectratio>keep</aspectratio>
               <include>KeyboardButtons</include>
-              <texture colordiffuse="HL">HUD/KeyButtonDel.png</texture>
+              <texture colordiffuse="$VAR[SelectedColor]">HUD/KeyButtonDel.png</texture>
             </control>
             <control type="image" description="Delete Backspace img">
               <visible>!Control.HasFocus(8)</visible>
@@ -456,7 +451,7 @@
               </control>
               <control type="button" id="32">
                 <description>SPACE button</description>
-                <width>535</width>
+                <width>360</width>
                 <label>$LOCALIZE[20182]</label>
                 <onup>162</onup>
                 <ondown>105</ondown>
@@ -464,7 +459,7 @@
                 <include>KeyboardButtons</include>
               </control>
               <control type="button" id="300" description="DONE button">
-                <width>303</width>
+                <width>280</width>
                 <label>[UPPERCASE]$LOCALIZE[20177][/UPPERCASE]</label>
                 <onup>169</onup>
                 <ondown>8</ondown>
