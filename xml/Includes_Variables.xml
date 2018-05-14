@@ -104,4 +104,8 @@
     <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FFffaa62</value>
     <value>FFffaa62</value>
   </variable>
+    <variable name="Logo" description="Logo image">
+    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">Logo_light.png</value>
+    <value>Logo_dark.png</value>
+  </variable>
 </includes>
