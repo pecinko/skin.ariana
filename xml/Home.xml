@@ -220,10 +220,8 @@
           <width>1860</width>
           <height>480</height>
           <orientation>horizontal</orientation>
-          <onleft>300</onleft>
+          <onleft>8010</onleft>
           <onright>8010</onright>
-          <onup>8000</onup>
-          <ondown>noop</ondown>
           <onback>300</onback>
           <itemlayout width="300" height="450">
             <include>PostersShelfNF</include>
@@ -245,10 +243,9 @@
           <width>1860</width>
           <height>480</height>
           <orientation>horizontal</orientation>
-          <onleft>300</onleft>
-          <onup>8001</onup>
-          <ondown>noop</ondown>
+          <onleft>8011</onleft>
           <onright>8011</onright>
+          <onback>300</onback>
           <itemlayout width="300" height="450">
             <include>PostersShelfNF</include>
           </itemlayout>
@@ -271,8 +268,6 @@
           <orientation>horizontal</orientation>
           <onleft>8000</onleft>
           <onright>8000</onright>
-          <onup>noop</onup>
-          <ondown>8010</ondown>
           <onback>300</onback>
           <itemlayout width="300" height="450">
             <include>PostersShelfNF</include>
@@ -294,10 +289,9 @@
           <width>1860</width>
           <height>480</height>
           <orientation>horizontal</orientation>
-          <onleft>300</onleft>
-          <onup>noop</onup>
-          <ondown>8011</ondown>
+          <onleft>8001</onleft>
           <onright>8001</onright>
+          <onback>300</onback>
           <itemlayout width="300" height="450">
             <include>PostersShelfNF</include>
           </itemlayout>
@@ -320,6 +314,7 @@
           <orientation>horizontal</orientation>
           <onleft>8002</onleft>
           <onright>8002</onright>
+          <onback>300</onback>
           <itemlayout width="360" height="410">
             <control type="image">
               <left>26</left>
