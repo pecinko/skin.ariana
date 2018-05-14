@@ -68,6 +68,12 @@
       <aspect>0.93</aspect>
     </font>
     <font>
+      <name>size18S</name>
+      <filename>Arial.ttf</filename>
+      <size>27</size>
+      <aspect>0.9</aspect>
+    </font>
+    <font>
       <name>size19</name>
       <filename>Arimo.ttf</filename>
       <size>28</size>

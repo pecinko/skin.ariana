@@ -395,7 +395,7 @@
         <top>33</top>
         <width>280</width>
         <height>45</height>
-        <font>size18</font>
+        <font>size18S</font>
         <align>right</align>
         <aligny>center</aligny>
         <label>$INFO[ListItem.Label2]</label>
@@ -425,7 +425,7 @@
         <top>33</top>
         <width>280</width>
         <height>45</height>
-        <font>size18</font>
+        <font>size18S</font>
         <align>right</align>
         <aligny>center</aligny>
         <label>$INFO[ListItem.Label2]</label>

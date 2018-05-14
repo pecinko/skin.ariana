@@ -212,7 +212,7 @@
           <height>60</height>
           <width>150</width>
           <aspectratio aligny="center" align="right">keep</aspectratio>
-          <texture colordiffuse="$VAR[LabelFOColor]">$INFO[ListItem.Rating,badges/,.png]</texture>
+          <texture colordiffuse="$VAR[LabelNFColor]">$INFO[ListItem.Rating,badges/,.png]</texture>
         </control>
         <control type="group" description="top">
           <left>390</left>
@@ -225,15 +225,88 @@
             <align>left</align>
             <autoscroll time="6000" delay="8000" repeat="8000">true</autoscroll>
             <label>[B]$INFO[ListItem.Label][/B]</label>
+            <wrapmultiline>true</wrapmultiline>
           </control>
-          <control type="label" description="Labels">
-            <top>102</top>
+          <control type="grouplist">
+            <top>105</top>
             <width>750</width>
-            <height>45</height>
-            <font>size19</font>
-            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <height>40</height>
             <align>left</align>
-            <label>$VAR[500TopLabel]$INFO[ListItem.MPAA, • ]</label>
+            <aligny>center</aligny>
+            <orientation>horizontal</orientation>
+            <control type="label" description="Labels">
+              <width>100</width>
+              <height>40</height>
+              <font>size21</font>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <align>left</align>
+              <aligny>center</aligny>
+              <label>$INFO[ListItem.Year,,   ]</label>
+            </control>
+            <control type="image" description="Rotten">
+              <visible>!IsEmpty(ListItem.Property(RottenTomatoesRating))</visible>
+              <height>40</height>
+              <width>25</width>
+              <aspectratio aligny="center" align="left">keep</aspectratio>
+              <texture>$INFO[ListItem.Property(RatingImage),badges/,.png]</texture>
+            </control>
+            <control type="label" description="Rotten">
+              <visible>!IsEmpty(ListItem.Property(RottenTomatoesRating))</visible>
+              <width>70</width>
+              <height>40</height>
+              <font>size21</font>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <align>left</align>
+              <label>$INFO[ListItem.Property(RottenTomatoesRating),,]</label>
+            </control>
+            <control type="image" description="Audience">
+              <visible>!IsEmpty(ListItem.Property(AudienceRating))</visible>
+              <height>32</height>
+              <width>35</width>
+              <aspectratio aligny="center" align="left">keep</aspectratio>
+              <texture>$INFO[ListItem.Property(AudienceRatingImage),badges/,.png]</texture>
+            </control>
+            <control type="label" description="Audience">
+              <visible>!IsEmpty(ListItem.Property(AudienceRating))</visible>
+              <width>70</width>
+              <height>40</height>
+              <font>size21</font>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <align>left</align>
+              <label>$INFO[ListItem.Property(AudienceRating),,]</label>
+            </control>
+            <control type="image" id="8888" description="IMDB">
+              <visible>IsEmpty(ListItem.Property(RottenTomatoesRating)) + !IsEmpty(ListItem.Property(RatingImage))</visible>
+              <height>40</height>
+              <width>60</width>
+              <aspectratio aligny="center" align="left">keep</aspectratio>
+              <texture>$INFO[ListItem.Property(RatingImage),badges/,.png]</texture>
+            </control>
+            <control type="image" description="Default">
+              <visible>![IsEmpty(ListItem.Rating) | Control.IsVisible(8888)]</visible>
+              <height>40</height>
+              <width>28</width>
+              <aspectratio aligny="center" align="left">keep</aspectratio>
+              <texture colordiffuse="$VAR[LabelNFColor]">badges/default.rating.png</texture>
+            </control>
+            <control type="label" description="Labels">
+              <visible>!IsEmpty(ListItem.Rating)</visible>
+              <width>70</width>
+              <height>40</height>
+              <font>size21</font>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <align>left</align>
+              <label>$INFO[ListItem.Rating, ]</label>
+            </control>
+            <control type="label" description="MPAA">
+              <visible>!IsEmpty(ListItem.mpaa)</visible>
+              <width min="70" max="300">auto</width>
+              <height>40</height>
+              <font>size19</font>
+              <align>left</align>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <label>$INFO[ListItem.mpaa,  ]</label>
+            </control>
           </control>
           <control type="label" description="Codec">
             <top>140</top>
