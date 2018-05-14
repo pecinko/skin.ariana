@@ -141,50 +141,49 @@
         </focusedlayout>
         <content>
           <item id="1">
-            <visible>Library.HasServices | Library.HasContent(Movies)</visible>
+            <visible>Library.HasContent(Movies)</visible>
             <label>$LOCALIZE[342]</label>
             <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
             <thumb>focus/HomeFrameMovies.png</thumb>
             <property name="art">icons/Movies.png</property>
           </item>
           <item id="2">
-            <visible>Library.HasServices | Library.HasContent(TVShows)</visible>
+            <visible>Library.HasContent(TVShows)</visible>
             <label>$LOCALIZE[20343]</label>
             <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
             <thumb>focus/HomeFrameTV.png</thumb>
             <property name="art">icons/TV.png</property>
           </item>
-          <!--
           <item id="3">
+            <visible>Library.HasContent(files) + ![Library.HasContent(Movies) | Library.HasContent(TVShows)]</visible>
             <label>$LOCALIZE[3]</label>
             <onclick>ActivateWindow(Video,Files,return)</onclick>
             <thumb>focus/HomeFrameVideos.png</thumb>
             <property name="art">icons/Videos.png</property>
           </item>
-        -->
           <item id="4">
-            <visible>Library.HasServices | Library.HasContent(music)</visible>
+            <visible>Library.HasContent(music)</visible>
             <label>$LOCALIZE[2]</label>
             <onclick>ActivateWindow(Music,root,return)</onclick>
             <thumb>focus/HomeFrameMusic.png</thumb>
             <property name="art">icons/Music.png</property>
           </item>
           <item id="5">
-            <visible>Library.HasServices | Library.HasContent(musicvideos)</visible>
+            <visible>Library.HasContent(musicvideos)</visible>
             <label>$LOCALIZE[20389]</label>
             <onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
             <thumb>focus/HomeFrameVideos.png</thumb>
             <property name="art">icons/Videos.png</property>
           </item>
           <item id="6">
-            <visible>Library.HasServices | Library.HasContent(pictures)</visible>
+            <visible>Library.HasContent(pictures)</visible>
             <label>$LOCALIZE[1]</label>
             <onclick>ActivateWindow(Pictures)</onclick>
             <thumb>focus/HomeFramePictures.png</thumb>
             <property name="art">icons/Pictures.png</property>
           </item>
           <item id="7">
-            <visible>!Library.HasContent(movies) + !Library.HasContent(pictures) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos) + Library.HasContent(files)</visible>
+            <visible>!Library.HasContent(movies) + !Library.HasContent(pictures) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos) + !Library.HasContent(files)</visible>
             <label>$LOCALIZE[744]</label>
             <onclick>ActivateWindow(MediaSources,root)</onclick>
             <thumb>focus/HomeFrameMovies.png</thumb>
