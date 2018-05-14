@@ -13,7 +13,7 @@
         <left>66</left>
         <width>300</width>
         <height>90</height>
-        <texture>Logo.png</texture>
+        <texture>$VAR[Logo]</texture>
         <aspectratio align="left">keep</aspectratio>
       </control>
       <control type="grouplist" id="9001" description="Top right row buttons">
