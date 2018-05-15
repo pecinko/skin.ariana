@@ -97,7 +97,7 @@
     </control>
   </include>
   <include name="VideoMenuButtons">
-    <width min="270" max="500">auto</width>
+    <width min="200" max="540">auto</width>
     <height>90</height>
     <font>size16USys</font>
     <align>center</align>
