@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-	<color name="White2">FFCCCCCC</color>
-	<color name="White">FFFFFFFF</color>
-	<color name="Blue">FF003366</color>
-	<color name="Black">FF000000</color>
-	<color name="BlackT">55000000</color>
-	<color name="BlackST">90000000</color>
-	<color name="Silver">FFE2E2E2</color>
-	<color name="Diffuse">FFA0A0A0</color>
-	<color name="Diffuse2">FF474747</color>
-  <color name="Grey">FF777777</color> <!-- THEME INDEPENDENT -->
-  <color name="Red">FFff3a31</color> <!-- THEME INDEPENDENT -->
+	<color name="white2">FFCCCCCC</color>
+	<color name="white">FFFFFFFF</color>
+	<color name="blue">FF003366</color>
+	<color name="black">FF000000</color>
+	<color name="blackT">55000000</color>
+	<color name="blackST">90000000</color>
+	<color name="silver">FFE2E2E2</color>
+	<color name="diffuse">FFA0A0A0</color>
+	<color name="diffuse2">FF474747</color>
+  <color name="shadow"FF111111</color>
+  <color name="grey">FF777777</color> <!-- THEME INDEPENDENT -->
+  <color name="red">FFff3a31</color> <!-- THEME INDEPENDENT -->
 
   <color name="Overlay">$VAR[OverlayColor]</color>
   <color name="LabelNF">$VAR[LabelNFColor]</color>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="View_50" description="50">
+    <control type="group" description="List 50 base">
+      <visible>Control.IsVisible(50)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="MainHeading">
+        <right>66</right>
+        <top>60</top>
+        <width>800</width>
+        <height>40</height>
+        <font>size50B</font>
+        <label>[B]$VAR[GlobalHeadings][/B]</label>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <align>center</align>
+      </control>
+      <control type="image" description="Thumb">
+        <centerleft>480</centerleft>
+        <centertop>580</centertop>
+        <width>600</width>
+        <height>760</height>
+        <include>Icon_Fade</include>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+        <bordersize>9</bordersize>
+        <aspectratio>keep</aspectratio>
+      </control>
+      <control type="list" id="50">
+        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes) | Container.content(albums) | container.content(songs)]</visible>
+        <left>1058</left>
+        <top>260</top>
+        <width>784</width>
+        <height>719</height>
+        <pagecontrol>60</pagecontrol>
+        <onleft>PageUp</onleft>
+        <onright>PageDown</onright>
+        <onup>9001</onup>
+        <ondown>50</ondown>
+        <viewtype label="535">List</viewtype>
+        <preloaditems>4</preloaditems>
+        <itemlayout width="784" height="80">
+          <control type="image">
+            <visible>Container.Content(files)</visible>
+            <left>20</left>
+            <top>0</top>
+            <height>80</height>
+            <width>28</width>
+            <texture colordiffuse="$VAR[LabelNFColor]" align="left" aligny="center">$VAR[Overlay]</texture>
+            <aspectratio>keep</aspectratio>
+          </control>
+          <control type="label" description="Main Label">
+            <left>20</left>
+            <right>125</right>
+            <top>0</top>
+            <height>80</height>
+            <font>size22</font>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="image" description="arrow">
+            <visible>ListItem.IsFolder + IsEmpty(ListItem.label2)</visible>
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>40</width>
+            <align>right</align>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="$VAR[LabelNFColor]">img/Arrow.png</texture>
+          </control>
+          <control type="image">
+            <visible>Container.Content(files)</visible>
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>32</width>
+            <texture colordiffuse="$VAR[LabelNFColor]" align="right">$VAR[Overlay]</texture>
+            <aspectratio>keep</aspectratio>
+          </control>
+          <control type="label" description="Label2">
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>124</width>
+            <font>size19</font>
+            <scroll>false</scroll>
+            <align>right</align>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout width="784" height="80">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>10</left>
+              <top>10</top>
+              <width>764</width>
+              <height>60</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+              <visible>Container.Content(files)</visible>
+              <left>20</left>
+              <top>0</top>
+              <height>80</height>
+              <width>28</width>
+              <texture colordiffuse="$VAR[LabelFOColor]" align="left" aligny="center">$VAR[Overlay]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <left>20</left>
+              <right>125</right>
+              <top>0</top>
+              <height>80</height>
+              <font>size22</font>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="image" description="arrow">
+              <visible>ListItem.IsFolder + IsEmpty(ListItem.label2)</visible>
+              <right>20</right>
+              <top>0</top>
+              <height>80</height>
+              <width>40</width>
+              <aspectratio>keep</aspectratio>
+              <align>right</align>
+              <texture colordiffuse="$VAR[LabelFOColor]">img/Arrow.png</texture>
+            </control>
+            <control type="label" description="Label2">
+              <right>20</right>
+              <top>0</top>
+              <height>80</height>
+              <width>124</width>
+              <font>size19</font>
+              <align>right</align>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.Label2]</label>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+  </include>
+  <include name="List49_Commons">
+    <!--VideoInfo metadata lists-->
+    <left>0</left>
+    <top>0</top>
+    <width>280</width>
+    <height>450</height>
+    <onleft>noop</onleft>
+    <onright>noop</onright>
+    <onup>9000</onup>
+    <ondown>9000</ondown>
+    <pagecontrol>-</pagecontrol>
+    <itemlayout height="90" width="280">
+      <control type="label">
+        <left>0</left>
+        <top>0</top>
+        <width>280</width>
+        <height>45</height>
+        <font style="uppercase">size16U</font>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label]</label>
+      </control>
+      <control type="label">
+        <left>0</left>
+        <top>33</top>
+        <width>280</width>
+        <height>45</height>
+        <font>size18S</font>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label2]</label>
+      </control>
+      <control type="image">
+        <left>0</left>
+        <top>22</top>
+        <width>280</width>
+        <height>1</height>
+        <texture>$INFO[ListItem.Thumb]</texture>
+      </control>
+    </itemlayout>
+    <focusedlayout height="90" width="280">
+      <control type="label">
+        <left>0</left>
+        <top>0</top>
+        <width>280</width>
+        <height>45</height>
+        <font style="uppercase">size16U</font>
+        <align>right</align>
+        <aligny>center</aligny>
+        <selectedcolor>$VAR[SelectedColor]</selectedcolor>
+        <label>$INFO[ListItem.Label]</label>
+      </control>
+      <control type="label">
+        <left>0</left>
+        <top>33</top>
+        <width>280</width>
+        <height>45</height>
+        <font>size18S</font>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label2]</label>
+      </control>
+      <control type="image">
+        <left>0</left>
+        <top>22</top>
+        <width>280</width>
+        <height>1</height>
+        <texture>$INFO[ListItem.Thumb]</texture>
+      </control>
+    </focusedlayout>
+  </include>
+  <include name="HeaderLabelShelf">
+    <textoffsetx>24</textoffsetx>
+    <height>24</height>
+    <width>1860</width>
+    <font>size22</font>
+    <textcolor>$VAR[Label2Color]</textcolor>
+    <align>left</align>
+  </include>
+  <include name="SquareBG_NF">
+    <control type="image">
+      <left>0</left>
+      <top>0</top>
+      <width>358</width>
+      <height>408</height>
+      <bordersize>0</bordersize>
+      <texture>thumbs/SquareNF.png</texture>
+    </control>
+  </include>
+  <include name="SquareBG_FO">
+    <control type="image">
+      <left>0</left>
+      <top>0</top>
+      <width>358</width>
+      <height>408</height>
+      <bordersize>0</bordersize>
+      <texture>thumbs/SquareFO.png</texture>
+    </control>
+  </include>
+  <include name="SquareCommons">
+    <left>0</left>
+    <top>0</top>
+    <width>358</width>
+    <height>358</height>
+    <aspectratio aligny="top">scale</aspectratio>
+    <bordersize>25</bordersize>
+  </include>
+  <include name="PosterBG_NF">
+    <control type="image">
+      <left>0</left>
+      <top>0</top>
+      <width>298</width>
+      <height>475</height>
+      <texture>thumbs/PosterNF.png</texture>
+      <bordersize>0</bordersize>
+    </control>
+  </include>
+  <include name="PosterBG_FO">
+    <control type="image">
+      <left>0</left>
+      <top>0</top>
+      <width>298</width>
+      <height>475</height>
+      <texture>thumbs/PosterFO.png</texture>
+      <bordersize>0</bordersize>
+    </control>
+  </include>
+  <include name="PosterCommons">
+    <left>0</left>
+    <top>0</top>
+    <width>298</width>
+    <height>425</height>
+    <aspectratio>scale</aspectratio>
+    <bordersize>24</bordersize>
+  </include>
+  <include name="PosterWatchedMarks">
+    <control type="group" description="Overlay">
+      <control type="image">
+        <right>24</right>
+        <top>24</top>
+        <height>64</height>
+        <width>64</width>
+        <aspectratio>keep</aspectratio>
+        <texture>OverlayBG.png</texture>
+      </control>
+      <control type="image">
+        <visible>!IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+        <right>28</right>
+        <top>28</top>
+        <height>28</height>
+        <width>28</width>
+        <aspectratio>keep</aspectratio>
+        <texture colordiffuse="FF000000">$VAR[Overlay]</texture>
+      </control>
+    </control>
+  </include>
+  <include name="PostersShelfNF">
+    <include>PosterBG_NF</include>
+    <control type="image">
+      <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+      <include>PosterCommons</include>
+      <texture background="true">$INFO[ListItem.Thumb]</texture>
+    </control>
+    <control type="image">
+      <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+      <include>PosterCommons</include>
+      <texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+    </control>
+    <include>PosterWatchedMarks</include>
+    <control type="label" description="Label2">
+      <visible>container.content(TVshows) | container.content(seasons)</visible>
+      <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+      <right>26</right>
+      <top>17</top>
+      <height>42</height>
+      <width>42</width>
+      <font>size14</font>
+      <align>center</align>
+      <textcolor>$VAR[LabelFOColor]</textcolor>
+      <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+    </control>
+    <control type="label" description="Label2">
+      <visible>Window.IsActive(home)</visible>
+      <left>5</left>
+      <top>400</top>
+      <width>290</width>
+      <height>45</height>
+      <font>size19</font>
+      <textcolor>$VAR[LabelNFColor]</textcolor>
+      <align>center</align>
+      <label>$INFO[ListItem.Season,S, ]$INFO[ListItem.Episode,E]</label>
+    </control>
+  </include>
+  <include name="PostersShelfFO">
+    <control type="group">
+      <animation type="Focus" reversible="false">
+        <effect type="zoom" center="150,245" start="100" end="110" time="120" easing="inout"/>
+      </animation>
+      <animation type="UnFocus" reversible="false">
+        <effect type="zoom" center="150,245" start="110" end="100" time="120" easing="inout"/>
+      </animation>
+      <include>PosterBG_FO</include>
+      <control type="image">
+        <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+        <include>PosterCommons</include>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+      </control>
+      <control type="image">
+        <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+        <include>PosterCommons</include>
+        <texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+      </control>
+      <include>PosterWatchedMarks</include>
+      <control type="label">
+        <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+        <left>5</left>
+        <top>400</top>
+        <width>290</width>
+        <height>45</height>
+        <font>size19</font>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <align>center</align>
+        <label>$INFO[ListItem.Label]</label>
+      </control>
+      <control type="label" description="Label2">
+        <visible>container.content(TVshows) | container.content(seasons)</visible>
+        <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+        <right>25</right>
+        <top>17</top>
+        <height>42</height>
+        <width>42</width>
+        <font>size14</font>
+        <align>center</align>
+        <textcolor>$VAR[LabelFOColor]</textcolor>
+        <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+      </control>
+    </control>
+  </include>
+</includes>
