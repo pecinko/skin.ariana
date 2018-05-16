@@ -87,62 +87,62 @@
           <item>
             <label>$LOCALIZE[20094]</label>
             <onclick>ActivateWindow(MediaSources,root)</onclick>
-            <icon>icons/NAS.png</icon>
+            <icon>icons/sources.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[480]</label>
             <onclick>ActivateWindow(AppearanceSettings)</onclick>
-            <icon>icons/Appearance.png</icon>
+            <icon>icons/appearance.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[14036]</label>
             <onclick>ActivateWindow(ServiceSettings)</onclick>
-            <icon>icons/Network.png</icon>
+            <icon>icons/network.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[13200]</label>
             <onclick>ActivateWindow(Profiles)</onclick>
-            <icon>icons/Profiles.png</icon>
+            <icon>icons/profiles.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[157]</label>
             <onclick>ActivateWindow(VideosSettings)</onclick>
-            <icon>icons/Videos.png</icon>
+            <icon>icons/videos.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[13000]</label>
             <onclick>ActivateWindow(SystemSettings)</onclick>
-            <icon>icons/System.png</icon>
+            <icon>icons/system.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[1]</label>
             <onclick>ActivateWindow(PicturesSettings)</onclick>
-            <icon>icons/Pictures.png</icon>
+            <icon>icons/pictures.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[24001]</label>
             <onclick>ActivateWindow(addonbrowser)</onclick>
-            <icon>icons/Addons.png</icon>
+            <icon>icons/extensions.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[2]</label>
             <onclick>ActivateWindow(MusicSettings)</onclick>
-            <icon>icons/Music.png</icon>
+            <icon>icons/music.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[138]</label>
             <onclick>ActivateWindow(systeminfo)</onclick>
-            <icon>icons/SysInfo.png</icon>
+            <icon>icons/sysinfo.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[31033]</label>
             <onclick>ActivateWindow(PVRSettings)</onclick>
-            <icon>icons/LiveTV.png</icon>
+            <icon>icons/livetv.png</icon>
           </item>
           <item>
             <label>$LOCALIZE[10003]</label>
             <onclick>ActivateWindow(filemanager)</onclick>
-            <icon>icons/FileMan.png</icon>
+            <icon>icons/fileman.png</icon>
           </item>
         </content>
       </control>
