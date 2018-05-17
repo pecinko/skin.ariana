@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <defaultcontrol>300</defaultcontrol>
+  <defaultcontrol>9000</defaultcontrol>
   <controls>
     <include>FullBackground</include>
     <control type="group">
       <include>OpenClose</include>
-      <animation type="Conditional" condition="ControlGroup(9000).HasFocus()" reversible="true">
+      <animation type="Conditional" condition="ControlGroup(9500).HasFocus()" reversible="true">
         <effect type="slide" end="0,-580" time="200" tween="sine" easing="inout"/>
       </animation>
       <control type="image">
@@ -16,18 +16,28 @@
         <texture>$VAR[Logo]</texture>
         <aspectratio align="left">keep</aspectratio>
       </control>
+      <!--<control type="label">
+        <top>20</top>
+        <left>0</left>
+        <right>0</right>
+        <height>40</height>
+        <font>size20</font>
+        <align>left</align>
+        <textcolor>$VAR[Label2Color]</textcolor>
+        <label>$INFO[Container(9000).ListItem.Property(type)]</label>
+      </control>-->
       <control type="grouplist" id="9001" description="Top right row buttons">
         <right>84</right>
         <top>90</top>
         <width min="154" max="770">auto</width>
         <height>110</height>
         <itemgap>10</itemgap>
-        <ondown>300</ondown>
-        <onback>300</onback>
+        <ondown>9000</ondown>
+        <onback>9000</onback>
         <align>right</align>
         <aligny>center</aligny>
         <orientation>horizontal</orientation>
-        <control type="button" id="3000" description="Server">
+        <control type="button" id="4000" description="Server">
           <!--<visible>IntegerGreaterThan(System.ServerCount,1)</visible>-->
           <texturefocus>buttons/ServerFO.png</texturefocus>
           <texturenofocus>buttons/ServerNF.png</texturenofocus>
@@ -66,15 +76,15 @@
           <include>SquareButtonCommons</include>
         </control>
       </control>
-      <control type="panel" id="300" description="Main menu">
+      <control type="panel" id="9000" description="Main menu">
         <top>220</top>
         <left>66</left>
         <width>1860</width>
         <height>360</height>
         <onup>9001</onup>
-        <ondown>9000</ondown>
-        <onleft>300</onleft>
-        <onright>300</onright>
+        <ondown>9500</ondown>
+        <onleft>9000</onleft>
+        <onright>9000</onright>
         <orientation>horizontal</orientation>
         <itemlayout height="304" width="358">
           <control type="image">
@@ -104,7 +114,7 @@
             <textcolor>$VAR[Label2Color]</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
-          <control type="label">
+          <!--<control type="label">
             <top>266</top>
             <left>0</left>
             <right>0</right>
@@ -113,7 +123,7 @@
             <align>center</align>
             <textcolor>$VAR[Label2Color]</textcolor>
             <label>$INFO[ListItem.Label2]</label>
-          </control>
+          </control>-->
         </itemlayout>
         <focusedlayout height="304" width="358">
           <control type="group" description="List in FO">
@@ -132,7 +142,7 @@
               <bordersize>0</bordersize>
             </control>
             <control type="image">
-              <visible>Control.HasFocus(300)</visible>
+              <visible>Control.HasFocus(9000)</visible>
               <include>VisibleFadeEffect</include>
               <centerleft>50%</centerleft>
               <centertop>42%</centertop>
@@ -151,7 +161,7 @@
               <textcolor>$VAR[LabelNFColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
-            <control type="label">
+            <!--<control type="label">
               <top>266</top>
               <left>0</left>
               <right>0</right>
@@ -160,72 +170,64 @@
               <align>center</align>
               <textcolor>$VAR[Label2Color]</textcolor>
               <label>$INFO[ListItem.Label2]</label>
-            </control>
+            </control>-->
           </control>
         </focusedlayout>
         <content>
           <item id="1">
             <visible>Library.HasContent(Movies)</visible>
             <label>$LOCALIZE[342]</label>
-            <label2>Test</label2>
             <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
             <property name="type">movies</property>
           </item>
           <item id="2">
             <visible>Library.HasContent(TVShows)</visible>
             <label>$LOCALIZE[20343]</label>
-            <label2>Test</label2>
             <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
             <property name="type">tvshows</property>
           </item>
           <item id="3">
             <visible>Library.HasContent(files) + ![Library.HasContent(Movies) | Library.HasContent(TVShows)]</visible>
             <label>$LOCALIZE[3]</label>
-            <label2>Test</label2>
             <onclick>ActivateWindow(Video,Files,return)</onclick>
             <property name="type">videos</property>
           </item>
           <item id="4">
             <visible>Library.HasContent(music)</visible>
             <label>$LOCALIZE[2]</label>
-            <label2>Test</label2>
             <onclick>ActivateWindow(Music,root,return)</onclick>
             <property name="type">music</property>
           </item>
           <item id="5">
             <visible>Library.HasContent(musicvideos)</visible>
             <label>$LOCALIZE[20389]</label>
-            <label2>Test</label2>
             <onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
             <property name="type">videos</property>
           </item>
           <item id="6">
             <visible>Library.HasContent(pictures)</visible>
             <label>$LOCALIZE[1]</label>
-            <label2>Test</label2>
             <onclick>ActivateWindow(Pictures)</onclick>
             <property name="type">pictures</property>
           </item>
           <item id="7">
             <visible>!Library.HasContent(movies) + !Library.HasContent(pictures) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos) + !Library.HasContent(files)</visible>
             <label>$LOCALIZE[744]</label>
-            <label2>Test</label2>
             <onclick>ActivateWindow(MediaSources,root)</onclick>
             <property name="type">sources</property>
           </item>
           <item id="8">
             <visible>System.HasExtensions</visible>
             <label>$LOCALIZE[24001]</label>
-            <label2>-</label2>
             <onclick>ActivateWindow(Programs,Addons,return)</onclick>
             <property name="type">extensions</property>
           </item>
         </content>
       </control>
-      <control type="grouplist" id="9000" description="home shelves">
+      <control type="grouplist" id="9500" description="home shelves">
         <top>600</top>
         <left>60</left>
-        <onup>300</onup>
+        <onup>9000</onup>
         <ondown>noop</ondown>
         <height min="480" max="999">auto</height>
         <aligny>top</aligny>
@@ -246,7 +248,7 @@
           <orientation>horizontal</orientation>
           <onleft>8011</onleft>
           <onright>8011</onright>
-          <onback>300</onback>
+          <onback>9000</onback>
           <itemlayout width="298" height="475">
             <include>PostersShelfNF</include>
           </itemlayout>
@@ -269,7 +271,7 @@
           <orientation>horizontal</orientation>
           <onleft>8010</onleft>
           <onright>8010</onright>
-          <onback>300</onback>
+          <onback>9000</onback>
           <itemlayout width="298" height="475">
             <include>PostersShelfNF</include>
           </itemlayout>
@@ -293,7 +295,7 @@
           <orientation>horizontal</orientation>
           <onleft>8000</onleft>
           <onright>8000</onright>
-          <onback>300</onback>
+          <onback>9000</onback>
           <itemlayout width="298" height="475">
             <include>PostersShelfNF</include>
           </itemlayout>
@@ -316,7 +318,7 @@
           <orientation>horizontal</orientation>
           <onleft>8001</onleft>
           <onright>8001</onright>
-          <onback>300</onback>
+          <onback>9000</onback>
           <itemlayout width="298" height="475">
             <include>PostersShelfNF</include>
           </itemlayout>
@@ -339,7 +341,7 @@
           <orientation>horizontal</orientation>
           <onleft>8002</onleft>
           <onright>8002</onright>
-          <onback>300</onback>
+          <onback>9000</onback>
           <itemlayout width="358" height="408">
             <include>SquareBG_NF</include>
             <control type="image">
