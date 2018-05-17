@@ -92,7 +92,7 @@
             <top>0</top>
             <height>304</height>
             <width>358</width>
-            <texture border="4">thumbs/homeNF.png</texture>
+            <texture border="4">thumbs/HomeNF.png</texture>
             <bordersize>0</bordersize>
           </control>
           <control type="image">
@@ -138,7 +138,7 @@
               <top>0</top>
               <height>304</height>
               <width>358</width>
-              <texture border="4">thumbs/homeFO.png</texture>
+              <texture border="4">thumbs/HomeFO.png</texture>
               <bordersize>0</bordersize>
             </control>
             <control type="image">
@@ -233,6 +233,29 @@
         <aligny>top</aligny>
         <align>left</align>
         <itemgap>10</itemgap>
+        <control type="label" id="80100" description="ShelfHeading">
+          <visible>Control.IsVisible(8010)</visible>
+          <include>HeaderLabelShelf</include>
+          <label>$LOCALIZE[31026]</label>
+        </control>
+        <control type="panel" id="8010" description="Continue">
+          <visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
+          <animation effect="fade" time="200">Visible</animation>
+          <top>440</top>
+          <left>66</left>
+          <width>1860</width>
+          <height>425</height>
+          <orientation>horizontal</orientation>
+          <onleft>8010</onleft>
+          <onright>8010</onright>
+          <onback>9000</onback>
+          <itemlayout width="596" height="425">
+            <include>RectangleShelfNF</include>
+          </itemlayout>
+          <focusedlayout width="596" height="425">
+            <include>RectangleShelfFO</include>
+          </focusedlayout>
+        </control>
         <control type="label" id="80110" description="ShelfHeading">
           <visible>Control.IsVisible(8011)</visible>
           <include>HeaderLabelShelf</include>
@@ -256,30 +279,6 @@
             <include>PostersShelfFO</include>
           </focusedlayout>
         </control>
-        <control type="label" id="80100" description="ShelfHeading">
-          <visible>Control.IsVisible(8010)</visible>
-          <include>HeaderLabelShelf</include>
-          <label>$LOCALIZE[31026]</label>
-        </control>
-        <control type="panel" id="8010" description="Movies OnDeck">
-          <visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
-          <animation effect="fade" time="200">Visible</animation>
-          <top>440</top>
-          <left>66</left>
-          <width>1860</width>
-          <height>475</height>
-          <orientation>horizontal</orientation>
-          <onleft>8010</onleft>
-          <onright>8010</onright>
-          <onback>9000</onback>
-          <itemlayout width="298" height="475">
-            <include>PostersShelfNF</include>
-          </itemlayout>
-          <focusedlayout width="298" height="475">
-            <include>PostersShelfFO</include>
-          </focusedlayout>
-        </control>
-
         <control type="label" id="80000" description="ShelfHeading">
           <visible>Control.IsVisible(8000)</visible>
           <include>HeaderLabelShelf</include>
