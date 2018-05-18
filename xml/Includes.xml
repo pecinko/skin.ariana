@@ -106,7 +106,7 @@
     <texturenofocus/>
     <alttexturefocus/>
     <alttexturenofocus/>
-    <textcolor>Grey</textcolor>
+    <textcolor>grey</textcolor>
     <focusedcolor>$VAR[LabelNFColor]</focusedcolor>
   </include>
   <include name="9000Buttons">
