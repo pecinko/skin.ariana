@@ -6,7 +6,7 @@
     <control type="group">
       <include>OpenClose</include>
       <animation type="Conditional" condition="ControlGroup(9500).HasFocus()" reversible="true">
-        <effect type="slide" end="0,-580" time="200" tween="sine" easing="inout"/>
+        <effect type="slide" end="0,-480" time="200" tween="sine" easing="inout"/>
       </animation>
       <control type="image">
         <top>84</top>
@@ -225,11 +225,11 @@
         </content>
       </control>
       <control type="grouplist" id="9500" description="home shelves">
-        <top>600</top>
+        <top>570</top>
         <left>60</left>
         <onup>9000</onup>
         <ondown>noop</ondown>
-        <height min="480" max="999">auto</height>
+        <height min="480" max="979">auto</height>
         <aligny>top</aligny>
         <align>left</align>
         <itemgap>10</itemgap>
@@ -259,7 +259,7 @@
         <control type="label" id="80110" description="ShelfHeading">
           <visible>Control.IsVisible(8011)</visible>
           <include>HeaderLabelShelf</include>
-          <label>$LOCALIZE[31026]</label>
+          <label>$LOCALIZE[31023]</label>
         </control>
         <control type="panel" id="8011" description="Shows OnDeck">
           <visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
