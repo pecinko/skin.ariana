@@ -61,7 +61,7 @@
           <label>$LOCALIZE[16003]</label>
           <include>SquareButtonCommons</include>
         </control>
-        <control type="button" id="3" description="favourites">
+        <control type="button" id="4001" description="favourites">
           <onclick>ActivateWindow(favourites)</onclick>
           <texturefocus>buttons/FavFO.png</texturefocus>
           <texturenofocus>buttons/FavNF.png</texturenofocus>
