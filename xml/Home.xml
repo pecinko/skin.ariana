@@ -173,7 +173,7 @@
             </control>-->
           </control>
         </focusedlayout>
-        <content>
+<!--         <content>
           <item id="1">
             <visible>Library.HasContent(Movies)</visible>
             <label>$LOCALIZE[342]</label>
@@ -222,7 +222,7 @@
             <onclick>ActivateWindow(Programs,Addons,return)</onclick>
             <property name="type">extensions</property>
           </item>
-        </content>
+        </content> -->
       </control>
       <control type="grouplist" id="9500" description="home shelves">
         <top>600</top>
