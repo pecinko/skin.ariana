@@ -5,25 +5,41 @@
   <include file="Includes_Views.xml" />
   <include name="9000GrouplistParameters">
     <centerleft>50%</centerleft>
-    <centertop>50%</centertop>
-    <width>500</width>
-    <height>680</height>
-    <itemgap>8</itemgap>
-    <onleft>noop</onleft>
-    <onright>noop</onright>
-    <onup>9000</onup>
-    <ondown>9000</ondown>
-    <onback>50</onback>
+    <top>40</top>
+    <width max="1800">auto</width>
+    <height>60</height>
+    <itemgap>65</itemgap>
+    <onleft>9000</onleft>
+    <onright>9000</onright>
+    <onup>50</onup>
+    <ondown>50</ondown>
     <align>center</align>
     <aligny>center</aligny>
-    <orientation>vertical</orientation>
-    <control type="label" id="555">
-      <width>100%</width>
-      <height>60</height>
-      <font>size22</font>
-      <label>[B]$LOCALIZE[14018][/B]</label>
-      <align>center</align>
-      <aligny>center</aligny>
+    <orientation>horizontal</orientation>
+  </include>
+  <include name="9000Buttons">
+    <width min="150" max="500">auto</width>
+    <height>60</height>
+    <textoffsetx>0</textoffsetx>
+    <align>center</align>
+    <aligny>center</aligny>
+    <font>size20B</font>
+    <textcolor>grey</textcolor>
+    <focusedcolor>$VAR[LabelFOColor]</focusedcolor>
+    <texturefocus/>
+    <texturenofocus/>
+    <alttexturenofocus/>
+    <alttexturefocus/>
+  </include>
+  <include name="TopBar">
+    <control type="image" description="Background">
+      <animation condition="ControlGroup(9000).HasFocus()" effect="slide" start="0,0" end="0,120" time="100" easing="in" reversible="false">Conditional</animation>
+      <animation condition="!ControlGroup(9000).HasFocus()" effect="slide" start="0,120" end="0,0" time="100" delay="50" easing="in" reversible="false">Conditional</animation>
+      <left>0</left>
+      <top>-125</top>
+      <width>1920</width>
+      <height>140</height>
+      <texture colordiffuse="$VAR[OverlayColor]">img/WhiteDot.png</texture>
     </control>
   </include>
   <include name="SquareButtonCommons">
@@ -108,15 +124,6 @@
     <alttexturenofocus/>
     <textcolor>grey</textcolor>
     <focusedcolor>$VAR[LabelNFColor]</focusedcolor>
-  </include>
-  <include name="9000Buttons">
-    <include>FocusButtonsAnimation</include>
-    <width>500</width>
-    <height>68</height>
-    <textoffsetx>0</textoffsetx>
-    <align>center</align>
-    <aligny>center</aligny>
-    <font>size20</font>
   </include>
   <include name="CenterHeading">
     <centerleft>960</centerleft>

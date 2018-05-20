@@ -91,11 +91,6 @@
       <aspect>0.93</aspect>
     </font>
     <font>
-      <name>size20</name>
-      <filename>Arimo.ttf</filename>
-      <size>30</size>
-    </font>
-    <font>
       <name>plot</name>
       <filename>Arimo.ttf</filename>
       <size>30</size>
@@ -105,6 +100,12 @@
       <name>size20</name>
       <filename>Arimo.ttf</filename>
       <size>30</size>
+    </font>
+    <font>
+      <name>size20B</name>
+      <filename>Arimo.ttf</filename>
+      <size>30</size>
+      <style>bold</style>
     </font>
     <font>
       <name>size22</name>

@@ -6,7 +6,7 @@
       <include>ContainerVisibleFade</include>
       <control type="label" description="MainHeading">
         <right>66</right>
-        <top>60</top>
+        <top>120</top>
         <width>800</width>
         <height>40</height>
         <font>size50B</font>
@@ -26,7 +26,7 @@
         <aspectratio>keep</aspectratio>
       </control>
       <control type="list" id="50">
-        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes) | Container.content(albums) | container.content(songs)]</visible>
+        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes)]</visible>
         <left>1058</left>
         <top>260</top>
         <width>784</width>
@@ -34,8 +34,9 @@
         <pagecontrol>60</pagecontrol>
         <onleft>PageUp</onleft>
         <onright>PageDown</onright>
-        <onup>9001</onup>
+        <onup>9000</onup>
         <ondown>50</ondown>
+        <onback>9000</onback>
         <viewtype label="535">List</viewtype>
         <preloaditems>4</preloaditems>
         <itemlayout width="784" height="80">

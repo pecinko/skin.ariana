@@ -17,16 +17,15 @@
         <align>left</align>
       </control>
         <control type="panel" id="53" description="Grid">
-          <viewtype label="21371">Thumbnails</viewtype>
+          <viewtype label="536">Thumbnails</viewtype>
           <left>60</left>
           <top>90</top>
           <width>1800</width>
           <height>980</height>
           <orientation>vertical</orientation>
-          <onleft>9000</onleft>
-          <onright>9000</onright>
-          <onup>PageUp</onup>
-          <ondown>PageDown</ondown>
+          <onup>9000</onup>
+          <onback>9000</onback>
+          <ondown>53</ondown>
           <preloaditems>4</preloaditems>
           <itemlayout height="408" width="360">
             <control type="image">
@@ -85,10 +84,9 @@
           </focusedlayout>
         </control>
     </control>
-    <include>OptionsButton</include>
     <control type="group" description="Side menu 9000 group">
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-      <include>MenuFullBG</include>
+      <include>TopBar</include>
       <include>VisibleFadeEffect</include>
       <control type="grouplist" id="9000">
         <include>9000GrouplistParameters</include>
@@ -103,7 +101,7 @@
           <label>$LOCALIZE[587] $LOCALIZE[31292]</label>
         </control>
         <control type="button" id="697" description="Library">
-          <visible>Library.HasContent(music) | Library.HasContent(musicvideos)</visible>
+          <visible>Library.HasContent(music)</visible>
           <include>9000Buttons</include>
           <label>$LOCALIZE[1024] $LOCALIZE[14022]</label>
           <onclick>ActivateWindow(MusicLibrary,root)</onclick>

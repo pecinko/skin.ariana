@@ -141,6 +141,21 @@
           <label2>$LOCALIZE[107]</label2>
           <onclick>Skin.ToggleSetting(HideFanart)</onclick>
         </item>
+        <item id="11">
+          <visible>!Skin.HasSetting(FavButton)</visible>
+          <label>$LOCALIZE[513] - $LOCALIZE[1036]</label>
+          <label2>$LOCALIZE[1223]</label2>
+          <onclick>Skin.ToggleSetting(FavButton)</onclick>
+        </item>
+
+        <item id="12">
+          <visible>Skin.HasSetting(FavButton)</visible>
+          <label>$LOCALIZE[513] - $LOCALIZE[1036]</label>
+          <label2>$LOCALIZE[305]</label2>
+          <onclick>Skin.ToggleSetting(FavButton)</onclick>
+        </item>
+
+
         <item id="100" description="Reset Skin">
           <label>$LOCALIZE[31038]</label>
           <label2>!!!</label2>

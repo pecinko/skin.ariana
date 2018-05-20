@@ -24,10 +24,9 @@
           <width>1800</width>
           <height>980</height>
           <orientation>vertical</orientation>
-          <onleft>PageUp</onleft>
-          <onright>PageDown</onright>
-          <onup>9001</onup>
-          <ondown>noop</ondown>
+          <onup>9000</onup>
+          <onback>9000</onback>
+          <ondown>53</ondown>
           <preloaditems>4</preloaditems>
           <itemlayout height="408" width="360">
             <control type="image">
@@ -87,10 +86,9 @@
         </control>
       </control>
     </control>
-    <include>OptionsButton</include>
     <control type="group" description="Side menu 9000 group">
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-      <include>MenuFullBG</include>
+      <include>TopBar</include>
       <include>VisibleFadeEffect</include>
       <control type="grouplist" id="9000">
         <include>9000GrouplistParameters</include>

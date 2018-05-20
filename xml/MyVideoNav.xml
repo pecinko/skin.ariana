@@ -65,8 +65,9 @@
             <orientation>horizontal</orientation>
             <onleft>51</onleft>
             <onright>51</onright>
-            <onup>9001</onup>
+            <onup>9000</onup>
             <ondown>noop</ondown>
+            <onback>9000</onback>
             <preloaditems>4</preloaditems>
             <itemlayout height="408" width="360">
               <control type="image">
@@ -170,10 +171,9 @@
             <width>1788</width>
             <height>948</height>
             <orientation>vertical</orientation>
-            <onleft>PageUp</onleft>
-            <onright>PageDown</onright>
-            <onup>9001</onup>
-            <ondown>noop</ondown>
+            <onup>9000</onup>
+            <ondown>53</ondown>
+            <onback>9000</onback>
             <preloaditems>4</preloaditems>
             <itemlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="475" width="298">
               <include>PosterBG_NF</include>
@@ -242,7 +242,7 @@
         <include>ContainerVisibleFade</include>
         <control type="label" description="MainHeading">
           <right>66</right>
-          <top>60</top>
+          <top>120</top>
           <width>800</width>
           <height>40</height>
           <font>size50B</font>
@@ -332,11 +332,9 @@
           <top>248</top>
           <width>800</width>
           <height>755</height>
-          <pagecontrol>60</pagecontrol>
-          <onleft>PageUp</onleft>
-          <onright>PageDown</onright>
-          <onup>9001</onup>
+          <onup>9000</onup>
           <ondown>52</ondown>
+          <onback>9000</onback>
           <viewtype label="535">List 52</viewtype>
           <preloaditems>4</preloaditems>
           <itemlayout width="800" height="84">
@@ -457,20 +455,19 @@
           </focusedlayout>
         </control>
       </control>
-      <include>OptionsButton</include>
       <control type="group" description="Side menu 9000 group">
         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-        <include>MenuFullBG</include>
+        <include>TopBar</include>
         <include>VisibleFadeEffect</include>
         <control type="grouplist" id="9000">
           <include>9000GrouplistParameters</include>
           <control type="button" id="2" description="Views">
             <include>9000Buttons</include>
           </control>
-          <control type="togglebutton" id="10" description="Toggle Watched">
+          <control type="togglebutton" id="14" description="Toggle Watched">
             <include>9000Buttons</include>
-            <label>$LOCALIZE[535]:</label>
-            <altlabel>$LOCALIZE[535]:</altlabel>
+            <label>$LOCALIZE[535]: $LOCALIZE[16100]</label>
+            <altlabel>$LOCALIZE[535]: $LOCALIZE[16101]</altlabel>
           </control>
           <control type="button" id="3" description="Sort">
             <include>9000Buttons</include>

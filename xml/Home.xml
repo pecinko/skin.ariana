@@ -38,7 +38,6 @@
         <aligny>center</aligny>
         <orientation>horizontal</orientation>
         <control type="button" id="4000" description="Server">
-          <!--<visible>IntegerGreaterThan(System.ServerCount,1)</visible>-->
           <texturefocus>buttons/ServerFO.png</texturefocus>
           <texturenofocus>buttons/ServerNF.png</texturenofocus>
           <label>$INFO[system.servername]</label>
@@ -61,7 +60,8 @@
           <label>$LOCALIZE[16003]</label>
           <include>SquareButtonCommons</include>
         </control>
-        <control type="button" id="4001" description="favourites">
+        <control type="button" id="3" description="favourites">
+          <visible>Skin.HasSetting(FavButton)</visible>
           <onclick>ActivateWindow(favourites)</onclick>
           <texturefocus>buttons/FavFO.png</texturefocus>
           <texturenofocus>buttons/FavNF.png</texturenofocus>

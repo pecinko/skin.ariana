@@ -6,10 +6,9 @@
     <control type="group" description="Content">
       <include>OpenClose</include>
       <include>View_50</include>
-      <include>OptionsButton</include>
       <control type="group" description="Side menu 9000 group">
         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-        <include>MenuFullBG</include>
+        <include>TopBar</include>
         <include>VisibleFadeEffect</include>
         <control type="grouplist" id="9000">
           <include>9000GrouplistParameters</include>
@@ -41,19 +40,11 @@
             <label>$LOCALIZE[31062]</label>
             <onclick>ActivateWindow(videoplaylist)</onclick>
           </control>
-          <control type="button" id="698" description="Browse files">
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[1024] $LOCALIZE[744]</label>
-            <onclick>ActivateWindow(Videos,files)</onclick>
-          </control>
-          <control type="togglebutton" id="699" description="Playing">
+          <control type="button" id="699" description="Playing">
             <enable>Player.HasMedia</enable>
             <include>9000Buttons</include>
             <label>$LOCALIZE[16003]</label>
-            <altlabel>$LOCALIZE[31977]</altlabel>
-            <usealttexture>Player.HasMedia</usealttexture>
             <onclick>fullscreen</onclick>
-            <altclick>fullscreen</altclick>
             <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
           </control>
         </control>

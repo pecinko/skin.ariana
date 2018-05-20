@@ -6,10 +6,9 @@
     <control type="group" description="Content">
       <include>OpenClose</include>
       <include>View_50</include>
-      <include>OptionsButton</include>
       <control type="group" description="Side menu 9000 group">
         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-        <include>MenuFullBG</include>
+        <include>TopBar</include>
         <include>VisibleFadeEffect</include>
         <control type="grouplist" id="9000">
           <include>9000GrouplistParameters</include>

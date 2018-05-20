@@ -19,15 +19,15 @@
       <control type="group" description="Container">
         <control type="panel" id="53" description="Grid">
           <visible>[Container.Content(albums) | Container.content(artists)]</visible>
-          <viewtype label="21371">Thumbnails</viewtype>
+          <viewtype label="536">Thumbnails</viewtype>
           <left>60</left>
           <top>150</top>
           <width>1800</width>
           <height>980</height>
           <orientation>vertical</orientation>
-          <onleft>PageUp</onleft>
-          <onright>PageDown</onright>
-          <onup>9001</onup>
+          <ondown>53</ondown>
+          <onup>9000</onup>
+          <onback>9000</onback>
           <preloaditems>4</preloaditems>
           <itemlayout height="408" width="360">
             <control type="image">
@@ -92,7 +92,7 @@
       <include>ContainerVisibleFade</include>
       <control type="label" description="MainHeading">
         <right>66</right>
-        <top>60</top>
+        <top>120</top>
         <width>800</width>
         <height>40</height>
         <font>size50B</font>
@@ -120,10 +120,8 @@
           <top>270</top>
           <width>840</width>
           <height>741</height>
-          <pagecontrol>60</pagecontrol>
-          <onleft>PageUp</onleft>
-          <onright>PageDown</onright>
-          <onup>9001</onup>
+          <onup>9000</onup>
+          <onback>9000</onback>
           <ondown>52</ondown>
           <viewtype label="537">Big List</viewtype>
           <preloaditems>4</preloaditems>
@@ -316,10 +314,9 @@
           <top>390</top>
           <width>920</width>
           <height>635</height>
-          <pagecontrol>60</pagecontrol>
-          <onleft>noop</onleft>
           <onright>9002</onright>
-          <onup>9001</onup>
+          <onup>9000</onup>
+          <onback>9000</onback>
           <ondown>51</ondown>
           <viewtype label="537">Big List 51</viewtype>
           <preloaditems>4</preloaditems>
@@ -419,10 +416,9 @@
         </control>
       </control>
     </control>
-    <include>OptionsButton</include>
     <control type="group" description="Side menu 9000 group">
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-      <include>MenuFullBG</include>
+      <include>TopBar</include>
       <include>VisibleFadeEffect</include>
       <control type="grouplist" id="9000">
         <include>9000GrouplistParameters</include>
@@ -439,31 +435,19 @@
         </control>
         <control type="togglebutton" id="16" description="PartyMode">
           <include>9000Buttons</include>
-          <label>$LOCALIZE[589]: $LOCALIZE[1223]</label>
-          <altlabel>$LOCALIZE[589]: $LOCALIZE[305]</altlabel>
+          <label>$LOCALIZE[589]: $LOCALIZE[351]</label>
+          <altlabel>$LOCALIZE[589]: $LOCALIZE[16041]</altlabel>
         </control>
-        <control type="togglebutton" id="20" description="Update library">
+        <control type="button" id="20" description="Update library">
           <include>9000Buttons</include>
           <label>653</label>
-          <altlabel>13353</altlabel>
-          <usealttexture>library.isscanningmusic</usealttexture>
-        </control>
-        <control type="button" id="800" description="Playlist">
-          <include>9000Buttons</include>
-          <label>$LOCALIZE[31062]</label>
-          <onclick>ActivateWindow(musicplaylist)</onclick>
-        </control>
-        <control type="button" id="801" description="Files">
-          <include>9000Buttons</include>
-          <label>$LOCALIZE[1024] $LOCALIZE[744]</label>
-          <onclick>ActivateWindow(MusicFiles,root)</onclick>
         </control>
         <control type="togglebutton" id="802" description="Playing">
           <include>FocusButtonsAnimation</include>
           <enable>Player.HasMedia</enable>
           <include>9000Buttons</include>
           <label>$LOCALIZE[16003]</label>
-          <altlabel>$LOCALIZE[31977]</altlabel>
+          <altlabel>$LOCALIZE[16003]</altlabel>
           <usealttexture>Player.HasMedia</usealttexture>
           <onclick>fullscreen</onclick>
           <altclick>fullscreen</altclick>

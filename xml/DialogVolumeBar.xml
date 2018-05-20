@@ -48,7 +48,7 @@
         <font>size24B</font>
         <align>right</align>
 				<label>$INFO[Control.GetLabel(20)]</label>
-				<textcolor>white2</textcolor>
+				<textcolor>white</textcolor>
       </control>
     </control>
   </controls>
