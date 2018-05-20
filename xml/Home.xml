@@ -61,7 +61,7 @@
           <label>$LOCALIZE[16003]</label>
           <include>SquareButtonCommons</include>
         </control>
-        <control type="button" id="3" description="favourites">
+        <control type="button" id="4001" description="favourites">
           <onclick>ActivateWindow(favourites)</onclick>
           <texturefocus>buttons/FavFO.png</texturefocus>
           <texturenofocus>buttons/FavNF.png</texturenofocus>
@@ -173,7 +173,7 @@
             </control>-->
           </control>
         </focusedlayout>
-        <content>
+<!--         <content>
           <item id="1">
             <visible>Library.HasContent(Movies)</visible>
             <label>$LOCALIZE[342]</label>
@@ -222,7 +222,7 @@
             <onclick>ActivateWindow(Programs,Addons,return)</onclick>
             <property name="type">extensions</property>
           </item>
-        </content>
+        </content> -->
       </control>
       <control type="grouplist" id="9500" description="home shelves">
         <top>570</top>
