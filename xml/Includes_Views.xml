@@ -26,14 +26,11 @@
         <aspectratio>keep</aspectratio>
       </control>
       <control type="list" id="50">
-        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes)]</visible>
+        <visible>![Container.Content(Movies) | Container.content(tvshows) | container.content(seasons) | container.content(episodes) | container.content(albums) | container.content(songs)]</visible>
         <left>1058</left>
         <top>260</top>
         <width>784</width>
         <height>719</height>
-        <pagecontrol>60</pagecontrol>
-        <onleft>PageUp</onleft>
-        <onright>PageDown</onright>
         <onup>9000</onup>
         <ondown>50</ondown>
         <onback>9000</onback>
@@ -140,6 +137,286 @@
             </control>
           </control>
         </focusedlayout>
+      </control>
+    </control>
+  </include>
+  <include name="Pvr_50" description="50">
+    <control type="group" description="List 50 Infolist">
+      <visible>Control.IsVisible(50)</visible>
+      <include>ContainerVisibleFade</include>
+      <control type="label" description="MainHeading">
+        <right>66</right>
+        <top>120</top>
+        <width>800</width>
+        <height>40</height>
+        <font>size50B</font>
+        <label>[B]$VAR[GlobalHeadings][/B]</label>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
+        <align>center</align>
+      </control>
+      <control type="group" description="Media info">
+        <include>VisibleFadeEffect</include>
+        <left>100</left>
+        <top>-75</top>
+        <control type="image" description="FA">
+          <top>186</top>
+          <left>0</left>
+          <width>756</width>
+          <height>425</height>
+          <texture fallback="img/BlackDot.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+          <aspectratio aligny="bottom">keep</aspectratio>
+          <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+          <bordersize>4</bordersize>
+        </control>
+        <control type="group" description="Media info Top">
+          <left>0</left>
+          <top>742</top>
+          <control type="label" description="Main Label">
+            <top>-14</top>
+            <width>758</width>
+            <font>size22</font>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>[B]$INFO[ListItem.Title][/B]</label>
+          </control>
+          <control type="textbox" description="Plot">
+            <top>58</top>
+            <width>758</width>
+            <height>170</height>
+            <font>plot</font>
+            <align>left</align>
+            <aligny>bottom</aligny>
+            <label>$VAR[Plots]</label>
+          </control>
+          <control type="label">
+            <top>240</top>
+            <width>758</width>
+            <font>size19</font>
+            <label>$VAR[TopLabel]</label>
+          </control>
+          <control type="label" description="Details">
+            <top>278</top>
+            <width>758</width>
+            <font>size19</font>
+            <label>$VAR[CodecList-Genre]</label>
+          </control>
+        </control>
+      </control>
+      <control type="list" id="50">
+        <right>66</right>
+        <top>248</top>
+        <width>800</width>
+        <height>755</height>
+        <onup>9000</onup>
+        <ondown>52</ondown>
+        <onback>9000</onback>
+        <viewtype label="535">List 50</viewtype>
+        <preloaditems>4</preloaditems>
+        <itemlayout width="800" height="120">
+          <control type="image">
+            <right>10</right>
+            <top>0</top>
+            <height>120</height>
+            <width>120</width>
+            <texture align="right" aligny="center">$INFO[ListItem.Icon]</texture>
+            <aspectratio>keep</aspectratio>
+          </control>
+          <control type="image">
+            <visible>ListItem.IsRecording</visible>
+            <left>12</left>
+            <top>50</top>
+            <height>28</height>
+            <width>28</width>
+            <texture colordiffuse="red" align="left" aligny="center">OverlayInProgress.png</texture>
+            <aspectratio>keep</aspectratio>
+          </control>
+          <control type="label" description="Nr">
+            <left>10</left>
+            <width>300</width>
+            <top>0</top>
+            <height>50</height>
+            <font>size22</font>
+            <scroll>false</scroll>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>$INFO[ListItem.ChannelNumber]</label>
+          </control>
+          <control type="label" description="Main Label">
+            <left>120</left>
+            <width>600</width>
+            <top>0</top>
+            <height>50</height>
+            <font>size22</font>
+            <scroll>false</scroll>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label" description="Label2">
+            <left>120</left>
+            <top>50</top>
+            <height>30</height>
+            <font>size19</font>
+            <scroll>false</scroll>
+            <textcolor>$VAR[Label2Color]</textcolor>
+            <label>$INFO[ListItem.Title]</label>
+          </control>
+          <control type="progress">
+            <visible>ListItem.HasEpg</visible>
+            <left>120</left>
+            <top>100</top>
+            <right>160</right>
+            <height>10</height>
+            <texturebg>progress/ProgressBG.png</texturebg>
+            <lefttexture>progress/ProgressLeft.png</lefttexture>
+            <righttexture flipx="true">progress/ProgressLeft.png</righttexture>
+            <midtexture>progress/ProgressMiddle.png</midtexture>
+            <info>ListItem.Progress</info>
+          </control>
+        </itemlayout>
+        <focusedlayout width="800" height="120">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>10</left>
+              <top>0</top>
+              <width>780</width>
+              <height>120</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+              <right>10</right>
+              <top>0</top>
+              <height>120</height>
+              <width>120</width>
+              <texture align="right" aligny="center">$INFO[ListItem.Icon]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+            <control type="image">
+              <visible>ListItem.IsRecording</visible>
+              <left>12</left>
+              <top>50</top>
+              <height>28</height>
+              <width>28</width>
+              <texture colordiffuse="red" align="left" aligny="center">OverlayInProgress.png</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+            <control type="label" description="Nr">
+              <left>10</left>
+              <width>300</width>
+              <top>0</top>
+              <height>50</height>
+              <font>size22</font>
+              <scroll>false</scroll>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.ChannelNumber]</label>
+            </control>
+            <control type="label" description="Main Label">
+              <left>120</left>
+              <width>600</width>
+              <top>0</top>
+              <height>50</height>
+              <font>size22</font>
+              <scroll>false</scroll>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label" description="Label2">
+              <left>120</left>
+              <top>50</top>
+              <height>30</height>
+              <font>size19</font>
+              <scroll>false</scroll>
+              <textcolor>$VAR[Label2Color]</textcolor>
+              <label>$INFO[ListItem.Title]</label>
+            </control>
+            <control type="progress">
+              <visible>ListItem.HasEpg</visible>
+              <left>120</left>
+              <top>100</top>
+              <right>160</right>
+              <height>10</height>
+              <texturebg>progress/ProgressBG.png</texturebg>
+              <lefttexture>progress/ProgressLeft.png</lefttexture>
+              <righttexture flipx="true">progress/ProgressLeft.png</righttexture>
+              <midtexture>progress/ProgressMiddle.png</midtexture>
+              <info>ListItem.Progress</info>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+  </include>
+  <include name="PVRGroup9000">
+    <control type="grouplist" id="9000">
+      <include>9000GrouplistParameters</include>
+      <control type="button" id="100">
+        <description>Channels</description>
+        <include>9000Buttons</include>
+        <label>19019</label>
+        <onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
+        <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+        <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+      </control>
+      <control type="button" id="101">
+        <description>TV Guide</description>
+        <include>9000Buttons</include>
+        <label>22020</label>
+        <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
+        <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+        <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+      </control>
+      <control type="button" id="102">
+        <description>Recordings</description>
+        <visible>![Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]</visible>
+        <include>9000Buttons</include>
+        <label>19163</label>
+        <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+        <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+      </control>
+      <control type="button" id="103">
+        <description>Timers</description>
+        <visible>![Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)]</visible>
+        <include>9000Buttons</include>
+        <label>19040</label>
+        <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+        <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+      </control>
+      <control type="button" id="104">
+        <description>Search</description>
+        <visible>![Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)]</visible>
+        <include>9000Buttons</include>
+        <label>137</label>
+        <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+        <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+      </control>
+      <control type="button" id="28">
+        <description>Channel Groups</description>
+        <include>9000Buttons</include>
+        <label>-</label>
+      </control>
+      <control type="button" id="5">
+        <description>Group recording items by folder structure</description>
+        <include>9000Buttons</include>
+        <label>19270</label>
+        <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+      </control>
+      <control type="button" id="6">
+        <description>Show hidden channels</description>
+        <include>9000Buttons</include>
+        <label>19051</label>
+        <visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
+      </control>
+      <control type="button" id="7">
+        <description>Show deleted recordings</description>
+        <include>9000Buttons</include>
+        <label>19184</label>
+        <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+      </control>
+      <control type="button" id="3">
+        <description>Sort by button</description>
+        <include>9000Buttons</include>
+        <label>103</label>
       </control>
     </control>
   </include>

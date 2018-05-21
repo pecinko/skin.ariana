@@ -27,25 +27,14 @@
           <onback>9000</onback>
           <ondown>53</ondown>
           <preloaditems>4</preloaditems>
-          <itemlayout height="408" width="360">
+          <itemlayout height="408" width="358">
+            <include>SquareBG_NF</include>
             <control type="image">
-              <left>26</left>
-              <top>10</top>
-              <width>308</width>
-              <height>308</height>
-              <texture border="12">img/ThumbBorder.png</texture>
-              <bordersize>-5</bordersize>
-            </control>
-            <control type="image">
-              <left>26</left>
-              <top>10</top>
-              <width>308</width>
-              <height>308</height>
+              <include>SquareCommons</include>
               <texture background="true">$INFO[ListItem.Thumb]</texture>
-              <aspectratio aligny="top">scale</aspectratio>
             </control>
-            </itemlayout>
-          <focusedlayout height="408" width="360">
+          </itemlayout>
+          <focusedlayout height="408" width="358">
             <control type="group">
               <animation type="Focus" reversible="false">
                 <effect type="zoom" center="auto" start="100" end="110" time="120" easing="inout"/>
@@ -53,27 +42,16 @@
               <animation type="UnFocus" reversible="false">
                 <effect type="zoom" center="auto" start="110" end="100" time="120" easing="inout"/>
               </animation>
+              <include>SquareBG_FO</include>
               <control type="image">
-                <left>26</left>
-                <top>10</top>
-                <width>308</width>
-                <height>308</height>
-                <texture border="12">img/ThumbBorder.png</texture>
-                <bordersize>-5</bordersize>
-              </control>
-              <control type="image">
-                <left>26</left>
-                <top>10</top>
-                <width>308</width>
-                <height>308</height>
+                <include>SquareCommons</include>
                 <texture background="true">$INFO[ListItem.Thumb]</texture>
-                <aspectratio aligny="top">scale</aspectratio>
               </control>
               <control type="label">
                 <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
-                <left>26</left>
-                <top>330</top>
-                <width>308</width>
+                <left>0</left>
+                <top>340</top>
+                <width>358</width>
                 <height>30</height>
                 <font>size16</font>
                 <textcolor>$VAR[LabelNFColor]</textcolor>

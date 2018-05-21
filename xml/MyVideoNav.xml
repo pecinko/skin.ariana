@@ -478,6 +478,7 @@
             <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
           </control>
           <control type="button" id="20" description="Update library">
+            <visible>Library.HasContent(movies) | Library.HasContent(tvshows)</visible>
             <include>9000Buttons</include>
             <label>653</label>
           </control>

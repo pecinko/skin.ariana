@@ -3,8 +3,8 @@
   <animation effect="fade" time="200">WindowClose</animation>
   <controls>
     <control type="group">
-      <centerleft>960</centerleft>
-      <centertop>760</centertop>
+      <centerleft>50%</centerleft>
+      <centertop>40%</centertop>
       <width>540</width>
       <height>124</height>
       <control type="image">

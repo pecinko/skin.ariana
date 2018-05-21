@@ -20,34 +20,23 @@
         <control type="panel" id="53" description="Grid">
           <visible>[Container.Content(albums) | Container.content(artists)]</visible>
           <viewtype label="536">Thumbnails</viewtype>
-          <left>60</left>
+          <left>66</left>
           <top>150</top>
-          <width>1800</width>
+          <width>1860</width>
           <height>980</height>
           <orientation>vertical</orientation>
           <ondown>53</ondown>
           <onup>9000</onup>
           <onback>9000</onback>
           <preloaditems>4</preloaditems>
-          <itemlayout height="408" width="360">
+          <itemlayout height="408" width="358">
+            <include>SquareBG_NF</include>
             <control type="image">
-              <left>26</left>
-              <top>10</top>
-              <width>308</width>
-              <height>308</height>
-              <texture border="12">img/ThumbBorder.png</texture>
-              <bordersize>-5</bordersize>
-            </control>
-            <control type="image">
-              <left>26</left>
-              <top>10</top>
-              <width>308</width>
-              <height>308</height>
+              <include>SquareCommons</include>
               <texture background="true">$INFO[ListItem.Thumb]</texture>
-              <aspectratio aligny="top">scale</aspectratio>
             </control>
           </itemlayout>
-          <focusedlayout height="408" width="360">
+          <focusedlayout height="408" width="358">
             <control type="group">
               <animation type="Focus" reversible="false">
                 <effect type="zoom" center="auto" start="100" end="110" time="120" easing="inout"/>
@@ -55,27 +44,16 @@
               <animation type="UnFocus" reversible="false">
                 <effect type="zoom" center="auto" start="110" end="100" time="120" easing="inout"/>
               </animation>
+              <include>SquareBG_FO</include>
               <control type="image">
-                <left>26</left>
-                <top>10</top>
-                <width>308</width>
-                <height>308</height>
-                <texture border="12">img/ThumbBorder.png</texture>
-                <bordersize>-5</bordersize>
-              </control>
-              <control type="image">
-                <left>26</left>
-                <top>10</top>
-                <width>308</width>
-                <height>308</height>
+                <include>SquareCommons</include>
                 <texture background="true">$INFO[ListItem.Thumb]</texture>
-                <aspectratio aligny="top">scale</aspectratio>
               </control>
               <control type="label">
                 <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
-                <left>26</left>
-                <top>330</top>
-                <width>308</width>
+                <left>0</left>
+                <top>340</top>
+                <width>358</width>
                 <height>30</height>
                 <font>size16</font>
                 <textcolor>$VAR[LabelNFColor]</textcolor>
@@ -439,6 +417,7 @@
           <altlabel>$LOCALIZE[589]: $LOCALIZE[16041]</altlabel>
         </control>
         <control type="button" id="20" description="Update library">
+          <visible>Library.HasContent(music)</visible>
           <include>9000Buttons</include>
           <label>653</label>
         </control>
