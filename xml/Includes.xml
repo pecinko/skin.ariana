@@ -3,6 +3,7 @@
   <include file="Includes_Variables.xml" />
   <include file="defaults.xml" />
   <include file="Includes_Views.xml" />
+  <!--<include file="View_57_58_59_Showcase.xml" /> -->
   <include name="9000GrouplistParameters">
     <centerleft>50%</centerleft>
     <top>40</top>

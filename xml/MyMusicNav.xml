@@ -235,18 +235,6 @@
         <ondown>51</ondown>
         <align>center</align>
         <orientation>horizontal</orientation>
-        <control type="button" id="1">
-          <onclick>Control.SetFocus(9000)</onclick>
-          <width>144</width>
-          <height>80</height>
-          <texturefocus>buttons/MoreFO.png</texturefocus>
-          <texturenofocus>buttons/MoreNF.png</texturenofocus>
-          <label>$LOCALIZE[33063]</label>
-          <wrapmultiline>True</wrapmultiline>
-          <font>size14</font>
-          <aligny>top</aligny>
-          <textoffsety>80</textoffsety>
-        </control>
         <control type="button" id="16" description="Party">
           <width>144</width>
           <height>80</height>

@@ -17,20 +17,20 @@
       <top>0</top>
       <width>1980</width>
       <height>174</height>
-      <texture border="14">img/ProgressBG.png</texture>
+      <texture border="14">img/BlackDot.png</texture>
     </control>
     <!-- Window Dialog debug -->
     <control type="grouplist">
       <left>22</left>
       <top>22</top>
-      <width>1170</width>
+      <width>100%</width>
       <height>675</height>
       <itemgap>18</itemgap>
       <control type="label">
         <top>90</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -38,9 +38,9 @@
       </control>
       <!-- Window labels -->
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -48,9 +48,9 @@
         <visible>Window.IsVisible(MyPVR.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -58,9 +58,9 @@
         <visible>Window.IsVisible(MyMediaSources.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -68,9 +68,9 @@
         <visible>Window.IsVisible(DialogPVRTimerSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -78,9 +78,9 @@
         <visible>Window.IsVisible(DialogPVRRecordingInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -88,9 +88,9 @@
         <visible>Window.IsVisible(DialogPVRGuideSearch.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -98,9 +98,9 @@
         <visible>Window.IsVisible(DialogPVRGuideOSD.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -108,9 +108,9 @@
         <visible>Window.IsVisible(DialogPVRGuideInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -118,9 +118,9 @@
         <visible>Window.IsVisible(DialogPVRGroupManager.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -128,9 +128,9 @@
         <visible>Window.IsVisible(DialogPVRChannelsOSD.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -138,9 +138,9 @@
         <visible>Window.IsVisible(DialogPVRChannelManager.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -148,9 +148,9 @@
         <visible>Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -158,9 +158,9 @@
         <visible>Window.IsVisible(CustomMenuCustomizer.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -168,9 +168,9 @@
         <visible>Window.IsVisible(CustomQuit.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -178,9 +178,9 @@
         <visible>Window.IsVisible(CustomSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -188,9 +188,9 @@
         <visible>Window.IsVisible(CustomShelfCustomizer.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -198,9 +198,9 @@
         <visible>Window.IsVisible(CustomSources.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -208,9 +208,9 @@
         <visible>Window.IsVisible(CustomWatchlist.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -218,9 +218,9 @@
         <visible>Window.IsVisible(CustomDVD.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -228,9 +228,9 @@
         <visible>Window.IsVisible(AddonBrowser.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -238,9 +238,9 @@
         <visible>Window.IsVisible(CustomSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -248,9 +248,9 @@
         <visible>Window.IsVisible(FileManager.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -258,9 +258,9 @@
         <visible>Window.IsVisible(Home.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -268,9 +268,9 @@
         <visible>Window.IsVisible(LoginScreen.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -278,9 +278,9 @@
         <visible>Window.IsVisible(MyMusicNav.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -288,9 +288,9 @@
         <visible>Window.IsVisible(MyMusicPlaylist.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -298,9 +298,9 @@
         <visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -308,9 +308,9 @@
         <visible>Window.IsVisible(MyMusicSongs.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -318,9 +318,9 @@
         <visible>Window.IsVisible(MyPics.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -328,9 +328,9 @@
         <visible>Window.IsVisible(MyPrograms.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -338,9 +338,9 @@
         <visible>Window.IsVisible(MyVideoNav.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -348,9 +348,9 @@
         <visible>Window.IsVisible(MyVideoPlaylist.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -358,9 +358,9 @@
         <visible>Window.IsVisible(MyWeather.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -368,9 +368,9 @@
         <visible>Window.IsVisible(Settings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -378,9 +378,9 @@
         <visible>Window.IsVisible(SettingsCategory.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -388,9 +388,9 @@
         <visible>Window.IsVisible(SettingsProfile.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
@@ -399,7 +399,7 @@
       </control>
       <!-- Dialog labels -->
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -409,7 +409,7 @@
         <visible>Window.IsVisible(DialogAddonInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -419,7 +419,7 @@
         <visible>Window.IsVisible(DialogAddonSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -429,7 +429,7 @@
         <visible>Window.IsVisible(DialogAlbumInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -439,7 +439,7 @@
         <visible>Window.IsVisible(DialogBusy.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -449,7 +449,7 @@
         <visible>Window.IsVisible(DialogButtonMenu.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -459,7 +459,7 @@
         <visible>Window.IsVisible(DialogContentSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -469,7 +469,7 @@
         <visible>Window.IsVisible(DialogContextMenu.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -479,7 +479,7 @@
         <visible>Window.IsVisible(DialogFavourites.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -489,7 +489,7 @@
         <visible>Window.IsVisible(DialogFileStacking.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -499,7 +499,7 @@
         <visible>Window.IsVisible(DialogFullScreenInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -509,7 +509,7 @@
         <visible>Window.IsVisible(DialogKaiToast.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -519,7 +519,7 @@
         <visible>Window.IsVisible(DialogKaraokeSongSelector.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -529,7 +529,7 @@
         <visible>Window.IsVisible(DialogKaraokeSongSelectorLarge.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -539,7 +539,7 @@
         <visible>Window.IsVisible(DialogKeyboard.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -549,7 +549,7 @@
         <visible>Window.IsVisible(DialogMediaSource.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -559,7 +559,7 @@
         <visible>Window.IsVisible(DialogMusicScan.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -569,7 +569,7 @@
         <visible>Window.IsVisible(DialogMuteBug.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -579,7 +579,7 @@
         <visible>Window.IsVisible(DialogNetworkSetup.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -589,7 +589,7 @@
         <visible>Window.IsVisible(DialogNumeric.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -599,7 +599,7 @@
         <visible>Window.IsVisible(DialogOk.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -609,7 +609,7 @@
         <visible>Window.IsVisible(DialogPeripheralManager.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -619,7 +619,7 @@
         <visible>Window.IsVisible(DialogPeripheralSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -629,7 +629,7 @@
         <visible>Window.IsVisible(DialogPictureInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -639,7 +639,7 @@
         <visible>Window.IsVisible(DialogProgress.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -649,7 +649,7 @@
         <visible>Window.IsVisible(DialogSeekbar.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -659,7 +659,7 @@
         <visible>Window.IsVisible(DialogSelect.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -669,7 +669,7 @@
         <visible>Window.IsVisible(DialogSlider.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -679,7 +679,7 @@
         <visible>Window.IsVisible(DialogSongInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -689,7 +689,7 @@
         <visible>Window.IsVisible(DialogTextViewer.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -699,7 +699,7 @@
         <visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -709,7 +709,7 @@
         <visible>Window.IsVisible(DialogVideoScan.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -719,7 +719,7 @@
         <visible>Window.IsVisible(DialogVolumeBar.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -729,7 +729,7 @@
         <visible>Window.IsVisible(DialogYesNo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -739,7 +739,7 @@
         <visible>Window.IsVisible(FileBrowser.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -749,7 +749,7 @@
         <visible>Window.IsVisible(LockSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -759,7 +759,7 @@
         <visible>Window.IsVisible(MusicKaraokeLyrics.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -769,7 +769,7 @@
         <visible>Window.IsVisible(MusicOSD.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -779,7 +779,7 @@
         <visible>Window.IsVisible(MusicOverlay.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -789,7 +789,7 @@
         <visible>Window.IsVisible(MusicVisualisation.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -799,7 +799,7 @@
         <visible>Window.IsVisible(PlayerControls.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -809,7 +809,7 @@
         <visible>Window.IsVisible(ProfileSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -819,7 +819,7 @@
         <visible>Window.IsVisible(SettingsScreenCalibration.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -829,7 +829,7 @@
         <visible>Window.IsVisible(SettingsSystemInfo.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -839,7 +839,7 @@
         <visible>Window.IsVisible(SlideShow.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -849,7 +849,7 @@
         <visible>Window.IsVisible(SmartPlaylistEditor.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -859,7 +859,7 @@
         <visible>Window.IsVisible(SmartPlaylistRule.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -869,7 +869,7 @@
         <visible>Window.IsVisible(VideoOSD.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -879,7 +879,7 @@
         <visible>Window.IsVisible(VideoOSDBookmarks.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -889,7 +889,7 @@
         <visible>Window.IsVisible(VideoOSDSettings.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -899,7 +899,7 @@
         <visible>Window.IsVisible(VideoOverlay.xml)</visible>
       </control>
       <control type="label">
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
         <textcolor>FFFF0000</textcolor>
         <shadowcolor>FF000000</shadowcolor>
@@ -908,250 +908,208 @@
         <label>VisualisationPresetList.xml</label>
         <visible>Window.IsVisible(VisualisationPresetList.xml)</visible>
       </control>
-    </control>
+
     <!-- Content label -->
-    <control type="group">
-      <visible>Skin.HasSetting(DebugInfo)</visible>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
-        <height>32</height>
-        <textcolor>FF0000FF</textcolor>
-        <shadowcolor>FF000000</shadowcolor>
-        <font>font13</font>
-        <align>right</align>
+          <width>100%</width>
+          <height>32</height>
+          <textcolor>red</textcolor>
+          <shadowcolor>FF000000</shadowcolor>
+          <font>font13</font>
+          <align>left</align>
         <label>Content: Files</label>
         <visible>container.content(files)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Movies</label>
         <visible>container.content(Movies)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: TV Shows</label>
         <visible>container.content(tvshows)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Seasons</label>
         <visible>container.content(seasons)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Episodes</label>
         <visible>container.content(episodes)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Music Videos</label>
         <visible>container.content(musicvideos)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Addons</label>
         <visible>container.content(addons)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Albums</label>
         <visible>container.content(albums)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Artists</label>
         <visible>container.content(artists)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Songs</label>
         <visible>container.content(songs)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Playlists</label>
         <visible>container.content(playlists)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Genres</label>
         <visible>container.content(genres)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Years</label>
         <visible>container.content(years)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Actors</label>
         <visible>container.content(actors)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Studios</label>
         <visible>container.content(studios)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Plugins</label>
         <visible>container.content(plugins)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Movie Sets</label>
         <visible>container.content(MovieSets)</visible>
       </control>
       <control type="label">
-        <left>22r</left>
-        <top>22</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>Content: Live TV</label>
         <visible>container.content(livetv)</visible>
       </control>
       <!-- Control label -->
       <control type="label">
-        <left>22r</left>
-        <top>120</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FF0000FF</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
+        <align>left</align>
         <label>$INFO[System.CurrentControl,Control: ]</label>
       </control>
       <!-- Path label -->
       <control type="label">
-        <left>22r</left>
-        <top>72</top>
-        <width>1170</width>
+        <width>100%</width>
         <height>32</height>
-        <textcolor>FFFF0000</textcolor>
+        <textcolor>red</textcolor>
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
-        <align>right</align>
-        <label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath]</label>
+        <align>left</align>
+        <label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR][CR]$INFO[Container.FolderPath]</label>
       </control>
-    </control>
+      </control>
   </controls>
 </window>
