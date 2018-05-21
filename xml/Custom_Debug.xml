@@ -16,8 +16,8 @@
       <left>-30</left>
       <top>0</top>
       <width>1980</width>
-      <height>174</height>
-      <texture border="14">img/BlackDot.png</texture>
+      <height>280</height>
+      <texture border="14">img/WhiteDotST.png</texture>
     </control>
     <!-- Window Dialog debug -->
     <control type="grouplist">
@@ -1091,7 +1091,7 @@
         <visible>container.content(livetv)</visible>
       </control>
       <!-- Control label -->
-      <control type="label">
+      <!--<control type="label">
         <width>100%</width>
         <height>32</height>
         <textcolor>red</textcolor>
@@ -1099,7 +1099,7 @@
         <font>font13</font>
         <align>left</align>
         <label>$INFO[System.CurrentControl,Control: ]</label>
-      </control>
+      </control>-->
       <!-- Path label -->
       <control type="label">
         <width>100%</width>
@@ -1108,7 +1108,16 @@
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
-        <label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR][CR]$INFO[Container.FolderPath]</label>
+        <label>$INFO[Container.FolderName,FolderName: ]</label>
+      </control>
+      <control type="label">
+        <width>100%</width>
+        <height>32</height>
+        <textcolor>red</textcolor>
+        <shadowcolor>FF000000</shadowcolor>
+        <font>font13</font>
+        <align>left</align>
+        <label>$INFO[Container.FolderPath]</label>
       </control>
       </control>
   </controls>
