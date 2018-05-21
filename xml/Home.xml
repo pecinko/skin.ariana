@@ -16,16 +16,6 @@
         <texture>$VAR[Logo]</texture>
         <aspectratio align="left">keep</aspectratio>
       </control>
-      <!--<control type="label">
-        <top>20</top>
-        <left>0</left>
-        <right>0</right>
-        <height>40</height>
-        <font>size20</font>
-        <align>left</align>
-        <textcolor>$VAR[Label2Color]</textcolor>
-        <label>$INFO[Container(9000).ListItem.Property(type)]</label>
-      </control>-->
       <control type="grouplist" id="9001" description="Top right row buttons">
         <right>84</right>
         <top>90</top>
@@ -60,7 +50,7 @@
           <label>$LOCALIZE[16003]</label>
           <include>SquareButtonCommons</include>
         </control>
-        <control type="button" id="3" description="favourites">
+        <control type="button" id="4002" description="favourites">
           <visible>Skin.HasSetting(FavButton)</visible>
           <onclick>ActivateWindow(favourites)</onclick>
           <texturefocus>buttons/FavFO.png</texturefocus>
@@ -68,7 +58,7 @@
           <label>$LOCALIZE[10134]</label>
           <include>SquareButtonCommons</include>
         </control>
-        <control type="button" id="4" description="settings">
+        <control type="button" id="4001" description="settings">
           <onclick>ActivateWindow(settings)</onclick>
           <texturefocus>buttons/SettingsFO.png</texturefocus>
           <texturenofocus>buttons/SettingsNF.png</texturenofocus>
@@ -114,16 +104,6 @@
             <textcolor>$VAR[Label2Color]</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
-          <!--<control type="label">
-            <top>266</top>
-            <left>0</left>
-            <right>0</right>
-            <height>40</height>
-            <font>size18</font>
-            <align>center</align>
-            <textcolor>$VAR[Label2Color]</textcolor>
-            <label>$INFO[ListItem.Label2]</label>
-          </control>-->
         </itemlayout>
         <focusedlayout height="304" width="358">
           <control type="group" description="List in FO">
@@ -161,68 +141,8 @@
               <textcolor>$VAR[LabelNFColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
-            <!--<control type="label">
-              <top>266</top>
-              <left>0</left>
-              <right>0</right>
-              <height>40</height>
-              <font>size18</font>
-              <align>center</align>
-              <textcolor>$VAR[Label2Color]</textcolor>
-              <label>$INFO[ListItem.Label2]</label>
-            </control>-->
           </control>
         </focusedlayout>
-<!--         <content>
-          <item id="1">
-            <visible>Library.HasContent(Movies)</visible>
-            <label>$LOCALIZE[342]</label>
-            <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-            <property name="type">movies</property>
-          </item>
-          <item id="2">
-            <visible>Library.HasContent(TVShows)</visible>
-            <label>$LOCALIZE[20343]</label>
-            <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-            <property name="type">tvshows</property>
-          </item>
-          <item id="3">
-            <visible>Library.HasContent(files) + ![Library.HasContent(Movies) | Library.HasContent(TVShows)]</visible>
-            <label>$LOCALIZE[3]</label>
-            <onclick>ActivateWindow(Video,Files,return)</onclick>
-            <property name="type">videos</property>
-          </item>
-          <item id="4">
-            <visible>Library.HasContent(music)</visible>
-            <label>$LOCALIZE[2]</label>
-            <onclick>ActivateWindow(Music,root,return)</onclick>
-            <property name="type">music</property>
-          </item>
-          <item id="5">
-            <visible>Library.HasContent(musicvideos)</visible>
-            <label>$LOCALIZE[20389]</label>
-            <onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
-            <property name="type">videos</property>
-          </item>
-          <item id="6">
-            <visible>Library.HasContent(pictures)</visible>
-            <label>$LOCALIZE[1]</label>
-            <onclick>ActivateWindow(Pictures)</onclick>
-            <property name="type">pictures</property>
-          </item>
-          <item id="7">
-            <visible>!Library.HasContent(movies) + !Library.HasContent(pictures) + !Library.HasContent(tvshows) + !Library.HasContent(music) + !Library.HasContent(musicvideos) + !Library.HasContent(files)</visible>
-            <label>$LOCALIZE[744]</label>
-            <onclick>ActivateWindow(MediaSources,root)</onclick>
-            <property name="type">sources</property>
-          </item>
-          <item id="8">
-            <visible>System.HasExtensions</visible>
-            <label>$LOCALIZE[24001]</label>
-            <onclick>ActivateWindow(Programs,Addons,return)</onclick>
-            <property name="type">extensions</property>
-          </item>
-        </content> -->
       </control>
       <control type="grouplist" id="9500" description="home shelves">
         <top>570</top>
