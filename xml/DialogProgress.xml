@@ -72,7 +72,6 @@
         <onup>10</onup>
         <ondown>10</ondown>
         <align>center</align>
-        <include>9000Buttons</include>
       </control>
     </control>
   </controls>

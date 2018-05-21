@@ -32,7 +32,6 @@
         <onup>11</onup>
         <ondown>11</ondown>
         <align>center</align>
-        <include>9000Buttons</include>
       </control>
       <control type="button" id="11" description="Yes">
         <top>640</top>
@@ -42,7 +41,6 @@
         <onup>10</onup>
         <ondown>10</ondown>
         <align>center</align>
-        <include>9000Buttons</include>
       </control>
     </control>
   </controls>
