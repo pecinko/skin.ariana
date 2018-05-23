@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol>10</defaultcontrol>
+  <views>10</views>
+  <menucontrol>9000</menucontrol>
+  <controls>
+    <include>FullBackground</include>
+    <control type="group" id="50" description="grouping for navigation sake">
+      <include>OpenClose</include>
+      <visible>Control.IsVisible(10)</visible>
+      <control type="image">
+        <left>66</left>
+        <top>90</top>
+        <right>66</right>
+        <bottom>400</bottom>
+        <texture border="24">focus/FrameNF.png</texture>
+        <bordersize>-24</bordersize>
+      </control>
+      <control type="epggrid" id="10">
+        <left>66</left>
+        <top>90</top>
+        <right>66</right>
+        <bottom>400</bottom>
+        <timeblocks>24</timeblocks>
+        <rulerunit>6</rulerunit>
+        <onback>9000</onback>
+        <viewtype label="19032">list</viewtype>
+        <progresstexture border="0,50,9,5">epg/EPGMarker.png</progresstexture>
+        <rulerlayout height="60" width="1300">
+          <control type="label">
+            <width min="200">auto</width>
+            <height>40</height>
+            <label>$INFO[ListItem.Label]</label>
+            <textoffsetx>10</textoffsetx>
+            <font>size18</font>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+          </control>
+        </rulerlayout>
+        <channellayout height="74" width="400">
+          <control type="label" description="Nr">
+            <left>5</left>
+            <top>0</top>
+            <width>110</width>
+            <height>60</height>
+            <font>size18</font>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>$INFO[ListItem.ChannelNumber]</label>
+            <align>left</align>
+            <aligny>center</aligny>
+          </control>
+          <control type="label" id="1" description="Channels">
+            <left>100</left>
+            <top>0</top>
+            <width>400</width>
+            <height>60</height>
+            <font>size16U</font>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>$INFO[ListItem.ChannelName]</label>
+            <aligny>center</aligny>
+          </control>
+        </channellayout>
+        <focusedchannellayout height="74" width="400">
+          <control type="image">
+            <width>400</width>
+            <height>60</height>
+            <texture border="9">img/SettingsButtonFO.png</texture>
+            <visible>Control.HasFocus(10)</visible>
+          </control>
+          <control type="label" description="Nr">
+            <left>5</left>
+            <top>0</top>
+            <width>110</width>
+            <height>60</height>
+            <font>size18</font>
+            <textcolor>$VAR[LabelFOColor]</textcolor>
+            <label>$INFO[ListItem.ChannelNumber]</label>
+            <align>left</align>
+            <aligny>center</aligny>
+          </control>
+          <control type="label" id="1" description="Channels">
+            <left>100</left>
+            <top>0</top>
+            <width>400</width>
+            <height>60</height>
+            <font>size16U</font>
+            <textcolor>$VAR[LabelFOColor]</textcolor>
+            <label>$INFO[ListItem.ChannelName]</label>
+            <aligny>center</aligny>
+          </control>
+        </focusedchannellayout>
+        <itemlayout height="60" width="60">
+          <control type="image" id="2">
+            <width>60</width>
+            <height>60</height>
+            <texture border="3" fallback="epg/0.png">$INFO[ListItem.Property(GenreType),epg/,.png]</texture>
+          </control>
+          <control type="label" id="1">
+            <left>5</left>
+            <top>0</top>
+            <width>98%</width>
+            <height>100%</height>
+            <aligny>center</aligny>
+            <font>font16U</font>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="60" width="60">
+          <control type="image" id="2">
+            <width>60</width>
+            <height>60</height>
+            <texture border="3" fallback="epg/0.png">$INFO[ListItem.Property(GenreType),epg/,.png]</texture>
+          </control>
+          <control type="image" id="2">
+            <width>60</width>
+            <height>60</height>
+            <texture border="9">img/SettingsButtonFO.png</texture>
+            <visible>Control.HasFocus(10)</visible>
+          </control>
+          <control type="label" id="1">
+            <left>5</left>
+            <top>0</top>
+            <width>98%</width>
+            <height>100%</height>
+            <aligny>center</aligny>
+            <font>font16U</font>
+            <textcolor>$VAR[LabelFOColor]</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="group" description="EPG info">
+        <bottom>0</bottom>
+        <height>300</height>
+        <control type="image">
+          <left>66</left>
+          <top>-10</top>
+          <right>66</right>
+          <bottom>66</bottom>
+          <texture border="24">focus/FrameNF.png</texture>
+          <bordersize>-24</bordersize>
+        </control>
+        <control type="image">
+          <left>66</left>
+          <width>200</width>
+          <height>200</height>
+          <aspectratio align="center" aligny="top">keep</aspectratio>
+          <fadetime>200</fadetime>
+          <texture>$INFO[ListItem.Icon]</texture>
+        </control>
+        <control type="label">
+          <top>-9</top>
+          <left>300</left>
+          <right>60</right>
+          <height>30</height>
+          <font>size20B</font>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  ,]$INFO[ListItem.EpisodeName, (,)]</label>
+        </control>
+        <control type="textbox">
+          <left>300</left>
+          <top>38</top>
+          <right>60</right>
+          <height>173</height>
+          <label>$INFO[ListItem.Plot]</label>
+          <autoscroll delay="10000" time="3000" repeat="10000">true</autoscroll>
+        </control>
+      </control>
+    </control>
+    <control type="group" description="Side menu 9000 group">
+      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+      <include>TopBar</include>
+      <include>VisibleFadeEffect</include>
+      <include>PVRGroup9000</include>
+    </control>
+  </controls>
+</window>

@@ -65,8 +65,6 @@
             <orientation>horizontal</orientation>
             <onleft>51</onleft>
             <onright>51</onright>
-            <onup>9000</onup>
-            <ondown>noop</ondown>
             <onback>9000</onback>
             <preloaditems>4</preloaditems>
             <itemlayout height="408" width="360">
@@ -171,12 +169,12 @@
             <width>1788</width>
             <height>948</height>
             <orientation>vertical</orientation>
-            <onup>9000</onup>
+            <onup>53</onup>
             <ondown>53</ondown>
             <onback>9000</onback>
             <preloaditems>4</preloaditems>
             <itemlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="475" width="298">
-              <include>PosterBG_NF</include>
+              <include>PosterBG_FO</include>
               <control type="image">
                 <include>PosterCommons</include>
                 <texture background="true">$INFO[ListItem.Thumb]</texture>
@@ -250,7 +248,7 @@
           <textcolor>$VAR[LabelNFColor]</textcolor>
           <align>center</align>
         </control>
-        <control type="image" description="Thumb">
+        <control type="image" description="Collection Thumb">
           <visible>ListItem.IsCollection</visible>
           <include>VisibleFadeEffect</include>
           <centerleft>480</centerleft>
@@ -278,8 +276,8 @@
             <include>Icon_Fade</include>
             <texture background="true">$INFO[ListItem.Thumb]</texture>
             <aspectratio aligny="bottom">keep</aspectratio>
-            <bordertexture border="12">img/ThumbBorder.png</bordertexture>
-            <bordersize>4</bordersize>
+            <bordertexture border="9">img/ThumbBorder.png</bordertexture>
+            <bordersize>7</bordersize>
           </control>
           <control type="image" description="FA">
             <visible>Skin.HasSetting(FanartInList)</visible>
@@ -332,7 +330,7 @@
           <top>248</top>
           <width>800</width>
           <height>755</height>
-          <onup>9000</onup>
+          <onup>52</onup>
           <ondown>52</ondown>
           <onback>9000</onback>
           <viewtype label="535">List 52</viewtype>

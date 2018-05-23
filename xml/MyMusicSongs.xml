@@ -23,12 +23,12 @@
           <width>1800</width>
           <height>980</height>
           <orientation>vertical</orientation>
-          <onup>9000</onup>
+          <onup>53</onup>
           <onback>9000</onback>
           <ondown>53</ondown>
           <preloaditems>4</preloaditems>
           <itemlayout height="408" width="358">
-            <include>SquareBG_NF</include>
+            <include>SquareBG_FO</include>
             <control type="image">
               <include>SquareCommons</include>
               <texture background="true">$INFO[ListItem.Thumb]</texture>

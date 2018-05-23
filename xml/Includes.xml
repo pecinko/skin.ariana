@@ -6,9 +6,9 @@
   <!--<include file="View_57_58_59_Showcase.xml" /> -->
   <include name="9000GrouplistParameters">
     <centerleft>50%</centerleft>
-    <top>40</top>
+    <top>10</top>
     <width max="1800">auto</width>
-    <height>60</height>
+    <height>90</height>
     <itemgap>65</itemgap>
     <onleft>9000</onleft>
     <onright>9000</onright>
@@ -19,14 +19,14 @@
     <orientation>horizontal</orientation>
   </include>
   <include name="9000Buttons">
-    <width min="150" max="500">auto</width>
-    <height>60</height>
+    <width min="150" max="540">auto</width>
+    <height>90</height>
     <textoffsetx>0</textoffsetx>
     <align>center</align>
     <aligny>center</aligny>
     <font>size20B</font>
     <textcolor>grey</textcolor>
-    <focusedcolor>$VAR[LabelFOColor]</focusedcolor>
+    <focusedcolor>$VAR[LabelNFColor]</focusedcolor>
     <texturefocus/>
     <texturenofocus/>
     <alttexturenofocus/>
@@ -34,12 +34,12 @@
   </include>
   <include name="TopBar">
     <control type="image" description="Background">
-      <animation condition="ControlGroup(9000).HasFocus()" effect="slide" start="0,0" end="0,120" time="100" easing="in" reversible="false">Conditional</animation>
-      <animation condition="!ControlGroup(9000).HasFocus()" effect="slide" start="0,120" end="0,0" time="100" delay="50" easing="in" reversible="false">Conditional</animation>
+      <animation condition="ControlGroup(9000).HasFocus()" effect="slide" start="0,0" end="0,100" time="100" easing="in" reversible="false">Conditional</animation>
+      <animation condition="!ControlGroup(9000).HasFocus()" effect="slide" start="0,100" end="0,0" time="100" delay="50" easing="in" reversible="false">Conditional</animation>
       <left>0</left>
-      <top>-125</top>
+      <top>-121</top>
       <width>1920</width>
-      <height>140</height>
+      <height>122</height>
       <texture colordiffuse="$VAR[OverlayColor]">img/WhiteDot.png</texture>
     </control>
   </include>
@@ -136,18 +136,7 @@
     <font>size26B</font>
   </include>
   <include name="FullBackground">
-    <control type="image" description="Home Fanart">
-      <visible>Window.IsActive(Home.xml)</visible>
-      <left>0</left>
-      <top>0</top>
-      <width>100%</width>
-      <height>100%</height>
-      <aspectratio>scale</aspectratio>
-      <include>Fanart_Fade</include>
-      <texture background="true">$VAR[Home.Fanart]</texture>
-    </control>
     <control type="image" description="Art">
-      <visible>!Window.IsActive(Home.xml)</visible>
       <left>0</left>
       <top>0</top>
       <width>100%</width>

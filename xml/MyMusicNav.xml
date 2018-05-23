@@ -26,11 +26,11 @@
           <height>980</height>
           <orientation>vertical</orientation>
           <ondown>53</ondown>
-          <onup>9000</onup>
+          <onup>53</onup>
           <onback>9000</onback>
           <preloaditems>4</preloaditems>
           <itemlayout height="408" width="358">
-            <include>SquareBG_NF</include>
+            <include>SquareBG_FO</include>
             <control type="image">
               <include>SquareCommons</include>
               <texture background="true">$INFO[ListItem.Thumb]</texture>
@@ -98,7 +98,7 @@
           <top>270</top>
           <width>840</width>
           <height>741</height>
-          <onup>9000</onup>
+          <onup>52</onup>
           <onback>9000</onback>
           <ondown>52</ondown>
           <viewtype label="537">Big List</viewtype>
@@ -281,7 +281,7 @@
           <width>920</width>
           <height>635</height>
           <onright>9002</onright>
-          <onup>9000</onup>
+          <onup>51</onup>
           <onback>9000</onback>
           <ondown>51</ondown>
           <viewtype label="537">Big List 51</viewtype>

@@ -155,7 +155,7 @@
   <include name="MusicShowcaseBG">
     <include>MusicShowcaseThumbDimensions</include>
     <bordersize>-12</bordersize>
-    <texture>thumbs/SquareBG_NF.png</texture>
+    <texture>thumbs/SquareBG_FO.png</texture>
   </include>
   <include name="MusicShowcaseThumb">
     <include>MusicShowcaseThumbDimensions</include>

@@ -31,7 +31,7 @@
         <top>260</top>
         <width>784</width>
         <height>719</height>
-        <onup>9000</onup>
+        <onup>50</onup>
         <ondown>50</ondown>
         <onback>9000</onback>
         <viewtype label="535">List</viewtype>
@@ -159,18 +159,16 @@
         <left>100</left>
         <top>-75</top>
         <control type="image" description="FA">
-          <top>186</top>
+          <top>396</top>
           <left>0</left>
           <width>756</width>
-          <height>425</height>
-          <texture fallback="img/BlackDot.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
-          <aspectratio aligny="bottom">keep</aspectratio>
-          <bordertexture border="12">img/ThumbBorder.png</bordertexture>
-          <bordersize>4</bordersize>
+          <height>125</height>
+          <texture>icons/livetv.png</texture>
+          <aspectratio aligny="center" align="center">keep</aspectratio>
         </control>
         <control type="group" description="Media info Top">
           <left>0</left>
-          <top>742</top>
+          <top>690</top>
           <control type="label" description="Main Label">
             <top>-14</top>
             <width>758</width>
@@ -181,20 +179,20 @@
           <control type="textbox" description="Plot">
             <top>58</top>
             <width>758</width>
-            <height>170</height>
+            <height>204</height>
             <font>plot</font>
             <align>left</align>
             <aligny>bottom</aligny>
             <label>$VAR[Plots]</label>
           </control>
           <control type="label">
-            <top>240</top>
+            <top>280</top>
             <width>758</width>
             <font>size19</font>
             <label>$VAR[TopLabel]</label>
           </control>
           <control type="label" description="Details">
-            <top>278</top>
+            <top>320</top>
             <width>758</width>
             <font>size19</font>
             <label>$VAR[CodecList-Genre]</label>
@@ -205,44 +203,64 @@
         <right>66</right>
         <top>248</top>
         <width>800</width>
-        <height>755</height>
-        <onup>9000</onup>
-        <ondown>52</ondown>
+        <height>749</height>
+        <onup>50</onup>
+        <ondown>50</ondown>
         <onback>9000</onback>
         <viewtype label="535">List 50</viewtype>
         <preloaditems>4</preloaditems>
-        <itemlayout width="800" height="120">
+        <itemlayout width="800" height="125">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>800</width>
+            <height>120</height>
+            <texture border="10">focus/FrameNF.png</texture>
+            <bordersize>0</bordersize>
+            <aspectratio>stretch</aspectratio>
+          </control>
           <control type="image">
             <right>10</right>
-            <top>0</top>
-            <height>120</height>
-            <width>120</width>
-            <texture align="right" aligny="center">$INFO[ListItem.Icon]</texture>
+            <top>9</top>
+            <height>99</height>
+            <width>99</width>
+            <texture fallback="focus/FrameNF.png" align="right" aligny="center">$INFO[ListItem.Thumb]</texture>
             <aspectratio>keep</aspectratio>
+          </control>
+          <control type="label" description="Duration">
+            <visible>IsEmpty(ListItem.Thumb)</visible>
+            <right>10</right>
+            <top>9</top>
+            <height>99</height>
+            <width>99</width>
+            <font>size14</font>
+            <align>center</align>
+            <textcolor>$VAR[Label2Color]</textcolor>
+            <label>$INFO[ListItem.Duration]</label>
           </control>
           <control type="image">
             <visible>ListItem.IsRecording</visible>
             <left>12</left>
-            <top>50</top>
+            <top>54</top>
             <height>28</height>
             <width>28</width>
             <texture colordiffuse="red" align="left" aligny="center">OverlayInProgress.png</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label" description="Nr">
-            <left>10</left>
+            <left>14</left>
             <width>300</width>
-            <top>0</top>
+            <top>6</top>
             <height>50</height>
-            <font>size22</font>
+            <font>size20</font>
             <scroll>false</scroll>
             <textcolor>$VAR[LabelNFColor]</textcolor>
             <label>$INFO[ListItem.ChannelNumber]</label>
           </control>
           <control type="label" description="Main Label">
-            <left>120</left>
-            <width>600</width>
-            <top>0</top>
+            <top>6</top>
+            <left>110</left>
+            <right>130</right>
             <height>50</height>
             <font>size22</font>
             <scroll>false</scroll>
@@ -250,19 +268,20 @@
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="label" description="Label2">
-            <left>120</left>
-            <top>50</top>
+            <top>54</top>
+            <left>110</left>
+            <right>130</right>
             <height>30</height>
-            <font>size19</font>
+            <font>size16</font>
             <scroll>false</scroll>
             <textcolor>$VAR[Label2Color]</textcolor>
             <label>$INFO[ListItem.Title]</label>
           </control>
           <control type="progress">
             <visible>ListItem.HasEpg</visible>
-            <left>120</left>
-            <top>100</top>
-            <right>160</right>
+            <top>93</top>
+            <left>110</left>
+            <right>130</right>
             <height>10</height>
             <texturebg>progress/ProgressBG.png</texturebg>
             <lefttexture>progress/ProgressLeft.png</lefttexture>
@@ -271,50 +290,61 @@
             <info>ListItem.Progress</info>
           </control>
         </itemlayout>
-        <focusedlayout width="800" height="120">
+        <focusedlayout width="800" height="125">
           <control type="group">
             <include>FocusButtonsAnimation</include>
             <control type="image">
               <animation effect="fade" time="100">VisibleChange</animation>
-              <left>10</left>
+              <left>0</left>
               <top>0</top>
-              <width>780</width>
+              <width>800</width>
               <height>120</height>
               <texture border="10">focus/FrameFO.png</texture>
-              <bordersize>-10</bordersize>
+              <bordersize>0</bordersize>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
               <right>10</right>
-              <top>0</top>
-              <height>120</height>
-              <width>120</width>
-              <texture align="right" aligny="center">$INFO[ListItem.Icon]</texture>
+              <top>9</top>
+              <height>99</height>
+              <width>99</width>
+              <texture fallback="focus/FrameNF.png" align="right" aligny="center">$INFO[ListItem.Thumb]</texture>
               <aspectratio>keep</aspectratio>
+            </control>
+            <control type="label" description="Duration">
+              <visible>IsEmpty(ListItem.Thumb)</visible>
+              <right>10</right>
+              <top>9</top>
+              <height>99</height>
+              <width>99</width>
+              <font>size14</font>
+              <align>center</align>
+              <textcolor>$VAR[Label2Color]</textcolor>
+              <label>$INFO[ListItem.Duration]</label>
             </control>
             <control type="image">
               <visible>ListItem.IsRecording</visible>
               <left>12</left>
-              <top>50</top>
+              <top>54</top>
               <height>28</height>
               <width>28</width>
               <texture colordiffuse="red" align="left" aligny="center">OverlayInProgress.png</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label" description="Nr">
-              <left>10</left>
+              <left>14</left>
               <width>300</width>
-              <top>0</top>
+              <top>6</top>
               <height>50</height>
-              <font>size22</font>
+              <font>size20</font>
               <scroll>false</scroll>
               <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.ChannelNumber]</label>
             </control>
             <control type="label" description="Main Label">
-              <left>120</left>
-              <width>600</width>
-              <top>0</top>
+              <top>6</top>
+              <left>110</left>
+              <right>130</right>
               <height>50</height>
               <font>size22</font>
               <scroll>false</scroll>
@@ -322,19 +352,20 @@
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Label2">
-              <left>120</left>
-              <top>50</top>
+              <top>54</top>
+              <left>110</left>
+              <right>130</right>
               <height>30</height>
-              <font>size19</font>
+              <font>size16</font>
               <scroll>false</scroll>
               <textcolor>$VAR[Label2Color]</textcolor>
               <label>$INFO[ListItem.Title]</label>
             </control>
             <control type="progress">
               <visible>ListItem.HasEpg</visible>
-              <left>120</left>
-              <top>100</top>
-              <right>160</right>
+              <top>93</top>
+              <left>110</left>
+              <right>130</right>
               <height>10</height>
               <texturebg>progress/ProgressBG.png</texturebg>
               <lefttexture>progress/ProgressLeft.png</lefttexture>
@@ -367,6 +398,7 @@
         <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
       </control>
       <control type="button" id="102">
+        <visible>false</visible>
         <description>Recordings</description>
         <visible>![Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]</visible>
         <include>9000Buttons</include>
@@ -376,6 +408,7 @@
       </control>
       <control type="button" id="103">
         <description>Timers</description>
+        <visible>false</visible>
         <visible>![Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)]</visible>
         <include>9000Buttons</include>
         <label>19040</label>
@@ -384,6 +417,7 @@
       </control>
       <control type="button" id="104">
         <description>Search</description>
+        <visible>false</visible>
         <visible>![Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)]</visible>
         <include>9000Buttons</include>
         <label>137</label>
@@ -499,23 +533,13 @@
     <textcolor>$VAR[Label2Color]</textcolor>
     <align>left</align>
   </include>
-  <include name="SquareBG_NF">
-    <control type="image">
-      <left>0</left>
-      <top>0</top>
-      <width>358</width>
-      <height>408</height>
-      <bordersize>0</bordersize>
-      <texture>thumbs/SquareNF.png</texture>
-    </control>
-  </include>
   <include name="SquareBG_FO">
     <control type="image">
       <left>0</left>
       <top>0</top>
       <width>358</width>
       <height>408</height>
-      <bordersize>0</bordersize>
+      <bordersize>1</bordersize>
       <texture>thumbs/SquareFO.png</texture>
     </control>
   </include>
@@ -527,16 +551,6 @@
     <aspectratio aligny="top">scale</aspectratio>
     <bordersize>25</bordersize>
   </include>
-  <include name="PosterBG_NF">
-    <control type="image">
-      <left>0</left>
-      <top>0</top>
-      <width>298</width>
-      <height>475</height>
-      <texture>thumbs/PosterNF.png</texture>
-      <bordersize>0</bordersize>
-    </control>
-  </include>
   <include name="PosterBG_FO">
     <control type="image">
       <left>0</left>
@@ -544,7 +558,7 @@
       <width>298</width>
       <height>475</height>
       <texture>thumbs/PosterFO.png</texture>
-      <bordersize>0</bordersize>
+      <bordersize>1</bordersize>
     </control>
   </include>
   <include name="PosterCommons">
@@ -576,16 +590,6 @@
       </control>
     </control>
   </include>
-  <include name="RectangleBG_NF">
-    <control type="image">
-      <left>0</left>
-      <top>0</top>
-      <width>596</width>
-      <height>425</height>
-      <texture>thumbs/RectangleFO.png</texture>
-      <bordersize>1</bordersize>
-    </control>
-  </include>
   <include name="RectangleBG_FO">
     <control type="image">
       <left>0</left>
@@ -602,13 +606,13 @@
     <width>596</width>
     <height>375</height>
     <aspectratio>scale</aspectratio>
-    <bordersize>36</bordersize>
+    <bordersize>24</bordersize>
   </include>
   <include name="RectangleWatchedMarks">
     <control type="group" description="Overlay">
       <control type="image">
-        <right>36</right>
-        <top>36</top>
+        <right>24</right>
+        <top>24</top>
         <height>64</height>
         <width>64</width>
         <aspectratio>keep</aspectratio>
@@ -616,50 +620,13 @@
       </control>
       <control type="image">
         <visible>!IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
-        <right>40</right>
-        <top>40</top>
+        <right>28</right>
+        <top>28</top>
         <height>28</height>
         <width>28</width>
         <aspectratio>keep</aspectratio>
         <texture colordiffuse="FF000000">$VAR[Overlay]</texture>
       </control>
-    </control>
-  </include>
-  <include name="PostersShelfNF">
-    <include>PosterBG_NF</include>
-    <control type="image">
-      <visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
-      <include>PosterCommons</include>
-      <texture background="true">$INFO[ListItem.Thumb]</texture>
-    </control>
-    <control type="image">
-      <visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
-      <include>PosterCommons</include>
-      <texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
-    </control>
-    <include>PosterWatchedMarks</include>
-    <control type="label" description="Label2">
-      <visible>container.content(TVshows) | container.content(seasons)</visible>
-      <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
-      <right>26</right>
-      <top>17</top>
-      <height>42</height>
-      <width>42</width>
-      <font>size14</font>
-      <align>center</align>
-      <textcolor>$VAR[LabelFOColor]</textcolor>
-      <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
-    </control>
-    <control type="label" description="Label2">
-      <visible>Window.IsActive(home)</visible>
-      <left>5</left>
-      <top>400</top>
-      <width>290</width>
-      <height>45</height>
-      <font>size19</font>
-      <textcolor>$VAR[LabelNFColor]</textcolor>
-      <align>center</align>
-      <label>$INFO[ListItem.Season,S, ]$INFO[ListItem.Episode,E]</label>
     </control>
   </include>
   <include name="PostersShelfFO">
@@ -707,50 +674,13 @@
       </control>
     </control>
   </include>
-  <include name="RectangleShelfNF">
-    <include>RectangleBG_NF</include>
-    <control type="image">
-      <visible>IsEmpty(ListItem.Art(fanart))</visible>
-      <include>RectangleCommons</include>
-      <texture background="true">$INFO[ListItem.Thumb]</texture>
-    </control>
-    <control type="image">
-      <visible>!IsEmpty(ListItem.Art(fanart))</visible>
-      <include>RectangleCommons</include>
-      <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-    </control>
-    <control type="progress">
-      <visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
-      <centerleft>50%</centerleft>
-      <top>315</top>
-      <width>500</width>
-      <height>10</height>
-      <texturebg>progress/ProgressBG.png</texturebg>
-      <lefttexture>progress/ProgressLeft.png</lefttexture>
-      <righttexture flipx="true">progress/ProgressLeft.png</righttexture>
-      <midtexture>progress/ProgressMiddle.png</midtexture>
-      <info>ListItem.PercentPlayed</info>
-    </control>
-    <include>RectangleWatchedMarks</include>
-    <control type="label" description="Label2">
-      <visible>Window.IsActive(home)</visible>
-      <left>5</left>
-      <top>350</top>
-      <width>586</width>
-      <height>45</height>
-      <font>size19</font>
-      <textcolor>$VAR[LabelNFColor]</textcolor>
-      <align>center</align>
-      <label>$INFO[ListItem.TVShowTitle,, - ]$INFO[ListItem.Label]</label>
-    </control>
-  </include>
   <include name="RectangleShelfFO">
     <control type="group">
       <animation type="Focus" reversible="false">
-        <effect type="zoom" center="auto" start="100" end="110" time="120" easing="inout"/>
+        <effect type="zoom" center="auto" start="100" end="110" time="100" easing="inout"/>
       </animation>
       <animation type="UnFocus" reversible="false">
-        <effect type="zoom" center="auto" start="110" end="100" time="120" easing="inout"/>
+        <effect type="zoom" center="auto" start="110" end="100" time="100" easing="inout"/>
       </animation>
       <include>RectangleBG_FO</include>
       <control type="image">

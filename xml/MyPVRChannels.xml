@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">50</defaultcontrol>
+  <controls>
+    <include>FullBackground</include>
+    <include>Pvr_50</include>
+    <control type="group" description="Info group">
+      <visible>Control.IsVisible(50)</visible>
+      <include>VisibleFadeEffect</include>
+      <control type="videowindow" description="Current Video">
+        <visible>Player.HasVideo</visible>
+        <top>110</top>
+        <left>100</left>
+        <width>756</width>
+        <height>425</height>
+      </control>
+    </control>
+    <control type="group" description="Side menu 9000 group">
+      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+      <include>TopBar</include>
+      <include>VisibleFadeEffect</include>
+      <include>PVRGroup9000</include>
+    </control>
+  </controls>
+</window>

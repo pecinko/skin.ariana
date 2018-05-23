@@ -24,7 +24,7 @@
           <width>1800</width>
           <height>980</height>
           <orientation>vertical</orientation>
-          <onup>9000</onup>
+          <onup>53</onup>
           <onback>9000</onback>
           <ondown>53</ondown>
           <preloaditems>4</preloaditems>

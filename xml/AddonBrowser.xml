@@ -10,6 +10,7 @@
         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
         <include>TopBar</include>
         <include>VisibleFadeEffect</include>
+        <!--
         <control type="grouplist" id="9000">
           <include>9000GrouplistParameters</include>
           <control type="button" id="3" description="Sort">
@@ -32,6 +33,7 @@
             <onclick>fullscreen</onclick>
           </control>
         </control>
+      -->
       </control>
     </control>
   </controls>
