@@ -5,7 +5,7 @@
     <include>FullBackground</include>
     <control type="group" description="content">
       <include>OpenClose</include>
-      <animation effect="slide" start="0,0" end="0,-400" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
+      <animation effect="slide" start="0,0" end="0,-270" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
       <control type="group" description="Media Info and buttons">
         <control type="image" description="Media Thumb">
           <visible>!Skin.HasSetting(InfoPosterHide)</visible>
@@ -18,7 +18,7 @@
         </control>
         <control type="group" description="List Info">
           <left>60</left>
-          <top>236</top>
+          <top>220</top>
           <control type="group">
             <visible>![container.content(tvshows) | container.content(episodes) | SubString(Container.FolderPath,videodb://3,left)]</visible>
             <include>VisibleFadeEffect</include>
@@ -55,12 +55,6 @@
                   <onclick>noop</onclick>
                   <visible>!IsEmpty(ListItem.Studio)</visible>
                 </item>
-                <item>
-                  <label>$LOCALIZE[563]</label>
-                  <label2>$INFO[ListItem.RatingAndVotes]</label2>
-                  <onclick>noop</onclick>
-                  <visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
-                </item>
               </content>
             </control>
           </control>
@@ -93,12 +87,6 @@
                   <label2>$INFO[ListItem.Year]</label2>
                   <onclick>noop</onclick>
                   <visible>!IsEmpty(ListItem.Year)</visible>
-                </item>
-                <item>
-                  <label>$LOCALIZE[563]</label>
-                  <label2>$INFO[ListItem.Rating]</label2>
-                  <onclick>noop</onclick>
-                  <visible>!IsEmpty(ListItem.Rating)</visible>
                 </item>
               </content>
             </control>
@@ -156,12 +144,6 @@
                   <label2>$INFO[ListItem.Duration] $LOCALIZE[12391]</label2>
                   <onclick>noop</onclick>
                   <visible>!IsEmpty(ListItem.Duration)</visible>
-                </item>
-                <item>
-                  <label>$LOCALIZE[563]</label>
-                  <label2>$INFO[ListItem.Rating]</label2>
-                  <onclick>noop</onclick>
-                  <visible>!IsEmpty(ListItem.Rating)</visible>
                 </item>
               </content>
             </control>
@@ -228,88 +210,91 @@
             <wrapmultiline>true</wrapmultiline>
           </control>
           <control type="grouplist">
-            <top>105</top>
+            <top>100</top>
             <width>750</width>
-            <height>40</height>
+            <height>38</height>
             <align>left</align>
             <aligny>center</aligny>
             <orientation>horizontal</orientation>
-            <control type="label" description="Labels">
-              <width>100</width>
-              <height>40</height>
-              <font>size21</font>
-              <textcolor>$VAR[LabelNFColor]</textcolor>
-              <align>left</align>
-              <aligny>center</aligny>
-              <label>$INFO[ListItem.Year,,   ]</label>
-            </control>
             <control type="image" description="Rotten">
               <visible>!IsEmpty(ListItem.Property(RottenTomatoesRating))</visible>
-              <height>40</height>
-              <width>25</width>
+              <height>38</height>
+              <width>40</width>
               <aspectratio aligny="center" align="left">keep</aspectratio>
               <texture>$INFO[ListItem.Property(RatingImage),badges/,.png]</texture>
             </control>
             <control type="label" description="Rotten">
               <visible>!IsEmpty(ListItem.Property(RottenTomatoesRating))</visible>
-              <width>70</width>
-              <height>40</height>
+              <width>90</width>
+              <height>38</height>
               <font>size21</font>
               <textcolor>$VAR[LabelNFColor]</textcolor>
               <align>left</align>
-              <label>$INFO[ListItem.Property(RottenTomatoesRating),,]</label>
+              <label>$INFO[ListItem.Property(RottenTomatoesRating),,%]</label>
             </control>
             <control type="image" description="Audience">
-              <visible>!IsEmpty(ListItem.Property(AudienceRating))</visible>
-              <height>32</height>
-              <width>35</width>
+              <visible>!IsEmpty(ListItem.Property(RottenTomatoesAudienceRating))</visible>
+              <height>38</height>
+              <width>40</width>
               <aspectratio aligny="center" align="left">keep</aspectratio>
               <texture>$INFO[ListItem.Property(AudienceRatingImage),badges/,.png]</texture>
             </control>
             <control type="label" description="Audience">
-              <visible>!IsEmpty(ListItem.Property(AudienceRating))</visible>
-              <width>70</width>
-              <height>40</height>
+              <visible>!IsEmpty(ListItem.Property(RottenTomatoesAudienceRating))</visible>
+              <width>90</width>
+              <height>38</height>
               <font>size21</font>
               <textcolor>$VAR[LabelNFColor]</textcolor>
               <align>left</align>
-              <label>$INFO[ListItem.Property(AudienceRating),,]</label>
+              <label>$INFO[ListItem.Property(RottenTomatoesAudienceRating),,%]</label>
             </control>
             <control type="image" id="8888" description="IMDB">
               <visible>IsEmpty(ListItem.Property(RottenTomatoesRating)) + !IsEmpty(ListItem.Property(RatingImage))</visible>
-              <height>40</height>
-              <width>60</width>
+              <height>38</height>
+              <width>90</width>
               <aspectratio aligny="center" align="left">keep</aspectratio>
               <texture>$INFO[ListItem.Property(RatingImage),badges/,.png]</texture>
             </control>
             <control type="image" description="Default">
               <visible>![IsEmpty(ListItem.Rating) | Control.IsVisible(8888)]</visible>
-              <height>40</height>
-              <width>28</width>
+              <height>38</height>
+              <width>40</width>
               <aspectratio aligny="center" align="left">keep</aspectratio>
               <texture colordiffuse="$VAR[LabelNFColor]">badges/default.rating.png</texture>
             </control>
             <control type="label" description="Labels">
               <visible>!IsEmpty(ListItem.Rating)</visible>
               <width>70</width>
-              <height>40</height>
+              <height>38</height>
               <font>size21</font>
               <textcolor>$VAR[LabelNFColor]</textcolor>
               <align>left</align>
-              <label>$INFO[ListItem.Rating, ]</label>
+              <label>$INFO[ListItem.Rating]</label>
             </control>
-            <control type="label" description="MPAA">
-              <visible>!IsEmpty(ListItem.mpaa)</visible>
-              <width min="70" max="300">auto</width>
-              <height>40</height>
-              <font>size19</font>
-              <align>left</align>
+            <control type="label" description="Labels">
+              <width min="50">auto</width>
+              <height>38</height>
+              <font>size21</font>
               <textcolor>$VAR[LabelNFColor]</textcolor>
-              <label>$INFO[ListItem.mpaa,  ]</label>
+              <align>left</align>
+              <aligny>center</aligny>
+              <label>$INFO[ListItem.Year,,  ]</label>
+            </control>
+            <control type="button" description="MPAA">
+              <visible>!IsEmpty(ListItem.mpaa)</visible>
+              <width min="60" max="400">auto</width>
+              <height>38</height>
+              <font>size21</font>
+              <align>center</align>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <label>$INFO[ListItem.mpaa]</label>
+              <texturefocus>focus/FrameNF.png</texturefocus>
+              <texturenofocus>focus/FrameNF.png</texturenofocus>
+              <onclick>-</onclick>
             </control>
           </control>
           <control type="label" description="Codec">
-            <top>140</top>
+            <top>148</top>
             <width>750</width>
             <height>45</height>
             <font>size16</font>
@@ -400,7 +385,15 @@
               <top>15</top>
               <width>270</width>
               <height>270</height>
-              <texture aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Icon]</texture>
+              <texture colordiffuse="$VAR[OverlayColor]">img/UserDiffuse.png</texture>
+              <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image">
+              <left>15</left>
+              <top>15</top>
+              <width>270</width>
+              <height>270</height>
+              <texture aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
               <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
           </itemlayout>
@@ -417,7 +410,15 @@
                 <top>15</top>
                 <width>270</width>
                 <height>270</height>
-                <texture aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Icon]</texture>
+                <texture colordiffuse="$VAR[OverlayColor]">img/UserDiffuse.png</texture>
+                <aspectratio>scale</aspectratio>
+              </control>
+              <control type="image">
+                <left>15</left>
+                <top>15</top>
+                <width>270</width>
+                <height>270</height>
+                <texture aligny="top" diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
               </control>
               <control type="label" description="Main Label">
