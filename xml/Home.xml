@@ -20,7 +20,7 @@
         <right>84</right>
         <top>90</top>
         <width min="154" max="770">auto</width>
-        <height>110</height>
+        <height>108</height>
         <itemgap>10</itemgap>
         <ondown>9000</ondown>
         <onback>9000</onback>
