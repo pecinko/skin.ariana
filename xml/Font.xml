@@ -161,6 +161,12 @@
       <style>bold</style>
     </font>
     <font>
+      <name>monogram</name>
+      <filename>Arimo.ttf</filename>
+      <size>56</size>
+      <aspect>0.8</aspect>
+    </font>
+    <font>
       <name>size50B</name>
       <filename>Arimo.ttf</filename>
       <size>46</size>
