@@ -28,6 +28,7 @@
           <ondown>53</ondown>
           <onup>53</onup>
           <onback>9000</onback>
+          <pagecontrol>60</pagecontrol>
           <preloaditems>4</preloaditems>
           <itemlayout height="408" width="358">
             <include>SquareBG_FO</include>
@@ -101,6 +102,7 @@
           <onup>52</onup>
           <onback>9000</onback>
           <ondown>52</ondown>
+          <pagecontrol>60</pagecontrol>
           <viewtype label="537">Big List</viewtype>
           <preloaditems>4</preloaditems>
           <itemlayout condition="container.content(albums)" width="840" height="106">
@@ -284,6 +286,7 @@
           <onup>51</onup>
           <onback>9000</onback>
           <ondown>51</ondown>
+          <pagecontrol>60</pagecontrol>
           <viewtype label="537">Big List 51</viewtype>
           <preloaditems>4</preloaditems>
           <itemlayout condition="container.content(songs)" width="920" height="106">

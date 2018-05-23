@@ -66,6 +66,7 @@
             <onleft>51</onleft>
             <onright>51</onright>
             <onback>9000</onback>
+            <pagecontrol>60</pagecontrol>
             <preloaditems>4</preloaditems>
             <itemlayout height="408" width="360">
               <control type="image">
@@ -173,6 +174,7 @@
             <ondown>53</ondown>
             <onback>9000</onback>
             <preloaditems>4</preloaditems>
+            <pagecontrol>60</pagecontrol>
             <itemlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="475" width="298">
               <include>PosterBG_FO</include>
               <control type="image">
@@ -333,6 +335,7 @@
           <onup>52</onup>
           <ondown>52</ondown>
           <onback>9000</onback>
+          <pagecontrol>60</pagecontrol>
           <viewtype label="535">List 52</viewtype>
           <preloaditems>4</preloaditems>
           <itemlayout width="800" height="84">

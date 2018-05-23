@@ -27,6 +27,7 @@
           <onup>53</onup>
           <onback>9000</onback>
           <ondown>53</ondown>
+          <pagecontrol>60</pagecontrol>
           <preloaditems>4</preloaditems>
           <itemlayout height="408" width="360">
             <control type="image">

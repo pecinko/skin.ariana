@@ -16,51 +16,52 @@
         <textcolor>$VAR[LabelNFColor]</textcolor>
         <align>left</align>
       </control>
-        <control type="panel" id="53" description="Grid">
-          <viewtype label="536">Thumbnails</viewtype>
-          <left>60</left>
-          <top>90</top>
-          <width>1800</width>
-          <height>980</height>
-          <orientation>vertical</orientation>
-          <onup>53</onup>
-          <onback>9000</onback>
-          <ondown>53</ondown>
-          <preloaditems>4</preloaditems>
-          <itemlayout height="408" width="358">
+      <control type="panel" id="53" description="Grid">
+        <viewtype label="536">Thumbnails</viewtype>
+        <left>60</left>
+        <top>90</top>
+        <width>1800</width>
+        <height>980</height>
+        <orientation>vertical</orientation>
+        <onup>53</onup>
+        <onback>9000</onback>
+        <ondown>53</ondown>
+        <pagecontrol>60</pagecontrol>
+        <preloaditems>4</preloaditems>
+        <itemlayout height="408" width="358">
+          <include>SquareBG_FO</include>
+          <control type="image">
+            <include>SquareCommons</include>
+            <texture background="true">$INFO[ListItem.Thumb]</texture>
+          </control>
+        </itemlayout>
+        <focusedlayout height="408" width="358">
+          <control type="group">
+            <animation type="Focus" reversible="false">
+              <effect type="zoom" center="auto" start="100" end="110" time="120" easing="inout"/>
+            </animation>
+            <animation type="UnFocus" reversible="false">
+              <effect type="zoom" center="auto" start="110" end="100" time="120" easing="inout"/>
+            </animation>
             <include>SquareBG_FO</include>
             <control type="image">
               <include>SquareCommons</include>
               <texture background="true">$INFO[ListItem.Thumb]</texture>
             </control>
-          </itemlayout>
-          <focusedlayout height="408" width="358">
-            <control type="group">
-              <animation type="Focus" reversible="false">
-                <effect type="zoom" center="auto" start="100" end="110" time="120" easing="inout"/>
-              </animation>
-              <animation type="UnFocus" reversible="false">
-                <effect type="zoom" center="auto" start="110" end="100" time="120" easing="inout"/>
-              </animation>
-              <include>SquareBG_FO</include>
-              <control type="image">
-                <include>SquareCommons</include>
-                <texture background="true">$INFO[ListItem.Thumb]</texture>
-              </control>
-              <control type="label">
-                <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
-                <left>0</left>
-                <top>340</top>
-                <width>358</width>
-                <height>30</height>
-                <font>size16</font>
-                <textcolor>$VAR[LabelNFColor]</textcolor>
-                <align>center</align>
-                <label>$INFO[ListItem.Label]</label>
-              </control>
+            <control type="label">
+              <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+              <left>0</left>
+              <top>340</top>
+              <width>358</width>
+              <height>30</height>
+              <font>size16</font>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <align>center</align>
+              <label>$INFO[ListItem.Label]</label>
             </control>
-          </focusedlayout>
-        </control>
+          </control>
+        </focusedlayout>
+      </control>
     </control>
     <control type="group" description="Side menu 9000 group">
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>

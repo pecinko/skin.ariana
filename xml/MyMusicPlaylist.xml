@@ -46,6 +46,17 @@
         <textcolor>$VAR[LabelNFColor]</textcolor>
         <label>$LOCALIZE[179] $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength]</label>
       </control>
+      <control type="image" description="Thumb">
+        <centertop>460</centertop>
+        <centerleft>1510</centerleft>
+        <width>640</width>
+        <height>640</height>
+        <include>Icon_Fade</include>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <aspectratio align="center" aligny="center">keep</aspectratio>
+        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+        <bordersize>4</bordersize>
+      </control>
       <control type="group" description="Infolist">
         <left>0</left>
         <top>0</top>
@@ -218,35 +229,5 @@
         </control>
       </control>
     </control>
-
-    <!--<control type="group" description="Side menu 9000 group">
-    <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-    <include>MenuFullBG</include>
-    <include>VisibleFadeEffect</include>
-    <control type="grouplist" id="9000">
-      <include>9000GrouplistParameters</include>
-      <control type="radiobutton" id="20" description="Shuffle">
-        <radioleft>630</radioleft>
-        <include>9000Buttons</include>
-        <label>191</label>
-      </control>
-      <control type="button" id="21" description="Save">
-        <include>9000Buttons</include>
-        <label>190</label>
-      </control>
-      <control type="button" id="22" description="Clear">
-        <include>9000Buttons</include>
-        <label>192</label>
-      </control>
-      <control type="button" id="23" description="Play">
-        <include>9000Buttons</include>
-        <label>208</label>
-      </control>
-      <control type="button" id="26" description="Repeat">
-        <include>9000Buttons</include>
-        <label>-</label>
-      </control>
-    </control>
-  </control>-->
-</controls>
+  </controls>
 </window>
