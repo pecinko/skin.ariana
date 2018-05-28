@@ -3,29 +3,17 @@
   <defaultcontrol always="true">50</defaultcontrol>
   <controls>
     <include>FullBackground</include>
-    <include>View_50</include>
-    <control type="group" description="Thumbnails 53">
-      <visible>Control.IsVisible(53)</visible>
-      <include>ContainerVisibleFade</include>
-      <control type="label" description="MainHeading">
-        <top>66</top>
-        <left>84</left>
-        <width>1920</width>
-        <font>size50B</font>
-        <label>[B]$VAR[GlobalHeadings][/B]</label>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
-        <align>left</align>
-      </control>
+    <control type="group">
+      <include>OpenClose</include>
+      <include>View_50</include>
       <control type="panel" id="53" description="Grid">
         <viewtype label="536">Thumbnails</viewtype>
-        <left>60</left>
-        <top>90</top>
-        <width>1800</width>
-        <height>980</height>
+        <left>66</left>
+        <top>126</top>
+        <width>1860</width>
+        <height>954</height>
         <orientation>vertical</orientation>
-        <onup>53</onup>
         <onback>9000</onback>
-        <ondown>53</ondown>
         <pagecontrol>60</pagecontrol>
         <preloaditems>4</preloaditems>
         <itemlayout height="408" width="358">
@@ -62,46 +50,53 @@
           </control>
         </focusedlayout>
       </control>
-    </control>
-    <control type="group" description="Side menu 9000 group">
-      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-      <include>TopBar</include>
-      <include>VisibleFadeEffect</include>
-      <control type="grouplist" id="9000">
-        <include>9000GrouplistParameters</include>
-        <control type="button" id="2" description="Views">
-          <include>9000Buttons</include>
+      <control type="group" description="53 Furniture">
+        <visible>Control.IsVisible(53)</visible>
+        <include>ContainerVisibleFade</include>
+        <control type="label" description="MainHeading">
+          <top>66</top>
+          <left>84</left>
+          <width>1920</width>
+          <font>size50B</font>
+          <label>[B]$VAR[GlobalHeadings][/B]</label>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <align>left</align>
         </control>
-        <control type="button" id="3" description="Sort">
-          <include>9000Buttons</include>
-        </control>
-        <control type="button" id="19" description="Filter">
-          <include>9000Buttons</include>
-          <label>$LOCALIZE[587] $LOCALIZE[31292]</label>
-        </control>
-        <control type="button" id="697" description="Library">
-          <visible>Library.HasContent(music)</visible>
-          <include>9000Buttons</include>
-          <label>$LOCALIZE[1024] $LOCALIZE[14022]</label>
-          <onclick>ActivateWindow(MusicLibrary,root)</onclick>
-        </control>
-        <control type="togglebutton" id="699" description="Playing">
-          <enable>Player.HasMedia</enable>
-          <include>9000Buttons</include>
-          <label>$LOCALIZE[16003]</label>
-          <altlabel>$LOCALIZE[31977]</altlabel>
-          <usealttexture>Player.HasMedia</usealttexture>
-          <onclick>fullscreen</onclick>
-          <altclick>fullscreen</altclick>
-          <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
+      </control>
+      <control type="group" description="Side menu 9000 group">
+        <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+        <include>TopBar</include>
+        <include>VisibleFadeEffect</include>
+        <control type="grouplist" id="9000">
+          <include>9000GrouplistParameters</include>
+          <control type="button" id="2" description="Views">
+            <include>9000Buttons</include>
+          </control>
+          <control type="button" id="3" description="Sort">
+            <include>9000Buttons</include>
+          </control>
+          <control type="button" id="19" description="Filter">
+            <include>9000Buttons</include>
+            <label>$LOCALIZE[587] $LOCALIZE[31292]</label>
+          </control>
+          <control type="button" id="697" description="Library">
+            <visible>Library.HasContent(music)</visible>
+            <include>9000Buttons</include>
+            <label>$LOCALIZE[1024] $LOCALIZE[14022]</label>
+            <onclick>ActivateWindow(MusicLibrary,root)</onclick>
+          </control>
+          <control type="togglebutton" id="699" description="Playing">
+            <enable>Player.HasMedia</enable>
+            <include>9000Buttons</include>
+            <label>$LOCALIZE[16003]</label>
+            <altlabel>$LOCALIZE[31977]</altlabel>
+            <usealttexture>Player.HasMedia</usealttexture>
+            <onclick>fullscreen</onclick>
+            <altclick>fullscreen</altclick>
+            <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
+          </control>
         </control>
       </control>
     </control>
-    <control type="label" description="Heading">
-      <visible>IsEmpty(Container.FolderName)</visible>
-      <include>HeadingR</include>
-      <label>2</label>
-    </control>
-    <include>SortLetter</include>
   </controls>
 </window>

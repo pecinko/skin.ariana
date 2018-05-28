@@ -10,7 +10,7 @@
       <width>930</width>
       <control type="label" id="2" description="Heading">
         <width>930</width>
-        <font>size26B</font>
+        <font>size50B</font>
         <label>-</label>
         <textcolor>$VAR[LabelNFColor]</textcolor>
         <align>center</align>
@@ -27,20 +27,17 @@
         <control type="button" id="11" description="Browse">
           <width>285</width>
           <label>1024</label>
-          <align>center</align>
-          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+          <include>FocusButtonsAnimation</include>
         </control>
         <control type="button" id="13" description="Add">
           <width>285</width>
           <label>15019</label>
-          <align>center</align>
-          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+          <include>FocusButtonsAnimation</include>
         </control>
         <control type="button" id="14" description="Remove">
           <width>285</width>
           <label>1210</label>
-          <align>center</align>
-          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+          <include>FocusButtonsAnimation</include>
         </control>
       </control>
       <control type="panel" id="10">
@@ -48,38 +45,35 @@
         <top>240</top>
         <width>930</width>
         <height>243</height>
-        <onup>9001</onup>
-        <onleft>noop</onleft>
-        <onright>noop</onright>
+        <onup>9000</onup>
         <ondown>12</ondown>
-        <itemlayout height="81" width="930">
+        <itemlayout height="60" width="930">
           <control type="image">
-            <width>930</width>
-            <height>75</height>
-            <texture border="4">img/SettingsButtonNF.png</texture>
+            <width>100%</width>
+            <height>100%</height>
+            <texture border="9">img/SettingsButtonNF.png</texture>
           </control>
           <control type="label">
-            <left>30</left>
-            <width>600</width>
-            <height>75</height>
+            <left>20</left>
+            <right>20</right>
+            <height>100%</height>
             <info>ListItem.Label</info>
           </control>
         </itemlayout>
-        <focusedlayout height="75" width="930">
+        <focusedlayout height="60" width="930">
           <control type="group">
             <animation type="Focus" reversible="true">
               <effect type="zoom" center="auto" start="100" end="106" time="100" easing="inout"/>
             </animation>
             <control type="image">
-              <width>930</width>
-              <height>75</height>
-              <texture border="9">img/MediaButton2.png</texture>
+              <width>100%</width>
+              <height>100%</height>
+              <texture border="9">img/SettingsButtonFO.png</texture>
             </control>
             <control type="label" description="Path label">
-              <left>30</left>
-              <aligny>center</aligny>
-              <height>75</height>
-              <width>600</width>
+              <left>20</left>
+              <right>20</right>
+              <height>100%</height>
               <info>ListItem.Label</info>
             </control>
           </control>
@@ -95,11 +89,8 @@
         <label>-</label>
         <width>930</width>
         <align>left</align>
-        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
         <textoffsetx>20</textoffsetx>
         <onup>10</onup>
-        <onleft>18</onleft>
-        <onright>19</onright>
         <ondown>1800</ondown>
       </control>
       <control type="grouplist" id="1800">
@@ -115,16 +106,14 @@
           <label>186</label>
           <onleft>20</onleft>
           <onright>19</onright>
-          <align>center</align>
-          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+          <include>FocusButtonsAnimation</include>
         </control>
         <control type="button" id="19" description="Cancel">
           <width>300</width>
           <label>222</label>
           <onleft>18</onleft>
           <onright>20</onright>
-          <align>center</align>
-          <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+          <include>FocusButtonsAnimation</include>
         </control>
       </control>
     </control>

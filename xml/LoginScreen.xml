@@ -2,98 +2,126 @@
 <window>
   <defaultcontrol always="true">52</defaultcontrol>
   <controls>
-    <include>DialogFullBG</include>
-    <control type="group" description="BG and icons">
+    <control type="image" description="Art">
+      <left>0</left>
+      <top>0</top>
+      <width>100%</width>
+      <height>100%</height>
+      <aspectratio>stretch</aspectratio>
+      <texture colordiffuse="FF7f8da8">background/LightBG.png</texture>
+    </control>
+    <control type="group">
       <include>OpenClose</include>
-      <control type="group" description="List 52">
-        <visible>Control.IsVisible(52)</visible>
-        <control type="label" id="2" description="Main Label">
-          <include>CenterHeading</include>
-          <label>$VAR[GlobalHeadings]</label>
-        </control>
-        <control type="list" id="52">
-          <centerleft>50%</centerleft>
-          <centertop>50%</centertop>
-          <width>800</width>
-          <height max="719">auto</height>
-          <onup>52</onup>
-          <ondown>52</ondown>
-          <itemlayout width="800" height="120">
+      <control type="wraplist" id="52" description="users">
+        <focusposition>2</focusposition>
+        <left>60</left>
+        <top>420</top>
+        <width>1800</width>
+        <height>408</height>
+        <orientation>horizontal</orientation>
+        <itemlayout height="408" width="360">
+          <control type="image">
+            <left>45</left>
+            <top>45</top>
+            <width>270</width>
+            <height>270</height>
+            <texture colordiffuse="$VAR[OverlayColor]">thumbs/Monogram.png</texture>
+            <bordersize>-24</bordersize>
+            <aspectratio>scale</aspectratio>
+          </control>
+          <control type="label" description="Monogram">
+            <left>45</left>
+            <top>45</top>
+            <width>270</width>
+            <height>270</height>
+            <font>monogram</font>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[Label2Color]</textcolor>
+            <label>$INFO[ListItem.Property(monogram)]</label>
+          </control>
+          <control type="image">
+            <left>45</left>
+            <top>45</top>
+            <width>270</width>
+            <height>270</height>
+            <texture diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <bordersize>-2</bordersize>
+          </control>
+        </itemlayout>
+        <focusedlayout height="408" width="360">
+          <control type="group">
+            <animation type="Focus" reversible="false">
+              <effect type="zoom" center="auto" start="100" end="133" time="120" easing="inout"/>
+            </animation>
+            <animation type="UnFocus" reversible="false">
+              <effect type="zoom" center="auto" start="133" end="100" time="120" easing="inout"/>
+            </animation>
             <control type="image">
-              <left>16</left>
-              <top>6</top>
-              <width>770</width>
-              <height>108</height>
-              <texture border="4">img/SettingsButtonNF.png</texture>
-              <bordersize>0</bordersize>
-              <aspectratio>stretch</aspectratio>
+              <left>45</left>
+              <top>45</top>
+              <width>270</width>
+              <height>270</height>
+              <texture colordiffuse="$VAR[OverlayColor]">thumbs/Monogram.png</texture>
+              <bordersize>-24</bordersize>
+              <aspectratio>scale</aspectratio>
             </control>
-            <control type="image" description="Thumb">
-              <top>14</top>
-              <left>28</left>
-              <width>90</width>
-              <height>90</height>
+            <control type="label" description="Monogram">
+              <left>45</left>
+              <top>45</top>
+              <width>270</width>
+              <height>270</height>
+              <font>monogram</font>
+              <align>center</align>
+              <aligny>center</aligny>
+              <textcolor>$VAR[Label2Color]</textcolor>
+              <label>$INFO[ListItem.Property(monogram)]</label>
+            </control>
+            <control type="image">
+              <left>45</left>
+              <top>45</top>
+              <width>270</width>
+              <height>270</height>
+              <font>monogram</font>
               <texture diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
               <aspectratio scalediffuse="false">scale</aspectratio>
+              <bordersize>-2</bordersize>
             </control>
             <control type="label" description="Main Label">
-              <left>140</left>
-              <right>20</right>
-              <top>0</top>
-              <height>90</height>
-              <font>size20</font>
+              <left>0</left>
+              <right>0</right>
+              <top>310</top>
+              <height>66</height>
+              <font>size19</font>
+              <align>center</align>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
-            <control type="label" description="INFO">
-              <left>140</left>
-              <right>20</right>
-              <bottom>0</bottom>
-              <height>66</height>
-              <font>size16</font>
-              <scroll>false</scroll>
-              <label>$INFO[ListItem.Label2]</label>
-            </control>
-          </itemlayout>
-          <focusedlayout width="800" height="120">
-            <control type="group">
-              <include>FocusButtonsAnimation</include>
-              <control type="image">
-                <left>16</left>
-                <top>15</top>
-                <width>760</width>
-                <height>90</height>
-                <texture border="10">focus/FrameFO.png</texture>
-                <bordersize>-10</bordersize>
-                <aspectratio>stretch</aspectratio>
-              </control>
-              <control type="image" description="Thumb">
-                <top>14</top>
-                <left>28</left>
-                <width>90</width>
-                <height>90</height>
-                <texture diffuse="img/UserDiffuse.png" >$INFO[ListItem.Thumb]</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-              </control>
-              <control type="label" description="Main Label">
-                <left>140</left>
-                <right>20</right>
-                <top>0</top>
-                <height>90</height>
-                <font>size20</font>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
-                <label>$INFO[ListItem.Label]</label>
-              </control>
-              <control type="label" description="INFO">
-                <left>140</left>
-                <right>20</right>
-                <bottom>0</bottom>
-                <height>66</height>
-                <font>size16</font>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
-                <label>$INFO[ListItem.Label2]</label>
-              </control>
-            </control>
-          </focusedlayout>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="group" description="52 furniture">
+        <visible>Control.IsVisible(52)</visible>
+        <control type="label" description="Main Label">
+          <centerleft>50%</centerleft>
+          <top>150</top>
+          <align>center</align>
+          <aligny>center</aligny>
+          <width>100%</width>
+          <height>60</height>
+          <font>size50B</font>
+          <label>$LOCALIZE[20096]</label>
+        </control>
+        <control type="label" description="INFO">
+          <centerleft>50%</centerleft>
+          <bottom>30</bottom>
+          <height>60</height>
+          <width>100%</width>
+          <align>center</align>
+          <font>size16</font>
+          <textcolor>$VAR[Label2Color]</textcolor>
+          <label>$INFO[Container(52).ListItem.Label2]</label>
         </control>
       </control>
     </control>

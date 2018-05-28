@@ -26,21 +26,27 @@
       </control>
       <control type="button" id="10" description="No">
         <top>556</top>
-        <centerleft>960</centerleft>
+        <centerleft>50%</centerleft>
         <width>360</width>
         <label>106</label>
         <onup>11</onup>
         <ondown>11</ondown>
         <align>center</align>
+        <focusedcolor>white</focusedcolor>
+        <texturefocus colordiffuse="red" border="9">img/SettingsButtonFO.png</texturefocus>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="button" id="11" description="Yes">
         <top>640</top>
-        <centerleft>960</centerleft>
+        <centerleft>50%</centerleft>
         <width>360</width>
         <label>107</label>
         <onup>10</onup>
         <ondown>10</ondown>
         <align>center</align>
+        <focusedcolor>white</focusedcolor>
+        <texturefocus colordiffuse="green" border="9">img/SettingsButtonFO.png</texturefocus>
+        <include>FocusButtonsAnimation</include>
       </control>
     </control>
   </controls>

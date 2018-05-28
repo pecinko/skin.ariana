@@ -3,29 +3,8 @@
   <defaultcontrol always="true">450</defaultcontrol>
   <controls>
     <include>FullBackground</include>
-    <control type="group" description="List 50 base">
-      <visible>Control.IsVisible(450)</visible>
-      <include>ContainerVisibleFade</include>
-      <control type="label" description="Main Label">
-        <centerleft>1400</centerleft>
-        <centertop>90</centertop>
-        <align>center</align>
-        <font>size28B</font>
-        <width>850</width>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
-        <label>1036</label>
-      </control>
-      <control type="image" description="Thumb">
-        <centerleft>480</centerleft>
-        <centertop>580</centertop>
-        <width>600</width>
-        <height>760</height>
-        <include>Icon_Fade</include>
-        <texture background="true">$INFO[ListItem.Thumb]</texture>
-        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
-        <bordersize>9</bordersize>
-        <aspectratio>keep</aspectratio>
-      </control>
+    <control type="group">
+      <include>OpenClose</include>
       <control type="list" id="450">
         <left>1058</left>
         <top>180</top>
@@ -88,6 +67,30 @@
             </control>
           </control>
         </focusedlayout>
+      </control>
+      <control type="group" description="450 furniture">
+        <visible>Control.IsVisible(450)</visible>
+        <include>ContainerVisibleFade</include>
+        <control type="label" description="Main Label">
+          <centerleft>1400</centerleft>
+          <centertop>90</centertop>
+          <align>center</align>
+          <font>size28B</font>
+          <width>850</width>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <label>1036</label>
+        </control>
+        <control type="image" description="Thumb">
+          <centerleft>480</centerleft>
+          <centertop>580</centertop>
+          <width>600</width>
+          <height>760</height>
+          <include>Icon_Fade</include>
+          <texture background="true">$INFO[ListItem.Thumb]</texture>
+          <bordertexture border="12">img/ThumbBorder.png</bordertexture>
+          <bordersize>9</bordersize>
+          <aspectratio>keep</aspectratio>
+        </control>
       </control>
     </control>
   </controls>

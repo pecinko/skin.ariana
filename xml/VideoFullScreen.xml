@@ -6,6 +6,7 @@
   <controls>
     <control type="group" id="0">
       <visible>!Window.IsActive(DialogFullscreenInfo.xml)</visible>
+      <include>VisibleFadeEffect</include>
       <left>0</left>
       <top>75</top>
       <animation effect="fade" time="200">VisibleChange</animation>

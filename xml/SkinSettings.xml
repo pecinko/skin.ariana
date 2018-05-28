@@ -3,26 +3,13 @@
   <defaultcontrol always="true">50</defaultcontrol>
   <controls>
     <include>DialogFullBG</include>
-    <control type="group" description="List 50 base">
-      <visible>Control.IsVisible(50)</visible>
-      <include>ContainerVisibleFade</include>
-      <control type="label" description="MainHeading">
-        <right>66</right>
-        <top>60</top>
-        <width>800</width>
-        <height>40</height>
-        <font>size50B</font>
-        <label>[B]$VAR[GlobalHeadings][/B]</label>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
-        <align>center</align>
-      </control>
+    <control type="group">
+      <include>OpenClose</include>
       <control type="list" id="50">
         <left>1058</left>
         <top>260</top>
         <width>784</width>
-        <height>719</height>
-        <onup>50</onup>
-        <ondown>50</ondown>
+        <height>720</height>
         <itemlayout width="784" height="80">
           <control type="label" description="Main Label">
             <left>20</left>
@@ -83,7 +70,7 @@
             <visible>!Skin.HasSetting(DarkInterface)</visible>
             <label>$LOCALIZE[480]</label>
             <label2>$LOCALIZE[14061]</label2>
-            <onclick>Skin.SetBool(DarkInterface)</onclick>
+            <onclick>Skin.ToggleSetting(DarkInterface)</onclick>
           </item>
           <item id="6" description="Theme reset fallback light">
             <visible>!System.Platform.TVOS</visible>
@@ -92,89 +79,85 @@
             <label2>$LOCALIZE[31024]</label2>
             <onclick>Skin.Reset(DarkInterface)</onclick>
           </item>
-          <item id="1" description="List">
+          <item id="1" description="List Fanart">
             <visible>Skin.HasSetting(FanartInList)</visible>
             <label>$LOCALIZE[31032]</label>
             <label2>$LOCALIZE[107]</label2>
             <onclick>Skin.ToggleSetting(FanartInList)</onclick>
           </item>
-          <item id="2" description="List">
+          <item id="2" description="List Fanart">
             <visible>!Skin.HasSetting(FanartInList)</visible>
             <label>$LOCALIZE[31032]</label>
             <label2>$LOCALIZE[106]</label2>
             <onclick>Skin.ToggleSetting(FanartInList)</onclick>
           </item>
-          <item id="3" description="SortLetter">
-            <visible>Skin.HasSetting(ShowScrollLetter)</visible>
-            <label>$LOCALIZE[31034]</label>
-            <label2>$LOCALIZE[107]</label2>
-            <onclick>Skin.ToggleSetting(ShowScrollLetter)</onclick>
-          </item>
-          <item id="4" description="SortLetter">
-            <visible>!Skin.HasSetting(ShowScrollLetter)</visible>
-            <label>$LOCALIZE[31034]</label>
+          <item id="7" description="InfoPoster">
+            <visible>Skin.HasSetting(InfoPosterHide)</visible>
+            <label>$LOCALIZE[31035]</label>
             <label2>$LOCALIZE[106]</label2>
-            <onclick>Skin.ToggleSetting(ShowScrollLetter)</onclick>
+            <onclick>Skin.ToggleSetting(InfoPosterHide)</onclick>
           </item>
-
-        <item id="7" description="InfoPoster">
-          <visible>Skin.HasSetting(InfoPosterHide)</visible>
-          <label>$LOCALIZE[31035]</label>
-          <label2>$LOCALIZE[106]</label2>
-          <onclick>Skin.ToggleSetting(InfoPosterHide)</onclick>
-        </item>
-        <item id="8">
-          <visible>!Skin.HasSetting(InfoPosterHide)</visible>
-          <label>$LOCALIZE[31035]</label>
-          <label2>$LOCALIZE[107]</label2>
-          <onclick>Skin.ToggleSetting(InfoPosterHide)</onclick>
-        </item>
-        <item id="9">
-          <visible>Skin.HasSetting(HideFanart)</visible>
-          <label>$LOCALIZE[31036]</label>
-          <label2>$LOCALIZE[106]</label2>
-          <onclick>Skin.ToggleSetting(HideFanart)</onclick>
-        </item>
-        <item id="10">
-          <visible>!Skin.HasSetting(HideFanart)</visible>
-          <label>$LOCALIZE[31036]</label>
-          <label2>$LOCALIZE[107]</label2>
-          <onclick>Skin.ToggleSetting(HideFanart)</onclick>
-        </item>
-        <item id="11">
-          <visible>!Skin.HasSetting(FavButton)</visible>
-          <label>$LOCALIZE[513] - $LOCALIZE[1036]</label>
-          <label2>$LOCALIZE[1223]</label2>
-          <onclick>Skin.ToggleSetting(FavButton)</onclick>
-        </item>
-
-        <item id="12">
-          <visible>Skin.HasSetting(FavButton)</visible>
-          <label>$LOCALIZE[513] - $LOCALIZE[1036]</label>
-          <label2>$LOCALIZE[305]</label2>
-          <onclick>Skin.ToggleSetting(FavButton)</onclick>
-        </item>
-
-        <item id="100" description="Reset Skin">
-          <label>$LOCALIZE[31038]</label>
-          <label2>!!!</label2>
-          <onclick>Skin.ResetSettings</onclick>
-          <onclick>ReloadSkin()</onclick>
-        </item>
-      </content>
+          <item id="8" description="InfoPoster">
+            <visible>!Skin.HasSetting(InfoPosterHide)</visible>
+            <label>$LOCALIZE[31035]</label>
+            <label2>$LOCALIZE[107]</label2>
+            <onclick>Skin.ToggleSetting(InfoPosterHide)</onclick>
+          </item>
+          <item id="9" description="FanartBG">
+            <visible>Skin.HasSetting(HideFanart)</visible>
+            <label>$LOCALIZE[31036]</label>
+            <label2>$LOCALIZE[106]</label2>
+            <onclick>Skin.ToggleSetting(HideFanart)</onclick>
+          </item>
+          <item id="10" description="FanartBG">
+            <visible>!Skin.HasSetting(HideFanart)</visible>
+            <label>$LOCALIZE[31036]</label>
+            <label2>$LOCALIZE[107]</label2>
+            <onclick>Skin.ToggleSetting(HideFanart)</onclick>
+          </item>
+          <item id="11" description="HomeFav">
+            <visible>!Skin.HasSetting(FavButton)</visible>
+            <label>$LOCALIZE[513] - $LOCALIZE[1036]</label>
+            <label2>$LOCALIZE[1223]</label2>
+            <onclick>Skin.ToggleSetting(FavButton)</onclick>
+          </item>
+          <item id="12" description="HomeFav">
+            <visible>Skin.HasSetting(FavButton)</visible>
+            <label>$LOCALIZE[513] - $LOCALIZE[1036]</label>
+            <label2>$LOCALIZE[305]</label2>
+            <onclick>Skin.ToggleSetting(FavButton)</onclick>
+          </item>
+          <item id="100" description="Reset Skin">
+            <label>$LOCALIZE[31038]</label>
+            <label2>!!!</label2>
+            <onclick>Skin.ResetSettings</onclick>
+            <onclick>ReloadSkin()</onclick>
+          </item>
+        </content>
+      </control>
+      <control type="group" description="List 50 furniture">
+        <visible>Control.IsVisible(50)</visible>
+        <include>ContainerVisibleFade</include>
+        <control type="label" description="MainHeading">
+          <right>66</right>
+          <top>60</top>
+          <width>800</width>
+          <height>40</height>
+          <font>size50B</font>
+          <label>[B]$VAR[GlobalHeadings][/B]</label>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <align>center</align>
+        </control>
+        <control type="textbox" description="Plot51">
+          <left>120</left>
+          <top>300</top>
+          <width>660</width>
+          <height>378</height>
+          <font>plot</font>
+          <align>center</align>
+          <label>[B]$LOCALIZE[470][/B][CR][CR]$LOCALIZE[31000]</label>
+        </control>
+      </control>
     </control>
-  </control>
-  <control type="group" description="Left panel">
-    <top>0</top>
-    <control type="textbox" description="Plot51">
-      <left>120</left>
-      <top>300</top>
-      <width>660</width>
-      <height>378</height>
-      <font>plot</font>
-      <align>center</align>
-      <label>[B]$LOCALIZE[470][/B][CR][CR]$LOCALIZE[31000]</label>
-    </control>
-  </control>
-</controls>
+  </controls>
 </window>

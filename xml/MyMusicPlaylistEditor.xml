@@ -1,61 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
   <defaultcontrol allways="true">50</defaultcontrol>
-  <include>OpenClose</include>
   <views>50</views>
   <controls>
     <include>FullBackground</include>
-    <control type="label">
-      <include>CenterHeading</include>
-      <label>10503</label>
-    </control>
     <control type="group">
-      <description>Left panel</description>
-      <left>45</left>
-      <top>78</top>
+      <include>OpenClose</include>
       <control type="label">
-        <left>15</left>
-        <top>15</top>
-        <width>615</width>
-        <height>45</height>
-        <font>size22</font>
-        <label>31058</label>
+        <include>CenterHeading</include>
+        <label>10503</label>
       </control>
-      <control type="list" id="50">
-        <left>60</left>
-        <top>93</top>
-        <width>600</width>
-        <height>828</height>
-        <onleft>550</onleft>
-        <onright>8999</onright>
-        <onup>50</onup>
-        <ondown>50</ondown>
-        <pagecontrol>550</pagecontrol>
-        <itemlayout height="60" width="600">
-          <control type="label">
-            <right>15</right>
-            <top>0</top>
-            <width>570</width>
-            <font>size22</font>
-            <height>60</height>
-            <align>right</align>
-            <scroll>false</scroll>
-            <info>ListItem.Label</info>
-          </control>
-        </itemlayout>
-        <focusedlayout height="60" width="600">
-          <control type="group">
-            <include>FocusButtonsAnimation</include>
-            <control type="image">
-              <animation effect="fade" time="100">VisibleChange</animation>
-              <left>5</left>
-              <top>5</top>
-              <width>590</width>
-              <height>50</height>
-              <texture border="10">focus/FrameFO.png</texture>
-              <bordersize>-10</bordersize>
-              <aspectratio>stretch</aspectratio>
-            </control>
+      <control type="group">
+        <description>Left panel</description>
+        <left>45</left>
+        <top>78</top>
+        <control type="label">
+          <left>15</left>
+          <top>15</top>
+          <width>615</width>
+          <height>45</height>
+          <font>size22</font>
+          <label>31058</label>
+        </control>
+        <control type="list" id="50">
+          <left>60</left>
+          <top>93</top>
+          <width>600</width>
+          <height>828</height>
+          <onleft>550</onleft>
+          <onright>8999</onright>
+          <onup>50</onup>
+          <ondown>50</ondown>
+          <pagecontrol>550</pagecontrol>
+          <itemlayout height="60" width="600">
             <control type="label">
               <right>15</right>
               <top>0</top>
@@ -63,172 +40,200 @@
               <font>size22</font>
               <height>60</height>
               <align>right</align>
+              <scroll>false</scroll>
               <info>ListItem.Label</info>
             </control>
-          </control>
-        </focusedlayout>
-      </control>
-    </control>
-    <control type="group">
-      <description>Middle Panel</description>
-      <left>750</left>
-      <top>68</top>
-      <control type="group">
-        <visible>Control.HasFocus(50)</visible>
-        <control type="image">
-          <left>0</left>
-          <top>60</top>
-          <width>420</width>
-          <height>420</height>
-          <aligny>bottom</aligny>
-          <aspectratio>keep</aspectratio>
-          <texture>$INFO[Container(50).ListItem.Icon]</texture>
-          <bordersize>2</bordersize>
-        </control>
-        <control type="textbox">
-          <left>15</left>
-          <top>520</top>
-          <width>420</width>
-          <height>420</height>
-          <font>size19</font>
-          <textcolor>$VAR[LabelFOColor]</textcolor>
-          <label>$INFO[Container(50).ListItem.Title,[COLOR=Label2]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Artist,[COLOR=Label2]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Album,[COLOR=Label2]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Duration,[COLOR=Label2]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Genre,[COLOR=Label2]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
-        </control>
-      </control>
-      <control type="group">
-        <visible>Control.HasFocus(100)</visible>
-        <control type="image">
-          <left>0</left>
-          <top>60</top>
-          <width>420</width>
-          <height>420</height>
-          <aspectratio>keep</aspectratio>
-          <texture>$INFO[Container(100).ListItem.Icon]</texture>
-          <bordersize>2</bordersize>
-        </control>
-        <control type="textbox">
-          <left>15</left>
-          <top>520</top>
-          <width>420</width>
-          <height>420</height>
-          <font>size19</font>
-          <textcolor>$VAR[LabelFOColor]</textcolor>
-          <label>$INFO[Container(100).ListItem.Title,[COLOR=Label2]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Artist,[COLOR=Label2]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Album,[COLOR=Label2]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Duration,[COLOR=Label2]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Genre,[COLOR=Label2]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
-        </control>
-      </control>
-      <control type="group" id="8999">
-        <left>0</left>
-        <top>753</top>
-        <control type="button" id="6" description="Open">
-          <left>0</left>
-          <top>0</top>
-          <width>420</width>
-          <label>31055</label>
-          <onleft>50</onleft>
-          <onright>100</onright>
-          <onup>8</onup>
-          <ondown>7</ondown>
-        </control>
-        <control type="button" id="7" description="Save">
-          <left>0</left>
-          <top>69</top>
-          <width>420</width>
-          <label>31056</label>
-          <onleft>50</onleft>
-          <onright>100</onright>
-          <onup>6</onup>
-          <ondown>8</ondown>
-        </control>
-        <control type="button" id="8" description="Clear">
-          <left>0</left>
-          <top>138</top>
-          <width>420</width>
-          <label>31057</label>
-          <onleft>50</onleft>
-          <onright>100</onright>
-          <onup>7</onup>
-          <ondown>6</ondown>
-        </control>
-      </control>
-    </control>
-    <control type="group" description="Right panel">
-      <left>1215</left>
-      <top>78</top>
-      <control type="label">
-        <left>15</left>
-        <top>15</top>
-        <width>615</width>
-        <height>45</height>
-        <font>size24</font>
-        <label>31059</label>
-      </control>
-      <control type="list" id="100">
-        <visible>!IsEmpty(Container(100).ListItem.Label)</visible>
-        <left>-15</left>
-        <top>93</top>
-        <width>630</width>
-        <height>828</height>
-        <onleft>8999</onleft>
-        <onright>150</onright>
-        <onup>100</onup>
-        <ondown>100</ondown>
-        <pagecontrol>150</pagecontrol>
-        <itemlayout height="60" width="600">
-          <control type="label">
-            <left>15</left>
-            <top>0</top>
-            <width>570</width>
-            <font>size22</font>
-            <height>60</height>
-            <scroll>false</scroll>
-            <info>ListItem.Label</info>
-          </control>
-        </itemlayout>
-        <focusedlayout height="60" width="600">
-          <control type="group">
-            <include>FocusButtonsAnimation</include>
-            <control type="image">
-              <animation effect="fade" time="100">VisibleChange</animation>
-              <left>5</left>
-              <top>5</top>
-              <width>590</width>
-              <height>50</height>
-              <texture border="10">focus/FrameFO.png</texture>
-              <bordersize>-10</bordersize>
-              <aspectratio>stretch</aspectratio>
+          </itemlayout>
+          <focusedlayout height="60" width="600">
+            <control type="group">
+              <include>FocusButtonsAnimation</include>
+              <control type="image">
+                <animation effect="fade" time="100">VisibleChange</animation>
+                <left>5</left>
+                <top>5</top>
+                <width>590</width>
+                <height>50</height>
+                <texture border="10">focus/FrameFO.png</texture>
+                <bordersize>-10</bordersize>
+                <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="label">
+                <right>15</right>
+                <top>0</top>
+                <width>570</width>
+                <font>size22</font>
+                <height>60</height>
+                <align>right</align>
+                <info>ListItem.Label</info>
+              </control>
             </control>
+          </focusedlayout>
+        </control>
+      </control>
+      <control type="group">
+        <description>Middle Panel</description>
+        <left>750</left>
+        <top>68</top>
+        <control type="group">
+          <visible>Control.HasFocus(50)</visible>
+          <control type="image">
+            <left>0</left>
+            <top>60</top>
+            <width>420</width>
+            <height>420</height>
+            <aligny>bottom</aligny>
+            <aspectratio>keep</aspectratio>
+            <texture>$INFO[Container(50).ListItem.Icon]</texture>
+            <bordersize>2</bordersize>
+          </control>
+          <control type="textbox">
+            <left>15</left>
+            <top>520</top>
+            <width>420</width>
+            <height>420</height>
+            <font>size19</font>
+            <textcolor>$VAR[LabelFOColor]</textcolor>
+            <label>$INFO[Container(50).ListItem.Title,[COLOR=Label2]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Artist,[COLOR=Label2]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Album,[COLOR=Label2]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Duration,[COLOR=Label2]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Genre,[COLOR=Label2]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Control.HasFocus(100)</visible>
+          <control type="image">
+            <left>0</left>
+            <top>60</top>
+            <width>420</width>
+            <height>420</height>
+            <aspectratio>keep</aspectratio>
+            <texture>$INFO[Container(100).ListItem.Icon]</texture>
+            <bordersize>2</bordersize>
+          </control>
+          <control type="textbox">
+            <left>15</left>
+            <top>520</top>
+            <width>420</width>
+            <height>420</height>
+            <font>size19</font>
+            <textcolor>$VAR[LabelFOColor]</textcolor>
+            <label>$INFO[Container(100).ListItem.Title,[COLOR=Label2]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Artist,[COLOR=Label2]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Album,[COLOR=Label2]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Duration,[COLOR=Label2]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Genre,[COLOR=Label2]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
+          </control>
+        </control>
+        <control type="group" id="8999">
+          <left>0</left>
+          <top>753</top>
+          <control type="button" id="6" description="Open">
+            <left>0</left>
+            <top>0</top>
+            <width>420</width>
+            <label>31055</label>
+            <onleft>50</onleft>
+            <onright>100</onright>
+            <onup>8</onup>
+            <ondown>7</ondown>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="button" id="7" description="Save">
+            <left>0</left>
+            <top>69</top>
+            <width>420</width>
+            <label>31056</label>
+            <onleft>50</onleft>
+            <onright>100</onright>
+            <onup>6</onup>
+            <ondown>8</ondown>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="button" id="8" description="Clear">
+            <left>0</left>
+            <top>138</top>
+            <width>420</width>
+            <label>31057</label>
+            <onleft>50</onleft>
+            <onright>100</onright>
+            <onup>7</onup>
+            <ondown>6</ondown>
+            <include>FocusButtonsAnimation</include>
+          </control>
+        </control>
+      </control>
+      <control type="group" description="Right panel">
+        <left>1215</left>
+        <top>78</top>
+        <control type="label">
+          <left>15</left>
+          <top>15</top>
+          <width>615</width>
+          <height>45</height>
+          <font>size24</font>
+          <label>31059</label>
+        </control>
+        <control type="list" id="100">
+          <visible>!IsEmpty(Container(100).ListItem.Label)</visible>
+          <left>-15</left>
+          <top>93</top>
+          <width>630</width>
+          <height>828</height>
+          <onleft>8999</onleft>
+          <onright>150</onright>
+          <onup>100</onup>
+          <ondown>100</ondown>
+          <pagecontrol>150</pagecontrol>
+          <itemlayout height="60" width="600">
             <control type="label">
               <left>15</left>
               <top>0</top>
               <width>570</width>
+              <font>size22</font>
               <height>60</height>
+              <scroll>false</scroll>
               <info>ListItem.Label</info>
             </control>
-          </control>
-        </focusedlayout>
+          </itemlayout>
+          <focusedlayout height="60" width="600">
+            <control type="group">
+              <include>FocusButtonsAnimation</include>
+              <control type="image">
+                <animation effect="fade" time="100">VisibleChange</animation>
+                <left>5</left>
+                <top>5</top>
+                <width>590</width>
+                <height>50</height>
+                <texture border="10">focus/FrameFO.png</texture>
+                <bordersize>-10</bordersize>
+                <aspectratio>stretch</aspectratio>
+              </control>
+              <control type="label">
+                <left>15</left>
+                <top>0</top>
+                <width>570</width>
+                <height>60</height>
+                <info>ListItem.Label</info>
+              </control>
+            </control>
+          </focusedlayout>
+        </control>
       </control>
-    </control>
-    <control type="scrollbar" id="550">
-      <left>30</left>
-      <top>210</top>
-      <height>759</height>
-      <width>12</width>
-      <onleft>noop</onleft>
-      <onright>50</onright>
-      <animation type="Conditional" condition="!Control.HasFocus(550) + !Container.Scrolling">
-        <effect type="fade" start="100" end="40" time="200" reversible="true" />
-      </animation>
-    </control>
-    <control type="scrollbar" id="150">
-      <right>30</right>
-      <top>210</top>
-      <height>759</height>
-      <width>12</width>
-      <onleft>100</onleft>
-      <onright>noop</onright>
-      <animation type="Conditional" condition="!Control.HasFocus(150) + !Container.Scrolling">
-        <effect type="fade" start="100" end="40" time="200" reversible="true" />
-      </animation>
+      <control type="scrollbar" id="550">
+        <left>30</left>
+        <top>210</top>
+        <height>759</height>
+        <width>12</width>
+        <onleft>noop</onleft>
+        <onright>50</onright>
+        <animation type="Conditional" condition="!Control.HasFocus(550) + !Container.Scrolling">
+          <effect type="fade" start="100" end="40" time="200" reversible="true" />
+        </animation>
+      </control>
+      <control type="scrollbar" id="150">
+        <right>30</right>
+        <top>210</top>
+        <height>759</height>
+        <width>12</width>
+        <onleft>100</onleft>
+        <onright>noop</onright>
+        <animation type="Conditional" condition="!Control.HasFocus(150) + !Container.Scrolling">
+          <effect type="fade" start="100" end="40" time="200" reversible="true" />
+        </animation>
+      </control>
     </control>
   </controls>
 </window>

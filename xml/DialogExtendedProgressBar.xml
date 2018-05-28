@@ -3,6 +3,7 @@
   <controls>
     <control type="group">
       <animation effect="slide" start="0,0" end="0,-150" time="200" reversible="true" condition="Window.IsActive(FullScreenVideo)">Conditional</animation>
+      <include>OpenClose</include>
       <control type="label" id="30" description="Heading">
         <top>6</top>
         <left>10</left>

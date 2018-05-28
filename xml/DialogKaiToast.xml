@@ -5,28 +5,29 @@
   <animation effect="slide" start="0,0" end="0,-150" time="400" easing="inout">WindowClose</animation>
   <controls>
     <control type="group">
+      <include>OpenClose</include>
       <control type="image">
         <centerleft>50%</centerleft>
         <top>0</top>
         <width>100%</width>
-        <height>96</height>
-        <texture>$VAR[Background.Overlay]</texture>
+        <height>90</height>
+        <texture colordiffuse="$VAR[OverlayColor]">dot/White80.png</texture>
       </control>
       <control type="label" id="9000" description="Real label">
         <top>0</top>
         <centerleft>50%</centerleft>
         <width>100%</width>
-        <height>66</height>
+        <height>90</height>
         <align>center</align>
-				<label>$INFO[Control.GetLabel(401)]$INFO[Control.GetLabel(402), • ]</label>
+        <label>$INFO[Control.GetLabel(401)]$INFO[Control.GetLabel(402), • ]</label>
       </control>
-			<control type="label" id="401" description="Heading">
+      <control type="label" id="401" description="Heading">
         <top>3</top>
         <left>0</left>
         <width>930</width>
         <height>60</height>
         <align>right</align>
-				<font>-</font>
+        <font>-</font>
       </control>
       <control type="label" id="402" description="Message">
         <top>3</top>
@@ -34,7 +35,7 @@
         <width>930</width>
         <height>60</height>
         <align>left</align>
-				<font>-</font>
+        <font>-</font>
       </control>
     </control>
   </controls>

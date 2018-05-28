@@ -3,17 +3,17 @@
   <defaultcontrol>3</defaultcontrol>
   <controls>
     <include>DialogFullBG</include>
-    <control type="group" description="Content">
+    <control type="image" description="Sidebar">
+      <visible>!Control.IsVisible(3)</visible>
+      <left>-150</left>
+      <top>0</top>
+      <width>660</width>
+      <height>100%</height>
+      <aspectratio>stretch</aspectratio>
+      <texture border="60">img/HomeMenuBarV.png</texture>
+    </control>
+    <control type="group">
       <include>OpenClose</include>
-      <control type="image" description="Sidebar">
-        <visible>!Control.IsVisible(3)</visible>
-        <left>-150</left>
-        <top>0</top>
-        <width>660</width>
-        <height>100%</height>
-        <aspectratio>stretch</aspectratio>
-        <texture border="60">img/HomeMenuBarV.png</texture>
-      </control>
       <control type="label" id="1" description="Header label">
         <include>CenterHeading</include>
         <label>13406</label>
@@ -135,10 +135,9 @@
         <top>150</top>
         <width>360</width>
         <height>81</height>
-        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
-        <font>size20</font>
         <onleft>3</onleft>
         <onright>3</onright>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="group">
         <left>-60</left>

@@ -36,6 +36,8 @@
     <value condition="Container.content(musicvideos) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20389]</value>
     <value condition="Window.IsActive(mypics.xml) + IsEmpty(Container.FolderName)">$LOCALIZE[1]</value>
     <value condition="Window.IsActive(mymusicnav.xml) + IsEmpty(Container.FolderName)">$LOCALIZE[2]</value>
+    <value condition="Window.IsActive(mypvrsearch.xml) + IsEmpty(Container.FolderName)">$LOCALIZE[137]</value>
+    <value condition="Window.IsActive(mypvrtimers.xml)">$LOCALIZE[19040]</value>
     <value>$INFO[Container.FolderName]</value>
   </variable>
   <variable name="TopLabel" description="Shown Above Plots and descriptions">
@@ -77,7 +79,7 @@
     <value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
   </variable>
   <variable name="OverlayColor" description="Overlay">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FFCED5E0</value>
+    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FFe1e5ef</value>
     <value>FF2A2C32</value>
   </variable>
   <variable name="LabelNFColor" description="LabelNF">
@@ -97,8 +99,12 @@
     <value>FF909192</value>
   </variable>
   <variable name="SelectedColor" description="Selected">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF0f206c</value>
+    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF7f8da8</value>
     <value>FFf68b1f</value>
+  </variable>
+  <variable name="ButtonOverlayColor" description="Overlay square buttons">
+    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF6a6a6c</value>
+    <value>FF838485</value>
   </variable>
     <variable name="Logo" description="Logo image">
     <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">Logo_light.png</value>

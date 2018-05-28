@@ -2,65 +2,94 @@
 <window>
   <defaultcontrol always="true">50</defaultcontrol>
   <controls>
-    <control type="visualisation" id="2" description="Visualisation">
-      <left>0</left>
-      <top>0</top>
-      <width>100%</width>
-      <height>100%</height>
-    </control>
     <include>DialogFullBG</include>
-    <control type="group" description="BigList 50">
-      <visible>Control.IsVisible(50)</visible>
-      <include>ContainerVisibleFade</include>
-      <control type="label" description="Title Party">
-        <visible>MusicPartyMode.Enabled</visible>
-        <left>180</left>
-        <top>80</top>
-        <font>size28B</font>
-        <width>800</width>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
-        <label>$LOCALIZE[589]</label>
+    <control type="group">
+      <include>OpenClose</include>
+      <control type="group" description="Player">
+        <visible>Player.HasVideo</visible>
+        <visible>Control.IsVisible(50)</visible>
+        <include>VisibleFadeEffect</include>
+        <control type="videowindow" id="2" description="Visualisation">
+          <left>0</left>
+          <top>0</top>
+          <width>100%</width>
+          <height>100%</height>
+        </control>
+        <include>DiffuseBG</include>
       </control>
-      <control type="label" description="Title">
-        <visible>!MusicPartyMode.Enabled</visible>
-        <left>180</left>
-        <top>80</top>
-        <font>size28B</font>
-        <width>800</width>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
-        <label>$LOCALIZE[13350]</label>
-      </control>
-      <control type="label" description="Subtitle">
-        <left>180</left>
-        <top>132</top>
-        <font>size22</font>
-        <width>800</width>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
-        <label>$INFO[VideoPlayer.Artist,, - ] $INFO[VideoPlayer.Title,, : ] $INFO[VideoPlayer.TimeRemaining]</label>
-      </control>
-      <control type="label" description="Genre">
-        <left>180</left>
-        <top>200</top>
-        <font>size20</font>
-        <width>800</width>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
-        <label>$LOCALIZE[179] $INFO[VideoPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[VideoPlayer.PlaylistLength]</label>
-      </control>
-      <control type="group" description="Infolist">
-        <left>0</left>
-        <top>0</top>
-        <control type="list" id="50">
-          <left>140</left>
-          <top>390</top>
-          <width>920</width>
-          <height>635</height>
-          <pagecontrol>60</pagecontrol>
-          <onleft>noop</onleft>
-          <onright>9001</onright>
-          <onup>50</onup>
-          <ondown>50</ondown>
-          <preloaditems>4</preloaditems>
-          <itemlayout width="920" height="106">
+      <control type="list" id="50">
+        <left>140</left>
+        <top>390</top>
+        <width>920</width>
+        <height>636</height>
+        <pagecontrol>60</pagecontrol>
+        <onright>9001</onright>
+        <preloaditems>4</preloaditems>
+        <itemlayout width="920" height="106">
+          <control type="image" description="Thumb">
+            <top>9</top>
+            <left>18</left>
+            <width>86</width>
+            <height>86</height>
+            <texture background="true">$INFO[ListItem.Thumb]</texture>
+            <bordersize>4</bordersize>
+            <aspectratio>scale</aspectratio>
+          </control>
+          <control type="label" description="Main Label">
+            <left>120</left>
+            <right>125</right>
+            <top>0</top>
+            <height>66</height>
+            <font>size22</font>
+            <scroll>false</scroll>
+            <textcolor>$VAR[LabelFOColor]</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label" description="Album">
+            <left>120</left>
+            <right>125</right>
+            <bottom>0</bottom>
+            <height>66</height>
+            <font>size16</font>
+            <scroll>false</scroll>
+            <textcolor>$VAR[Label2Color]</textcolor>
+            <label>$INFO[ListItem.Album]</label>
+          </control>
+          <control type="label" description="Duration">
+            <visible>!ListItem.IsPlaying</visible>
+            <right>76</right>
+            <top>0</top>
+            <height>106</height>
+            <width>330</width>
+            <font>size16</font>
+            <align>right</align>
+            <textcolor>$VAR[Label2Color]</textcolor>
+            <label>$INFO[ListItem.Duration]</label>
+          </control>
+          <control type="image" description="playing">
+            <visible>ListItem.IsPlaying</visible>
+            <right>76</right>
+            <top>0</top>
+            <height>106</height>
+            <width>36</width>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="$VAR[SelectedColor]">img/NowPlayingFO.png</texture>
+          </control>
+        </itemlayout>
+        <focusedlayout width="920" height="106">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <visible>Control.HasFocus(51)</visible>
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>16</left>
+              <top>9</top>
+              <width>848</width>
+              <height>88</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
             <control type="image" description="Thumb">
               <top>9</top>
               <left>18</left>
@@ -76,7 +105,6 @@
               <top>0</top>
               <height>66</height>
               <font>size22</font>
-              <scroll>false</scroll>
               <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
@@ -86,7 +114,6 @@
               <bottom>0</bottom>
               <height>66</height>
               <font>size16</font>
-              <scroll>false</scroll>
               <textcolor>$VAR[Label2Color]</textcolor>
               <label>$INFO[ListItem.Album]</label>
             </control>
@@ -110,109 +137,88 @@
               <aspectratio>keep</aspectratio>
               <texture colordiffuse="$VAR[SelectedColor]">img/NowPlayingFO.png</texture>
             </control>
-          </itemlayout>
-          <focusedlayout width="920" height="106">
-            <control type="group">
-              <include>FocusButtonsAnimation</include>
-              <control type="image">
-                <visible>Control.HasFocus(51)</visible>
-                <animation effect="fade" time="100">VisibleChange</animation>
-                <left>16</left>
-                <top>9</top>
-                <width>848</width>
-                <height>88</height>
-                <texture border="10">focus/FrameFO.png</texture>
-                <bordersize>-10</bordersize>
-                <aspectratio>stretch</aspectratio>
-              </control>
-              <control type="image" description="Thumb">
-                <top>9</top>
-                <left>18</left>
-                <width>86</width>
-                <height>86</height>
-                <texture background="true">$INFO[ListItem.Thumb]</texture>
-                <bordersize>4</bordersize>
-                <aspectratio>scale</aspectratio>
-              </control>
-              <control type="label" description="Main Label">
-                <left>120</left>
-                <right>125</right>
-                <top>0</top>
-                <height>66</height>
-                <font>size22</font>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
-                <label>$INFO[ListItem.Label]</label>
-              </control>
-              <control type="label" description="Album">
-                <left>120</left>
-                <right>125</right>
-                <bottom>0</bottom>
-                <height>66</height>
-                <font>size16</font>
-                <textcolor>$VAR[Label2Color]</textcolor>
-                <label>$INFO[ListItem.Album]</label>
-              </control>
-              <control type="label" description="Duration">
-                <visible>!ListItem.IsPlaying</visible>
-                <right>76</right>
-                <top>0</top>
-                <height>106</height>
-                <width>330</width>
-                <font>size16</font>
-                <align>right</align>
-                <textcolor>$VAR[Label2Color]</textcolor>
-                <label>$INFO[ListItem.Duration]</label>
-              </control>
-              <control type="image" description="playing">
-                <visible>ListItem.IsPlaying</visible>
-                <right>76</right>
-                <top>0</top>
-                <height>106</height>
-                <width>36</width>
-                <aspectratio>keep</aspectratio>
-                <texture colordiffuse="$VAR[SelectedColor]">img/NowPlayingFO.png</texture>
-              </control>
-            </control>
-          </focusedlayout>
-        </control>
+          </control>
+        </focusedlayout>
       </control>
-      <control type="grouplist" id="9001">
-        <visible>!MusicPartyMode.Enabled</visible>
-        <include>VisibleFadeEffect</include>
-        <left>1192</left>
-        <top>830</top>
-        <width>638</width>
-        <height>150</height>
-        <itemgap>20</itemgap>
-        <onleft>50</onleft>
-        <onright>noop</onright>
-        <onup>50</onup>
-        <ondown>50</ondown>
-        <onback>50</onback>
-        <align>center</align>
-        <orientation>horizontal</orientation>
-        <control type="button" id="23" description="Play">
-          <texturefocus>buttons/PlayFO.png</texturefocus>
-          <texturenofocus>buttons/PlayNF.png</texturenofocus>
-          <label>208</label>
-          <include>SquareButtonCommons</include>
+      <control type="group" description="BigList 50">
+        <visible>Control.IsVisible(50)</visible>
+        <include>ContainerVisibleFade</include>
+        <control type="label" description="Title Party">
+          <visible>MusicPartyMode.Enabled</visible>
+          <left>180</left>
+          <top>80</top>
+          <font>size28B</font>
+          <width>800</width>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <label>$LOCALIZE[589]</label>
         </control>
-        <control type="button" id="20" description="Shuffle">
-          <texturefocus>buttons/ShuffleFO.png</texturefocus>
-          <texturenofocus>buttons/ShuffleNF.png</texturenofocus>
-          <label>191</label>
-          <include>SquareButtonCommons</include>
+        <control type="label" description="Title">
+          <visible>!MusicPartyMode.Enabled</visible>
+          <left>180</left>
+          <top>80</top>
+          <font>size28B</font>
+          <width>800</width>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <label>$LOCALIZE[13350]</label>
         </control>
-        <control type="button" id="26" description="Repeat">
-          <texturefocus>buttons/RepeatFO.png</texturefocus>
-          <texturenofocus>buttons/RepeatNF.png</texturenofocus>
-          <label>-</label>
-          <include>SquareButtonCommons</include>
+        <control type="label" description="Subtitle">
+          <left>180</left>
+          <top>132</top>
+          <font>size22</font>
+          <width>800</width>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <label>$INFO[VideoPlayer.Artist,, - ] $INFO[VideoPlayer.Title,, : ] $INFO[VideoPlayer.TimeRemaining]</label>
         </control>
-        <control type="button" id="21" description="Save">
-          <texturefocus>buttons/AddFO.png</texturefocus>
-          <texturenofocus>buttons/AddNF.png</texturenofocus>
-          <include>SquareButtonCommons</include>
+        <control type="label" description="Genre">
+          <left>180</left>
+          <top>200</top>
+          <font>size20</font>
+          <width>800</width>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <label>$LOCALIZE[179] $INFO[VideoPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[VideoPlayer.PlaylistLength]</label>
+        </control>
+        <control type="grouplist" id="9001">
+          <visible>!MusicPartyMode.Enabled</visible>
+          <include>VisibleFadeEffect</include>
+          <left>1192</left>
+          <top>830</top>
+          <width>638</width>
+          <height>150</height>
+          <itemgap>20</itemgap>
+          <onleft>50</onleft>
+          <onright>noop</onright>
+          <onup>50</onup>
+          <ondown>50</ondown>
+          <onback>50</onback>
+          <align>center</align>
+          <orientation>horizontal</orientation>
+          <control type="button" id="23" description="Play">
+            <texturefocus>buttons/PlayFO.png</texturefocus>
+            <texturenofocus>buttons/PlayNF.png</texturenofocus>
+            <label>208</label>
+            <include>SquareButtonCommons</include>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="button" id="20" description="Shuffle">
+            <texturefocus>buttons/ShuffleFO.png</texturefocus>
+            <texturenofocus>buttons/ShuffleNF.png</texturenofocus>
+            <label>191</label>
+            <include>SquareButtonCommons</include>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="button" id="26" description="Repeat">
+            <texturefocus>buttons/RepeatFO.png</texturefocus>
+            <texturenofocus>buttons/RepeatNF.png</texturenofocus>
+            <label>-</label>
+            <include>SquareButtonCommons</include>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="button" id="21" description="Save">
+            <texturefocus>buttons/AddFO.png</texturefocus>
+            <texturenofocus>buttons/AddNF.png</texturenofocus>
+            <include>SquareButtonCommons</include>
+            <include>FocusButtonsAnimation</include>
+          </control>
         </control>
       </control>
     </control>

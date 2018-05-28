@@ -2,7 +2,7 @@
 <window>
   <controls>
     <include>DialogFullBG</include>
-    <control type="group" description="controls">
+    <control type="group">
       <include>OpenClose</include>
       <control type="image" description="Sidebar">
         <left>-30</left>
@@ -15,8 +15,8 @@
       <control type="image" id="110" description="Service Logo">
         <centerleft>50%</centerleft>
         <top>60</top>
-        <width>375</width>
-        <height>60</height>
+        <width>500</width>
+        <height>80</height>
         <aspectratio align="center">keep</aspectratio>
       </control>
       <control type="label" id="100" description="Active service label">
@@ -231,14 +231,11 @@
           <control type="group">
             <include>FocusButtonsAnimation</include>
             <control type="image">
-              <visible>Control.HasFocus(150)</visible>
-              <include>VisibleFadeEffect</include>
               <left>0</left>
-              <top>5</top>
-              <width>365</width>
-              <height>50</height>
-              <texture border="10">focus/FrameFO.png</texture>
-              <bordersize>-10</bordersize>
+              <top>0</top>
+              <width>100%</width>
+              <height>100%</height>
+              <texture border="9">img/SettingsButtonFO.png</texture>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="label">
@@ -272,6 +269,7 @@
         <onright>120</onright>
         <onup>150</onup>
         <ondown>170</ondown>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="button" id="170" description="Manual search Button">
         <left>25</left>
@@ -283,6 +281,7 @@
         <onright>120</onright>
         <onup>160</onup>
         <ondown>150</ondown>
+        <include>FocusButtonsAnimation</include>
       </control>
     </control>
   </controls>

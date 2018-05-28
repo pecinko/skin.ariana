@@ -3,14 +3,107 @@
   <defaultcontrol always="true">50</defaultcontrol>
   <controls>
     <include>FullBackground</include>
-    <control type="group" description="Content">
+    <control type="group">
       <include>OpenClose</include>
-      <animation effect="fade" delay="100" time="300">Visible</animation>
-      <animation effect="fade" time="0">Hidden</animation>
       <include>View_50</include>
-      <control type="group" description="51 episodes GridWide">
+      <control type="fixedlist" id="51" description="51 Wide Container">
+        <visible>Container.Content(episodes)</visible>
+        <viewtype label="539">Wide 51</viewtype>
+        <focusposition>1</focusposition>
+        <movement>0</movement>
+        <left>60</left>
+        <top>260</top>
+        <width>1860</width>
+        <height>408</height>
+        <orientation>horizontal</orientation>
+        <onleft>51</onleft>
+        <onright>51</onright>
+        <onback>9000</onback>
+        <pagecontrol>60</pagecontrol>
+        <preloaditems>4</preloaditems>
+        <itemlayout height="408" width="360">
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>330</width>
+            <height>220</height>
+            <texture border="12">img/ThumbBorder.png</texture>
+            <bordersize>-5</bordersize>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>330</width>
+            <height>220</height>
+            <texture background="true">$INFO[ListItem.Thumb]</texture>
+            <aspectratio aligny="top">scale</aspectratio>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.Thumb)</visible>
+            <right>15</right>
+            <top>15</top>
+            <height>62</height>
+            <width>62</width>
+            <aspectratio>keep</aspectratio>
+            <texture>OverlayBG.png</texture>
+          </control>
+          <control type="image">
+            <right>18</right>
+            <top>18</top>
+            <height>28</height>
+            <width>28</width>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="Black">$VAR[Overlay]</texture>
+          </control>
+        </itemlayout>
+        <focusedlayout height="408" width="360">
+          <control type="group">
+            <animation type="Focus" reversible="false">
+              <effect type="zoom" center="180,180" start="100" end="115" time="120" easing="inout"/>
+            </animation>
+            <animation type="UnFocus" reversible="false">
+              <effect type="zoom" center="180,180" start="115" end="100" time="120" easing="inout"/>
+            </animation>
+            <control type="image">
+              <left>15</left>
+              <top>15</top>
+              <width>330</width>
+              <height>220</height>
+              <texture border="12">img/ThumbBorder.png</texture>
+              <bordersize>-5</bordersize>
+            </control>
+            <control type="image">
+              <left>15</left>
+              <top>15</top>
+              <width>330</width>
+              <height>220</height>
+              <texture background="true">$INFO[ListItem.Thumb]</texture>
+              <aspectratio aligny="top">scale</aspectratio>
+            </control>
+            <control type="image">
+              <visible>!IsEmpty(ListItem.Thumb)</visible>
+              <right>15</right>
+              <top>15</top>
+              <height>62</height>
+              <width>62</width>
+              <aspectratio>keep</aspectratio>
+              <texture>OverlayBG.png</texture>
+            </control>
+            <control type="image">
+              <right>18</right>
+              <top>18</top>
+              <height>28</height>
+              <width>28</width>
+              <aspectratio>keep</aspectratio>
+              <texture colordiffuse="Black">$VAR[Overlay]</texture>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="group" description="51 episodes Furniture">
         <visible>Control.IsVisible(51)</visible>
         <include>ContainerVisibleFade</include>
+        <include>FanartBG</include>
         <control type="label" description="Main Label">
           <left>420</left>
           <top>160</top>
@@ -18,7 +111,7 @@
           <font>size50B</font>
           <width>850</width>
           <height>40</height>
-          <textcolor>$VAR[LabelFOColor]</textcolor>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
           <label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
         </control>
         <control type="group" description="Media info left">
@@ -52,104 +145,81 @@
             <label>$VAR[Plots]</label>
           </control>
         </control>
-        <control type="group" description="Container">
-          <control type="fixedlist" id="51" description="51 Wide">
-            <visible>Container.Content(episodes)</visible>
-            <viewtype label="539">Wide 51</viewtype>
-            <focusposition>1</focusposition>
-            <movement>0</movement>
-            <left>60</left>
-            <top>260</top>
-            <width>1800</width>
-            <height>408</height>
-            <orientation>horizontal</orientation>
-            <onleft>51</onleft>
-            <onright>51</onright>
-            <onback>9000</onback>
-            <pagecontrol>60</pagecontrol>
-            <preloaditems>4</preloaditems>
-            <itemlayout height="408" width="360">
-              <control type="image">
-                <left>15</left>
-                <top>15</top>
-                <width>330</width>
-                <height>220</height>
-                <texture border="12">img/ThumbBorder.png</texture>
-                <bordersize>-5</bordersize>
-              </control>
-              <control type="image">
-                <left>15</left>
-                <top>15</top>
-                <width>330</width>
-                <height>220</height>
-                <texture background="true">$INFO[ListItem.Thumb]</texture>
-                <aspectratio aligny="top">scale</aspectratio>
-              </control>
-              <control type="image">
-                <visible>!IsEmpty(ListItem.Thumb)</visible>
-                <right>15</right>
-                <top>15</top>
-                <height>62</height>
-                <width>62</width>
-                <aspectratio>keep</aspectratio>
-                <texture>OverlayBG.png</texture>
-              </control>
-              <control type="image">
-                <right>18</right>
-                <top>18</top>
-                <height>28</height>
-                <width>28</width>
-                <aspectratio>keep</aspectratio>
-                <texture colordiffuse="Black">$VAR[Overlay]</texture>
-              </control>
-            </itemlayout>
-            <focusedlayout height="408" width="360">
-              <control type="group">
-                <animation type="Focus" reversible="false">
-                  <effect type="zoom" center="180,180" start="100" end="115" time="120" easing="inout"/>
-                </animation>
-                <animation type="UnFocus" reversible="false">
-                  <effect type="zoom" center="180,180" start="115" end="100" time="120" easing="inout"/>
-                </animation>
-                <control type="image">
-                  <left>15</left>
-                  <top>15</top>
-                  <width>330</width>
-                  <height>220</height>
-                  <texture border="12">img/ThumbBorder.png</texture>
-                  <bordersize>-5</bordersize>
-                </control>
-                <control type="image">
-                  <left>15</left>
-                  <top>15</top>
-                  <width>330</width>
-                  <height>220</height>
-                  <texture background="true">$INFO[ListItem.Thumb]</texture>
-                  <aspectratio aligny="top">scale</aspectratio>
-                </control>
-                <control type="image">
-                  <visible>!IsEmpty(ListItem.Thumb)</visible>
-                  <right>15</right>
-                  <top>15</top>
-                  <height>62</height>
-                  <width>62</width>
-                  <aspectratio>keep</aspectratio>
-                  <texture>OverlayBG.png</texture>
-                </control>
-                <control type="image">
-                  <right>18</right>
-                  <top>18</top>
-                  <height>28</height>
-                  <width>28</width>
-                  <aspectratio>keep</aspectratio>
-                  <texture colordiffuse="Black">$VAR[Overlay]</texture>
-                </control>
-              </control>
-            </focusedlayout>
-          </control>
-        </control>
       </control>
-      <control type="group" description="Thumbnails 53">
+      <control type="panel" id="53" description="Grid Container">
+        <visible>[Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)]</visible>
+        <viewtype label="536">Thumbnails</viewtype>
+        <left>66</left>
+        <top>126</top>
+        <width>1788</width>
+        <height>950</height>
+        <orientation>vertical</orientation>
+        <onup>53</onup>
+        <ondown>53</ondown>
+        <onback>9000</onback>
+        <preloaditems>4</preloaditems>
+        <pagecontrol>60</pagecontrol>
+        <itemlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="475" width="298">
+          <include>PosterBG_FO</include>
+          <control type="image">
+            <include>PosterCommons</include>
+            <texture background="true">$INFO[ListItem.Thumb]</texture>
+          </control>
+          <include>PosterWatchedMarks</include>
+          <control type="label" description="Label2">
+            <visible>container.content(TVshows) | container.content(seasons)</visible>
+            <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+            <right>26</right>
+            <top>17</top>
+            <height>42</height>
+            <width>42</width>
+            <font>size14</font>
+            <align>center</align>
+            <textcolor>$VAR[LabelFOColor]</textcolor>
+            <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="475" width="298">
+          <control type="group">
+            <animation type="Focus" reversible="false">
+              <effect type="zoom" center="149,237" start="100" end="115" time="120" easing="inout"/>
+            </animation>
+            <animation type="UnFocus" reversible="false">
+              <effect type="zoom" center="149,237" start="115" end="100" time="120" easing="inout"/>
+            </animation>
+            <include>PosterBG_FO</include>
+            <control type="image">
+              <include>PosterCommons</include>
+              <texture background="true">$INFO[ListItem.Thumb]</texture>
+            </control>
+            <control type="label">
+              <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+              <left>5</left>
+              <top>400</top>
+              <width>290</width>
+              <height>45</height>
+              <font>size19B</font>
+              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <align>center</align>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <include>PosterWatchedMarks</include>
+            <control type="label" description="Label2">
+              <visible>container.content(TVshows) | container.content(seasons)</visible>
+              <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+              <right>25</right>
+              <top>17</top>
+              <height>42</height>
+              <width>42</width>
+              <font>size14</font>
+              <align>center</align>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="group" description="53 Furniture">
         <visible>Control.IsVisible(53)</visible>
         <include>ContainerVisibleFade</include>
         <control type="group" description="Container">
@@ -162,84 +232,139 @@
             <textcolor>$VAR[LabelNFColor]</textcolor>
             <align>left</align>
           </control>
-          <control type="panel" id="53" description="Grid">
-            <visible>[Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)]</visible>
-            <viewtype label="536">Thumbnails</viewtype>
-            <left>66</left>
-            <top>126</top>
-            <width>1788</width>
-            <height>948</height>
-            <orientation>vertical</orientation>
-            <onup>53</onup>
-            <ondown>53</ondown>
-            <onback>9000</onback>
-            <preloaditems>4</preloaditems>
-            <pagecontrol>60</pagecontrol>
-            <itemlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="475" width="298">
-              <include>PosterBG_FO</include>
-              <control type="image">
-                <include>PosterCommons</include>
-                <texture background="true">$INFO[ListItem.Thumb]</texture>
-              </control>
-              <include>PosterWatchedMarks</include>
-              <control type="label" description="Label2">
-                <visible>container.content(TVshows) | container.content(seasons)</visible>
-                <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
-                <right>26</right>
-                <top>17</top>
-                <height>42</height>
-                <width>42</width>
-                <font>size14</font>
-                <align>center</align>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
-                <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
-              </control>
-            </itemlayout>
-            <focusedlayout condition="Container.Content(Movies) | Container.content(tvshows) | container.content(seasons)" height="475" width="298">
-              <control type="group">
-                <animation type="Focus" reversible="false">
-                  <effect type="zoom" center="149,237" start="100" end="115" time="120" easing="inout"/>
-                </animation>
-                <animation type="UnFocus" reversible="false">
-                  <effect type="zoom" center="149,237" start="115" end="100" time="120" easing="inout"/>
-                </animation>
-                <include>PosterBG_FO</include>
-                <control type="image">
-                  <include>PosterCommons</include>
-                  <texture background="true">$INFO[ListItem.Thumb]</texture>
-                </control>
-                <control type="label">
-                  <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
-                  <left>5</left>
-                  <top>400</top>
-                  <width>290</width>
-                  <height>45</height>
-                  <font>size19B</font>
-                  <textcolor>$VAR[LabelNFColor]</textcolor>
-                  <align>center</align>
-                  <label>$INFO[ListItem.Label]</label>
-                </control>
-                <include>PosterWatchedMarks</include>
-                <control type="label" description="Label2">
-                  <visible>container.content(TVshows) | container.content(seasons)</visible>
-                  <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
-                  <right>25</right>
-                  <top>17</top>
-                  <height>42</height>
-                  <width>42</width>
-                  <font>size14</font>
-                  <align>center</align>
-                  <textcolor>$VAR[LabelFOColor]</textcolor>
-                  <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
-                </control>
-              </control>
-            </focusedlayout>
-          </control>
         </control>
       </control>
-      <control type="group" description="List 52 Infolist">
+      <control type="list" id="52" description="Movie shows list">
+        <visible>container.content(Movies) | container.content(TVshows) | container.content(seasons) | container.content(episodes) | container.content(musicvideos) | container.content(files)</visible>
+        <right>66</right>
+        <top>248</top>
+        <width>800</width>
+        <height>756</height>
+        <onback>9000</onback>
+        <pagecontrol>60</pagecontrol>
+        <viewtype label="535">List 52</viewtype>
+        <preloaditems>4</preloaditems>
+        <itemlayout width="800" height="84">
+          <control type="image">
+            <left>20</left>
+            <top>0</top>
+            <height>84</height>
+            <width>28</width>
+            <texture colordiffuse="$VAR[LabelNFColor]" align="left" aligny="center">$VAR[Overlay]</texture>
+            <aspectratio>keep</aspectratio>
+          </control>
+          <control type="label" description="Main Label">
+            <left>70</left>
+            <width>600</width>
+            <top>0</top>
+            <height>84</height>
+            <font>size22</font>
+            <scroll>false</scroll>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label" description="Label2">
+            <visible>container.content(movies)</visible>
+            <right>30</right>
+            <top>0</top>
+            <align>right</align>
+            <height>84</height>
+            <font>size19</font>
+            <scroll>false</scroll>
+            <textcolor>$VAR[Label2Color]</textcolor>
+            <label>$INFO[ListItem.Duration,, $LOCALIZE[31297]]</label>
+          </control>
+          <control type="label" description="Label2">
+            <visible>container.content(seasons) | container.content(TVshows)</visible>
+            <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+            <right>30</right>
+            <top>0</top>
+            <align>right</align>
+            <height>84</height>
+            <font>size19</font>
+            <scroll>false</scroll>
+            <textcolor>$VAR[Label2Color]</textcolor>
+            <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+          </control>
+          <control type="image" description="arrow">
+            <visible>ListItem.IsCollection</visible>
+            <right>20</right>
+            <top>0</top>
+            <height>80</height>
+            <width>40</width>
+            <align>right</align>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="$VAR[Label2Color]">img/Arrow.png</texture>
+          </control>
+        </itemlayout>
+        <focusedlayout width="800" height="84">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>10</left>
+              <top>10</top>
+              <width>770</width>
+              <height>64</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+              <left>20</left>
+              <top>0</top>
+              <height>84</height>
+              <width>28</width>
+              <texture colordiffuse="$VAR[LabelFOColor]" align="left">$VAR[Overlay]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <left>70</left>
+              <width>600</width>
+              <top>0</top>
+              <height>84</height>
+              <font>size22</font>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label" description="Label2">
+              <visible>container.content(movies)</visible>
+              <right>30</right>
+              <top>0</top>
+              <align>right</align>
+              <height>84</height>
+              <font>size19</font>
+              <textcolor>$VAR[Label2Color]</textcolor>
+              <label>$INFO[ListItem.Duration,, $LOCALIZE[31297]]</label>
+            </control>
+            <control type="label" description="Label2">
+              <visible>container.content(seasons) | container.content(TVshows)</visible>
+              <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+              <right>30</right>
+              <top>0</top>
+              <align>right</align>
+              <height>84</height>
+              <font>size19</font>
+              <textcolor>$VAR[Label2Color]</textcolor>
+              <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+            </control>
+            <control type="image" description="arrow">
+              <visible>ListItem.IsCollection</visible>
+              <right>30</right>
+              <top>0</top>
+              <height>80</height>
+              <width>40</width>
+              <aspectratio>keep</aspectratio>
+              <align>right</align>
+              <texture colordiffuse="$VAR[LabelFOColor]">img/Arrow.png</texture>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="group" description="52 Furniture">
         <visible>Control.IsVisible(52)</visible>
         <include>ContainerVisibleFade</include>
+        <include>FanartBG</include>
         <control type="label" description="MainHeading">
           <right>66</right>
           <top>120</top>
@@ -326,135 +451,6 @@
             </control>
           </control>
         </control>
-        <control type="list" id="52">
-          <visible>container.content(Movies) | container.content(TVshows) | container.content(seasons) | container.content(episodes) | container.content(musicvideos) | container.content(files)</visible>
-          <right>66</right>
-          <top>248</top>
-          <width>800</width>
-          <height>755</height>
-          <onup>52</onup>
-          <ondown>52</ondown>
-          <onback>9000</onback>
-          <pagecontrol>60</pagecontrol>
-          <viewtype label="535">List 52</viewtype>
-          <preloaditems>4</preloaditems>
-          <itemlayout width="800" height="84">
-            <control type="image">
-              <left>20</left>
-              <top>0</top>
-              <height>84</height>
-              <width>28</width>
-              <texture colordiffuse="$VAR[LabelNFColor]" align="left" aligny="center">$VAR[Overlay]</texture>
-              <aspectratio>keep</aspectratio>
-            </control>
-            <control type="label" description="Main Label">
-              <left>70</left>
-              <width>600</width>
-              <top>0</top>
-              <height>84</height>
-              <font>size22</font>
-              <scroll>false</scroll>
-              <textcolor>$VAR[LabelNFColor]</textcolor>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="label" description="Label2">
-              <visible>container.content(movies)</visible>
-              <right>30</right>
-              <top>0</top>
-              <align>right</align>
-              <height>84</height>
-              <font>size19</font>
-              <scroll>false</scroll>
-              <textcolor>$VAR[Label2Color]</textcolor>
-              <label>$INFO[ListItem.Duration,, $LOCALIZE[31297]]</label>
-            </control>
-            <control type="label" description="Label2">
-              <visible>container.content(seasons) | container.content(TVshows)</visible>
-              <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
-              <right>30</right>
-              <top>0</top>
-              <align>right</align>
-              <height>84</height>
-              <font>size19</font>
-              <scroll>false</scroll>
-              <textcolor>$VAR[Label2Color]</textcolor>
-              <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
-            </control>
-            <control type="image" description="arrow">
-              <visible>ListItem.IsCollection</visible>
-              <right>20</right>
-              <top>0</top>
-              <height>80</height>
-              <width>40</width>
-              <align>right</align>
-              <aspectratio>keep</aspectratio>
-              <texture colordiffuse="$VAR[Label2Color]">img/Arrow.png</texture>
-            </control>
-          </itemlayout>
-          <focusedlayout width="800" height="84">
-            <control type="group">
-              <include>FocusButtonsAnimation</include>
-              <control type="image">
-                <animation effect="fade" time="100">VisibleChange</animation>
-                <left>10</left>
-                <top>10</top>
-                <width>770</width>
-                <height>64</height>
-                <texture border="10">focus/FrameFO.png</texture>
-                <bordersize>-10</bordersize>
-                <aspectratio>stretch</aspectratio>
-              </control>
-              <control type="image">
-                <left>20</left>
-                <top>0</top>
-                <height>84</height>
-                <width>28</width>
-                <texture colordiffuse="$VAR[LabelFOColor]" align="left">$VAR[Overlay]</texture>
-                <aspectratio>keep</aspectratio>
-              </control>
-              <control type="label" description="Main Label">
-                <left>70</left>
-                <width>600</width>
-                <top>0</top>
-                <height>84</height>
-                <font>size22</font>
-                <textcolor>$VAR[LabelFOColor]</textcolor>
-                <label>$INFO[ListItem.Label]</label>
-              </control>
-              <control type="label" description="Label2">
-                <visible>container.content(movies)</visible>
-                <right>30</right>
-                <top>0</top>
-                <align>right</align>
-                <height>84</height>
-                <font>size19</font>
-                <textcolor>$VAR[Label2Color]</textcolor>
-                <label>$INFO[ListItem.Duration,, $LOCALIZE[31297]]</label>
-              </control>
-              <control type="label" description="Label2">
-                <visible>container.content(seasons) | container.content(TVshows)</visible>
-                <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
-                <right>30</right>
-                <top>0</top>
-                <align>right</align>
-                <height>84</height>
-                <font>size19</font>
-                <textcolor>$VAR[Label2Color]</textcolor>
-                <label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
-              </control>
-              <control type="image" description="arrow">
-                <visible>ListItem.IsCollection</visible>
-                <right>30</right>
-                <top>0</top>
-                <height>80</height>
-                <width>40</width>
-                <aspectratio>keep</aspectratio>
-                <align>right</align>
-                <texture colordiffuse="$VAR[LabelFOColor]">img/Arrow.png</texture>
-              </control>
-            </control>
-          </focusedlayout>
-        </control>
       </control>
       <control type="group" description="Side menu 9000 group">
         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
@@ -492,6 +488,5 @@
         </control>
       </control>
     </control>
-    <include>SortLetter</include>
   </controls>
 </window>

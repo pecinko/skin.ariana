@@ -3,7 +3,7 @@
   <defaultcontrol always="true">3</defaultcontrol>
   <controls>
     <include>DialogFullBG</include>
-    <control type="group" description="Content">
+    <control type="group">
       <include>OpenClose</include>
       <control type="image" description="Sidebar">
         <left>-150</left>
@@ -38,8 +38,8 @@
         <orientation>vertical</orientation>
       </control>
       <control type="button" id="10" description="Category Button">
-        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
         <align>left</align>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="button" id="20" description="Settings level">
         <left>45</left>
@@ -48,9 +48,9 @@
         <onleft>noop</onleft>
         <onup>noop</onup>
         <ondown>3</ondown>
-        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
         <align>left</align>
         <onclick>SettingsLevelChange</onclick>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="grouplist" id="5" description="Right - Control Area">
         <left>540</left>
@@ -68,11 +68,13 @@
       <control type="button" id="7" description="Button">
         <width>1260</width>
         <align>left</align>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="radiobutton" id="8" description="Radio Button">
         <width>1260</width>
         <radioleft>1197</radioleft>
         <align>left</align>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="spincontrolex" id="9" description="Spin control">
         <width>1260</width>

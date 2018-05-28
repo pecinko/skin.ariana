@@ -2,16 +2,9 @@
 <window>
   <defaultcontrol always="true">5</defaultcontrol>
   <controls>
+    <include>DiffuseBG</include>
     <control type="group">
       <include>OpenClose</include>
-      <control type="image">
-        <centerleft>50%</centerleft>
-        <centertop>50%</centertop>
-        <width>100%</width>
-        <height>100%</height>
-        <texture background="true">$VAR[Background.Overlay]</texture>
-        <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
-      </control>
       <control type="label" id="2" description="Settings">
         <visible>false</visible>
         <centerleft>50%</centerleft>
@@ -25,7 +18,7 @@
         <centerleft>50%</centerleft>
         <centertop>50%</centertop>
         <width>840</width>
-        <height max="960">auto</height>
+        <height min="120" max="960">auto</height>
         <aligny>center</aligny>
         <itemgap>2</itemgap>
         <orientation>vertical</orientation>
@@ -33,19 +26,19 @@
         <ondown>5</ondown>
       </control>
       <control type="button" id="7">
-        <description>Default Button</description>
         <align>left</align>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="radiobutton" id="8">
-        <description>Default RadioButton</description>
         <align>left</align>
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="spincontrolex" id="9">
-        <description>Default spincontrolex</description>
+        <align>left</align>
         <reverse>yes</reverse>
       </control>
       <control type="sliderex" id="13">
-        <description>Default Slider</description>
+        <align>left</align>
       </control>
     </control>
   </controls>

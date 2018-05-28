@@ -3,38 +3,9 @@
   <defaultcontrol always="true">50</defaultcontrol>
   <controls>
     <include>DialogFullBG</include>
-    <control type="group" description="Content">
+    <control type="group">
       <include>OpenClose</include>
       <include>View_50</include>
-      <control type="group" description="Side menu 9000 group">
-        <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-        <include>TopBar</include>
-        <include>VisibleFadeEffect</include>
-        <!--
-        <control type="grouplist" id="9000">
-          <include>9000GrouplistParameters</include>
-          <control type="button" id="3" description="Sort">
-            <include>9000Buttons</include>
-          </control>
-          <control type="button" id="5" description="Updates">
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[24063]: $LOCALIZE[1223]</label>
-            <altlabel>$LOCALIZE[24063]: $LOCALIZE[305]</altlabel>
-          </control>
-          <control type="togglebutton" id="6" description="Notifications">
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[25000]: $LOCALIZE[1223]</label>
-            <altlabel>$LOCALIZE[25000]: $LOCALIZE[305]</altlabel>
-          </control>
-          <control type="button" id="699" description="Playing">
-            <visible>Player.HasMedia</visible>
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[16003]</label>
-            <onclick>fullscreen</onclick>
-          </control>
-        </control>
-      -->
-      </control>
     </control>
   </controls>
 </window>

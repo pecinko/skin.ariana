@@ -4,8 +4,8 @@
   <controls>
     <include>DialogFullBG</include>
     <control type="group">
-      <include>OpenClose</include>
-      <left>435</left>
+        <include>OpenClose</include>
+        <left>435</left>
       <top>180</top>
       <control type="label">
         <description>header label</description>
@@ -13,7 +13,7 @@
         <top>-30</top>
         <width>930</width>
         <height>45</height>
-        <font>size28</font>
+        <font>size50B</font>
         <label>$LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
@@ -45,35 +45,19 @@
       </control>
       <control type="button" id="7">
         <description>Default Button</description>
-        <left>0</left>
-        <top>0</top>
-        <height>60</height>
-        <font>size18</font>
-        <!--<texturefocus border="5">button-focus2.png</texturefocus>-->
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="radiobutton" id="8">
         <description>Default RadioButton</description>
-        <left>0</left>
-        <top>0</top>
-        <height>60</height>
-        <font>size18</font>
-        <!--<texturefocus border="5">button-focus2.png</texturefocus>-->
+        <include>FocusButtonsAnimation</include>
       </control>
       <control type="spincontrolex" id="9">
         <description>Default SpinControlex</description>
         <left>0</left>
         <top>0</top>
-        <height>60</height>
-        <font>size18</font>
-        <!--<texturefocus border="5">button-focus2.png</texturefocus>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>-->
       </control>
       <control type="sliderex" id="13">
         <description>Default Slider</description>
-        <height>60</height>
-        <!--<texturenofocus border="5">button-nofocus.png</texturenofocus>
-			<texturefocus border="5">button-focus2.png</texturefocus>-->
-        <font>size18</font>
       </control>
       <control type="image" id="11">
         <description>separator image</description>
@@ -88,16 +72,12 @@
           <top>0</top>
           <left>0</left>
           <width>300</width>
-          <height>60</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>size17</font>
           <label>222</label>
           <onleft>50</onleft>
           <onright>28</onright>
           <onup>5</onup>
           <ondown>5</ondown>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <include>FocusButtonsAnimation</include>
         </control>
         <control type="button" id="28">
           <description>OK Button</description>
@@ -105,31 +85,24 @@
           <left>315</left>
           <width>300</width>
           <height>60</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>size17</font>
           <label>186</label>
           <onleft>29</onleft>
           <onright>50</onright>
           <onup>5</onup>
           <ondown>5</ondown>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <include>FocusButtonsAnimation</include>
         </control>
         <control type="button" id="50">
           <description>Defaults Button</description>
           <top>0</top>
           <left>630</left>
           <width>300</width>
-          <height>60</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>size17</font>
           <label>409</label>
           <onleft>28</onleft>
           <onright>29</onright>
           <onup>5</onup>
           <ondown>5</ondown>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <include>FocusButtonsAnimation</include>
         </control>
       </control>
     </control>

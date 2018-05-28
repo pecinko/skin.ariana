@@ -11,9 +11,9 @@
         <label>-</label>
         <height>32</height>
         <width>100%</width>
-        <font>size28B</font>
+        <font>size50B</font>
         <align>center</align>
-        <textcolor>$VAR[SelectedColor]</textcolor>
+        <textcolor>$VAR[LabelNFColor]</textcolor>
       </control>
       <control type="label" id="2" description="Line 1">
         <top>340</top>
@@ -72,6 +72,8 @@
         <onup>10</onup>
         <ondown>10</ondown>
         <align>center</align>
+        <texturefocus colordiffuse="red" border="9">img/SettingsButtonFO.png</texturefocus>
+        <include>FocusButtonsAnimation</include>
       </control>
     </control>
   </controls>

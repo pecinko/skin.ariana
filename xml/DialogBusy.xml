@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-	<animation effect="fade" time="300" delay="200">WindowOpen</animation>
-  <animation effect="fade" time="50">WindowClose</animation>
   <controls>
     <include>DialogFullBG</include>
-		<control type="group">
+    <control type="group">
+      <include>OpenClose</include>
       <control type="multiimage">
         <centerleft>50%</centerleft>
         <centertop>50%</centertop>
@@ -14,7 +13,7 @@
         <timeperimage>80</timeperimage>
         <loop>yes</loop>
       </control>
-			<control type="label" description="Loading">
+      <control type="label" description="Loading">
         <centerleft>50%</centerleft>
         <centertop>50%</centertop>
         <width>100%</width>
@@ -23,7 +22,7 @@
         <align>center</align>
         <aligny>top</aligny>
         <textcolor>$VAR[LabelNFColor]</textcolor>
-				<label>[B]$LOCALIZE[31037][/B]</label>
+        <label>[B]$LOCALIZE[31037][/B]</label>
       </control>
     </control>
   </controls>

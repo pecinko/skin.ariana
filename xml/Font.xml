@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
-  <fontset id="Default">
+  <fontset id="Default" idloc="31390">
     <font>
       <name>font13</name>
       <filename>Arimo.ttf</filename>
@@ -29,7 +29,7 @@
     </font>
     <font>
       <name>size16B</name>
-      <filename>Arimo.ttf</filename>
+      <filename>ArimoBold.ttf</filename>
       <size>24</size>
     </font>
     <font>
@@ -57,7 +57,7 @@
     </font>
     <font>
       <name>size18B</name>
-      <filename>Arimo.ttf</filename>
+      <filename>ArimoBold.ttf</filename>
       <size>27</size>
     </font>
     <font>
@@ -118,7 +118,6 @@
       <size>33</size>
       <style>bold</style>
     </font>
-
     <font>
       <name>size23</name>
       <filename>Arimo.ttf</filename>
@@ -162,18 +161,207 @@
     </font>
     <font>
       <name>monogram</name>
+      <filename>ArimoBold.ttf</filename>
+      <size>70</size>
+    </font>
+    <font>
+      <name>size50</name>
       <filename>Arimo.ttf</filename>
-      <size>56</size>
-      <aspect>0.8</aspect>
+      <size>46</size>
     </font>
     <font>
       <name>size50B</name>
-      <filename>Arimo.ttf</filename>
+      <filename>ArimoBold.ttf</filename>
       <size>46</size>
     </font>
     <font>
       <name>SortLetter</name>
       <filename>Arimo.ttf</filename>
+      <size>90</size>
+    </font>
+  </fontset>
+  <fontset id="Arial" unicode="true">
+    <font>
+      <name>font13</name>
+      <filename>Arial.ttf</filename>
+      <size>27</size>
+      <color>white</color>
+    </font>
+    <font>
+      <name>Scroll</name>
+      <filename>Arial.ttf</filename>
+      <size>100</size>
+    </font>
+    <font>
+      <name>size14</name>
+      <filename>Arial.ttf</filename>
+      <size>20</size>
+    </font>
+    <font>
+      <name>size15</name>
+      <filename>Arial.ttf</filename>
+      <size>22</size>
+    </font>
+    <font>
+      <name>size16</name>
+      <filename>Arial.ttf</filename>
+      <size>24</size>
+    </font>
+    <font>
+      <name>size16B</name>
+      <filename>Arial.ttf</filename>
+      <size>24</size>
+      <style>bold</style>
+    </font>
+    <font>
+      <name>size16U</name>
+      <filename>Arial.ttf</filename>
+      <size>24</size>
+      <style>uppercase bold</style>
+      <aspect>0.9</aspect>
+    </font>
+    <font>
+      <name>size16USys</name>
+      <filename>Arial.ttf</filename>
+      <size>22</size>
+      <style>uppercase bold</style>
+    </font>
+    <font>
+      <name>size17</name>
+      <filename>Arial.ttf</filename>
+      <size>26</size>
+    </font>
+    <font>
+      <name>size18</name>
+      <filename>Arial.ttf</filename>
+      <size>27</size>
+    </font>
+    <font>
+      <name>size18B</name>
+      <filename>Arial.ttf</filename>
+      <size>27</size>
+      <style>bold</style>
+    </font>
+    <font>
+      <name>size18U</name>
+      <filename>Arial.ttf</filename>
+      <size>27</size>
+      <style>uppercase bold</style>
+      <aspect>0.93</aspect>
+    </font>
+    <font>
+      <name>size18S</name>
+      <filename>Arial.ttf</filename>
+      <size>27</size>
+      <aspect>0.9</aspect>
+    </font>
+    <font>
+      <name>size19</name>
+      <filename>Arial.ttf</filename>
+      <size>28</size>
+    </font>
+    <font>
+      <name>size19B</name>
+      <filename>Arial.ttf</filename>
+      <size>28</size>
+      <style>bold</style>
+    </font>
+    <font>
+      <name>size19U</name>
+      <filename>Arial.ttf</filename>
+      <size>28</size>
+      <style>uppercase bold</style>
+      <aspect>0.93</aspect>
+    </font>
+    <font>
+      <name>plot</name>
+      <filename>Arial.ttf</filename>
+      <size>30</size>
+      <linespacing>1.2</linespacing>
+    </font>
+    <font>
+      <name>size20</name>
+      <filename>Arial.ttf</filename>
+      <size>30</size>
+    </font>
+    <font>
+      <name>size20B</name>
+      <filename>Arial.ttf</filename>
+      <size>30</size>
+      <style>bold</style>
+    </font>
+    <font>
+      <name>size22</name>
+      <filename>Arial.ttf</filename>
+      <size>33</size>
+    </font>
+    <font>
+      <name>size22B</name>
+      <filename>Arial.ttf</filename>
+      <size>33</size>
+      <style>bold</style>
+    </font>
+    <font>
+      <name>size23</name>
+      <filename>Arial.ttf</filename>
+      <size>34</size>
+    </font>
+    <font>
+      <name>size24</name>
+      <filename>Arial.ttf</filename>
+      <size>36</size>
+    </font>
+    <font>
+      <name>size24B</name>
+      <filename>Arial.ttf</filename>
+      <size>36</size>
+    </font>
+    <font>
+      <name>size25</name>
+      <filename>Arial.ttf</filename>
+      <size>38</size>
+    </font>
+    <font>
+      <name>size26</name>
+      <filename>Arial.ttf</filename>
+      <size>39</size>
+    </font>
+    <font>
+      <name>size26B</name>
+      <filename>Arial.ttf</filename>
+      <size>39</size>
+    </font>
+    <font>
+      <name>size28</name>
+      <filename>Arial.ttf</filename>
+      <size>42</size>
+    </font>
+    <font>
+      <name>size28B</name>
+      <filename>Arial.ttf</filename>
+      <size>42</size>
+      <style>bold</style>
+    </font>
+    <font>
+      <name>monogram</name>
+      <filename>Arial.ttf</filename>
+      <size>70</size>
+      <style>bold</style>
+    </font>
+    <font>
+      <name>size50</name>
+      <filename>Arial.ttf</filename>
+      <size>46</size>
+    </font>
+    <font>
+      <name>size50B</name>
+      <filename>Arial.ttf</filename>
+      <size>46</size>
+      <style>bold</style>
+    </font>
+    <font>
+      <name>SortLetter</name>
+      <filename>Arial.ttf</filename>
       <size>90</size>
     </font>
   </fontset>

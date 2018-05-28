@@ -57,7 +57,6 @@
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <alttexturenofocus border="9">img/SettingsButtonNF.png</alttexturenofocus>
     <alttexturefocus border="9">img/SettingsButtonFO.png</alttexturefocus>
-    <include>FocusButtonsAnimation</include>
     <pulseonselect>false</pulseonselect>
   </default>
   <default type="edit">
@@ -94,7 +93,6 @@
     <alttexturefocus border="9">img/SettingsButtonFO.png</alttexturefocus>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <alttexturenofocus border="9">img/SettingsButtonNF.png</alttexturenofocus>
-    <include>FocusButtonsAnimation</include>
   </default>
   <default type="radiobutton">
     <height>60</height>
@@ -113,12 +111,14 @@
     <texturefocus border="9">img/SettingsButtonFO.png</texturefocus>
     <texturenofocus border="9">img/SettingsButtonNF.png</texturenofocus>
     <textureradioonfocus colordiffuse="$VAR[LabelFOColor]">img/RadioON.png</textureradioonfocus>
-    <textureradioonnofocus colordiffuse="$VAR[Label2Color]">img/RadioON.png</textureradioonnofocus>
+    <textureradioonnofocus colordiffuse="$VAR[LabelNFColor]">img/RadioON.png</textureradioonnofocus>
     <textureradioofffocus colordiffuse="$VAR[LabelFOColor]">img/RadioOFF.png</textureradioofffocus>
-    <textureradiooffnofocus colordiffuse="$VAR[Label2Color]">img/RadioOFF.png</textureradiooffnofocus>
-    <include>FocusButtonsAnimation</include>
+    <textureradiooffnofocus colordiffuse="$VAR[LabelNFColor]">img/RadioOFF.png</textureradiooffnofocus>
   </default>
   <default type="spincontrol">
+    <width>450</width>
+    <height>60</height>
+    <font>size22</font>
     <textureup colordiffuse="$VAR[Label2Color]" flipy="true">img/SpinDW.png</textureup>
     <textureupfocus colordiffuse="$VAR[LabelFOColor]" flipy="true">img/SpinDW.png</textureupfocus>
     <texturedown colordiffuse="$VAR[Label2Color]">img/SpinDW.png</texturedown>
@@ -175,8 +175,8 @@
     <sliderwidth>150</sliderwidth>
     <sliderheight>24</sliderheight>
     <texturesliderbar border="3,0,3,0">HUD/SliderBG.png</texturesliderbar>
-    <textureslidernib>HUD/SliderNib.png</textureslidernib>
-    <textureslidernibfocus colordiffuse="$VAR[SelectedColor]">HUD/SliderNib.png</textureslidernibfocus>
+    <textureslidernib colordiffuse="$VAR[Label2Color]">HUD/SliderNib.png</textureslidernib>
+    <textureslidernibfocus colordiffuse="$VAR[LabelFOColor]">HUD/SliderNib.png</textureslidernibfocus>
     <pulseonselect>false</pulseonselect>
   </default>
   <default type="sliderex" description="Default Slider">
@@ -206,5 +206,14 @@
     <midtexture border="1">-</midtexture>
     <righttexture border="1">-</righttexture>
     <overlaytexture>-</overlaytexture>
+  </default>
+  <default type="scrollbar">
+    <width>9</width>
+    <orientation>vertical</orientation>
+    <texturesliderbackground border="0,4,0,4">Scrollbar/ScrollbarBG.png</texturesliderbackground>
+    <texturesliderbar border="0,4,0,4">Scrollbar/ScrollerNF.png</texturesliderbar>
+    <texturesliderbarfocus border="0,4,0,4">Scrollbar/ScrollerFO.png</texturesliderbarfocus>
+    <pulseonselect>false</pulseonselect>
+    <showonepage>true</showonepage>
   </default>
 </includes>

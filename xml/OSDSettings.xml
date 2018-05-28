@@ -4,8 +4,7 @@
   <zorder>2</zorder>
   <controls>
     <control type="group">
-      <include>OpenClose</include>
-      <visible>Player.HasVideo + ![Window.IsActive(sliderdialog) | Window.IsActive(subtitlesearch) | Window.IsActive(videoosdsettings.xml)]</visible>
+      <visible>Player.HasVideo + ![Window.IsActive(sliderdialog) | Window.IsActive(subtitlesearch) | Window.IsActive(videoosdsettings.xml) | Window.IsActive(PVROSDGuide)]</visible>
       <include>VisibleFadeEffect</include>
       <control type="image" description="Background">
         <animation condition="!ControlGroup(9000).HasFocus(101)" effect="slide" start="0,0" end="0,-200" time="150" tween="cubic" easing="inout" reversible="true">Conditional</animation>
@@ -13,7 +12,7 @@
         <top>0</top>
         <width>1920</width>
         <height>390</height>
-        <texture>$VAR[Background.Overlay]</texture>
+        <texture colordiffuse="$VAR[OverlayColor]">dot/White.png</texture>
       </control>
       <control type="image" description="Background">
         <left>0</left>
@@ -38,6 +37,12 @@
           <font>size22</font>
           <include>VideoMenuButtons</include>
           <label>[B]$LOCALIZE[31030][/B]</label>
+        </control>
+        <control type="button" id="105" description="LiveTv">
+          <visible>VideoPlayer.Content(livetv)</visible>
+          <font>size22</font>
+          <include>VideoMenuButtons</include>
+          <label>[B]$LOCALIZE[31033][/B]</label>
         </control>
         <control type="button" id="102" description="Subs">
           <font>size22</font>
@@ -106,24 +111,56 @@
           <onright>9004</onright>
           <orientation>horizontal</orientation>
           <align>center</align>
-          <control type="button" id="1047">
+          <control type="button" id="4000">
             <visible>ControlGroup(9000).HasFocus(104)</visible>
             <include>VideoMenuButtons</include>
             <label>$LOCALIZE[292]</label>
             <onclick>ActivateWindow(osdaudiosettings)</onclick>
           </control>
-          <control type="button" id="1048">
+          <control type="button" id="4001">
             <visible>ControlGroup(9000).HasFocus(104)</visible>
             <include>VideoMenuButtons</include>
             <label>$LOCALIZE[157]</label>
             <onclick>ActivateWindow(osdvideosettings)</onclick>
           </control>
-          <control type="button" id="1049">
+          <control type="button" id="4002">
             <visible>ControlGroup(9000).HasFocus(104)</visible>
             <visible>System.HasCMS</visible>
             <include>VideoMenuButtons</include>
             <label>CMS</label>
             <onclick>ActivateWindow(osdcmssettings)</onclick>
+          </control>
+        </control>
+        <control type="grouplist" id="9005" description="Player Settings Submenu">
+          <visible>ControlGroup(9000).HasFocus(105)</visible>
+          <include>VisibleFadeEffect</include>
+          <top>100</top>
+          <centerleft>50%</centerleft>
+          <width max="1800">auto</width>
+          <height>80</height>
+          <onup>9000</onup>
+          <onleft>9004</onleft>
+          <onright>9004</onright>
+          <orientation>horizontal</orientation>
+          <align>center</align>
+          <control type="button" id="5000" description="record">
+            <visible>ControlGroup(9000).HasFocus(105)</visible>
+            <include>VideoMenuButtons</include>
+            <label>$LOCALIZE[264]</label>
+            <onclick>PlayerControl(Record)</onclick>
+            <enable>Player.CanRecord</enable>
+          </control>
+          <control type="button" id="5001" description="guide">
+            <visible>ControlGroup(9000).HasFocus(105)</visible>
+            <include>VideoMenuButtons</include>
+            <label>$LOCALIZE[19069]</label>
+            <onclick>ActivateWindow(PVROSDGuide)</onclick>
+				  </control>
+          <control type="button" id="5002" description="Teletext">
+            <visible>ControlGroup(9000).HasFocus(105)</visible>
+            <include>VideoMenuButtons</include>
+            <label>$LOCALIZE[31022]</label>
+            <onclick>ActivateWindow(Teletext)</onclick>
           </control>
         </control>
       </control>

@@ -3,7 +3,7 @@
   <defaultcontrol>9000</defaultcontrol>
   <controls>
     <include>DialogFullBG</include>
-    <control type="group" description="Content">
+    <control type="group">
       <include>OpenClose</include>
       <control type="image" description="Sidebar">
         <left>-150</left>
@@ -21,7 +21,7 @@
         <left>45</left>
         <top>165</top>
         <width>420</width>
-        <height>864</height>
+        <height>814</height>
         <itemgap>5</itemgap>
         <onleft>9100</onleft>
         <onright>9100</onright>
@@ -32,7 +32,7 @@
           <control type="image">
             <width>390</width>
             <height>60</height>
-            <texture border="4">img/SettingsButtonNF.png</texture>
+            <texture border="9">img/SettingsButtonNF.png</texture>
           </control>
           <control type="label">
             <height>60</height>
@@ -52,7 +52,7 @@
             <control type="image">
               <width>390</width>
               <height>60</height>
-              <texture border="4">img/SettingsButtonFO.png</texture>
+              <texture border="9">img/SettingsButtonFO.png</texture>
             </control>
             <control type="label">
               <width>360</width>
@@ -97,6 +97,7 @@
             <radioleft>1197</radioleft>
             <align>left</align>
             <label>10029</label>
+            <include>FocusButtonsAnimation</include>
           </control>
           <control type="button" id="5" description="Button">
             <enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
@@ -107,6 +108,7 @@
             <align>left</align>
             <label>33084</label>
             <label2>$INFO[System.ProfileAutoLogin]</label2>
+            <include>FocusButtonsAnimation</include>
           </control>
         </control>
         <control type="panel" id="2">
@@ -125,7 +127,7 @@
               <top>6</top>
               <width>770</width>
               <height>108</height>
-              <texture border="4">img/SettingsButtonNF.png</texture>
+              <texture border="9">img/SettingsButtonNF.png</texture>
               <bordersize>0</bordersize>
               <aspectratio>stretch</aspectratio>
             </control>

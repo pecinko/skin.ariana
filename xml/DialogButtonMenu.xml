@@ -3,63 +3,67 @@
   <defaultcontrol>9000</defaultcontrol>
   <controls>
     <include>DialogFullBG</include>
-    <control type="group">
+    <control type="grouplist" id="9000">
       <include>OpenClose</include>
-      <control type="grouplist" id="9000">
-        <centerleft>50%</centerleft>
-        <centertop>50%</centertop>
-        <height max="800">auto</height>
-        <width>600</width>
-        <itemgap>10</itemgap>
-        <onleft>9000</onleft>
-        <onright>9000</onright>
-        <align>center</align>
-        <aligny>center</aligny>
-        <orientation>vertical</orientation>
-        <control type="button" id="10003" description="Exit button">
-          <onclick>Quit()</onclick>
-          <label>13009</label>
-        </control>
-        <control type="button" id="10004" description="Shutdown button">
-          <enable>System.CanPowerDown</enable>
-          <animation type="Conditional" condition="!Control.IsEnabled(10004)">
-            <effect type="fade" start="100" end="30" time="0" reversible="true" />
-          </animation>
-          <onclick>Powerdown()</onclick>
-          <label>13005</label>
-        </control>
-        <control type="button" id="10005" description="Suspend button">
-          <enable>System.CanSuspend</enable>
-          <animation type="Conditional" condition="!Control.IsEnabled(10005)">
-            <effect type="fade" start="100" end="30" time="0" reversible="true" />
-          </animation>
-          <onclick>Suspend()</onclick>
-          <label>13011</label>
-        </control>
-        <control type="button" id="10006" description="Reboot button">
-          <enable>System.CanReboot</enable>
-          <animation type="Conditional" condition="!Control.IsEnabled(10006)">
-            <effect type="fade" start="100" end="30" time="0" reversible="true" />
-          </animation>
-          <onclick>Reset()</onclick>
-          <label>13013</label>
-        </control>
-        <control type="button" id="10007" description="Reboot button">
-          <enable>System.HasShutdown + !System.IsInhibit</enable>
-          <animation type="Conditional" condition="!Control.IsEnabled(10007)">
-            <effect type="fade" start="100" end="30" time="0" reversible="true" />
-          </animation>
-          <onclick>InhibitIdleShutdown(true)</onclick>
-          <label>13017</label>
-        </control>
-        <control type="button" id="10008" description="Reboot button">
-          <enable>System.HasShutdown + System.IsInhibit</enable>
-          <animation type="Conditional" condition="!Control.IsEnabled(10008)">
-            <effect type="fade" start="100" end="30" time="0" reversible="true" />
-          </animation>
-          <onclick>InhibitIdleShutdown(false)</onclick>
-          <label>13018</label>
-        </control>
+      <centerleft>50%</centerleft>
+      <centertop>50%</centertop>
+      <height max="800">auto</height>
+      <width>600</width>
+      <itemgap>10</itemgap>
+      <onleft>9000</onleft>
+      <onright>9000</onright>
+      <align>center</align>
+      <aligny>center</aligny>
+      <orientation>vertical</orientation>
+      <control type="button" id="10003" description="Exit button">
+        <onclick>Quit()</onclick>
+        <label>13009</label>
+        <include>FocusButtonsAnimation</include>
+      </control>
+      <control type="button" id="10004" description="Shutdown button">
+        <enable>System.CanPowerDown</enable>
+        <animation type="Conditional" condition="!Control.IsEnabled(10004)">
+          <effect type="fade" start="100" end="30" time="0" reversible="true" />
+        </animation>
+        <onclick>Powerdown()</onclick>
+        <label>13005</label>
+        <include>FocusButtonsAnimation</include>
+      </control>
+      <control type="button" id="10005" description="Suspend button">
+        <enable>System.CanSuspend</enable>
+        <animation type="Conditional" condition="!Control.IsEnabled(10005)">
+          <effect type="fade" start="100" end="30" time="0" reversible="true" />
+        </animation>
+        <onclick>Suspend()</onclick>
+        <label>13011</label>
+        <include>FocusButtonsAnimation</include>
+      </control>
+      <control type="button" id="10006" description="Reboot button">
+        <enable>System.CanReboot</enable>
+        <animation type="Conditional" condition="!Control.IsEnabled(10006)">
+          <effect type="fade" start="100" end="30" time="0" reversible="true" />
+        </animation>
+        <onclick>Reset()</onclick>
+        <label>13013</label>
+        <include>FocusButtonsAnimation</include>
+      </control>
+      <control type="button" id="10007" description="Reboot button">
+        <enable>System.HasShutdown + !System.IsInhibit</enable>
+        <animation type="Conditional" condition="!Control.IsEnabled(10007)">
+          <effect type="fade" start="100" end="30" time="0" reversible="true" />
+        </animation>
+        <onclick>InhibitIdleShutdown(true)</onclick>
+        <label>13017</label>
+        <include>FocusButtonsAnimation</include>
+      </control>
+      <control type="button" id="10008" description="Reboot button">
+        <enable>System.HasShutdown + System.IsInhibit</enable>
+        <animation type="Conditional" condition="!Control.IsEnabled(10008)">
+          <effect type="fade" start="100" end="30" time="0" reversible="true" />
+        </animation>
+        <onclick>InhibitIdleShutdown(false)</onclick>
+        <label>13018</label>
+        <include>FocusButtonsAnimation</include>
       </control>
     </control>
   </controls>

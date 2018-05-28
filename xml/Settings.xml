@@ -6,14 +6,7 @@
     <control type="group">
       <include>OpenClose</include>
       <control type="label" description="Heading">
-        <left>0</left>
-        <top>52</top>
-        <align>center</align>
-        <aligny>top</aligny>
-        <width>1920</width>
-        <height>75</height>
-        <textcolor>$VAR[LabelNFColor]</textcolor>
-        <font>size28B</font>
+        <include>CenterHeading</include>
         <label>[B]$LOCALIZE[10004][/B]</label>
       </control>
       <control type="panel" id="9000">
@@ -21,17 +14,13 @@
         <width>1720</width>
         <centertop>55%</centertop>
         <height>900</height>
-        <onup>noop</onup>
-        <ondown>noop</ondown>
-        <onleft>noop</onleft>
-        <onright>noop</onright>
         <itemlayout height="140" width="860">
           <control type="image">
             <left>0</left>
             <right>0</right>
             <bottom>0</bottom>
-            <texture border="8">img/SettingsButtonNF.png</texture>
-            <bordersize>18</bordersize>
+            <texture border="9">img/SettingsButtonNF.png</texture>
+            <bordersize>12</bordersize>
           </control>
           <control type="image">
             <left>0</left>
@@ -44,7 +33,7 @@
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
-            <left>240</left>
+            <left>200</left>
             <top>0</top>
             <aligny>center</aligny>
             <height>140</height>
@@ -54,13 +43,15 @@
         </itemlayout>
         <focusedlayout height="140" width="860">
           <control type="group">
-            <include>FocusButtonsAnimation</include>
+            <animation type="Focus" reversible="true">
+              <effect type="zoom" center="auto" start="100" end="104" time="100" easing="inout"/>
+            </animation>
             <control type="image">
               <left>0</left>
               <right>0</right>
               <bottom>0</bottom>
-              <texture border="18">img/SettingsButtonFO.png</texture>
-              <bordersize>18</bordersize>
+              <texture border="9">img/SettingsButtonFO.png</texture>
+              <bordersize>12</bordersize>
             </control>
             <control type="image">
               <left>0</left>
@@ -73,7 +64,7 @@
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
-              <left>240</left>
+              <left>200</left>
               <top>0</top>
               <aligny>center</aligny>
               <height>140</height>
@@ -135,7 +126,7 @@
             <icon>icons/sysinfo.png</icon>
           </item>
           <item>
-            <label>$LOCALIZE[31033]</label>
+            <label>$LOCALIZE[19020]</label>
             <onclick>ActivateWindow(PVRSettings)</onclick>
             <icon>icons/livetv.png</icon>
           </item>

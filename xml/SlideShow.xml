@@ -13,14 +13,14 @@
         <top>0</top>
         <width>129</width>
         <height>120</height>
-        <texture>img/BlackDotST2.png</texture>
+        <texture colordiffuse="OverlayColor">dot/White.png</texture>
       </control>
       <control type="image">
         <left>6</left>
         <top>0</top>
         <width>120</width>
         <height>120</height>
-        <texture>OSD/OSDProgressPlay.png</texture>
+        <texture>MusicOSD/OSDPlayNF.png</texture>
       </control>
     </control>
     <control type="group" id="13">
@@ -33,14 +33,14 @@
         <top>0</top>
         <width>129</width>
         <height>120</height>
-        <texture>img/BlackDotST2.png</texture>
+        <texture colordiffuse="OverlayColor">dot/White.png</texture>
       </control>
       <control type="image">
         <left>6</left>
         <top>0</top>
         <width>120</width>
         <height>120</height>
-        <texture>OSD/OSDProgressPause.png</texture>
+        <texture>MusicOSD/OSDPauseNF.png</texture>
       </control>
     </control>
   </controls>

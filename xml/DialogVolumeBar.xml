@@ -3,6 +3,7 @@
   <animation effect="fade" time="200">WindowClose</animation>
   <controls>
     <control type="group">
+      <include>OpenClose</include>
       <centerleft>50%</centerleft>
       <centertop>40%</centertop>
       <width>540</width>
