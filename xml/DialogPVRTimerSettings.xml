@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol>29</defaultcontrol>
+  <controls>
+    <include>DialogFullBG</include>
+    <control type="group">
+      <include>OpenClose</include>
+      <control type="grouplist" id="5">
+        <centerleft>50%</centerleft>
+        <centertop>45%</centertop>
+        <width>960</width>
+        <height>700</height>
+        <itemgap>5</itemgap>
+        <onup>9001</onup>
+        <ondown>9001</ondown>
+        <onleft>9001</onleft>
+        <onright>9001</onright>
+      </control>
+      <control type="group" id="9001">
+        <centerleft>50%</centerleft>
+        <top>840</top>
+        <width>520</width>
+        <height>80</height>
+        <control type="button" id="28">
+          <description>OK Button</description>
+          <left>0</left>
+          <top>0</top>
+          <width>250</width>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>186</label>
+          <onleft>29</onleft>
+          <onright>29</onright>
+          <onup>5</onup>
+          <ondown>5</ondown>
+          <include>FocusButtonsAnimation</include>
+        </control>
+        <control type="button" id="29">
+          <description>Cancel Button</description>
+          <left>270</left>
+          <top>0</top>
+          <width>250</width>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>222</label>
+          <onleft>28</onleft>
+          <onright>28</onright>
+          <onup>5</onup>
+          <ondown>5</ondown>
+          <include>FocusButtonsAnimation</include>
+        </control>
+      </control>
+      <control type="button" id="7">
+        <description>Default Button</description>
+        <align>left</align>
+        <include>FocusButtonsAnimation</include>
+      </control>
+      <control type="radiobutton" id="8">
+        <description>Default RadioButton</description>
+        <align>left</align>
+        <include>FocusButtonsAnimation</include>
+      </control>
+      <control type="spincontrolex" id="9">
+        <description>Default spincontrolex</description>
+        <align>left</align>
+        <reverse>yes</reverse>
+      </control>
+      <control type="sliderex" id="13">
+        <description>Default Slider</description>
+        <align>left</align>
+      </control>
+      <control type="image" id="11">
+        <description>Default Seperator</description>
+        <height>2</height>
+        <texture>
+        </texture>
+      </control>
+      <control type="edit" id="12">
+        <description>Default Edit</description>
+        <align>left</align>
+      </control>
+      <control type="label" id="14">
+        <description>Default Label</description>
+        <align>left</align>
+        <label>-</label>
+      </control>
+    </control>
+  </controls>
+</window>

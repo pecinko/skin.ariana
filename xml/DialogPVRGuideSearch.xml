@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">9</defaultcontrol>
+  <controls>
+    <include>DialogFullBG</include>
+    <control type="group">
+      <include>OpenClose</include>
+      <control type="image" description="mid">
+        <centerleft>50%</centerleft>
+        <top>150</top>
+        <width>1520</width>
+        <height>900</height>
+        <texture border="24">focus/FrameNF.png</texture>
+      </control>
+      <control type="label" description="Heading">
+        <include>CenterHeading</include>
+        <label>$LOCALIZE[19142]</label>
+      </control>
+      <control type="grouplist" id="9000">
+        <top>940</top>
+        <centerleft>50%</centerleft>
+        <onup>5000</onup>
+        <ondown>9</ondown>
+        <width>620</width>
+        <itemgap>20</itemgap>
+        <orientation>horizontal</orientation>
+        <control type="button" id="26">
+          <width>300</width>
+          <label>$LOCALIZE[137]</label>
+          <include>FocusButtonsAnimation</include>
+        </control>
+        <control type="button" id="28">
+          <width>300</width>
+          <focusedcolor>white</focusedcolor>
+          <texturefocus colordiffuse="red" border="9">img/SettingsButtonFO.png</texturefocus>
+          <label>$LOCALIZE[10035]</label>
+          <include>FocusButtonsAnimation</include>
+        </control>
+      </control>
+      <control type="group">
+        <top>180</top>
+        <left>220</left>
+        <height>990</height>
+        <width>1780</width>
+        <control type="edit" id="9">
+          <left>35</left>
+          <top>40</top>
+          <width>1410</width>
+          <textoffsetx>60</textoffsetx>
+          <hinttext>$LOCALIZE[137]...</hinttext>
+          <onup>9000</onup>
+          <ondown>5000</ondown>
+        </control>
+        <control type="textbox">
+          <description>Search help</description>
+          <left>0</left>
+          <top>120</top>
+          <width>1480</width>
+          <height>68</height>
+          <font>size16</font>
+          <align>center</align>
+          <textcolor>$VAR[Label2Color]</textcolor>
+          <label>$LOCALIZE[19001] $LOCALIZE[19002]</label>
+        </control>
+        <control type="grouplist" id="5000">
+          <left>30</left>
+          <top>190</top>
+          <onright>6000</onright>
+          <onleft>6000</onleft>
+          <ondown>9000</ondown>
+          <onup>9</onup>
+          <orientation>vertical</orientation>
+          <control type="radiobutton" id="10">
+            <description>Include Description</description>
+            <width>710</width>
+            <onright>12</onright>
+            <label>$LOCALIZE[19134]</label>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="radiobutton" id="11">
+            <description>Case Sensitive</description>
+            <width>710</width>
+            <onright>13</onright>
+            <label>$LOCALIZE[19135]</label>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="edit" id="14">
+            <description>Start Date</description>
+            <width>710</width>
+            <onright>16</onright>
+            <label>$LOCALIZE[19128]</label>
+          </control>
+          <control type="edit" id="15">
+            <description>Stop Date</description>
+            <width>710</width>
+            <onright>17</onright>
+            <label>$LOCALIZE[19129]</label>
+          </control>
+          <control type="spincontrolex" id="18">
+            <description>Genre</description>
+            <width>710</width>
+            <onright>19</onright>
+            <label>$LOCALIZE[515]</label>
+          </control>
+          <control type="radiobutton" id="20">
+            <description>Include unknown Genres</description>
+            <width>710</width>
+            <onright>21</onright>
+            <label>$LOCALIZE[19132]</label>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="radiobutton" id="22">
+            <description>FTA only</description>
+            <width>710</width>
+            <onright>23</onright>
+            <label>$LOCALIZE[19123]</label>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="radiobutton" id="24">
+            <description>Ignore Timers</description>
+            <width>710</width>
+            <onright>27</onright>
+            <label>$LOCALIZE[19124]</label>
+            <include>FocusButtonsAnimation</include>
+          </control>
+        </control>
+        <control type="grouplist" id="6000">
+          <left>740</left>
+          <top>190</top>
+          <onright>5000</onright>
+          <onleft>5000</onleft>
+          <ondown>9000</ondown>
+          <onup>9</onup>
+          <orientation>vertical</orientation>
+          <control type="spincontrolex" id="12">
+            <description>Min Duration</description>
+            <width>710</width>
+            <onleft>10</onleft>
+            <label>$LOCALIZE[19130]</label>
+          </control>
+          <control type="spincontrolex" id="13">
+            <description>Max Duration</description>
+            <width>710</width>
+            <onleft>11</onleft>
+            <label>$LOCALIZE[19131]</label>
+          </control>
+          <control type="edit" id="16">
+            <description>Start time</description>
+            <width>710</width>
+            <onleft>14</onleft>
+            <label>$LOCALIZE[19126]</label>
+          </control>
+          <control type="edit" id="17">
+            <description>Stop time</description>
+            <width>710</width>
+            <onleft>15</onleft>
+            <label>$LOCALIZE[19127]</label>
+          </control>
+          <control type="radiobutton" id="19">
+            <description>avoid repeats</description>
+            <width>710</width>
+            <onleft>18</onleft>
+            <label>$LOCALIZE[19121]</label>
+            <include>FocusButtonsAnimation</include>
+          </control>
+          <control type="spincontrolex" id="21">
+            <description>Groups</description>
+            <width>710</width>
+            <onleft>20</onleft>
+            <label>$LOCALIZE[19141]</label>
+          </control>
+          <control type="spincontrolex" id="23">
+            <description>Channels</description>
+            <width>710</width>
+            <onleft>22</onleft>
+            <label>$LOCALIZE[19148]</label>
+          </control>
+          <control type="radiobutton" id="27">
+            <description>Ignore Recordings</description>
+            <width>710</width>
+            <onleft>24</onleft>
+            <label>$LOCALIZE[19125]</label>
+            <include>FocusButtonsAnimation</include>
+          </control>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>

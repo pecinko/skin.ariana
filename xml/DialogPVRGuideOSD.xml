@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">11</defaultcontrol>
+  <controls>
+    <control type="group">
+      <include>OpenClose</include>
+      <control type="group" description="List">
+        <visible>Control.IsVisible(11)</visible>
+        <include>ContainerVisibleFade</include>
+        <control type="image" description="right">
+          <visible>!IsEmpty(Container(11).ListItem.Label)</visible>
+          <include>VisibleFadeEffect</include>
+          <left>1058</left>
+          <top>120</top>
+          <width>784</width>
+          <height>860</height>
+          <texture border="24" colordiffuse="$VAR[OverlayColor]">background/Panel.png</texture>
+          <bordersize>-48</bordersize>
+        </control>
+        <control type="label" description="MainHeading">
+          <right>66</right>
+          <top>120</top>
+          <width>800</width>
+          <height>40</height>
+          <font>size50B</font>
+          <label>$LOCALIZE[19222] - $INFO[VideoPlayer.ChannelName]</label>
+          <textcolor>$VAR[LabelNFColor]</textcolor>
+          <align>center</align>
+        </control>
+        <control type="image" description="mid">
+          <visible>!IsEmpty(Container(11).ListItem.Label)</visible>
+          <include>VisibleFadeEffect</include>
+          <left>66</left>
+          <top>90</top>
+          <width>840</width>
+          <height>904</height>
+          <texture border="24" colordiffuse="$VAR[OverlayColor]">background/Panel.png</texture>
+          <bordersize>-48</bordersize>
+        </control>
+        <control type="group" description="Media info">
+          <include>VisibleFadeEffect</include>
+          <left>100</left>
+          <top>110</top>
+          <control type="label" description="Main Label">
+            <top>0</top>
+            <width>758</width>
+            <font>size22</font>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>[B]$INFO[Container(11).ListItem.Label][/B]</label>
+          </control>
+          <control type="label" description="Details">
+            <top>46</top>
+            <width>758</width>
+            <font>size22</font>
+            <textcolor>$VAR[Label2Color]</textcolor>
+            <label>$INFO[Container(11).ListItem.Duration]</label>
+          </control>
+          <control type="label">
+            <top>780</top>
+            <width>758</width>
+            <font>size19</font>
+            <label>$VAR[TopLabel]</label>
+          </control>
+          <control type="label" description="Details">
+            <top>820</top>
+            <width>758</width>
+            <font>size19</font>
+            <label>$VAR[CodecList-Genre]</label>
+          </control>
+          <control type="textbox" description="Plot">
+            <top>120</top>
+            <width>758</width>
+            <height>612</height>
+            <font>plot</font>
+            <align>left</align>
+            <aligny>bottom</aligny>
+            <label>$INFO[Container(11).ListItem.Plot]</label>
+          </control>
+        </control>
+      </control>
+      <control type="list" id="11">
+        <left>1058</left>
+        <top>260</top>
+        <width>784</width>
+        <height>719</height>
+        <pagecontrol>60</pagecontrol>
+        <viewtype label="535">List</viewtype>
+        <itemlayout width="784" height="80">
+          <control type="label" description="Main Label">
+            <right>20</right>
+            <left>125</left>
+            <top>0</top>
+            <height>80</height>
+            <font>size22</font>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label" description="Label2">
+            <left>20</left>
+            <top>0</top>
+            <height>80</height>
+            <width>124</width>
+            <font>size19</font>
+            <scroll>false</scroll>
+            <align>left</align>
+            <label>$INFO[ListItem.StartTime]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout width="784" height="80">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>10</left>
+              <top>10</top>
+              <width>764</width>
+              <height>60</height>
+              <texture border="10">focus/FrameFO.png</texture>
+              <bordersize>-10</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <right>20</right>
+              <left>125</left>
+              <top>0</top>
+              <height>80</height>
+              <font>size22</font>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label" description="Label2">
+              <left>20</left>
+              <top>0</top>
+              <height>80</height>
+              <width>124</width>
+              <font>size19</font>
+              <align>left</align>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.StartTime]</label>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+  </controls>
+</window>
