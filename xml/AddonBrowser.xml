@@ -3,9 +3,6 @@
   <defaultcontrol always="true">50</defaultcontrol>
   <controls>
     <include>DialogFullBG</include>
-    <control type="group">
-      <include>OpenClose</include>
-      <include>View_50</include>
-    </control>
+    <include>View_50</include>
   </controls>
 </window>

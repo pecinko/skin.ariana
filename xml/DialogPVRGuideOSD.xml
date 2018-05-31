@@ -99,7 +99,7 @@
             <top>0</top>
             <height>80</height>
             <width>124</width>
-            <font>size19</font>
+            <font>size16</font>
             <scroll>false</scroll>
             <align>left</align>
             <label>$INFO[ListItem.StartTime]</label>
@@ -132,7 +132,7 @@
               <top>0</top>
               <height>80</height>
               <width>124</width>
-              <font>size19</font>
+              <font>size16</font>
               <align>left</align>
               <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.StartTime]</label>

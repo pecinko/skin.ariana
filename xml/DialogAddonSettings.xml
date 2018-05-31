@@ -14,17 +14,20 @@
         <texture border="60">img/HomeMenuBarV.png</texture>
       </control>
       <control type="label" id="20" description="Heading">
-        <include>CenterHeading</include>
+        <left>700</left>
+        <top>66</top>
+        <width>1000</width>
+        <height>60</height>
+        <font>size50B</font>
       </control>
       <control type="grouplist" id="9" description="Left Configure Panel">
         <left>66</left>
-        <top>120</top>
+        <top>180</top>
         <width>480</width>
         <height>585</height>
         <itemgap>4</itemgap>
         <onleft>30</onleft>
         <onright>2</onright>
-        <onup>9</onup>
         <ondown>8999</ondown>
       </control>
       <control type="button" id="13" description="Default Category Button">
@@ -32,19 +35,50 @@
         <width>480</width>
         <align>left</align>
       </control>
+      <control type="grouplist" id="2" description="Right controls">
+        <left>700</left>
+        <top>180</top>
+        <width>1125</width>
+        <height>600</height>
+        <itemgap>4</itemgap>
+        <ondown>8999</ondown>
+        <onleft>9</onleft>
+      </control>
+      <control type="button" id="3" description="Default Button">
+        <include>FocusButtonsAnimation</include>
+        <align>left</align>
+      </control>
+      <control type="radiobutton" id="4" description="Default RadioButton">
+        <include>FocusButtonsAnimation</include>
+        <align>left</align>
+      </control>
+      <control type="spincontrolex" id="5" description="Default spincontrolex">
+        <align>left</align>
+        <reverse>yes</reverse>
+      </control>
+      <control type="label" id="7">
+        <label>-</label>
+        <align>left</align>
+      </control>
+      <control type="image" id="6" description="Default Seperator">
+        <height>-3</height>
+        <texture>-</texture>
+      </control>
+      <control type="sliderex" id="8" description="Default Slider Control">
+        <align>left</align>
+        <width>900</width>
+      </control>
       <control type="grouplist" id="8999" description="Left OK/Cancel Panel">
-        <left>66</left>
-        <top>840</top>
-        <width>360</width>
-        <height>250</height>
-        <itemgap>2</itemgap>
-        <onleft>noop</onleft>
-        <onright>2</onright>
-        <onup>9</onup>
-        <ondown>noop</ondown>
+        <left>700</left>
+        <top>960</top>
+        <width>750</width>
+        <height>60</height>
+        <itemgap>20</itemgap>
+        <onleft>9</onleft>
+        <onup>2</onup>
+        <ondown>2</ondown>
         <align>center</align>
-        <aligny>top</aligny>
-        <orientation>vertical</orientation>
+        <orientation>horizontal</orientation>
         <control type="button" id="10" description="OK Button">
           <include>FocusButtonsAnimation</include>
           <width>360</width>
@@ -54,46 +88,6 @@
           <include>FocusButtonsAnimation</include>
           <width>360</width>
           <label>409</label>
-        </control>
-      </control>
-      <control type="group" description="Right Panel">
-        <left>700</left>
-        <top>120</top>
-        <control type="grouplist" id="2" description="Right controls">
-          <left>0</left>
-          <top>0</top>
-          <width>1125</width>
-          <height>900</height>
-          <itemgap>4</itemgap>
-          <onup>2</onup>
-          <ondown>2</ondown>
-          <onleft>9</onleft>
-          <onright>60</onright>
-          <pagecontrol>60</pagecontrol>
-        </control>
-        <control type="button" id="3" description="Default Button">
-          <include>FocusButtonsAnimation</include>
-          <align>left</align>
-        </control>
-        <control type="radiobutton" id="4" description="Default RadioButton">
-          <include>FocusButtonsAnimation</include>
-          <align>left</align>
-        </control>
-        <control type="spincontrolex" id="5" description="Default spincontrolex">
-          <align>left</align>
-          <reverse>yes</reverse>
-        </control>
-        <control type="label" id="7">
-          <label>-</label>
-          <align>left</align>
-        </control>
-        <control type="image" id="6" description="Default Seperator">
-          <height>-3</height>
-          <texture>-</texture>
-        </control>
-        <control type="sliderex" id="8" description="Default Slider Control">
-          <align>left</align>
-          <width>900</width>
         </control>
       </control>
     </control>
