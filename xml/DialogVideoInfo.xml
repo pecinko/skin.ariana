@@ -4,18 +4,18 @@
   <controls>
     <include>FullBackground</include>
     <control type="image" description="Fanart">
-      <animation effect="slide" start="0,0" end="0,482" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
+      <animation effect="slide" start="0,0" end="0,363" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
       <left>0</left>
       <top>0</top>
       <width>100%</width>
-      <height>757</height>
+      <height>748</height>
       <aspectratio aligny="top">scale</aspectratio>
       <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-      <animation effect="fade" end="10" time="0" condition="true">Conditional</animation>
+      <animation effect="fade" end="8" time="0" condition="true">Conditional</animation>
     </control>
     <control type="group" description="content">
       <include>OpenClose</include>
-      <animation effect="slide" start="0,0" end="0,-712" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
+      <animation effect="slide" start="0,0" end="0,-732" time="300" reversible="true" condition="Control.HasFocus(50)">Conditional</animation>
       <control type="group" description="Media Info and buttons">
         <control type="image" description="Media Thumb">
           <visible>!Skin.HasSetting(InfoPosterHide)</visible>
@@ -210,16 +210,16 @@
         <top>60</top>
         <control type="image" description="Navbar">
           <centerleft>590</centerleft>
-          <top>740</top>
+          <top>670</top>
           <width>140%</width>
-          <height>360</height>
+          <height>390</height>
           <aspectratio align="center">stretch</aspectratio>
           <texture border="60">img/HomeMenuBar.png</texture>
-          <bordersize>-60</bordersize>
+          <bordersize>0</bordersize>
         </control>
         <control type="panel" id="50" description="50 actors">
           <left>60</left>
-          <top>750</top>
+          <top>700</top>
           <width>1860</width>
           <height>408</height>
           <orientation>horizontal</orientation>
@@ -235,7 +235,7 @@
               <width>270</width>
               <height>270</height>
               <texture colordiffuse="$VAR[OverlayColor]">thumbs/Monogram.png</texture>
-              <bordersize>-24</bordersize>
+              <bordersize>0</bordersize>
               <aspectratio>scale</aspectratio>
             </control>
             <control type="label" description="Monogram">
@@ -256,7 +256,17 @@
               <height>270</height>
               <texture diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
               <aspectratio scalediffuse="false">scale</aspectratio>
-              <bordersize>-2</bordersize>
+              <bordersize>22</bordersize>
+            </control>
+            <control type="label" description="Main Label">
+              <left>0</left>
+              <right>0</right>
+              <top>250</top>
+              <height>66</height>
+              <font>size19</font>
+              <align>center</align>
+              <textcolor>$VAR[Label2Color]</textcolor>
+              <label>$INFO[ListItem.Label]</label>
             </control>
           </itemlayout>
           <focusedlayout height="408" width="300">
@@ -273,7 +283,7 @@
                 <width>270</width>
                 <height>270</height>
                 <texture colordiffuse="$VAR[OverlayColor]">thumbs/Monogram.png</texture>
-                <bordersize>-24</bordersize>
+                <bordersize>0</bordersize>
                 <aspectratio>scale</aspectratio>
               </control>
               <control type="label" description="Monogram">
@@ -295,12 +305,12 @@
                 <font>monogram</font>
                 <texture diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
-                <bordersize>-2</bordersize>
+                <bordersize>22</bordersize>
               </control>
               <control type="label" description="Main Label">
                 <left>0</left>
                 <right>0</right>
-                <top>282</top>
+                <top>250</top>
                 <height>66</height>
                 <font>size19</font>
                 <align>center</align>
@@ -312,7 +322,7 @@
         </control>
         <control type="group" description="List Info">
           <left>150</left>
-          <top>1220</top>
+          <top>1200</top>
           <control type="group">
             <visible>![container.content(tvshows) | container.content(episodes) | SubString(Container.FolderPath,videodb://3,left)]</visible>
             <include>VisibleFadeEffect</include>
