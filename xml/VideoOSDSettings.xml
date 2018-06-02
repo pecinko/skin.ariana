@@ -2,24 +2,38 @@
 <window>
   <defaultcontrol always="true">5</defaultcontrol>
   <controls>
-    <include>DiffuseBG</include>
     <control type="group">
-      <include>OpenClose</include>
-      <control type="label" id="2" description="Settings">
-        <visible>false</visible>
+      <visible>Window.IsTopMostModal(VideoOSDSettings.xml)</visible>
+      <include>VisibleFadeEffect</include>
+      <control type="image">
+        <visible>!StringCompare(Control.GetLabel(2),$LOCALIZE[13396])</visible>
         <centerleft>50%</centerleft>
-        <top>60</top>
+        <top>40</top>
+        <width>906</width>
+        <height>1000</height>
+        <texture colordiffuse="$VAR[OverlayColor]" border="24">background/DialogBG.png</texture>
+      </control>
+      <control type="image">
+        <visible>StringCompare(Control.GetLabel(2),$LOCALIZE[13396])</visible>
+        <centerleft>50%</centerleft>
+        <top>40</top>
+        <width>906</width>
+        <height>760</height>
+        <texture colordiffuse="$VAR[OverlayColor]" border="24">background/DialogBG.png</texture>
+      </control>
+      <control type="label" id="2" description="Settings">
+        <centerleft>50%</centerleft>
+        <top>120</top>
         <width>1050</width>
-        <font>size24B</font>
+        <font>-</font>
         <align>center</align>
       </control>
       <control type="grouplist" id="5" description="Control Area">
-        <animation effect="fade" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
         <centerleft>50%</centerleft>
-        <centertop>50%</centertop>
+        <top>75</top>
         <width>840</width>
-        <height min="120" max="960">auto</height>
-        <aligny>center</aligny>
+        <height>930</height>
+        <aligny>top</aligny>
         <itemgap>2</itemgap>
         <orientation>vertical</orientation>
         <onup>5</onup>

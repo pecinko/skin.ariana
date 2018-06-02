@@ -12,6 +12,7 @@
       <align>center</align>
       <aligny>center</aligny>
       <control type="textbox" id="8888">
+        <visible>!IsEmpty(ListItem.Label)</visible>
         <width>100%</width>
         <height>150</height>
         <font>size22B</font>

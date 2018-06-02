@@ -5,23 +5,23 @@
     <control type="group">
       <include>OpenClose</include>
       <control type="image">
-        <centerleft>960</centerleft>
-        <centertop>540</centertop>
-        <width>900</width>
-        <height>480</height>
-        <texture border="128">img/DialogPanelST.png</texture>
+        <centerleft>50%</centerleft>
+        <centertop>25%</centertop>
+        <width>660</width>
+        <height>240</height>
+        <texture colordiffuse="$VAR[OverlayColor]" border="24">background/DialogBG.png</texture>
       </control>
       <control type="label" id="10" description="Heading">
-        <centerleft>960</centerleft>
-        <centertop>471</centertop>
+        <centerleft>50%</centerleft>
+        <centertop>201</centertop>
         <width>990</width>
         <align>center</align>
         <font>size50B</font>
         <textcolor>white</textcolor>
       </control>
       <control type="slider" id="11" description="Slider">
-        <centerleft>960</centerleft>
-        <centertop>549</centertop>
+        <centerleft>50%</centerleft>
+        <centertop>279</centertop>
         <width>540</width>
         <height>33</height>
         <onup>noop</onup>
@@ -31,8 +31,8 @@
         <include>FocusButtonsAnimation</include>
       </control>
       <control type="label" id="12" description="Slider value">
-        <centerleft>960</centerleft>
-        <centertop>609</centertop>
+        <centerleft>50%</centerleft>
+        <centertop>339</centertop>
         <width>690</width>
         <align>center</align>
         <textcolor>white</textcolor>

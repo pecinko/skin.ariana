@@ -95,7 +95,7 @@
               <height>66</height>
               <font>size19</font>
               <align>center</align>
-              <textcolor>$VAR[LabelNFColor]</textcolor>
+              <textcolor>white</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
           </control>
@@ -112,6 +112,7 @@
           <height>60</height>
           <font>size50B</font>
           <label>$LOCALIZE[20096]</label>
+          <textcolor>white</textcolor>
         </control>
         <control type="label" description="INFO">
           <centerleft>50%</centerleft>
@@ -120,7 +121,7 @@
           <width>100%</width>
           <align>center</align>
           <font>size16</font>
-          <textcolor>$VAR[Label2Color]</textcolor>
+          <textcolor>grey</textcolor>
           <label>$INFO[Container(52).ListItem.Label2]</label>
         </control>
       </control>

@@ -14,7 +14,7 @@
           <top>120</top>
           <width>784</width>
           <height>860</height>
-          <texture border="24" colordiffuse="$VAR[OverlayColor]">background/Panel.png</texture>
+          <texture colordiffuse="$VAR[OverlayColor]" border="24">background/DialogBG.png</texture>
           <bordersize>-48</bordersize>
         </control>
         <control type="label" description="MainHeading">
@@ -34,7 +34,7 @@
           <top>90</top>
           <width>840</width>
           <height>904</height>
-          <texture border="24" colordiffuse="$VAR[OverlayColor]">background/Panel.png</texture>
+          <texture colordiffuse="$VAR[OverlayColor]" border="24">background/DialogBG.png</texture>
           <bordersize>-48</bordersize>
         </control>
         <control type="group" description="Media info">
@@ -95,7 +95,7 @@
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="label" description="Label2">
-            <left>20</left>
+            <left>15</left>
             <top>0</top>
             <height>80</height>
             <width>124</width>
@@ -128,7 +128,7 @@
               <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label" description="Label2">
-              <left>20</left>
+              <left>15</left>
               <top>0</top>
               <height>80</height>
               <width>124</width>

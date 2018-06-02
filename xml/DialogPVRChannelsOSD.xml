@@ -9,7 +9,7 @@
         <top>140</top>
         <width>800</width>
         <height>860</height>
-        <texture border="24" colordiffuse="$VAR[OverlayColor]">background/Panel.png</texture>
+        <texture colordiffuse="$VAR[OverlayColor]" border="24">background/DialogBG.png</texture>
         <bordersize>-48</bordersize>
       </control>
       <control type="label" description="MainHeading">

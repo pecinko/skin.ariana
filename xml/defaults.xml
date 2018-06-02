@@ -175,8 +175,8 @@
     <sliderwidth>150</sliderwidth>
     <sliderheight>24</sliderheight>
     <texturesliderbar border="3,0,3,0">HUD/SliderBG.png</texturesliderbar>
-    <textureslidernib colordiffuse="$VAR[Label2Color]">HUD/SliderNib.png</textureslidernib>
-    <textureslidernibfocus colordiffuse="$VAR[LabelFOColor]">HUD/SliderNib.png</textureslidernibfocus>
+    <textureslidernib>HUD/SliderNibNF.png</textureslidernib>
+    <textureslidernibfocus>HUD/SliderNibFO.png</textureslidernibfocus>
     <pulseonselect>false</pulseonselect>
   </default>
   <default type="sliderex" description="Default Slider">
@@ -194,8 +194,8 @@
     <sliderwidth>150</sliderwidth>
     <sliderheight>24</sliderheight>
     <texturesliderbar border="3,0,3,0">HUD/SliderBG.png</texturesliderbar>
-    <textureslidernib colordiffuse="$VAR[Label2Color]">HUD/SliderNib.png</textureslidernib>
-    <textureslidernibfocus colordiffuse="$VAR[LabelFOColor]">HUD/SliderNib.png</textureslidernibfocus>
+    <textureslidernib>HUD/SliderNibNF.png</textureslidernib>
+    <textureslidernibfocus>HUD/SliderNibFO.png</textureslidernibfocus>
     <pulseonselect>false</pulseonselect>
     <include>FocusButtonsAnimation</include>
   </default>

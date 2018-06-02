@@ -210,7 +210,7 @@
     <centertop>50%</centertop>
     <width>500</width>
     <height>360</height>
-    <texture border="24" colordiffuse="$VAR[OverlayColor]">background/Panel.png</texture>
+    <texture colordiffuse="$VAR[OverlayColor]" border="24">background/DialogBG.png</texture>
     <bordersize>-48</bordersize>
   </control>
   <control type="grouplist" id="100" description="Music OSD Options">
