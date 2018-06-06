@@ -4,17 +4,32 @@
   <controls>
     <include>FullBackground</include>
     <control type="group">
+      <control type="button" id="4004" description="Users">
+        <visible>IntegerGreaterThan(System.ProfileCount,1) | Library.HasServices</visible>
+        <include>HiddenButton</include>
+        <onclick>System.LogOff</onclick>
+      </control>
       <include>OpenClose</include>
       <animation type="Conditional" condition="ControlGroup(9500).HasFocus()" reversible="true">
-        <effect type="slide" end="0,-505" time="200" tween="sine" easing="inout"/>
+        <effect type="slide" end="0,-505" time="300" easing="inout"/>
       </animation>
       <control type="image">
+        <visible>!Control.IsVisible(4004)</visible>
         <top>84</top>
         <left>66</left>
         <width>300</width>
         <height>90</height>
         <texture>$VAR[Logo]</texture>
         <aspectratio align="left">keep</aspectratio>
+      </control>
+      <control type="image" description="Users">
+        <visible>Control.IsVisible(4004)</visible>
+        <top>90</top>
+        <left>90</left>
+        <width>80</width>
+        <height>80</height>
+        <aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+        <texture diffuse="img/UserDiffuse.png">$INFO[Control.GetLabel(4004).index(1)]</texture>
       </control>
       <control type="grouplist" id="9001" description="Top right row buttons">
         <right>84</right>
@@ -29,45 +44,39 @@
         <orientation>horizontal</orientation>
         <control type="button" id="4000" description="Server">
           <texturefocus>buttons/ServerFO.png</texturefocus>
-          <texturenofocus colordiffuse="$VAR[ButtonOverlayColor]">buttons/ServerNF.png</texturenofocus>
-          <label>$INFO[system.servername]</label>
+          <texturenofocus>buttons/ServerNF.png</texturenofocus>
           <include>SquareButtonCommons</include>
-          <include>FocusButtonsAnimation</include>
         </control>
-        <control type="button" id="4004" description="User">
-          <visible>IntegerGreaterThan(System.ProfileCount,1)</visible>
-          <onclick>System.LogOff</onclick>
+        <control type="button" id="4" description="User">
+          <visible>Control.IsVisible(4004)</visible>
           <texturefocus>buttons/ProfilesFO.png</texturefocus>
-          <texturenofocus colordiffuse="$VAR[ButtonOverlayColor]">buttons/ProfilesNF.png</texturenofocus>
-          <label>$INFO[system.profilename]</label>
+          <texturenofocus>buttons/ProfilesNF.png</texturenofocus>
+          <label>$INFO[Control.GetLabel(4004)]</label>
+          <onclick>SendClick(4004)</onclick>
           <include>SquareButtonCommons</include>
-          <include>FocusButtonsAnimation</include>
         </control>
         <control type="button" id="2" description="Player Fullscreen">
           <visible>Player.HasMedia</visible>
           <onclick condition="Player.HasMedia">fullscreen</onclick>
           <texturefocus>buttons/FullscreenFO.png</texturefocus>
-          <texturenofocus colordiffuse="$VAR[ButtonOverlayColor]">buttons/FullscreenNF.png</texturenofocus>
+          <texturenofocus>buttons/FullscreenNF.png</texturenofocus>
           <label>$LOCALIZE[16003]</label>
           <include>SquareButtonCommons</include>
-          <include>FocusButtonsAnimation</include>
         </control>
         <control type="button" id="4002" description="favourites">
           <visible>Skin.HasSetting(FavButton)</visible>
           <onclick>ActivateWindow(favourites)</onclick>
           <texturefocus>buttons/FavFO.png</texturefocus>
-          <texturenofocus colordiffuse="$VAR[ButtonOverlayColor]">buttons/FavNF.png</texturenofocus>
+          <texturenofocus>buttons/FavNF.png</texturenofocus>
           <label>$LOCALIZE[10134]</label>
           <include>SquareButtonCommons</include>
-          <include>FocusButtonsAnimation</include>
         </control>
         <control type="button" id="4001" description="settings">
           <onclick>ActivateWindow(settings)</onclick>
           <texturefocus>buttons/SettingsFO.png</texturefocus>
-          <texturenofocus colordiffuse="$VAR[ButtonOverlayColor]">buttons/SettingsNF.png</texturenofocus>
+          <texturenofocus>buttons/SettingsNF.png</texturenofocus>
           <label>$LOCALIZE[10004]</label>
           <include>SquareButtonCommons</include>
-          <include>FocusButtonsAnimation</include>
         </control>
       </control>
       <control type="panel" id="9000" description="Main menu">
@@ -157,13 +166,38 @@
         <aligny>top</aligny>
         <align>left</align>
         <itemgap>10</itemgap>
-        <control type="label" id="80100" description="ShelfHeading">
-          <visible>Control.IsVisible(8010)</visible>
+        <!--
+        <control type="label" id="5555" description="ShelfHeading">
+          <visible>Control.IsVisible(8011)</visible>
           <include>HeaderLabelShelf</include>
-          <label>$LOCALIZE[31026]</label>
+          <label>test</label>
         </control>
-        <control type="panel" id="8010" description="Continue">
-          <visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
+        <control type="panel" id="55556" description="test">
+          <animation effect="fade" time="200">Visible</animation>
+          <top>600</top>
+          <left>66</left>
+          <width>1860</width>
+          <height>475</height>
+          <orientation>horizontal</orientation>
+          <onleft>8011</onleft>
+          <onright>8011</onright>
+          <onback>9000</onback>
+          <itemlayout width="298" height="475">
+            <include>PostersShelfFO</include>
+          </itemlayout>
+          <focusedlayout width="298" height="475">
+            <include>PostersShelfFO</include>
+          </focusedlayout>
+          <content target="video">plex://movies/titles/filters/$INFO[Container(9000).ListItem(2).Property(base64url)]</content>
+        </control>
+      -->
+        <control type="label" id="80100" description="ShelfHeading">
+          <visible>Control.IsVisible(8020)</visible>
+          <include>HeaderLabelShelf</include>
+          <label>$INFO[Container(8020).ListItem.Property(ItemType)]</label>
+        </control>
+        <control type="panel" id="8020" description="Continue">
+          <visible>IntegerGreaterThan(Container(8020).NumItems,0)</visible>
           <animation effect="fade" time="200">Visible</animation>
           <top>0</top>
           <left>66</left>
@@ -183,7 +217,7 @@
         <control type="label" id="80110" description="ShelfHeading">
           <visible>Control.IsVisible(8011)</visible>
           <include>HeaderLabelShelf</include>
-          <label>$LOCALIZE[31023]</label>
+          <label>$INFO[Container(8011).ListItem.Property(ItemType)]</label>
         </control>
         <control type="panel" id="8011" description="Shows OnDeck">
           <visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
@@ -206,7 +240,7 @@
         <control type="label" id="80000" description="ShelfHeading">
           <visible>Control.IsVisible(8000)</visible>
           <include>HeaderLabelShelf</include>
-          <label>$LOCALIZE[681]</label>
+          <label>$INFO[Container(8000).ListItem.Property(ItemType)]</label>
         </control>
         <control type="panel" id="8000" description="Movies RA">
           <visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
@@ -229,7 +263,7 @@
         <control type="label" id="80010" description="ShelfHeading">
           <visible>Control.IsVisible(8001)</visible>
           <include>HeaderLabelShelf</include>
-          <label>$LOCALIZE[681]</label>
+          <label>$INFO[Container(8001).ListItem.Property(ItemType)]</label>
         </control>
         <control type="panel" id="8001" description="Shows RA">
           <visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
@@ -252,7 +286,7 @@
         <control type="label" id="80020" description="ShelfHeading">
           <visible>Control.IsVisible(8002)</visible>
           <include>HeaderLabelShelf</include>
-          <label>$LOCALIZE[681]</label>
+          <label>$INFO[Container(8002).ListItem.Property(ItemType)]</label>
         </control>
         <control type="panel" id="8002" description="Music RA">
           <visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>

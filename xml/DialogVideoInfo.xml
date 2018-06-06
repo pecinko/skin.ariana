@@ -266,7 +266,7 @@
               <font>size19</font>
               <align>center</align>
               <textcolor>$VAR[Label2Color]</textcolor>
-              <label>$INFO[ListItem.Label]</label>
+              <label>$INFO[ListItem.Label2]</label>
             </control>
           </itemlayout>
           <focusedlayout height="408" width="300">

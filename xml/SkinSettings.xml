@@ -67,17 +67,17 @@
         <content>
           <item id="5" description="Theme force dark">
             <visible>!System.Platform.TVOS</visible>
-            <visible>!Skin.HasSetting(DarkInterface)</visible>
+            <visible>!Skin.HasSetting(LightInterface)</visible>
             <label>$LOCALIZE[480]</label>
             <label2>$LOCALIZE[14061]</label2>
-            <onclick>Skin.ToggleSetting(DarkInterface)</onclick>
+            <onclick>Skin.ToggleSetting(LightInterface)</onclick>
           </item>
           <item id="6" description="Theme reset fallback light">
             <visible>!System.Platform.TVOS</visible>
-            <visible>Skin.HasSetting(DarkInterface)</visible>
+            <visible>Skin.HasSetting(LightInterface)</visible>
             <label>$LOCALIZE[480]</label>
             <label2>$LOCALIZE[31024]</label2>
-            <onclick>Skin.Reset(DarkInterface)</onclick>
+            <onclick>Skin.Reset(LightInterface)</onclick>
           </item>
           <item id="1" description="List Fanart">
             <visible>Skin.HasSetting(FanartInList)</visible>

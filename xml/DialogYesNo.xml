@@ -37,7 +37,7 @@
         <include>FocusButtonsAnimation</include>
       </control>
       <control type="button" id="11" description="Yes">
-        <top>640</top>
+        <top>620</top>
         <centerleft>50%</centerleft>
         <width>360</width>
         <label>107</label>

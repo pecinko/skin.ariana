@@ -3,32 +3,52 @@
   <defaultcontrol>3</defaultcontrol>
   <controls>
     <include>DialogFullBG</include>
-    <control type="image" description="Sidebar">
-      <visible>!Control.IsVisible(3)</visible>
-      <left>-150</left>
-      <top>0</top>
-      <width>660</width>
-      <height>100%</height>
-      <aspectratio>stretch</aspectratio>
-      <texture border="60">img/HomeMenuBarV.png</texture>
-    </control>
     <control type="group">
       <include>OpenClose</include>
       <control type="label" id="1" description="Header label">
         <include>CenterHeading</include>
         <label>13406</label>
       </control>
-      <control type="panel" id="3">
-        <centerleft>960</centerleft>
-        <top>150</top>
-        <width>900</width>
-        <height>810</height>
+      <control type="panel" id="3" description="thumbs">
+        <left>120</left>
+        <top>220</top>
+        <width>828</width>
+        <height>770</height>
         <onleft>5</onleft>
-        <itemlayout width="900" height="80">
+        <onright>5</onright>
+        <itemlayout height="110">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>100%</width>
+            <height>100</height>
+            <texture border="10">focus/FrameNF.png</texture>
+            <bordersize>-5</bordersize>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.Thumb)</visible>
+            <left>5</left>
+            <top>4</top>
+            <width>90</width>
+            <height>90</height>
+            <texture>$INFO[ListItem.Thumb]</texture>
+            <aspectratio align="left" aligny="center">keep</aspectratio>
+          </control>
           <control type="label" description="Main Label">
+            <visible>!IsEmpty(ListItem.Thumb)</visible>
+            <left>120</left>
+            <right>70</right>
+            <height>90%</height>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Property(Addon.Version), - $LOCALIZE[24051] ]$INFO[ListItem.Property(Addon.Creator), • ]</label>
+            <scroll>false</scroll>
+          </control>
+          <control type="label" description="Main Label">
+            <visible>IsEmpty(ListItem.Thumb)</visible>
             <left>20</left>
-            <right>60</right>
-            <height>80</height>
+            <right>70</right>
+            <height>90%</height>
             <textcolor>$VAR[LabelNFColor]</textcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
@@ -37,28 +57,47 @@
             <right>20</right>
             <top>0</top>
             <width>30</width>
-            <height>80</height>
+            <height>90%</height>
             <texture colordiffuse="$VAR[LabelNFColor]">img/RadioON.png</texture>
-            <aspectratio align="right">keep</aspectratio>
+            <aspectratio aligny="center">keep</aspectratio>
           </control>
         </itemlayout>
-        <focusedlayout width="900" height="80">
+        <focusedlayout height="110">
           <control type="group">
             <include>FocusButtonsAnimation</include>
             <control type="image">
               <animation effect="fade" time="100">VisibleChange</animation>
-              <left>10</left>
-              <top>10</top>
-              <width>880</width>
-              <height>60</height>
+              <left>0</left>
+              <right>0</right>
+              <top>0</top>
+              <height>100</height>
               <texture border="10">focus/FrameFO.png</texture>
-              <bordersize>-10</bordersize>
+              <bordersize>-5</bordersize>
               <aspectratio>stretch</aspectratio>
             </control>
+            <control type="image">
+              <visible>!IsEmpty(ListItem.Thumb)</visible>
+              <left>5</left>
+              <top>4</top>
+              <width>90</width>
+              <height>90</height>
+              <texture>$INFO[ListItem.Thumb]</texture>
+              <aspectratio align="left" aligny="center">keep</aspectratio>
+            </control>
             <control type="label" description="Main Label">
+              <visible>!IsEmpty(ListItem.Thumb)</visible>
+              <left>120</left>
+              <right>70</right>
+              <height>90%</height>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Property(Addon.Version), - $LOCALIZE[24051] ]$INFO[ListItem.Property(Addon.Creator), • ]</label>
+              <scroll>false</scroll>
+            </control>
+            <control type="label" description="Main Label">
+              <visible>IsEmpty(ListItem.Thumb)</visible>
               <left>20</left>
-              <right>60</right>
-              <height>80</height>
+              <right>70</right>
+              <height>90%</height>
               <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
@@ -67,113 +106,41 @@
               <right>20</right>
               <top>0</top>
               <width>30</width>
-              <height>80</height>
+              <height>90%</height>
               <texture colordiffuse="$VAR[LabelFOColor]">img/RadioON.png</texture>
-              <aspectratio align="right">keep</aspectratio>
-            </control>
-          </control>
-        </focusedlayout>
-      </control>
-      <control type="panel" id="6">
-        <left>1058</left>
-        <top>180</top>
-        <width>784</width>
-        <height>799</height>
-        <pagecontrol>60</pagecontrol>
-        <onleft>5</onleft>
-        <itemlayout width="784" height="80">
-          <control type="label" description="Main Label">
-            <left>30</left>
-            <right>30</right>
-            <height>81</height>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
-          <control type="image">
-            <visible>ListItem.IsSelected</visible>
-            <right>20</right>
-            <top>0</top>
-            <width>30</width>
-            <height>81</height>
-            <texture colordiffuse="$VAR[LabelNFColor]">img/RadioON.png</texture>
-            <aspectratio>keep</aspectratio>
-          </control>
-        </itemlayout>
-        <focusedlayout width="784" height="80">
-          <control type="group">
-            <include>FocusButtonsAnimation</include>
-            <control type="image">
-              <animation effect="fade" time="100">VisibleChange</animation>
-              <left>10</left>
-              <top>10</top>
-              <width>760</width>
-              <height>60</height>
-              <texture border="10">focus/FrameFO.png</texture>
-              <bordersize>-10</bordersize>
-              <aspectratio>stretch</aspectratio>
-            </control>
-            <control type="label" description="Main Label">
-              <left>30</left>
-              <right>60</right>
-              <height>81</height>
-              <textcolor>$VAR[LabelFOColor]</textcolor>
-              <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="image">
-              <visible>ListItem.IsSelected</visible>
-              <right>20</right>
-              <top>0</top>
-              <width>30</width>
-              <height>81</height>
-              <texture colordiffuse="$VAR[LabelFOColor]">img/RadioON.png</texture>
-              <aspectratio>keep</aspectratio>
+              <aspectratio aligny="center">keep</aspectratio>
             </control>
           </control>
         </focusedlayout>
       </control>
       <control type="button" id="5" description="Left buttons template">
-        <left>60</left>
-        <top>150</top>
-        <width>360</width>
-        <height>81</height>
+        <centerright>25%</centerright>
+        <top>900</top>
+        <texturefocus colordiffuse="green">buttons/OKFO.png</texturefocus>
+        <texturenofocus>buttons/OKNF.png</texturenofocus>
+        <include>SquareButtonCommons</include>
         <onleft>3</onleft>
         <onright>3</onright>
-        <include>FocusButtonsAnimation</include>
       </control>
-      <control type="group">
-        <left>-60</left>
-        <visible>!Control.IsVisible(3)</visible>
-        <control type="image" description="Item Thumb">
-          <centerleft>810</centerleft>
-          <top>210</top>
-          <width>450</width>
-          <height>450</height>
-          <fadetime>200</fadetime>
-          <texture fallback="DefaultFolder.png">$INFO[Container(6).ListItem.Thumb]</texture>
-          <bordertexture border="12">img/ThumbBorder.png</bordertexture>
-          <bordersize>9</bordersize>
-          <aspectratio aligny="top">keep</aspectratio>
-        </control>
-        <control type="label" description="Author">
-          <visible>!IsEmpty(Container(6).ListItem.Property(Addon.Version))</visible>
-          <centerleft>810</centerleft>
-          <top>720</top>
-          <width>450</width>
-          <height>150</height>
-          <align>center</align>
-          <font>size22</font>
-          <label>$INFO[Container(6).ListItem.Property(Addon.Version),$LOCALIZE[24051] ]</label>
-        </control>
-        <control type="label" description="Author">
-          <visible>!IsEmpty(Container(6).ListItem.Property(Addon.Creator))</visible>
-          <centerleft>810</centerleft>
-          <top>839</top>
-          <width>450</width>
-          <height>150</height>
-          <wrapmultiline>true</wrapmultiline>
-          <align>center</align>
-          <font>size22</font>
-          <label>$INFO[Container(6).ListItem.Property(Addon.Creator),$LOCALIZE[21863]: ]</label>
-        </control>
+      <control type="image" description="Item Thumb">
+        <visible>IsEmpty(Container(3).ListItem.Thumb)</visible>
+        <centerleft>75%</centerleft>
+        <top>270</top>
+        <width>400</width>
+        <height>400</height>
+        <fadetime>200</fadetime>
+        <texture>Logo_square.png</texture>
+        <aspectratio aligny="center" align="center">keep</aspectratio>
+      </control>
+      <control type="image" description="Item Thumb">
+        <visible>!IsEmpty(Container(3).ListItem.Thumb)</visible>
+        <centerleft>75%</centerleft>
+        <top>270</top>
+        <width>400</width>
+        <height>400</height>
+        <fadetime>200</fadetime>
+        <texture>$INFO[Container(3).ListItem.Thumb]</texture>
+        <aspectratio aligny="center" align="center">keep</aspectratio>
       </control>
     </control>
   </controls>

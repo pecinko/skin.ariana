@@ -21,15 +21,15 @@
           <progresstexture border="0,60,10,4">epg/EPGMarker.png</progresstexture>
           <rulerlayout height="60" width="1300">
             <control type="label">
-              <width min="200" max="400">auto</width>
+              <width min="200" max="350">auto</width>
               <height>40</height>
               <label>[B]$INFO[ListItem.Label][/B]</label>
-              <font>size18</font>
+              <font>size16</font>
               <align>center</align>
               <textcolor>$VAR[LabelNFColor]</textcolor>
             </control>
           </rulerlayout>
-          <channellayout height="80" width="450">
+          <channellayout height="80" width="350">
             <control type="image">
               <top>1</top>
               <width>100%</width>
@@ -52,7 +52,7 @@
               <visible>IsEmpty(ListItem.Icon)</visible>
               <right>5</right>
               <top>0</top>
-              <width>370</width>
+              <width>270</width>
               <height>100%</height>
               <font>size16U</font>
               <textcolor>$VAR[LabelNFColor]</textcolor>
@@ -63,7 +63,7 @@
             <control type="image">
               <right>1</right>
               <top>0</top>
-              <width>370</width>
+              <width>270</width>
               <height>100%</height>
               <align>right</align>
               <aligny>center</aligny>
@@ -72,7 +72,7 @@
               <bordersize>5</bordersize>
             </control>
           </channellayout>
-          <focusedchannellayout height="80" width="450">
+          <focusedchannellayout height="80" width="350">
             <control type="image">
               <width>100%</width>
               <height>100%</height>
@@ -95,7 +95,7 @@
               <visible>IsEmpty(ListItem.Icon)</visible>
               <right>5</right>
               <top>0</top>
-              <width>370</width>
+              <width>270</width>
               <height>100%</height>
               <font>size16U</font>
               <textcolor>$VAR[LabelFOColor]</textcolor>
@@ -106,7 +106,7 @@
             <control type="image">
               <right>1</right>
               <top>0</top>
-              <width>370</width>
+              <width>270</width>
               <height>100%</height>
               <aspectratio align="right" aligny="center">keep</aspectratio>
               <texture>$INFO[ListItem.Icon]</texture>
@@ -129,6 +129,13 @@
               <font>font16U</font>
               <textcolor>$VAR[LabelNFColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="image">
+              <left>6</left>
+              <top>50</top>
+              <width>24</width>
+              <height>24</height>
+              <texture>$VAR[PVRTimerIcon]</texture>
             </control>
           </itemlayout>
           <focusedlayout height="80" width="60">
@@ -154,6 +161,13 @@
               <font>font16U</font>
               <textcolor>$VAR[LabelFOColor]</textcolor>
               <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="image">
+              <left>6</left>
+              <top>50</top>
+              <width>24</width>
+              <height>24</height>
+              <texture>$VAR[PVRTimerIcon]</texture>
             </control>
           </focusedlayout>
         </control>

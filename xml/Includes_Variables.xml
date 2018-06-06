@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <variable name="Background.Overlay" description="backgrounds">
-    <value condition="System.IsDarkInterface | Skin.HasSetting(DarkInterface)">background/DarkBG.png</value>
+    <value condition="System.IsDarkInterface | !Skin.HasSetting(LightInterface)">background/DarkBG.png</value>
     <value>background/LightBG.png</value>
   </variable>
   <variable name="Background.Art" description="Art backgrounds">
@@ -78,36 +78,48 @@
     <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
     <value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
   </variable>
+  <variable name="PVRTimerIcon">
+		<value condition="ListItem.IsRecording">OverlayRecording.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">icons/pvr/PVR-HasTimerScheduleError.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasError">icons/pvr/PVR-HasTimerError.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerScheduleConflict.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasConflict">icons/pvr/PVR-HasTimerConflict.png</value>
+		<value condition="ListItem.HasRecording">icons/pvr/PVR-HasRecording.png</value>
+		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerScheduleDisabled.png</value>
+		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerDisabled.png</value>
+		<value condition="ListItem.HasTimerSchedule">icons/pvr/PVR-HasTimerSchedule.png</value>
+		<value condition="ListItem.HasTimer">icons/pvr/PVR-HasTimer.png</value>
+  </variable>
   <variable name="OverlayColor" description="Overlay">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FFe1e5ef</value>
+    <value condition="!System.IsDarkInterface + Skin.HasSetting(LightInterface)">FFe1e5ef</value>
     <value>FF2A2C32</value>
   </variable>
   <variable name="LabelNFColor" description="LabelNF">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF000000</value>
+    <value condition="!System.IsDarkInterface + Skin.HasSetting(LightInterface)">FF000000</value>
     <value>FFFFFFFF</value>
   </variable>
   <variable name="LabelFOColor" description="LabelFO">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF000000</value>
+    <value condition="!System.IsDarkInterface + Skin.HasSetting(LightInterface)">FF000000</value>
     <value>FF000000</value>
   </variable>
   <variable name="Label2Color" description="Label2">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF575759</value>
+    <value condition="!System.IsDarkInterface + Skin.HasSetting(LightInterface)">FF575759</value>
     <value>FF838485</value>
   </variable>
   <variable name="DisabledColor" description="Disabled">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF5e5e60</value>
+    <value condition="!System.IsDarkInterface + Skin.HasSetting(LightInterface)">FF5e5e60</value>
     <value>FF909192</value>
   </variable>
   <variable name="SelectedColor" description="Selected">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF7f8da8</value>
+    <value condition="!System.IsDarkInterface + Skin.HasSetting(LightInterface)">FF7f8da8</value>
     <value>FFf68b1f</value>
   </variable>
   <variable name="ButtonOverlayColor" description="Overlay square buttons">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">FF6a6a6c</value>
+    <value condition="!System.IsDarkInterface + Skin.HasSetting(LightInterface)">FF6a6a6c</value>
     <value>FF838485</value>
   </variable>
     <variable name="Logo" description="Logo image">
-    <value condition="!System.IsDarkInterface + !Skin.HasSetting(DarkInterface)">Logo_light.png</value>
+    <value condition="!System.IsDarkInterface + Skin.HasSetting(LightInterface)">Logo_light.png</value>
     <value>Logo_dark.png</value>
   </variable>
 </includes>

@@ -68,7 +68,7 @@
             <top>54</top>
             <height>28</height>
             <width>28</width>
-            <texture colordiffuse="red" align="left" aligny="center">OverlayInProgress.png</texture>
+            <texture align="left" aligny="center">OverlayRecording.png</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label" description="Nr">
@@ -154,7 +154,7 @@
               <top>54</top>
               <height>28</height>
               <width>28</width>
-              <texture colordiffuse="red" align="left" aligny="center">OverlayInProgress.png</texture>
+              <texture align="left" aligny="center">OverlayRecording.png</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label" description="Nr">

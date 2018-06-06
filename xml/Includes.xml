@@ -194,13 +194,10 @@
     <animation effect="fade" time="100">Hidden</animation>
   </include>
   <include name="HiddenButton">
-    <left>-30</left>
-    <top>-30</top>
+    <left>-300</left>
+    <top>-300</top>
     <width>1</width>
     <height>1</height>
-    <label>-</label>
-    <texturenofocus>-</texturenofocus>
-    <texturefocus>-</texturefocus>
   </include>
   <include name="HeadingR">
     <left>960</left>
@@ -240,14 +237,12 @@
     <aspectratio aligny="center" align="left">keep</aspectratio>
   </include>
   <include name="SeekbarLabels">
-    <left>0</left>
-    <top>525</top>
-    <height>75</height>
-    <width>1920</width>
+    <height>40</height>
+    <width>100%</width>
     <align>center</align>
-    <font>size24B</font>
-    <textcolor>$VAR[LabelNFColor]</textcolor>
-    <animation effect="fade" time="200">VisibleChange</animation>
+    <font>size50B</font>
+    <shadowcolor>black</shadowcolor>
+    <textcolor>white</textcolor>
   </include>
   <include name="FocusButtonsAnimation">
     <animation type="Focus" reversible="true">

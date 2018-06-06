@@ -387,17 +387,6 @@
             <include>9000Buttons</include>
             <label>653</label>
           </control>
-          <control type="togglebutton" id="802" description="Playing">
-            <include>FocusButtonsAnimation</include>
-            <enable>Player.HasMedia</enable>
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[16003]</label>
-            <altlabel>$LOCALIZE[16003]</altlabel>
-            <usealttexture>Player.HasMedia</usealttexture>
-            <onclick>fullscreen</onclick>
-            <altclick>fullscreen</altclick>
-            <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
-          </control>
         </control>
       </control>
     </control>

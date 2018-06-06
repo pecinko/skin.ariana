@@ -20,12 +20,6 @@
             <label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
             <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
           </control>
-          <control type="button" id="699" description="Playing">
-            <visible>Player.HasMedia</visible>
-            <include>9000Buttons</include>
-            <label>$LOCALIZE[16003]</label>
-            <onclick>fullscreen</onclick>
-          </control>
         </control>
       </control>
     </control>
