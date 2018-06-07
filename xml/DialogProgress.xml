@@ -2,78 +2,68 @@
 <window>
   <defaultcontrol always="true">10</defaultcontrol>
   <controls>
-    <include>DialogFullBG</include>
+    <include>FullBackground</include>
     <control type="group">
       <include>OpenClose</include>
       <control type="label" id="1" description="Heading">
-        <top>240</top>
-        <centerleft>960</centerleft>
+        <top>210</top>
+        <centerleft>50%</centerleft>
         <label>-</label>
-        <height>32</height>
+        <height>40</height>
         <width>100%</width>
         <font>size50B</font>
         <align>center</align>
         <textcolor>$VAR[LabelNFColor]</textcolor>
       </control>
       <control type="label" id="2" description="Line 1">
-        <top>340</top>
-        <centerleft>960</centerleft>
+        <top>440</top>
+        <centerleft>50%</centerleft>
         <width>960</width>
-        <height>50</height>
+        <height>40</height>
         <align>center</align>
-        <font>size20</font>
-        <label>111111</label>
       </control>
       <control type="label" id="3" description="Line 2">
-        <top>390</top>
-        <centerleft>960</centerleft>
+        <top>480</top>
+        <centerleft>50%</centerleft>
         <width>960</width>
-        <height>50</height>
+        <height>40</height>
         <align>center</align>
-        <font>size20</font>
-        <label>222222</label>
       </control>
       <control type="label" id="4" description="Line 3">
-        <top>440</top>
-        <centerleft>960</centerleft>
+        <top>520</top>
+        <centerleft>50%</centerleft>
         <width>960</width>
-        <height>50</height>
+        <height>40</height>
         <align>center</align>
-        <font>size20</font>
-        <label>333333</label>
       </control>
       <control type="label" id="21" description="Progress">
         <top>580</top>
-        <centerleft>960</centerleft>
+        <centerleft>50%</centerleft>
         <width>960</width>
-        <height>50</height>
+        <height>40</height>
         <align>center</align>
-        <font>size28B</font>
-        <label>$INFO[Control.GetLabel(20),,%]</label>
+        <label>[B]$INFO[Control.GetLabel(20),,%][/B]</label>
       </control>
       <control type="progress" id="20" description="Progressbar">
-        <top>-1556</top>
-        <centerleft>960</centerleft>
-        <width>360</width>
-        <width>960</width>
-        <height>9</height>
-        <texturebg border="5,0,5,0">progress/ProgressBG.png</texturebg>
-        <midtexture border="0,1,0,1">progress/ProgressMidd.png</midtexture>
-        <righttexture border="1,1,5,1">progress/ProgressRight.png</righttexture>
-        <lefttexture border="5,1,1,1">progress/ProgressLeft.png</lefttexture>
-        <overlaytexture>-</overlaytexture>
+        <top/>
+        <left/>
         <info>System.Progressbar</info>
+        <texturebg/>
+        <lefttexture/>
+        <midtexture/>
+        <righttexture/>
+        <overlaytexture/>
       </control>
       <control type="button" id="10" description="Cancel">
-        <top>700</top>
-        <centerleft>960</centerleft>
-        <width>360</width>
+        <top>75%</top>
+        <centerleft>50%</centerleft>
+        <width>320</width>
         <label>222</label>
-        <onup>10</onup>
-        <ondown>10</ondown>
         <align>center</align>
+        <textcolor>white</textcolor>
+        <focusedcolor>white</focusedcolor>
+        <pulseonselect>true</pulseonselect>
         <texturefocus colordiffuse="red" border="9">img/SettingsButtonFO.png</texturefocus>
-        <include>FocusButtonsAnimation</include>
       </control>
     </control>
   </controls>

@@ -57,7 +57,7 @@
       <height>720</height>
       <onup>50</onup>
       <ondown>50</ondown>
-      <onback>9000</onback>
+      <onback condition="!substring(Container.FolderPath,sources://)">9000</onback>
       <pagecontrol>60</pagecontrol>
       <viewtype label="535">List</viewtype>
       <preloaditems>4</preloaditems>
@@ -364,7 +364,7 @@
   </include>
   <include name="HeaderLabelShelf">
     <textoffsetx>24</textoffsetx>
-    <height>24</height>
+    <height>40</height>
     <width>1860</width>
     <font>size22</font>
     <textcolor>$VAR[Label2Color]</textcolor>

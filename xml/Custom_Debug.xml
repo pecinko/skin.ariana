@@ -35,7 +35,7 @@
         <shadowcolor>FF000000</shadowcolor>
         <font>font13</font>
         <align>left</align>
-        <label>$INFO[Container.NumItems,Items: ] </label>
+        <label>$INFO[Container(9000).ListItem.Property(servicetype)] $INFO[Container(9000).ListItem.Property(base64url)]</label>
       </control>
       <!-- Window labels -->
       <control type="label">

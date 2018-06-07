@@ -7,15 +7,16 @@
       <include>OpenClose</include>
       <control type="label" id="1" description="Header label">
         <include>CenterHeading</include>
-        <label>13406</label>
       </control>
-      <control type="panel" id="3" description="thumbs">
-        <left>120</left>
+      <control type="panel" id="6" description="Addons like">
+        <centerleft>50%</centerleft>
         <top>220</top>
-        <width>828</width>
-        <height>770</height>
+        <width>780</width>
+        <height>660</height>
         <onleft>5</onleft>
         <onright>5</onright>
+        <ondown>5</ondown>
+        <onup>5</onup>
         <itemlayout height="110">
           <control type="image">
             <left>0</left>
@@ -27,13 +28,22 @@
             <aspectratio>stretch</aspectratio>
           </control>
           <control type="image">
-            <visible>!IsEmpty(ListItem.Thumb)</visible>
+            <visible>!IsEmpty(ListItem.Thumb) + StringCompare(Control.GetLabel(1),Users)</visible>
+            <left>5</left>
+            <top>4</top>
+            <width>90</width>
+            <height>90</height>
+            <texture diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
+            <aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.Thumb) + !StringCompare(Control.GetLabel(1),Users)</visible>
             <left>5</left>
             <top>4</top>
             <width>90</width>
             <height>90</height>
             <texture>$INFO[ListItem.Thumb]</texture>
-            <aspectratio align="left" aligny="center">keep</aspectratio>
+            <aspectratio align="left" aligny="center">scale</aspectratio>
           </control>
           <control type="label" description="Main Label">
             <visible>!IsEmpty(ListItem.Thumb)</visible>
@@ -76,13 +86,22 @@
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-              <visible>!IsEmpty(ListItem.Thumb)</visible>
+              <visible>!IsEmpty(ListItem.Thumb) + StringCompare(Control.GetLabel(1),Users)</visible>
+              <left>5</left>
+              <top>4</top>
+              <width>90</width>
+              <height>90</height>
+              <texture diffuse="img/UserDiffuse.png">$INFO[ListItem.Thumb]</texture>
+              <aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
+            </control>
+            <control type="image">
+              <visible>!IsEmpty(ListItem.Thumb) + !StringCompare(Control.GetLabel(1),Users)</visible>
               <left>5</left>
               <top>4</top>
               <width>90</width>
               <height>90</height>
               <texture>$INFO[ListItem.Thumb]</texture>
-              <aspectratio align="left" aligny="center">keep</aspectratio>
+              <aspectratio align="left" aligny="center">scale</aspectratio>
             </control>
             <control type="label" description="Main Label">
               <visible>!IsEmpty(ListItem.Thumb)</visible>
@@ -113,35 +132,104 @@
           </control>
         </focusedlayout>
       </control>
+      <control type="panel" id="3">
+        <centerleft>50%</centerleft>
+        <top>150</top>
+        <width>930</width>
+        <height>700</height>
+        <onleft>5</onleft>
+        <onright>5</onright>
+        <ondown>5</ondown>
+        <itemlayout height="70">
+          <control type="image">
+            <left>0</left>
+            <top>2</top>
+            <width>100%</width>
+            <height>64</height>
+            <texture border="10">focus/FrameNF.png</texture>
+            <bordersize>-5</bordersize>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="label" description="Main Label">
+            <left>20</left>
+            <right>20</right>
+            <height>100%</height>
+            <textcolor>$VAR[LabelNFColor]</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="image">
+            <visible>ListItem.IsSelected</visible>
+            <right>20</right>
+            <top>0</top>
+            <width>30</width>
+            <height>100%</height>
+            <texture colordiffuse="$VAR[LabelNFColor]">img/RadioON.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </itemlayout>
+        <focusedlayout height="70">
+          <control type="group">
+            <include>FocusButtonsAnimation</include>
+            <control type="image">
+              <animation effect="fade" time="100">VisibleChange</animation>
+              <left>0</left>
+              <top>-1</top>
+              <width>100%</width>
+              <height>100%</height>
+              <texture border="24">focus/FrameFO.png</texture>
+              <bordersize>-5</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label" description="Main Label">
+              <left>20</left>
+              <right>20</right>
+              <height>100%</height>
+              <textcolor>$VAR[LabelFOColor]</textcolor>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="image">
+              <visible>ListItem.IsSelected</visible>
+              <right>20</right>
+              <top>0</top>
+              <width>30</width>
+              <height>100%</height>
+              <texture colordiffuse="$VAR[LabelFOColor]">img/RadioON.png</texture>
+              <aspectratio aligny="center">keep</aspectratio>
+            </control>
+          </control>
+        </focusedlayout>
+      </control>
       <control type="button" id="5" description="Left buttons template">
-        <centerright>25%</centerright>
-        <top>900</top>
-        <texturefocus colordiffuse="green">buttons/OKFO.png</texturefocus>
-        <texturenofocus>buttons/OKNF.png</texturenofocus>
-        <include>SquareButtonCommons</include>
+        <centerleft>50%</centerleft>
+        <top>960</top>
+        <width>350</width>
+        <onup>3</onup>
         <onleft>3</onleft>
         <onright>3</onright>
       </control>
-      <control type="image" description="Item Thumb">
-        <visible>IsEmpty(Container(3).ListItem.Thumb)</visible>
-        <centerleft>75%</centerleft>
-        <top>270</top>
-        <width>400</width>
-        <height>400</height>
-        <fadetime>200</fadetime>
-        <texture>Logo_square.png</texture>
-        <aspectratio aligny="center" align="center">keep</aspectratio>
-      </control>
-      <control type="image" description="Item Thumb">
-        <visible>!IsEmpty(Container(3).ListItem.Thumb)</visible>
-        <centerleft>75%</centerleft>
-        <top>270</top>
-        <width>400</width>
-        <height>400</height>
-        <fadetime>200</fadetime>
-        <texture>$INFO[Container(3).ListItem.Thumb]</texture>
-        <aspectratio aligny="center" align="center">keep</aspectratio>
-      </control>
+      <!--<control type="group">
+        <visible>Control.IsVisible(6)</visible>
+        <control type="image" description="Item Thumb">
+          <visible>IsEmpty(Container(6).ListItem.Thumb)</visible>
+          <centerleft>25%</centerleft>
+          <top>270</top>
+          <width>400</width>
+          <height>400</height>
+          <fadetime>200</fadetime>
+          <texture>Logo_square.png</texture>
+          <aspectratio aligny="center" align="center">keep</aspectratio>
+        </control>
+        <control type="image" description="Item Thumb">
+          <visible>!IsEmpty(Container(6).ListItem.Thumb)</visible>
+          <centerleft>25%</centerleft>
+          <top>270</top>
+          <width>400</width>
+          <height>400</height>
+          <fadetime>200</fadetime>
+          <texture>$INFO[Container(6).ListItem.Thumb]</texture>
+          <aspectratio aligny="center" align="center">keep</aspectratio>
+        </control>
+      </control>-->
     </control>
   </controls>
 </window>

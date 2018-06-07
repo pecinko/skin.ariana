@@ -11,10 +11,10 @@
       </control>
       <include>OpenClose</include>
       <animation type="Conditional" condition="ControlGroup(9500).HasFocus()" reversible="true">
-        <effect type="slide" end="0,-505" time="300" easing="inout"/>
+        <effect type="slide" end="0,-500" time="300" easing="inout"/>
       </animation>
       <control type="image">
-        <visible>!Control.IsVisible(4004)</visible>
+        <visible>![Control.IsVisible(4004) + !StringCompare(Control.GetLabel(4004).index(1),unknown-user.png)]</visible>
         <top>84</top>
         <left>66</left>
         <width>300</width>
@@ -23,11 +23,11 @@
         <aspectratio align="left">keep</aspectratio>
       </control>
       <control type="image" description="Users">
-        <visible>Control.IsVisible(4004)</visible>
-        <top>90</top>
-        <left>90</left>
-        <width>80</width>
-        <height>80</height>
+        <visible>Control.IsVisible(4004) + !StringCompare(Control.GetLabel(4004).index(1),unknown-user.png)</visible>
+        <top>92</top>
+        <left>92</left>
+        <width>90</width>
+        <height>90</height>
         <aspectratio align="left" aligny="center" scalediffuse="false">scale</aspectratio>
         <texture diffuse="img/UserDiffuse.png">$INFO[Control.GetLabel(4004).index(1)]</texture>
       </control>
@@ -158,14 +158,14 @@
         </focusedlayout>
       </control>
       <control type="grouplist" id="9500" description="home shelves">
-        <top>504</top>
+        <top>500</top>
         <left>60</left>
         <onup>9000</onup>
         <ondown>noop</ondown>
-        <height min="480" max="100%">auto</height>
+        <height>1080</height>
         <aligny>top</aligny>
         <align>left</align>
-        <itemgap>10</itemgap>
+        <itemgap>4</itemgap>
         <!--
         <control type="label" id="5555" description="ShelfHeading">
           <visible>Control.IsVisible(8011)</visible>
